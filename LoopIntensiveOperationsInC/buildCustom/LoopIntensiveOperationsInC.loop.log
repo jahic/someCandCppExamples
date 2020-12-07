@@ -1,0 +1,430 @@
+Build Janus Expressions:
+		Not handled: 0 Undefined push rbx
+		Not handled: 3 Undefined movabs rsi, 0x6666666666666667
+		Not handled: 34 Undefined movabs r8, 0x6666666666666667
+		Not handled: 66 Undefined movabs r11, 0x6666666666666667
+		Not handled: 115 Undefined shufps xmm0, xmm0, 0
+		Not handled: 116 Undefined mulps xmm0, xmmword ptr [rax - 0x280]
+		Not handled: 139 Undefined rep movsq qword ptr [rdi], qword ptr [rsi]
+=========================================================
+Analysing Loop 15 in computationKernelPolybenchDoitgen
+	Analysing loop variables
+	Performing dependence analysis on loop variables
+		Analysing phi variable RAX_39
+		Analysing phi variable RDX_25
+		Analysing phi variable XMM1_5
+	Performing iterator analysis on loop variables
+		Analysing candidate variable RAX_39
+		Analysing candidate variable RDX_25
+		Analysing candidate variable XMM1_5
+		Bound expr -0x280 + RCX_7 + RAX_39@L15*-0x1
+		Iterator identified: RAX [RAX_23:640:(-0x280 + RCX_7)]@L15
+	Proceed to the second pass of analysis
+=========================================================
+
+=========================================================
+Analysing Loop 14 in computationKernelPolybenchDoitgen
+	Analysing loop variables
+	Performing dependence analysis on loop variables
+		Analysing phi variable RSI_13
+		Analysing phi variable RDI_13
+	Performing iterator analysis on loop variables
+		Analysing candidate variable RSI_13
+		Analysing candidate variable RDI_13
+		Bound expr 0x371ad29 + RSI_13@L14*-0x1
+		Iterator identified: RSI [57780921:16:57781545]@L14
+	Proceed to the second pass of analysis
+=========================================================
+
+=========================================================
+Analysing Loop 13 in computationKernelPolybenchDoitgen
+	Analysing loop variables
+	Performing dependence analysis on loop variables
+		Analysing phi variable R8_11
+	Performing iterator analysis on loop variables
+		Analysing candidate variable R8_11
+		Bound expr -0x280 + R8_11@L13*-0x1 + R10_2
+		Iterator identified: R8 [R8_3:640:(-0x280 + R10_2)]@L13
+	Proceed to the second pass of analysis
+=========================================================
+
+=========================================================
+Analysing Loop 12 in computationKernelPolybenchDoitgen
+	Analysing loop variables
+	Performing dependence analysis on loop variables
+		Analysing phi variable R10_2
+	Performing iterator analysis on loop variables
+		Analysing candidate variable R10_2
+		Bound expr -0x3701ab9 + R10_2@L12
+		Iterator identified: R10 [44328121:89600:57678521]@L12
+	Proceed to the second pass of analysis
+=========================================================
+
+Build Janus Expressions:
+		Not handled: 1 Undefined push r13
+		Not handled: 3 Undefined push r12
+		Not handled: 4 Undefined push rbp
+		Not handled: 6 Undefined push rbx
+		Not handled: 9 Undefined movabs r9, 0x6666666666666667
+		Not handled: 39 Undefined movabs r9, 0x6666666666666667
+		Not handled: 72 Undefined movabs r10, 0x6666666666666667
+=========================================================
+Analysing Loop 27 in computationKernelPolybenchGramschmidt
+	Analysing loop variables
+	Performing dependence analysis on loop variables
+		Analysing phi variable RAX_47
+		Analysing phi variable XMM1_5
+	Performing iterator analysis on loop variables
+		Analysing candidate variable RAX_47
+		Analysing candidate variable XMM1_5
+		Bound expr -0x889f00 + RAX_47@L27
+		Iterator identified: RAX [RAX_27:6400:8953600]@L27
+	Proceed to the second pass of analysis
+=========================================================
+
+=========================================================
+Analysing Loop 28 in computationKernelPolybenchGramschmidt
+	Analysing loop variables
+	Performing dependence analysis on loop variables
+		Analysing phi variable RAX_39
+	Performing iterator analysis on loop variables
+		Analysing candidate variable RAX_39
+		Bound expr -0x889f00 + RAX_39@L28
+		Iterator identified: RAX [RAX_31:6400:8953600]@L28
+	Proceed to the second pass of analysis
+=========================================================
+
+=========================================================
+Analysing Loop 26 in computationKernelPolybenchGramschmidt
+	Analysing loop variables
+	Performing dependence analysis on loop variables
+		Analysing phi variable RDX_24
+		Analysing phi variable R10_4
+	Performing iterator analysis on loop variables
+		Analysing candidate variable RDX_24
+		Analysing candidate variable R10_4
+		Bound expr -0x63f + R10_4@L26
+		Iterator identified: R10 [R10_1:1:1599]@L26
+	Proceed to the second pass of analysis
+=========================================================
+
+=========================================================
+Analysing Loop 24 in computationKernelPolybenchGramschmidt
+	Analysing loop variables
+	Performing dependence analysis on loop variables
+		Analysing phi variable RBP_4
+		Analysing phi variable RSI_11
+		Analysing phi variable R9_9
+	Performing iterator analysis on loop variables
+		Analysing candidate variable RBP_4
+		Analysing candidate variable RSI_11
+		Analysing candidate variable R9_9
+		Bound expr -0x63f + R9_9@L24
+		Iterator identified: R9 [R9_4:1:1599]@L24
+	Proceed to the second pass of analysis
+=========================================================
+
+=========================================================
+Analysing Loop 12 Second Pass
+	Loop 12 post iterator [44328121:89600:57678521]@L12
+	Performing iteration count analysis
+		Total iteration count: 150
+		Loop 12 improved iterator [44328121:89600:57678521]@L12
+=========================================================
+
+=========================================================
+Analysing Loop 13 Second Pass
+	Loop 13 post iterator [R8_3:640:(-0x280 + R10_2)]@L13
+	Performing iteration count analysis
+		Expand init expr to: -0x15e00 + R10_2@L12
+		Expand final expr to: -0x280 + R10_2
+		Spectrum expression: 0x15b80
+		Total iteration count: 140
+		Loop 13 improved iterator [R8_3:640:(-0x280 + R10_2)]@L13
+=========================================================
+
+=========================================================
+Analysing Loop 14 Second Pass
+	Loop 14 post iterator [57780921:16:57781545]@L14
+	Performing iteration count analysis
+		Total iteration count: 40
+		Loop 14 improved iterator [57780921:16:57781545]@L14
+=========================================================
+
+=========================================================
+Analysing Loop 15 Second Pass
+	Loop 15 post iterator [RAX_23:640:(-0x280 + RCX_7)]@L15
+	Performing iteration count analysis
+		Expand init expr to: RDI_13@L14
+		Expand final expr to: 0x18d80 + RDI_13@L14
+		Spectrum expression: 0x18d80
+		Total iteration count: 160
+		Loop 15 improved iterator [RAX_23:640:(0x18d80 + RDI_13@L14)]@L15
+		Loop 15 stride [XMM1_0:XMM0_10:]@L15 is a reduction variable
+=========================================================
+
+=========================================================
+Analysing Loop 26 Second Pass
+	Loop 26 post iterator [R10_1:1:1599]@L26
+	Performing iteration count analysis
+		Expand init expr to: 0x1 + R9_9@L24
+		Spectrum expression: 0x63e + R9_9@L24*-0x1
+		Total iteration count: (0x63e + R9_9@L24*-0x1)/1
+		Loop 26 improved iterator [R10_1:1:1599]@L26
+=========================================================
+
+=========================================================
+Analysing Loop 27 Second Pass
+	Loop 27 post iterator [RAX_27:6400:8953600]@L27
+	Performing iteration count analysis
+		Expand init expr to: 0x0
+		Spectrum expression: 0x889f00
+		Total iteration count: 1400
+		Loop 27 improved iterator [0:6400:8953600]@L27
+		Loop 27 stride [XMM1_2:0x1 ? [0x0 ? 0x1 ? RSI_11@L24 ? RAX_47@L27] ? [0x0 ? 0x1 ? RDX_24@L26 ? RAX_47@L27]:]@L27 is a reduction variable
+=========================================================
+
+=========================================================
+Analysing Loop 28 Second Pass
+	Loop 28 post iterator [RAX_31:6400:8953600]@L28
+	Performing iteration count analysis
+		Expand init expr to: 0x0
+		Spectrum expression: 0x889f00
+		Total iteration count: 1400
+		Loop 28 improved iterator [0:6400:8953600]@L28
+=========================================================
+
+=========================================================
+Analysing Loop 12 Third Pass
+			Found phi loop iterator but not a main iterator 14
+	Started scratch analysis
+		Register to copy across threads: RAX RCX RDX RBX RSI RDI R9 R10 R11 XMM2 
+		Register to merge from threads: RAX RBX R10 
+		No. of stack variables to merge from threads: 0
+		Register pressure: 
+			RBP 0
+			R12 0
+			R13 0
+			R14 0
+			R15 0
+			RBX 1
+			R9 65
+			R10 69
+			R11 129
+			RCX 517
+			R8 585
+			RDX 708
+			RDI 906
+			RSI 970
+			RAX 1486
+		Found four least-used registers: RBP R12 R13 R14
+		Occupied stack frame size: 8
+	Encoding recognised variables into portable variable profiles
+		Induction R10 add 0x15e00 check RBX
+=========================================================
+
+=========================================================
+Analysing Loop 13 Third Pass
+	Started scratch analysis
+		Register to copy across threads: R8 R9 R10 R11 XMM2 
+		Register to merge from threads: RAX R8 R10 
+		No. of stack variables to merge from threads: 0
+		Register pressure: 
+			RBX 0
+			RBP 0
+			R12 0
+			R13 0
+			R14 0
+			R15 0
+			R9 1
+			R10 1
+			R11 65
+			R8 72
+			RCX 197
+			RDI 266
+			RSI 330
+			RDX 452
+			RAX 590
+		Found four least-used registers: RBX RBP R12 R13
+		Occupied stack frame size: 8
+	Encoding recognised variables into portable variable profiles
+		Induction R8 add 0x280 check R10
+=========================================================
+
+=========================================================
+Analysing Loop 14 Third Pass
+	Started scratch analysis
+		Register to copy across threads: RSI RDI R8 R11 XMM2 
+		Register to merge from threads: RSI RDI R11 
+		No. of stack variables to merge from threads: 0
+		Register pressure: 
+			RBX 0
+			RBP 0
+			R9 0
+			R10 0
+			R12 0
+			R13 0
+			R14 0
+			R15 0
+			R8 1
+			R11 1
+			RDI 4
+			RSI 5
+			RCX 66
+			RDX 196
+			RAX 261
+		Found four least-used registers: RBX RBP R9 R10
+		Occupied stack frame size: 8
+	Encoding recognised variables into portable variable profiles
+		Induction RSI add 0x10 check R11
+		Induction RDI add 0x10 no check
+=========================================================
+
+=========================================================
+Analysing Loop 15 Third Pass
+	Started scratch analysis
+		Register to copy across threads: RAX RCX RDX XMM1 
+		Register to merge from threads: RAX RCX RDX XMM1 
+		No. of stack variables to merge from threads: 0
+		Register pressure: 
+			RBX 0
+			RBP 0
+			RSI 0
+			RDI 0
+			R8 0
+			R9 0
+			R10 0
+			R11 0
+			R12 0
+			R13 0
+			R14 0
+			R15 0
+			RCX 1
+			RDX 3
+			RAX 4
+		Found four least-used registers: RBX RBP RSI RDI
+		Occupied stack frame size: 8
+	Encoding recognised variables into portable variable profiles
+		Induction RAX add 0x280 check RCX
+		Induction RDX add 0x4 no check
+=========================================================
+
+=========================================================
+Analysing Loop 26 Third Pass
+	Started scratch analysis
+		Register to copy across threads: RAX RCX RDX RBX RSI RDI R8 R9 R10 R11 XMM0 XMM1 XMM3 
+		Register to merge from threads: RDX R10 
+		No. of stack variables to merge from threads: 0
+		Register pressure: 
+			RBP 0
+			R12 0
+			R13 0
+			R14 0
+			R15 0
+			RBX 1
+			R11 1
+			R10 4
+			RSI 130
+			RDI 130
+			R8 130
+			RDX 197
+			R9 260
+			RCX 325
+			RAX 656
+		Found four least-used registers: RBP R12 R13 R14
+		Occupied stack frame size: 32
+	Encoding recognised variables into portable variable profiles
+		Induction RDX add 0x4 no check
+		Induction R10 add 0x1 check 0x63f
+=========================================================
+
+=========================================================
+Analysing Loop 27 Third Pass
+	Started scratch analysis
+		Register to copy across threads: RAX RDX RSI RDI R8 XMM1 
+		Register to merge from threads: RAX XMM1 
+		No. of stack variables to merge from threads: 0
+		Register pressure: 
+			RBX 0
+			RBP 0
+			R10 0
+			R11 0
+			R12 0
+			R13 0
+			R14 0
+			R15 0
+			RDX 1
+			RSI 1
+			RDI 1
+			R8 1
+			RCX 2
+			R9 2
+			RAX 5
+		Found four least-used registers: RBX RBP R10 R11
+		Occupied stack frame size: 32
+	Encoding recognised variables into portable variable profiles
+		Induction RAX add 0x1900 check 0x889f00
+=========================================================
+
+=========================================================
+Analysing Loop 28 Third Pass
+	Started scratch analysis
+		Register to copy across threads: RAX RCX RDX RSI RDI R8 R9 XMM0 XMM1 
+		Register to merge from threads: RAX 
+		No. of stack variables to merge from threads: 0
+		Register pressure: 
+			RBX 0
+			RBP 0
+			R10 0
+			R11 0
+			R12 0
+			R13 0
+			R14 0
+			R15 0
+			RSI 1
+			RDI 1
+			R8 1
+			RDX 2
+			R9 2
+			RCX 3
+			RAX 5
+		Found four least-used registers: RBX RBP R10 R11
+		Occupied stack frame size: 32
+	Encoding recognised variables into portable variable profiles
+		Induction RAX add 0x1900 check 0x889f00
+=========================================================
+
+Performing automatic DOALL loop selection:
+Loop 12:
+	DOALL Check Phase 1 Passed
+
+Loop 13:
+	DOALL Check Phase 1 Passed
+
+Loop 14:
+	DOALL Check Phase 1 Passed
+
+Loop 15:
+	This loop contains SIMD iterators which is not yet implemented
+
+Loop 26:
+	DOALL Check Phase 1 Passed
+
+Loop 27:
+	This loop contains SIMD iterators which is not yet implemented
+
+Loop 28:
+	DOALL Check Phase 1 Passed
+
+-- Phase 1 Finished -- Recognised safe DOALL loops: 
+12 13 14 26 28 
+
+	Reading LoopIntensiveOperationsInC.loop.select for manual loop selection
+	12 13 14 15 26 27 28 
+Loop 13 is removed because it is the inner loop in the outter loop 12
+Loop 14 is removed because it is the inner loop in the outter loop 12
+Loop 14 is removed because it is the inner loop in the outter loop 13
+Loop 28 is removed because it is the inner loop in the outter loop 26
+-- Final selected DOALL loops: 
+12 26 
+

@@ -1,0 +1,1 @@
+/usr/bin/cc -Wall -Wextra -O3 -g -static  -rdynamic CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.o CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.o  -o LoopIntensiveOperationsInC -lm 

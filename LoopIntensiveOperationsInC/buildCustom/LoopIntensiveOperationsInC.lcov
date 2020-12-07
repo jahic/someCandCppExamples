@@ -1,0 +1,46 @@
+--------------------------------------------------
+Janus Dynamic Loop Coverage- Sample-based Profiling - Results:
+Total Loops found: 1437
+      id  fraction(%)   invocation    iteration   inaccurate         function:
+       6         0.00            1          160            0 computationKernelPolybenchDoitgen
+       7         0.00            1          160            0 computationKernelPolybenchDoitgen
+       8         0.00          149        23840            1 computationKernelPolybenchDoitgen
+       9         0.05            1          150            0 computationKernelPolybenchDoitgen
+      10         0.05          150        21000            0 computationKernelPolybenchDoitgen
+      11         0.03        19460      3113600            1 computationKernelPolybenchDoitgen
+      12         1.24            1          150            0 computationKernelPolybenchDoitgen
+      13         1.24          150        21000            0 computationKernelPolybenchDoitgen
+      14         1.23        21000       840000            0 computationKernelPolybenchDoitgen
+      15         1.09       840000    134400000            0 computationKernelPolybenchDoitgen
+      17         0.00         1540       246400            0 computationKernelPolybenchDoitgen
+      18         0.02            1         1400            0 computationKernelPolybenchGramschmidt
+      19         0.02         1389      2222400            1 computationKernelPolybenchGramschmidt
+      20         0.02            1         1600            0 computationKernelPolybenchGramschmidt
+      21         0.02         1589      2542400            1 computationKernelPolybenchGramschmidt
+      22         0.02            1         1400            0 computationKernelPolybenchGramschmidt
+      23         0.02         1389      2222400            1 computationKernelPolybenchGramschmidt
+      24        98.57            1         1600            0 computationKernelPolybenchGramschmidt
+      25         0.18         1600      2240000            0 computationKernelPolybenchGramschmidt
+      26        98.39         1599      1279200            0 computationKernelPolybenchGramschmidt
+      27        47.76      1279200   1790880000            0 computationKernelPolybenchGramschmidt
+      28        49.28      1279200   1790880000            0 computationKernelPolybenchGramschmidt
+      33         0.00            1         1500            0 computationKernelPolybenchTislov
+      34         0.02            1         1500            0 computationKernelPolybenchTislov
+      35         0.02         1489      2233500            1 computationKernelPolybenchTislov
+      36         0.01            1         1400            0 computationKernelPolybenchTislov
+      37         0.00         1397       244650            0 computationKernelPolybenchTislov
+      77         0.00            1           24            0    __libc_start_main
+      83         0.00            1            2            0      __libc_csu_init
+     172         0.00            1            2            0  __run_exit_handlers
+     173         0.00            2            2            0  __run_exit_handlers
+     174         0.00            1            2            1  __run_exit_handlers
+     227         0.00            1            1            1          _IO_cleanup
+     591        99.96            1            8            0 __memset_avx2_unaligned_erms
+     593         0.00            6           15            0 intel_check_word_isra_0
+     598         0.00            3            3            0 handle_intel_constprop_1
+     645         0.00            1            1            0      __tunables_init
+     646         0.00            0           60            1      __tunables_init
+    1120        99.98            0            0            0       _dl_new_object
+    1136         0.00            1            8            0 _dl_important_hwcaps
+    1377         0.00            0            0            0 __deregister_frame_info_bases
+--------------------------------------------------

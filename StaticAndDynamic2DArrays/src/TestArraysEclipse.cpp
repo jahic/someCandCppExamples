@@ -34,13 +34,6 @@ void printArray(int array[ARRAY_LENGTH][ARRAY_WIDTH]);
 long sumArray(int** array);
 long sumArray(int array[ARRAY_LENGTH][ARRAY_WIDTH]);
 
-void test(int* a)
-{
-	printf("a=%d.\n", *a);
-	a++;
-	printf("a=%d.\n", *a);
-}
-
 int main()
 {
 	int staticArray[ARRAY_LENGTH][ARRAY_WIDTH];
