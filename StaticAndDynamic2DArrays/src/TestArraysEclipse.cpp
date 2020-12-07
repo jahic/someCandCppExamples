@@ -22,6 +22,7 @@ void allocateArray(int*** array);
 // first row or to its first plane): array-to-pointer decay is applied only once.
 // int b[2][3];         // array of 2 arrays of 3 int
 // int** p2 = b;     // error: b does not decay to int**
+// Sources:
 // https://en.cppreference.com/w/cpp/language/array#Array-to-pointer_decay
 // https://stackoverflow.com/questions/8203700/conversion-of-2d-array-to-pointer-to-pointer
 void populateArrayD(int*** array);
