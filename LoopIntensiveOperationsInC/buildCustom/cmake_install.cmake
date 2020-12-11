@@ -1,4 +1,4 @@
-# Install script for directory: /home/jahic/workspace/janus/LoopIntensiveOperationsInC
+# Install script for directory: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/jahic/workspace/janus/LoopIntensiveOperationsInC/buildCustom/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

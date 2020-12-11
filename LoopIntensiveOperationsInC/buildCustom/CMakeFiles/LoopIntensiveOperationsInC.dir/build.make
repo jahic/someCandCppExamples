@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jahic/workspace/janus/LoopIntensiveOperationsInC
+CMAKE_SOURCE_DIR = /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jahic/workspace/janus/LoopIntensiveOperationsInC/buildCustom
+CMAKE_BINARY_DIR = /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom
 
 # Include any dependencies generated for this target.
 include CMakeFiles/LoopIntensiveOperationsInC.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/LoopIntensiveOperationsInC.dir/flags.make
 
 CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.o: CMakeFiles/LoopIntensiveOperationsInC.dir/flags.make
 CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.o: ../LoopIntensiveOperationsInC.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jahic/workspace/janus/LoopIntensiveOperationsInC/buildCustom/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.o   -c /home/jahic/workspace/janus/LoopIntensiveOperationsInC/LoopIntensiveOperationsInC.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.o   -c /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/LoopIntensiveOperationsInC.c
 
 CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jahic/workspace/janus/LoopIntensiveOperationsInC/LoopIntensiveOperationsInC.c > CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/LoopIntensiveOperationsInC.c > CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.i
 
 CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jahic/workspace/janus/LoopIntensiveOperationsInC/LoopIntensiveOperationsInC.c -o CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/LoopIntensiveOperationsInC.c -o CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.s
 
 CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.o.provide
 
 CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.o: CMakeFiles/LoopIntensiveOperationsInC.dir/flags.make
 CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.o: ../computationKernels.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jahic/workspace/janus/LoopIntensiveOperationsInC/buildCustom/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.o   -c /home/jahic/workspace/janus/LoopIntensiveOperationsInC/computationKernels.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.o   -c /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c
 
 CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jahic/workspace/janus/LoopIntensiveOperationsInC/computationKernels.c > CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c > CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.i
 
 CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jahic/workspace/janus/LoopIntensiveOperationsInC/computationKernels.c -o CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c -o CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.s
 
 CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.o.requires:
 
@@ -117,7 +117,7 @@ LoopIntensiveOperationsInC: CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntens
 LoopIntensiveOperationsInC: CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.o
 LoopIntensiveOperationsInC: CMakeFiles/LoopIntensiveOperationsInC.dir/build.make
 LoopIntensiveOperationsInC: CMakeFiles/LoopIntensiveOperationsInC.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jahic/workspace/janus/LoopIntensiveOperationsInC/buildCustom/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable LoopIntensiveOperationsInC"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable LoopIntensiveOperationsInC"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LoopIntensiveOperationsInC.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -135,6 +135,6 @@ CMakeFiles/LoopIntensiveOperationsInC.dir/clean:
 .PHONY : CMakeFiles/LoopIntensiveOperationsInC.dir/clean
 
 CMakeFiles/LoopIntensiveOperationsInC.dir/depend:
-	cd /home/jahic/workspace/janus/LoopIntensiveOperationsInC/buildCustom && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jahic/workspace/janus/LoopIntensiveOperationsInC /home/jahic/workspace/janus/LoopIntensiveOperationsInC /home/jahic/workspace/janus/LoopIntensiveOperationsInC/buildCustom /home/jahic/workspace/janus/LoopIntensiveOperationsInC/buildCustom /home/jahic/workspace/janus/LoopIntensiveOperationsInC/buildCustom/CMakeFiles/LoopIntensiveOperationsInC.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles/LoopIntensiveOperationsInC.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/LoopIntensiveOperationsInC.dir/depend
 

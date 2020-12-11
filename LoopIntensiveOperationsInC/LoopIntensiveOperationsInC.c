@@ -46,11 +46,12 @@ int main(int argc, char **argv)
 	// Polybench, tislov
 	computationKernelPolybenchTislov();
 	printf("	- computationKernelPolybenchTislov---COMPLETE.\n");
-/*
+
 	// Generic 1D loop, 2 arrays.
 	computationKernelGenericLoop1D2A();
 	printf("	- computationKernelGenericLoop1D2A---COMPLETE.\n");
 	computationKernelGenericLoop1D2AD();
+	printf("	- computationKernelGenericLoop1D2AD---COMPLETE.\n");
 
 	// Generic 2D loop, 2 arrays.
 	computationKernelGenericLoop2D2A();
@@ -60,7 +61,8 @@ int main(int argc, char **argv)
 
 	// Generic 3D loop, 2 arrays.
 	computationKernelGenericLoop3D2A();
-*/
+	printf("	- computationKernelGenericLoop3D2A---COMPLETE.\n");
+
 	printf("Exit.\n");
 
 	return 0;

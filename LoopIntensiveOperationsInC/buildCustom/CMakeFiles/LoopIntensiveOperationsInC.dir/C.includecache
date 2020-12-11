@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/jahic/workspace/janus/LoopIntensiveOperationsInC/LoopIntensiveOperationsInC.c
+/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/LoopIntensiveOperationsInC.c
 stdio.h
 -
 stdlib.h
 -
 computationKernels.h
-/home/jahic/workspace/janus/LoopIntensiveOperationsInC/computationKernels.h
+/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.h
 
-/home/jahic/workspace/janus/LoopIntensiveOperationsInC/computationKernels.c
+/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c
 stdio.h
 -
 unistd.h
@@ -30,19 +30,19 @@ stdlib.h
 math.h
 -
 populateArrays.h
-/home/jahic/workspace/janus/LoopIntensiveOperationsInC/populateArrays.h
+/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/populateArrays.h
 computationKernels.h
-/home/jahic/workspace/janus/LoopIntensiveOperationsInC/computationKernels.h
+/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.h
 
-/home/jahic/workspace/janus/LoopIntensiveOperationsInC/computationKernels.h
+/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.h
 
-/home/jahic/workspace/janus/LoopIntensiveOperationsInC/globalConfiguration.h
+/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/globalConfiguration.h
 
-/home/jahic/workspace/janus/LoopIntensiveOperationsInC/kernels/kernelConfiguration.h
+/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/kernels/kernelConfiguration.h
 
-/home/jahic/workspace/janus/LoopIntensiveOperationsInC/populateArrays.h
+/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/populateArrays.h
 kernels/kernelConfiguration.h
-/home/jahic/workspace/janus/LoopIntensiveOperationsInC/kernels/kernelConfiguration.h
+/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/kernels/kernelConfiguration.h
 globalConfiguration.h
-/home/jahic/workspace/janus/LoopIntensiveOperationsInC/globalConfiguration.h
+/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/globalConfiguration.h
 

@@ -1,378 +1,1135 @@
 ---------------------------------------------------------
-Loop 12 Alias Analysis
+Loop 7 Alias Analysis
 
 	Step 0: Extracting loop ranges in the loop nest:
-		Main Loop 12 range [44328121:89600:57678521]@L12 trip count 150
-		Loop 13 range [R8_3:640:(-0x280 + R10_2)]@L13 trip count 140
-		Loop 14 range [57780921:16:57781545]@L14 trip count 40
-		Loop 15 range [RAX_23:640:(0x18d80 + RDI_13@L14)]@L15 trip count 160
+		Main Loop 7 range [1:1:([0x6c2359]_0)]@L7 trip count 0
+		Loop 8 range [0:-1:(0x1 + R14_11@L7*-0x1)]@L8 trip count 0
 
 	Step 1: Analyse each memory access in the loop:
-		106 [RSI] <-- XMM2
-			Memory expression: RSI_13@L14 constructed
-			Expr:RSI_13@L14
-			Scalar evolution: {0x371aab9,+,0x10*l14}
-			Insert new array base (0x0) with location [RSI]_0 Base (0x0)
-		114 XMM0 <-- [RDX-0x4]
-			Memory expression: RDX_25@L15 constructed
-			Expr:RDX_25@L15
-			Scalar evolution: {-0x280 + R10_2,+,0x4*l15}
-			Insert new array base (R10_2) with location [RDX-0x4]_1 Base (R10_2)
-		116 XMM0 <-- [RAX-0x280]
-			Memory expression: RAX_39@L15 constructed
-			Expr:RAX_39@L15
-			Scalar evolution: {0,+,0x280*l15}
-			Insert new array base (UDF) with location [RAX-0x280]_0 Base (UDF)
-		120 [RSI] <-- XMM1
-			Memory expression: RSI_13@L14 constructed
-			Expr:RSI_13@L14
-			Scalar evolution: {0x371aab9,+,0x10*l14}
-			Found existing array base (0x0) with existing location [RSI]_0 from 106  Base (0x0)
-		129 [R8] <-- RAX
-			Memory expression: R8_11@L13 constructed
-			Expr:R8_11@L13
-			Scalar evolution: {0x2a306b9,+,0x280*l13,+,0x15e00*l12}
-			Found existing array base (0x0) with new location [R8]_0 Base (0x0)
-		131 [R8+0x278] <-- RAX
-			Memory expression: 0x278 + R8_11@L13 constructed
-			Expr:0x278 + R8_11@L13
-			Scalar evolution: {0x2a30931,+,0x280*l13,+,0x15e00*l12}
-			Found existing array base (0x0) with new location [R8+0x278]_0 Base (0x0)
-		139 NULL
-			Memory expression: -0x8 ? RSI_7 ? R8_11@L13 constructed
-			Expr:-0x8 ? RSI_7 ? R8_11@L13
-			Scalar evolution: {0x2a306b1 + RSI_7,+,0x280*l13,+,0x15e00*l12}
-			Insert new array base (RSI_7) with location [RSI]_2 Base (RSI_7)
+		176 [RSI-0x4] <-- RAX
+			Memory expression: RSI_20@L8 constructed
+			Expr:RSI_20@L8
+			Scalar evolution: {0x1df1ef39,+,0x4*l8,+,0x13880*l7}
+			Insert new array base (0x0) with location [RSI-0x4]_0 Base (0x0)
+		185 [R15-0x4] <-- 0x1
+			Memory expression: -0x4 + R15_8@L7 constructed
+			Expr:-0x4 + R15_8@L7
+			Scalar evolution: {0x1df1ef39,+,0x13884*l7}
+			Found existing array base (0x0) with new location [R15-0x4]_0 Base (0x0)
 
 	Identified read set: 
-		[RDX-0x4]_1 by 114  Base (R10_2)
-		[RAX-0x280]_0 by 116  Base (UDF)
 	Identified write set: 
-		[RSI]_0 from 106 120  Base (0x0)
-		[R8]_0 from 129  Base (0x0)
-		[R8+0x278]_0 from 131  Base (0x0)
+		[RSI-0x4]_0 from 176  Base (0x0)
+		[R15-0x4]_0 from 185  Base (0x0)
 	Recognised array bases:
-		UDF r116 
-		0x0 w106 w120 w129 w131 
-		RSI_7 
-		R10_2 r114 
+		0x0 w176 w185 
 
 	Step 2: Performing SCEV-based alias analysis on loop memory accesses
-		Check write: [RSI]_0 from 106 120  Base (0x0)
-		Found a write after write dependency. 
-		It could be resolved by privatizing memories :[RSI]_0 from 106 120  Base (0x0)
-		Check write: [R8]_0 from 129  Base (0x0)
-			vs: [RSI]_0 from 106 120  Base (0x0)
-			SCEV: {0x2a306b9,+,0x280*l13,+,0x15e00*l12} - {0x371aab9,+,0x10*l14}
-			rdiff: {-0xcea400,+,-0x10*l14,+,0x280*l13,+,0x15e00*l12}
-			Found stride GCD of 16 for distance 13542400, which is beyond loop boundary
-			vs: [R8+0x278]_0 from 131  Base (0x0)
-			SCEV: {0x2a306b9,+,0x280*l13,+,0x15e00*l12} - {0x2a30931,+,0x280*l13,+,0x15e00*l12}
-			rdiff: {-0x278,+,0x280*l13,+,0x15e00*l12}
-			Found stride GCD of 640 could not divide distance 632, therefore no dependency
-		Check write: [R8+0x278]_0 from 131  Base (0x0)
-			vs: [RSI]_0 from 106 120  Base (0x0)
-			SCEV: {0x2a30931,+,0x280*l13,+,0x15e00*l12} - {0x371aab9,+,0x10*l14}
-			rdiff: {-0xcea188,+,-0x10*l14,+,0x280*l13,+,0x15e00*l12}
-			Found stride GCD of 16 could not divide distance 13541768, therefore no dependency
-			vs: [R8]_0 from 129  Base (0x0)
-			SCEV: {0x2a30931,+,0x280*l13,+,0x15e00*l12} - {0x2a306b9,+,0x280*l13,+,0x15e00*l12}
-			rdiff: {0x278,+,0x280*l13,+,0x15e00*l12}
-			Found stride GCD of 640 could not divide distance 632, therefore no dependency
+		Check write: [RSI-0x4]_0 from 176  Base (0x0)
+			vs: [R15-0x4]_0 from 185  Base (0x0)
+			SCEV: {0x1df1ef39,+,0x4*l8,+,0x13880*l7} - {0x1df1ef39,+,0x13884*l7}
+			rdiff: {0x0,+,0x4*l8,+,-0x13884*l7,+,0x13880*l7}
+			Found stride GCD of 4 for distance 0,therefore a dependency exists
+		Check write: [R15-0x4]_0 from 185  Base (0x0)
+			vs: [RSI-0x4]_0 from 176  Base (0x0)
+			SCEV: {0x1df1ef39,+,0x13884*l7} - {0x1df1ef39,+,0x4*l8,+,0x13880*l7}
+			rdiff: {0x0,+,-0x4*l8,+,0x13884*l7,+,-0x13880*l7}
+			Found stride GCD of 4 for distance 0,therefore a dependency exists
 ---------------------------------------------------------
-Loop 13 Alias Analysis
+Loop 8 Alias Analysis
 
 	Step 0: Extracting loop ranges in the loop nest:
-		Main Loop 13 range [R8_3:640:(-0x280 + R10_2)]@L13 trip count 140
-		Loop 12 range [44328121:89600:57678521]@L12 trip count 150
-		Loop 14 range [57780921:16:57781545]@L14 trip count 40
-		Loop 15 range [RAX_23:640:(0x18d80 + RDI_13@L14)]@L15 trip count 160
+		Main Loop 8 range [0:-1:(0x1 + R14_11@L7*-0x1)]@L8 trip count 0
+		Loop 7 range [1:1:([0x6c2359]_0)]@L7 trip count 0
 
 	Step 1: Analyse each memory access in the loop:
-		106 [RSI] <-- XMM2
-			Memory expression: RSI_13@L14 constructed
-			Expr:RSI_13@L14
-			Scalar evolution: {0x371aab9,+,0x10*l14}
-			Insert new array base (0x0) with location [RSI]_0 Base (0x0)
-		114 XMM0 <-- [RDX-0x4]
-			Memory expression: RDX_25@L15 constructed
-			Expr:RDX_25@L15
-			Scalar evolution: {-0x280 + R10_2,+,0x4*l15}
-			Insert new array base (R10_2) with location [RDX-0x4]_1 Base (R10_2)
-		116 XMM0 <-- [RAX-0x280]
-			Memory expression: RAX_39@L15 constructed
-			Expr:RAX_39@L15
-			Scalar evolution: {0,+,0x280*l15}
-			Insert new array base (UDF) with location [RAX-0x280]_0 Base (UDF)
-		120 [RSI] <-- XMM1
-			Memory expression: RSI_13@L14 constructed
-			Expr:RSI_13@L14
-			Scalar evolution: {0x371aab9,+,0x10*l14}
-			Found existing array base (0x0) with existing location [RSI]_0 from 106  Base (0x0)
-		129 [R8] <-- RAX
-			Memory expression: R8_11@L13 constructed
-			Expr:R8_11@L13
-			Scalar evolution: {0x2a306b9,+,0x280*l13,+,0x15e00*l12}
-			Found existing array base (0x0) with new location [R8]_0 Base (0x0)
-		131 [R8+0x278] <-- RAX
-			Memory expression: 0x278 + R8_11@L13 constructed
-			Expr:0x278 + R8_11@L13
-			Scalar evolution: {0x2a30931,+,0x280*l13,+,0x15e00*l12}
-			Found existing array base (0x0) with new location [R8+0x278]_0 Base (0x0)
-		139 NULL
-			Memory expression: -0x8 ? RSI_7 ? R8_11@L13 constructed
-			Expr:-0x8 ? RSI_7 ? R8_11@L13
-			Scalar evolution: {0x2a306b1 + RSI_7,+,0x280*l13,+,0x15e00*l12}
-			Insert new array base (RSI_7) with location [RSI]_2 Base (RSI_7)
+		176 [RSI-0x4] <-- RAX
+			Memory expression: RSI_20@L8 constructed
+			Expr:RSI_20@L8
+			Scalar evolution: {0x1df1ef39,+,0x4*l8,+,0x13880*l7}
+			Insert new array base (0x0) with location [RSI-0x4]_0 Base (0x0)
 
 	Identified read set: 
-		[RDX-0x4]_1 by 114  Base (R10_2)
-		[RAX-0x280]_0 by 116  Base (UDF)
 	Identified write set: 
-		[RSI]_0 from 106 120  Base (0x0)
-		[R8]_0 from 129  Base (0x0)
-		[R8+0x278]_0 from 131  Base (0x0)
+		[RSI-0x4]_0 from 176  Base (0x0)
 	Recognised array bases:
-		UDF r116 
-		0x0 w106 w120 w129 w131 
-		RSI_7 
-		R10_2 r114 
+		0x0 w176 
 
 	Step 2: Performing SCEV-based alias analysis on loop memory accesses
-		Check write: [RSI]_0 from 106 120  Base (0x0)
-		Found a write after write dependency. 
-		It could be resolved by privatizing memories :[RSI]_0 from 106 120  Base (0x0)
-		Check write: [R8]_0 from 129  Base (0x0)
-			vs: [RSI]_0 from 106 120  Base (0x0)
-			SCEV: {0x2a306b9,+,0x280*l13,+,0x15e00*l12} - {0x371aab9,+,0x10*l14}
-			rdiff: {-0xcea400,+,-0x10*l14,+,0x280*l13,+,0x15e00*l12}
-			Found stride GCD of 16 for distance 13542400, which is beyond loop boundary
-			vs: [R8+0x278]_0 from 131  Base (0x0)
-			SCEV: {0x2a306b9,+,0x280*l13,+,0x15e00*l12} - {0x2a30931,+,0x280*l13,+,0x15e00*l12}
-			rdiff: {-0x278,+,0x280*l13}
-			Found stride GCD of 640 could not divide distance 632, therefore no dependency
-		Check write: [R8+0x278]_0 from 131  Base (0x0)
-			vs: [RSI]_0 from 106 120  Base (0x0)
-			SCEV: {0x2a30931,+,0x280*l13,+,0x15e00*l12} - {0x371aab9,+,0x10*l14}
-			rdiff: {-0xcea188,+,-0x10*l14,+,0x280*l13,+,0x15e00*l12}
-			Found stride GCD of 16 could not divide distance 13541768, therefore no dependency
-			vs: [R8]_0 from 129  Base (0x0)
-			SCEV: {0x2a30931,+,0x280*l13,+,0x15e00*l12} - {0x2a306b9,+,0x280*l13,+,0x15e00*l12}
-			rdiff: {0x278,+,0x280*l13}
-			Found stride GCD of 640 could not divide distance 632, therefore no dependency
+		Check write: [RSI-0x4]_0 from 176  Base (0x0)
+
+This loop is a DOALL loop !
 ---------------------------------------------------------
-Loop 14 Alias Analysis
+Loop 17 Alias Analysis
 
 	Step 0: Extracting loop ranges in the loop nest:
-		Main Loop 14 range [57780921:16:57781545]@L14 trip count 40
-		Loop 12 range [44328121:89600:57678521]@L12 trip count 150
-		Loop 13 range [R8_3:640:(-0x280 + R10_2)]@L13 trip count 140
-		Loop 15 range [RAX_23:640:(0x18d80 + RDI_13@L14)]@L15 trip count 160
+		Main Loop 17 range [0:1:(-0x1 + [0x6c2359]_0)]@L17 trip count 0
+		Loop 18 range [0:1:(-0x1 + R15_9@L17)]@L18 trip count 0
 
 	Step 1: Analyse each memory access in the loop:
-		106 [RSI] <-- XMM2
-			Memory expression: RSI_13@L14 constructed
-			Expr:RSI_13@L14
-			Scalar evolution: {0x371aab9,+,0x10*l14}
-			Insert new array base (0x0) with location [RSI]_0 Base (0x0)
-		114 XMM0 <-- [RDX-0x4]
-			Memory expression: RDX_25@L15 constructed
-			Expr:RDX_25@L15
-			Scalar evolution: {-0x280 + R10_2,+,0x4*l15}
-			Insert new array base (R10_2) with location [RDX-0x4]_1 Base (R10_2)
-		116 XMM0 <-- [RAX-0x280]
-			Memory expression: RAX_39@L15 constructed
-			Expr:RAX_39@L15
-			Scalar evolution: {0,+,0x280*l15}
-			Insert new array base (UDF) with location [RAX-0x280]_0 Base (UDF)
-		120 [RSI] <-- XMM1
-			Memory expression: RSI_13@L14 constructed
-			Expr:RSI_13@L14
-			Scalar evolution: {0x371aab9,+,0x10*l14}
-			Found existing array base (0x0) with existing location [RSI]_0 from 106  Base (0x0)
+		158 R14 <-- [RBX+R15*8]
+			Memory expression: RBX_0 + R15_9@L17*0x8 constructed
+			Expr:RBX_0 + R15_9@L17*0x8
+			Scalar evolution: {RBX_0,+,0x8*l17}
+			Insert new array base (RBX_0) with location [RBX+R15*8]_0 Base (RBX_0)
+		170 [R14+RSI*4] <-- RAX
+			Memory expression: [RBX+R15*8]_0 + RSI_24@L18*0x4 constructed
+			Expr:[RBX+R15*8]_0 + RSI_24@L18*0x4
+			Scalar evolution: {[RBX+R15*8]_0,+,0x4*l18}
+			Insert new array base ([RBX+R15*8]_0) with location [R14+RSI*4]_0 Base ([RBX+R15*8]_0)
+		184 [R14+R15*4] <-- 0x1
+			Memory expression: [RBX+R15*8]_0 + R15_9@L17*0x4 constructed
+			Expr:[RBX+R15*8]_0 + R15_9@L17*0x4
+			Scalar evolution: {[RBX+R15*8]_0,+,0x4*l17}
+			Found existing array base ([RBX+R15*8]_0) with new location [R14+R15*4]_0 Base ([RBX+R15*8]_0)
 
 	Identified read set: 
-		[RDX-0x4]_1 by 114  Base (R10_2)
-		[RAX-0x280]_0 by 116  Base (UDF)
+		[RBX+R15*8]_0 by 158  Base (RBX_0)
 	Identified write set: 
-		[RSI]_0 from 106 120  Base (0x0)
+		[R14+RSI*4]_0 from 170  Base ([RBX+R15*8]_0)
+		[R14+R15*4]_0 from 184  Base ([RBX+R15*8]_0)
 	Recognised array bases:
-		UDF r116 
-		0x0 w106 w120 
-		R10_2 r114 
+		[RBX+R15*8]_0 w170 w184 
+		RBX_0 r158 
 
 	Step 2: Performing SCEV-based alias analysis on loop memory accesses
-		Check write: [RSI]_0 from 106 120  Base (0x0)
+		Check write: [R14+RSI*4]_0 from 170  Base ([RBX+R15*8]_0)
+		Found a write after write dependency. 
+		It could be resolved by privatizing memories :[R14+RSI*4]_0 from 170  Base ([RBX+R15*8]_0)
+		Check write: [R14+R15*4]_0 from 184  Base ([RBX+R15*8]_0)
+			vs: [R14+RSI*4]_0 from 170  Base ([RBX+R15*8]_0)
+			SCEV: {[RBX+R15*8]_0,+,0x4*l17} - {[RBX+R15*8]_0,+,0x4*l18}
+			rdiff: {0,+,-0x4*l18,+,0x4*l17}
+			Currently janus is not able to find the dependencies relation for this pair
+---------------------------------------------------------
+Loop 18 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 18 range [0:1:(-0x1 + R15_9@L17)]@L18 trip count 0
+		Loop 17 range [0:1:(-0x1 + [0x6c2359]_0)]@L17 trip count 0
+
+	Step 1: Analyse each memory access in the loop:
+		170 [R14+RSI*4] <-- RAX
+			Memory expression: [RBX+R15*8]_0 + RSI_24@L18*0x4 constructed
+			Expr:[RBX+R15*8]_0 + RSI_24@L18*0x4
+			Scalar evolution: {[RBX+R15*8]_0,+,0x4*l18}
+			Insert new array base ([RBX+R15*8]_0) with location [R14+RSI*4]_0 Base ([RBX+R15*8]_0)
+
+	Identified read set: 
+	Identified write set: 
+		[R14+RSI*4]_0 from 170  Base ([RBX+R15*8]_0)
+	Recognised array bases:
+		[RBX+R15*8]_0 w170 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+		Check write: [R14+RSI*4]_0 from 170  Base ([RBX+R15*8]_0)
+
+This loop is a DOALL loop !
+---------------------------------------------------------
+Loop 30 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 30 range [R13_0:1:1999]@L30 trip count 0
+		Loop 29 range [RBP_0:1:]@L29 trip count 0
+		Loop 31 range [RAX_16:8000:(0)]@L31 trip count 0
+		Loop 32 range [R12_3:1:(-0x1 + R8_2)]@L32 trip count 0
+		Loop 33 range [RAX_18:8000:(-0x1f40 + RSI_12)]@L33 trip count 0
+
+	Step 1: Analyse each memory access in the loop:
+		150 XMM1 <-- [RDI+RCX*4]
+			Memory expression: RDI_3 + R15_1*0x4 + R13_5@L30*0x4 constructed
+			Expr:RDI_3 + R15_1*0x4 + R13_5@L30*0x4
+			Scalar evolution: {RDI_3 + R15_1*0x4,+,0x4*l30,+,0x4*l29}
+			Insert new array base (RDI_3 + R15_1*0x4) with location [RDI+RCX*4]_1 Base (RDI_3 + R15_1*0x4)
+		152 XMM0 <-- [RDX]
+			Memory expression: RDX_22@L31 constructed
+			Expr:RDX_22@L31
+			Scalar evolution: {0x1cfdcb39,+,0x4*l31,+,0x1f40*l29}
+			Insert new array base (0x0) with location [RDX]_1 Base (0x0)
+		155 XMM0 <-- [RAX-0x1f40]
+			Memory expression: RAX_34@L31 constructed
+			Expr:RAX_34@L31
+			Scalar evolution: {0x1cfdcb39,+,0x1f40*l31,+,0x4*l30,+,0x4*l29}
+			Found existing array base (0x0) with new location [RAX-0x1f40]_0 Base (0x0)
+		159 [RDI+RCX*4] <-- XMM1
+			Memory expression: RDI_3 + R15_1*0x4 + R13_5@L30*0x4 constructed
+			Expr:RDI_3 + R15_1*0x4 + R13_5@L30*0x4
+			Scalar evolution: {RDI_3 + R15_1*0x4,+,0x4*l30,+,0x4*l29}
+			Insert new array base (RDI_3 + R15_1*0x4) with location [RDI+RCX*4]_0 Base (RDI_3 + R15_1*0x4)
+
+	Identified read set: 
+		[RDI+RCX*4]_1 by 150  Base (RDI_3 + R15_1*0x4)
+		[RDX]_1 by 152  Base (0x0)
+		[RAX-0x1f40]_0 by 155  Base (0x0)
+	Identified write set: 
+		[RDI+RCX*4]_0 from 159  Base (RDI_3 + R15_1*0x4)
+	Recognised array bases:
+		0x0 r152 r155 
+		RDI_3 + R15_1*0x4 r150 
+		RDI_3 + R15_1*0x4 w159 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+		Check write: [RDI+RCX*4]_0 from 159  Base (RDI_3 + R15_1*0x4)
 
 This loop is a DOALL loop with runtime array base check of 2
 ---------------------------------------------------------
-Loop 15 Alias Analysis
+Loop 31 Alias Analysis
 
 	Step 0: Extracting loop ranges in the loop nest:
-		Main Loop 15 range [RAX_23:640:(0x18d80 + RDI_13@L14)]@L15 trip count 160
-		Loop 12 range [44328121:89600:57678521]@L12 trip count 150
-		Loop 13 range [R8_3:640:(-0x280 + R10_2)]@L13 trip count 140
-		Loop 14 range [57780921:16:57781545]@L14 trip count 40
+		Main Loop 31 range [RAX_16:8000:(0)]@L31 trip count 0
+		Loop 29 range [RBP_0:1:]@L29 trip count 0
+		Loop 30 range [R13_0:1:1999]@L30 trip count 0
+		Loop 32 range [R12_3:1:(-0x1 + R8_2)]@L32 trip count 0
+		Loop 33 range [RAX_18:8000:(-0x1f40 + RSI_12)]@L33 trip count 0
 
 	Step 1: Analyse each memory access in the loop:
-		114 XMM0 <-- [RDX-0x4]
-			Memory expression: RDX_25@L15 constructed
-			Expr:RDX_25@L15
-			Scalar evolution: {-0x280 + R10_2,+,0x4*l15}
-			Insert new array base (R10_2) with location [RDX-0x4]_1 Base (R10_2)
-		116 XMM0 <-- [RAX-0x280]
-			Memory expression: RAX_39@L15 constructed
-			Expr:RAX_39@L15
-			Scalar evolution: {0,+,0x280*l15}
-			Insert new array base (UDF) with location [RAX-0x280]_0 Base (UDF)
+		152 XMM0 <-- [RDX]
+			Memory expression: RDX_22@L31 constructed
+			Expr:RDX_22@L31
+			Scalar evolution: {0x1cfdcb39,+,0x4*l31,+,0x1f40*l29}
+			Insert new array base (0x0) with location [RDX]_1 Base (0x0)
+		155 XMM0 <-- [RAX-0x1f40]
+			Memory expression: RAX_34@L31 constructed
+			Expr:RAX_34@L31
+			Scalar evolution: {0x1cfdcb39,+,0x1f40*l31,+,0x4*l30,+,0x4*l29}
+			Found existing array base (0x0) with new location [RAX-0x1f40]_0 Base (0x0)
+		159 [RDI+RCX*4] <-- XMM1
+			Memory expression: RDI_3 + R15_1*0x4 + R13_5@L30*0x4 constructed
+			Expr:RDI_3 + R15_1*0x4 + R13_5@L30*0x4
+			Scalar evolution: {RDI_3 + R15_1*0x4,+,0x4*l30,+,0x4*l29}
+			Insert new array base (RDI_3 + R15_1*0x4) with location [RDI+RCX*4]_0 Base (RDI_3 + R15_1*0x4)
 
 	Identified read set: 
-		[RDX-0x4]_1 by 114  Base (R10_2)
-		[RAX-0x280]_0 by 116  Base (UDF)
+		[RDX]_1 by 152  Base (0x0)
+		[RAX-0x1f40]_0 by 155  Base (0x0)
+	Identified write set: 
+		[RDI+RCX*4]_0 from 159  Base (RDI_3 + R15_1*0x4)
+	Recognised array bases:
+		0x0 r152 r155 
+		RDI_3 + R15_1*0x4 w159 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+		Check write: [RDI+RCX*4]_0 from 159  Base (RDI_3 + R15_1*0x4)
+		Found a write after write dependency. 
+		It could be resolved by privatizing memories :[RDI+RCX*4]_0 from 159  Base (RDI_3 + R15_1*0x4)
+---------------------------------------------------------
+Loop 33 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 33 range [RAX_18:8000:(-0x1f40 + RSI_12)]@L33 trip count 0
+		Loop 29 range [RBP_0:1:]@L29 trip count 0
+		Loop 30 range [R13_0:1:1999]@L30 trip count 0
+		Loop 31 range [RAX_16:8000:(0)]@L31 trip count 0
+		Loop 32 range [R12_3:1:(-0x1 + R8_2)]@L32 trip count 0
+
+	Step 1: Analyse each memory access in the loop:
+		183 XMM0 <-- [RDX]
+			Memory expression: RDX_25@L33 constructed
+			Expr:RDX_25@L33
+			Scalar evolution: {0x1cfdea79,+,0x4*l33,+,0x1f40*l29}
+			Insert new array base (0x0) with location [RDX]_0 Base (0x0)
+		186 XMM0 <-- [RAX-0x1f40]
+			Memory expression: RAX_37@L33 constructed
+			Expr:RAX_37@L33
+			Scalar evolution: {-0x1f40,+,0x1f40*l33,+,-0x1f40*l29}
+			Found existing array base (0x0) with new location [RAX-0x1f40]_1 Base (0x0)
+		190 [RCX] <-- XMM1
+			Memory expression: RCX_15@L32 constructed
+			Expr:RCX_15@L32
+			Scalar evolution: {0x1cfdea7d,+,0x4*l32,+,0x1f40*l29}
+			Found existing array base (0x0) with new location [RCX]_0 Base (0x0)
+
+	Identified read set: 
+		[RDX]_0 by 183  Base (0x0)
+		[RAX-0x1f40]_1 by 186  Base (0x0)
+	Identified write set: 
+		[RCX]_0 from 190  Base (0x0)
+	Recognised array bases:
+		0x0 r183 r186 w190 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+		Check write: [RCX]_0 from 190  Base (0x0)
+		Found a write after write dependency. 
+		It could be resolved by privatizing memories :[RCX]_0 from 190  Base (0x0)
+---------------------------------------------------------
+Loop 57 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 57 range [477994681:6000:486388681]@L57 trip count 1400
+		Loop 58 range [0:16:5984]@L58 trip count 375
+		Loop 59 range [460074681:5600:469029081]@L59 trip count 1600
+
+	Step 1: Analyse each memory access in the loop:
+		284 [R9+RDI] <-- XMM3
+			Memory expression: RDI_30@L58 + R9_11@L57 constructed
+			Expr:RDI_30@L58 + R9_11@L57
+			Scalar evolution: {0x1c7d9eb9,+,0x10*l58,+,0x1770*l57}
+			Insert new array base (0x0) with location [R9+RDI]_0 Base (0x0)
+		292 XMM0 <-- [RDX-0x4]
+			Memory expression: RDX_68@L59 constructed
+			Expr:RDX_68@L59
+			Scalar evolution: {0x1bf4e6b9,+,0x1900*l57,+,0x4*l59}
+			Found existing array base (0x0) with new location [RDX-0x4]_5 Base (0x0)
+		295 XMM0 <-- [RAX-0x15e0]
+			Memory expression: RAX_131@L59 constructed
+			Expr:RAX_131@L59
+			Scalar evolution: {0x1b6c2eb9,+,0x15e0*l59}
+			Found existing array base (0x0) with new location [RAX-0x15e0]_0 Base (0x0)
+		299 [R9+RDI] <-- XMM1
+			Memory expression: RDI_30@L58 + R9_11@L57 constructed
+			Expr:RDI_30@L58 + R9_11@L57
+			Scalar evolution: {0x1c7d9eb9,+,0x10*l58,+,0x1770*l57}
+			Found existing array base (0x0) with existing location [R9+RDI]_0 from 284  Base (0x0)
+
+	Identified read set: 
+		[RDX-0x4]_5 by 292  Base (0x0)
+		[RAX-0x15e0]_0 by 295  Base (0x0)
+	Identified write set: 
+		[R9+RDI]_0 from 284 299  Base (0x0)
+	Recognised array bases:
+		0x0 w284 w299 r292 r295 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+		Check write: [R9+RDI]_0 from 284 299  Base (0x0)
+			vs: [RDX-0x4]_5 by 292  Base (0x0)
+			SCEV: {0x1c7d9eb9,+,0x10*l58,+,0x1770*l57} - {0x1bf4e6b9,+,0x1900*l57,+,0x4*l59}
+			rdiff: {0x88b800,+,-0x1900*l57,+,-0x4*l59,+,0x10*l58,+,0x1770*l57}
+			Found stride GCD of 4 for distance 8960000, which is beyond loop boundary
+			vs: [RAX-0x15e0]_0 by 295  Base (0x0)
+			SCEV: {0x1c7d9eb9,+,0x10*l58,+,0x1770*l57} - {0x1b6c2eb9,+,0x15e0*l59}
+			rdiff: {0x1117000,+,-0x15e0*l59,+,0x10*l58,+,0x1770*l57}
+			Found stride GCD of 16 for distance 17920000, which is beyond loop boundary
+
+This loop is a DOALL loop !
+---------------------------------------------------------
+Loop 58 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 58 range [0:16:5984]@L58 trip count 375
+		Loop 57 range [477994681:6000:486388681]@L57 trip count 1400
+		Loop 59 range [460074681:5600:469029081]@L59 trip count 1600
+
+	Step 1: Analyse each memory access in the loop:
+		284 [R9+RDI] <-- XMM3
+			Memory expression: RDI_30@L58 + R9_11@L57 constructed
+			Expr:RDI_30@L58 + R9_11@L57
+			Scalar evolution: {0x1c7d9eb9,+,0x10*l58,+,0x1770*l57}
+			Insert new array base (0x0) with location [R9+RDI]_0 Base (0x0)
+		292 XMM0 <-- [RDX-0x4]
+			Memory expression: RDX_68@L59 constructed
+			Expr:RDX_68@L59
+			Scalar evolution: {0x1bf4e6b9,+,0x1900*l57,+,0x4*l59}
+			Found existing array base (0x0) with new location [RDX-0x4]_5 Base (0x0)
+		295 XMM0 <-- [RAX-0x15e0]
+			Memory expression: RAX_131@L59 constructed
+			Expr:RAX_131@L59
+			Scalar evolution: {0x1b6c2eb9,+,0x15e0*l59}
+			Found existing array base (0x0) with new location [RAX-0x15e0]_0 Base (0x0)
+		299 [R9+RDI] <-- XMM1
+			Memory expression: RDI_30@L58 + R9_11@L57 constructed
+			Expr:RDI_30@L58 + R9_11@L57
+			Scalar evolution: {0x1c7d9eb9,+,0x10*l58,+,0x1770*l57}
+			Found existing array base (0x0) with existing location [R9+RDI]_0 from 284  Base (0x0)
+
+	Identified read set: 
+		[RDX-0x4]_5 by 292  Base (0x0)
+		[RAX-0x15e0]_0 by 295  Base (0x0)
+	Identified write set: 
+		[R9+RDI]_0 from 284 299  Base (0x0)
+	Recognised array bases:
+		0x0 w284 w299 r292 r295 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+		Check write: [R9+RDI]_0 from 284 299  Base (0x0)
+			vs: [RDX-0x4]_5 by 292  Base (0x0)
+			SCEV: {0x1c7d9eb9,+,0x10*l58,+,0x1770*l57} - {0x1bf4e6b9,+,0x1900*l57,+,0x4*l59}
+			rdiff: {0x88b800,+,-0x1900*l57,+,-0x4*l59,+,0x10*l58,+,0x1770*l57}
+			Found stride GCD of 4 for distance 8960000, which is beyond loop boundary
+			vs: [RAX-0x15e0]_0 by 295  Base (0x0)
+			SCEV: {0x1c7d9eb9,+,0x10*l58,+,0x1770*l57} - {0x1b6c2eb9,+,0x15e0*l59}
+			rdiff: {0x1117000,+,-0x15e0*l59,+,0x10*l58,+,0x1770*l57}
+			Found stride GCD of 16 for distance 17920000, which is beyond loop boundary
+
+This loop is a DOALL loop !
+---------------------------------------------------------
+Loop 59 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 59 range [460074681:5600:469029081]@L59 trip count 1600
+		Loop 57 range [477994681:6000:486388681]@L57 trip count 1400
+		Loop 58 range [0:16:5984]@L58 trip count 375
+
+	Step 1: Analyse each memory access in the loop:
+		292 XMM0 <-- [RDX-0x4]
+			Memory expression: RDX_68@L59 constructed
+			Expr:RDX_68@L59
+			Scalar evolution: {0x1bf4e6b9,+,0x1900*l57,+,0x4*l59}
+			Insert new array base (0x0) with location [RDX-0x4]_5 Base (0x0)
+		295 XMM0 <-- [RAX-0x15e0]
+			Memory expression: RAX_131@L59 constructed
+			Expr:RAX_131@L59
+			Scalar evolution: {0x1b6c2eb9,+,0x15e0*l59}
+			Found existing array base (0x0) with new location [RAX-0x15e0]_0 Base (0x0)
+
+	Identified read set: 
+		[RDX-0x4]_5 by 292  Base (0x0)
+		[RAX-0x15e0]_0 by 295  Base (0x0)
 	Identified write set: 
 	Recognised array bases:
-		UDF r116 
-		R10_2 r114 
+		0x0 r292 r295 
 
 	Step 2: Performing SCEV-based alias analysis on loop memory accesses
 
 This loop is a DOALL loop !
 ---------------------------------------------------------
-Loop 26 Alias Analysis
+Loop 60 Alias Analysis
 
 	Step 0: Extracting loop ranges in the loop nest:
-		Main Loop 26 range [R10_1:1:1599]@L26 trip count 0
-		Loop 24 range [R9_4:1:1599]@L24 trip count 0
-		Loop 27 range [0:6400:8953600]@L27 trip count 1400
-		Loop 28 range [0:6400:8953600]@L28 trip count 1400
+		Main Loop 60 range [441034681:6800:450547881]@L60 trip count 1400
+		Loop 61 range [0:16:5584]@L61 trip count 350
+		Loop 62 range [450554681:6800:460747881]@L62 trip count 1500
 
 	Step 1: Analyse each memory access in the loop:
-		134 XMM0 <-- [R9+RSI]
-			Memory expression: RSI_11@L24 ? RAX_47@L27 constructed
-			Expr:RSI_11@L24 ? RAX_47@L27
-			Scalar evolution: {0x0,+,0x1900*l27,+,0x4*l24}
-			Insert new array base (0x0) with location [R9+RSI]_0 Base (0x0)
-		135 XMM0 <-- [RCX+RDX]
-			Memory expression: RDX_24@L26 ? RAX_47@L27 constructed
-			Expr:RDX_24@L26 ? RAX_47@L27
-			Scalar evolution: {0x4,+,0x1900*l27,+,0x4*l26,+,0x4*l24}
-			Found existing array base (0x0) with new location [RCX+RDX]_1 Base (0x0)
-		140 [RBX+RAX*4] <-- XMM1
-			Memory expression: RBX_2 + R11_1*0x4 + R10_4@L26*0x4 constructed
-			Expr:RBX_2 + R11_1*0x4 + R10_4@L26*0x4
-			Scalar evolution: {0x4 + RBX_2 + R11_1*0x4,+,0x4*l26,+,0x4*l24}
-			Insert new array base (0x4 + RBX_2 + R11_1*0x4) with location [RBX+RAX*4]_0 Base (0x4 + RBX_2 + R11_1*0x4)
-		147 XMM2 <-- [R9+RSI]
-			Memory expression: RAX_39@L28 ? RSI_11@L24 constructed
-			Expr:RAX_39@L28 ? RSI_11@L24
-			Scalar evolution: {0x0,+,0x1900*l28,+,0x4*l24}
-			Found existing array base (0x0) with new location [R9+RSI]_1 Base (0x0)
-		149 XMM0 <-- [RCX+RDX]
-			Memory expression: RAX_39@L28 ? RDX_24@L26 constructed
-			Expr:RAX_39@L28 ? RDX_24@L26
-			Scalar evolution: {0x4,+,0x1900*l28,+,0x4*l26,+,0x4*l24}
-			Found existing array base (0x0) with new location [RCX+RDX]_2 Base (0x0)
-		151 [RCX+RDX] <-- XMM0
-			Memory expression: RAX_39@L28 ? RDX_24@L26 constructed
-			Expr:RAX_39@L28 ? RDX_24@L26
-			Scalar evolution: {0x4,+,0x1900*l28,+,0x4*l26,+,0x4*l24}
-			Found existing array base (0x0) with existing location [RCX+RDX]_2 by 149  Base (0x0)
+		312 XMM1 <-- [R9+RDI]
+			Memory expression: RDI_32@L61 + R9_12@L60 constructed
+			Expr:RDI_32@L61 + R9_12@L60
+			Scalar evolution: {0x1a49a7b9,+,0x10*l61,+,0x1a90*l60}
+			Insert new array base (0x0) with location [R9+RDI]_4 Base (0x0)
+		317 [R9+RDI] <-- XMM1
+			Memory expression: RDI_32@L61 + R9_12@L60 constructed
+			Expr:RDI_32@L61 + R9_12@L60
+			Scalar evolution: {0x1a49a7b9,+,0x10*l61,+,0x1a90*l60}
+			Found existing array base (0x0) with existing location [R9+RDI]_4 by 312  Base (0x0)
+		321 XMM0 <-- [RDX-0x4]
+			Memory expression: RDX_71@L62 constructed
+			Expr:RDX_71@L62
+			Scalar evolution: {0x1c7d9eb9,+,0x4*l62,+,0x1770*l60}
+			Found existing array base (0x0) with new location [RDX-0x4]_6 Base (0x0)
+		323 XMM0 <-- [RAX-0x1a90]
+			Memory expression: RAX_134@L62 constructed
+			Expr:RAX_134@L62
+			Scalar evolution: {0x1adaeb39,+,0x1a90*l62}
+			Found existing array base (0x0) with new location [RAX-0x1a90]_0 Base (0x0)
+		327 [R9+RDI] <-- XMM1
+			Memory expression: RDI_32@L61 + R9_12@L60 constructed
+			Expr:RDI_32@L61 + R9_12@L60
+			Scalar evolution: {0x1a49a7b9,+,0x10*l61,+,0x1a90*l60}
+			Found existing array base (0x0) with existing location [R9+RDI]_4 by 312  from 317  Base (0x0)
 
 	Identified read set: 
-		[R9+RSI]_0 by 134  Base (0x0)
-		[RCX+RDX]_1 by 135  Base (0x0)
-		[R9+RSI]_1 by 147  Base (0x0)
-		[RCX+RDX]_2 by 149  from 151  Base (0x0)
+		[R9+RDI]_4 by 312  from 317 327  Base (0x0)
+		[RDX-0x4]_6 by 321  Base (0x0)
+		[RAX-0x1a90]_0 by 323  Base (0x0)
 	Identified write set: 
-		[RBX+RAX*4]_0 from 140  Base (0x4 + RBX_2 + R11_1*0x4)
-		[RCX+RDX]_2 by 149  from 151  Base (0x0)
+		[R9+RDI]_4 by 312  from 317 327  Base (0x0)
 	Recognised array bases:
-		0x0 r134 r135 r147 r149 w151 
-		0x4 + RBX_2 + R11_1*0x4 w140 
+		0x0 r312 w317 w327 r321 r323 
 
 	Step 2: Performing SCEV-based alias analysis on loop memory accesses
-		Check write: [RBX+RAX*4]_0 from 140  Base (0x4 + RBX_2 + R11_1*0x4)
-		Check write: [RCX+RDX]_2 by 149  from 151  Base (0x0)
-			vs: [R9+RSI]_0 by 134  Base (0x0)
-			SCEV: {0x4,+,0x1900*l28,+,0x4*l26,+,0x4*l24} - {0x0,+,0x1900*l27,+,0x4*l24}
-			rdiff: {0x4,+,-0x1900*l27,+,0x1900*l28,+,0x4*l26}
-			Found stride GCD of 4 for distance 4,therefore a dependency exists
-			vs: [RCX+RDX]_1 by 135  Base (0x0)
-			SCEV: {0x4,+,0x1900*l28,+,0x4*l26,+,0x4*l24} - {0x4,+,0x1900*l27,+,0x4*l26,+,0x4*l24}
-			rdiff: {0x0,+,-0x1900*l27,+,0x1900*l28,+,0x4*l26}
-			Found stride GCD of 4 for distance 0,therefore a dependency exists
-			vs: [R9+RSI]_1 by 147  Base (0x0)
-			SCEV: {0x4,+,0x1900*l28,+,0x4*l26,+,0x4*l24} - {0x0,+,0x1900*l28,+,0x4*l24}
-			rdiff: {0x4,+,0x1900*l28,+,0x4*l26}
-			Found stride GCD of 4 for distance 4,therefore a dependency exists
+		Check write: [R9+RDI]_4 by 312  from 317 327  Base (0x0)
+			vs: [RDX-0x4]_6 by 321  Base (0x0)
+			SCEV: {0x1a49a7b9,+,0x10*l61,+,0x1a90*l60} - {0x1c7d9eb9,+,0x4*l62,+,0x1770*l60}
+			rdiff: {-0x233f700,+,-0x4*l62,+,0x10*l61,+,0x1a90*l60,+,-0x1770*l60}
+			Found stride GCD of 4 for distance 36960000, which is beyond loop boundary
+			vs: [RAX-0x1a90]_0 by 323  Base (0x0)
+			SCEV: {0x1a49a7b9,+,0x10*l61,+,0x1a90*l60} - {0x1adaeb39,+,0x1a90*l62}
+			rdiff: {-0x914380,+,-0x1a90*l62,+,0x10*l61,+,0x1a90*l60}
+			Found stride GCD of 16 for distance 9520000, which is beyond loop boundary
+
+This loop is a DOALL loop !
 ---------------------------------------------------------
-Loop 27 Alias Analysis
+Loop 61 Alias Analysis
 
 	Step 0: Extracting loop ranges in the loop nest:
-		Main Loop 27 range [0:6400:8953600]@L27 trip count 1400
-		Loop 24 range [R9_4:1:1599]@L24 trip count 0
-		Loop 26 range [R10_1:1:1599]@L26 trip count 0
-		Loop 28 range [0:6400:8953600]@L28 trip count 1400
+		Main Loop 61 range [0:16:5584]@L61 trip count 350
+		Loop 60 range [441034681:6800:450547881]@L60 trip count 1400
+		Loop 62 range [450554681:6800:460747881]@L62 trip count 1500
 
 	Step 1: Analyse each memory access in the loop:
-		134 XMM0 <-- [R9+RSI]
-			Memory expression: RSI_11@L24 ? RAX_47@L27 constructed
-			Expr:RSI_11@L24 ? RAX_47@L27
-			Scalar evolution: {0x0,+,0x1900*l27,+,0x4*l24}
-			Insert new array base (0x0) with location [R9+RSI]_0 Base (0x0)
-		135 XMM0 <-- [RCX+RDX]
-			Memory expression: RDX_24@L26 ? RAX_47@L27 constructed
-			Expr:RDX_24@L26 ? RAX_47@L27
-			Scalar evolution: {0x4,+,0x1900*l27,+,0x4*l26,+,0x4*l24}
-			Found existing array base (0x0) with new location [RCX+RDX]_1 Base (0x0)
+		312 XMM1 <-- [R9+RDI]
+			Memory expression: RDI_32@L61 + R9_12@L60 constructed
+			Expr:RDI_32@L61 + R9_12@L60
+			Scalar evolution: {0x1a49a7b9,+,0x10*l61,+,0x1a90*l60}
+			Insert new array base (0x0) with location [R9+RDI]_4 Base (0x0)
+		317 [R9+RDI] <-- XMM1
+			Memory expression: RDI_32@L61 + R9_12@L60 constructed
+			Expr:RDI_32@L61 + R9_12@L60
+			Scalar evolution: {0x1a49a7b9,+,0x10*l61,+,0x1a90*l60}
+			Found existing array base (0x0) with existing location [R9+RDI]_4 by 312  Base (0x0)
+		321 XMM0 <-- [RDX-0x4]
+			Memory expression: RDX_71@L62 constructed
+			Expr:RDX_71@L62
+			Scalar evolution: {0x1c7d9eb9,+,0x4*l62,+,0x1770*l60}
+			Found existing array base (0x0) with new location [RDX-0x4]_6 Base (0x0)
+		323 XMM0 <-- [RAX-0x1a90]
+			Memory expression: RAX_134@L62 constructed
+			Expr:RAX_134@L62
+			Scalar evolution: {0x1adaeb39,+,0x1a90*l62}
+			Found existing array base (0x0) with new location [RAX-0x1a90]_0 Base (0x0)
+		327 [R9+RDI] <-- XMM1
+			Memory expression: RDI_32@L61 + R9_12@L60 constructed
+			Expr:RDI_32@L61 + R9_12@L60
+			Scalar evolution: {0x1a49a7b9,+,0x10*l61,+,0x1a90*l60}
+			Found existing array base (0x0) with existing location [R9+RDI]_4 by 312  from 317  Base (0x0)
 
 	Identified read set: 
-		[R9+RSI]_0 by 134  Base (0x0)
-		[RCX+RDX]_1 by 135  Base (0x0)
+		[R9+RDI]_4 by 312  from 317 327  Base (0x0)
+		[RDX-0x4]_6 by 321  Base (0x0)
+		[RAX-0x1a90]_0 by 323  Base (0x0)
+	Identified write set: 
+		[R9+RDI]_4 by 312  from 317 327  Base (0x0)
+	Recognised array bases:
+		0x0 r312 w317 w327 r321 r323 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+		Check write: [R9+RDI]_4 by 312  from 317 327  Base (0x0)
+			vs: [RDX-0x4]_6 by 321  Base (0x0)
+			SCEV: {0x1a49a7b9,+,0x10*l61,+,0x1a90*l60} - {0x1c7d9eb9,+,0x4*l62,+,0x1770*l60}
+			rdiff: {-0x233f700,+,-0x4*l62,+,0x10*l61,+,0x1a90*l60,+,-0x1770*l60}
+			Found stride GCD of 4 for distance 36960000, which is beyond loop boundary
+			vs: [RAX-0x1a90]_0 by 323  Base (0x0)
+			SCEV: {0x1a49a7b9,+,0x10*l61,+,0x1a90*l60} - {0x1adaeb39,+,0x1a90*l62}
+			rdiff: {-0x914380,+,-0x1a90*l62,+,0x10*l61,+,0x1a90*l60}
+			Found stride GCD of 16 for distance 9520000, which is beyond loop boundary
+
+This loop is a DOALL loop !
+---------------------------------------------------------
+Loop 62 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 62 range [450554681:6800:460747881]@L62 trip count 1500
+		Loop 60 range [441034681:6800:450547881]@L60 trip count 1400
+		Loop 61 range [0:16:5584]@L61 trip count 350
+
+	Step 1: Analyse each memory access in the loop:
+		321 XMM0 <-- [RDX-0x4]
+			Memory expression: RDX_71@L62 constructed
+			Expr:RDX_71@L62
+			Scalar evolution: {0x1c7d9eb9,+,0x4*l62,+,0x1770*l60}
+			Insert new array base (0x0) with location [RDX-0x4]_6 Base (0x0)
+		323 XMM0 <-- [RAX-0x1a90]
+			Memory expression: RAX_134@L62 constructed
+			Expr:RAX_134@L62
+			Scalar evolution: {0x1adaeb39,+,0x1a90*l62}
+			Found existing array base (0x0) with new location [RAX-0x1a90]_0 Base (0x0)
+
+	Identified read set: 
+		[RDX-0x4]_6 by 321  Base (0x0)
+		[RAX-0x1a90]_0 by 323  Base (0x0)
 	Identified write set: 
 	Recognised array bases:
-		0x0 r134 r135 
+		0x0 r321 r323 
 
 	Step 2: Performing SCEV-based alias analysis on loop memory accesses
 
 This loop is a DOALL loop !
 ---------------------------------------------------------
-Loop 28 Alias Analysis
+Loop 102 Alias Analysis
 
 	Step 0: Extracting loop ranges in the loop nest:
-		Main Loop 28 range [0:6400:8953600]@L28 trip count 1400
-		Loop 24 range [R9_4:1:1599]@L24 trip count 0
-		Loop 26 range [R10_1:1:1599]@L26 trip count 0
-		Loop 27 range [0:6400:8953600]@L27 trip count 1400
+		Main Loop 102 range [363274681:7600:376947081]@L102 trip count 1800
+		Loop 103 range [0:16:7584]@L103 trip count 475
+		Loop 104 range [412154681:7600:427347081]@L104 trip count 2000
 
 	Step 1: Analyse each memory access in the loop:
-		147 XMM2 <-- [R9+RSI]
-			Memory expression: RAX_39@L28 ? RSI_11@L24 constructed
-			Expr:RAX_39@L28 ? RSI_11@L24
-			Scalar evolution: {0x0,+,0x1900*l28,+,0x4*l24}
-			Insert new array base (0x0) with location [R9+RSI]_1 Base (0x0)
-		149 XMM0 <-- [RCX+RDX]
-			Memory expression: RAX_39@L28 ? RDX_24@L26 constructed
-			Expr:RAX_39@L28 ? RDX_24@L26
-			Scalar evolution: {0x4,+,0x1900*l28,+,0x4*l26,+,0x4*l24}
-			Found existing array base (0x0) with new location [RCX+RDX]_2 Base (0x0)
-		151 [RCX+RDX] <-- XMM0
-			Memory expression: RAX_39@L28 ? RDX_24@L26 constructed
-			Expr:RAX_39@L28 ? RDX_24@L26
-			Scalar evolution: {0x4,+,0x1900*l28,+,0x4*l26,+,0x4*l24}
-			Found existing array base (0x0) with existing location [RCX+RDX]_2 by 149  Base (0x0)
+		336 [R9+RSI] <-- XMM2
+			Memory expression: RSI_43@L103 + R9_7@L102 constructed
+			Expr:RSI_43@L103 + R9_7@L102
+			Scalar evolution: {0x15a721b9,+,0x10*l103,+,0x1db0*l102}
+			Insert new array base (0x0) with location [R9+RSI]_0 Base (0x0)
+		344 XMM0 <-- [RDX-0x4]
+			Memory expression: RDX_58@L104 constructed
+			Expr:RDX_58@L104
+			Scalar evolution: {0x1978ea39,+,0x4*l104,+,0x1db0*l102}
+			Found existing array base (0x0) with new location [RDX-0x4]_6 Base (0x0)
+		346 XMM0 <-- [RAX-0x1db0]
+			Memory expression: RAX_160@L104 constructed
+			Expr:RAX_160@L104
+			Scalar evolution: {0x1890fb39,+,0x1db0*l104}
+			Found existing array base (0x0) with new location [RAX-0x1db0]_0 Base (0x0)
+		350 [R9+RSI] <-- XMM1
+			Memory expression: RSI_43@L103 + R9_7@L102 constructed
+			Expr:RSI_43@L103 + R9_7@L102
+			Scalar evolution: {0x15a721b9,+,0x10*l103,+,0x1db0*l102}
+			Found existing array base (0x0) with existing location [R9+RSI]_0 from 336  Base (0x0)
 
 	Identified read set: 
-		[R9+RSI]_1 by 147  Base (0x0)
-		[RCX+RDX]_2 by 149  from 151  Base (0x0)
+		[RDX-0x4]_6 by 344  Base (0x0)
+		[RAX-0x1db0]_0 by 346  Base (0x0)
 	Identified write set: 
-		[RCX+RDX]_2 by 149  from 151  Base (0x0)
+		[R9+RSI]_0 from 336 350  Base (0x0)
 	Recognised array bases:
-		0x0 r147 r149 w151 
+		0x0 w336 w350 r344 r346 
 
 	Step 2: Performing SCEV-based alias analysis on loop memory accesses
-		Check write: [RCX+RDX]_2 by 149  from 151  Base (0x0)
-			vs: [R9+RSI]_1 by 147  Base (0x0)
-			SCEV: {0x4,+,0x1900*l28,+,0x4*l26,+,0x4*l24} - {0x0,+,0x1900*l28,+,0x4*l24}
-			rdiff: {0x4,+,0x1900*l28,+,0x4*l26}
-			Found stride GCD of 4 for distance 4,therefore a dependency exists
+		Check write: [R9+RSI]_0 from 336 350  Base (0x0)
+			vs: [RDX-0x4]_6 by 344  Base (0x0)
+			SCEV: {0x15a721b9,+,0x10*l103,+,0x1db0*l102} - {0x1978ea39,+,0x4*l104,+,0x1db0*l102}
+			rdiff: {-0x3d1c880,+,-0x4*l104,+,0x10*l103,+,0x1db0*l102,+,-0x1db0*l102}
+			Found stride GCD of 4 for distance 64080000, which is beyond loop boundary
+			vs: [RAX-0x1db0]_0 by 346  Base (0x0)
+			SCEV: {0x15a721b9,+,0x10*l103,+,0x1db0*l102} - {0x1890fb39,+,0x1db0*l104}
+			rdiff: {-0x2e9d980,+,-0x1db0*l104,+,0x10*l103,+,0x1db0*l102}
+			Found stride GCD of 16 for distance 48880000, which is beyond loop boundary
+
+This loop is a DOALL loop !
+---------------------------------------------------------
+Loop 103 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 103 range [0:16:7584]@L103 trip count 475
+		Loop 102 range [363274681:7600:376947081]@L102 trip count 1800
+		Loop 104 range [412154681:7600:427347081]@L104 trip count 2000
+
+	Step 1: Analyse each memory access in the loop:
+		336 [R9+RSI] <-- XMM2
+			Memory expression: RSI_43@L103 + R9_7@L102 constructed
+			Expr:RSI_43@L103 + R9_7@L102
+			Scalar evolution: {0x15a721b9,+,0x10*l103,+,0x1db0*l102}
+			Insert new array base (0x0) with location [R9+RSI]_0 Base (0x0)
+		344 XMM0 <-- [RDX-0x4]
+			Memory expression: RDX_58@L104 constructed
+			Expr:RDX_58@L104
+			Scalar evolution: {0x1978ea39,+,0x4*l104,+,0x1db0*l102}
+			Found existing array base (0x0) with new location [RDX-0x4]_6 Base (0x0)
+		346 XMM0 <-- [RAX-0x1db0]
+			Memory expression: RAX_160@L104 constructed
+			Expr:RAX_160@L104
+			Scalar evolution: {0x1890fb39,+,0x1db0*l104}
+			Found existing array base (0x0) with new location [RAX-0x1db0]_0 Base (0x0)
+		350 [R9+RSI] <-- XMM1
+			Memory expression: RSI_43@L103 + R9_7@L102 constructed
+			Expr:RSI_43@L103 + R9_7@L102
+			Scalar evolution: {0x15a721b9,+,0x10*l103,+,0x1db0*l102}
+			Found existing array base (0x0) with existing location [R9+RSI]_0 from 336  Base (0x0)
+
+	Identified read set: 
+		[RDX-0x4]_6 by 344  Base (0x0)
+		[RAX-0x1db0]_0 by 346  Base (0x0)
+	Identified write set: 
+		[R9+RSI]_0 from 336 350  Base (0x0)
+	Recognised array bases:
+		0x0 w336 w350 r344 r346 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+		Check write: [R9+RSI]_0 from 336 350  Base (0x0)
+			vs: [RDX-0x4]_6 by 344  Base (0x0)
+			SCEV: {0x15a721b9,+,0x10*l103,+,0x1db0*l102} - {0x1978ea39,+,0x4*l104,+,0x1db0*l102}
+			rdiff: {-0x3d1c880,+,-0x4*l104,+,0x10*l103,+,0x1db0*l102,+,-0x1db0*l102}
+			Found stride GCD of 4 for distance 64080000, which is beyond loop boundary
+			vs: [RAX-0x1db0]_0 by 346  Base (0x0)
+			SCEV: {0x15a721b9,+,0x10*l103,+,0x1db0*l102} - {0x1890fb39,+,0x1db0*l104}
+			rdiff: {-0x2e9d980,+,-0x1db0*l104,+,0x10*l103,+,0x1db0*l102}
+			Found stride GCD of 16 for distance 48880000, which is beyond loop boundary
+
+This loop is a DOALL loop !
+---------------------------------------------------------
+Loop 104 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 104 range [412154681:7600:427347081]@L104 trip count 2000
+		Loop 102 range [363274681:7600:376947081]@L102 trip count 1800
+		Loop 103 range [0:16:7584]@L103 trip count 475
+
+	Step 1: Analyse each memory access in the loop:
+		344 XMM0 <-- [RDX-0x4]
+			Memory expression: RDX_58@L104 constructed
+			Expr:RDX_58@L104
+			Scalar evolution: {0x1978ea39,+,0x4*l104,+,0x1db0*l102}
+			Insert new array base (0x0) with location [RDX-0x4]_6 Base (0x0)
+		346 XMM0 <-- [RAX-0x1db0]
+			Memory expression: RAX_160@L104 constructed
+			Expr:RAX_160@L104
+			Scalar evolution: {0x1890fb39,+,0x1db0*l104}
+			Found existing array base (0x0) with new location [RAX-0x1db0]_0 Base (0x0)
+
+	Identified read set: 
+		[RDX-0x4]_6 by 344  Base (0x0)
+		[RAX-0x1db0]_0 by 346  Base (0x0)
+	Identified write set: 
+	Recognised array bases:
+		0x0 r344 r346 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+
+This loop is a DOALL loop !
+---------------------------------------------------------
+Loop 105 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 105 range [347314681:8400:363266281]@L105 trip count 1900
+		Loop 106 range [0:16:8384]@L106 trip count 525
+		Loop 107 range [376954681:8400:395426281]@L107 trip count 2200
+
+	Step 1: Analyse each memory access in the loop:
+		364 [R9+RSI] <-- XMM2
+			Memory expression: RSI_39@L106 + R9_8@L105 constructed
+			Expr:RSI_39@L106 + R9_8@L105
+			Scalar evolution: {0x14b399f9,+,0x10*l106,+,0x20d0*l105}
+			Insert new array base (0x0) with location [R9+RSI]_2 Base (0x0)
+		371 XMM0 <-- [RDX-0x4]
+			Memory expression: RDX_61@L107 constructed
+			Expr:RDX_61@L107
+			Scalar evolution: {0x1791dab9,+,0x4*l107,+,0x2260*l105}
+			Found existing array base (0x0) with new location [RDX-0x4]_7 Base (0x0)
+		373 XMM0 <-- [RAX-0x20d0]
+			Memory expression: RAX_163@L107 constructed
+			Expr:RAX_163@L107
+			Scalar evolution: {0x1677df39,+,0x20d0*l107}
+			Found existing array base (0x0) with new location [RAX-0x20d0]_0 Base (0x0)
+		377 [R9+RSI] <-- XMM1
+			Memory expression: RSI_39@L106 + R9_8@L105 constructed
+			Expr:RSI_39@L106 + R9_8@L105
+			Scalar evolution: {0x14b399f9,+,0x10*l106,+,0x20d0*l105}
+			Found existing array base (0x0) with existing location [R9+RSI]_2 from 364  Base (0x0)
+
+	Identified read set: 
+		[RDX-0x4]_7 by 371  Base (0x0)
+		[RAX-0x20d0]_0 by 373  Base (0x0)
+	Identified write set: 
+		[R9+RSI]_2 from 364 377  Base (0x0)
+	Recognised array bases:
+		0x0 w364 w377 r371 r373 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+		Check write: [R9+RSI]_2 from 364 377  Base (0x0)
+			vs: [RDX-0x4]_7 by 371  Base (0x0)
+			SCEV: {0x14b399f9,+,0x10*l106,+,0x20d0*l105} - {0x1791dab9,+,0x4*l107,+,0x2260*l105}
+			rdiff: {-0x2de40c0,+,-0x4*l107,+,0x10*l106,+,0x20d0*l105,+,-0x2260*l105}
+			Found stride GCD of 4 for distance 48120000, which is beyond loop boundary
+			vs: [RAX-0x20d0]_0 by 373  Base (0x0)
+			SCEV: {0x14b399f9,+,0x10*l106,+,0x20d0*l105} - {0x1677df39,+,0x20d0*l107}
+			rdiff: {-0x1c44540,+,-0x20d0*l107,+,0x10*l106,+,0x20d0*l105}
+			Found stride GCD of 16 for distance 29640000, which is beyond loop boundary
+
+This loop is a DOALL loop !
+---------------------------------------------------------
+Loop 106 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 106 range [0:16:8384]@L106 trip count 525
+		Loop 105 range [347314681:8400:363266281]@L105 trip count 1900
+		Loop 107 range [376954681:8400:395426281]@L107 trip count 2200
+
+	Step 1: Analyse each memory access in the loop:
+		364 [R9+RSI] <-- XMM2
+			Memory expression: RSI_39@L106 + R9_8@L105 constructed
+			Expr:RSI_39@L106 + R9_8@L105
+			Scalar evolution: {0x14b399f9,+,0x10*l106,+,0x20d0*l105}
+			Insert new array base (0x0) with location [R9+RSI]_2 Base (0x0)
+		371 XMM0 <-- [RDX-0x4]
+			Memory expression: RDX_61@L107 constructed
+			Expr:RDX_61@L107
+			Scalar evolution: {0x1791dab9,+,0x4*l107,+,0x2260*l105}
+			Found existing array base (0x0) with new location [RDX-0x4]_7 Base (0x0)
+		373 XMM0 <-- [RAX-0x20d0]
+			Memory expression: RAX_163@L107 constructed
+			Expr:RAX_163@L107
+			Scalar evolution: {0x1677df39,+,0x20d0*l107}
+			Found existing array base (0x0) with new location [RAX-0x20d0]_0 Base (0x0)
+		377 [R9+RSI] <-- XMM1
+			Memory expression: RSI_39@L106 + R9_8@L105 constructed
+			Expr:RSI_39@L106 + R9_8@L105
+			Scalar evolution: {0x14b399f9,+,0x10*l106,+,0x20d0*l105}
+			Found existing array base (0x0) with existing location [R9+RSI]_2 from 364  Base (0x0)
+
+	Identified read set: 
+		[RDX-0x4]_7 by 371  Base (0x0)
+		[RAX-0x20d0]_0 by 373  Base (0x0)
+	Identified write set: 
+		[R9+RSI]_2 from 364 377  Base (0x0)
+	Recognised array bases:
+		0x0 w364 w377 r371 r373 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+		Check write: [R9+RSI]_2 from 364 377  Base (0x0)
+			vs: [RDX-0x4]_7 by 371  Base (0x0)
+			SCEV: {0x14b399f9,+,0x10*l106,+,0x20d0*l105} - {0x1791dab9,+,0x4*l107,+,0x2260*l105}
+			rdiff: {-0x2de40c0,+,-0x4*l107,+,0x10*l106,+,0x20d0*l105,+,-0x2260*l105}
+			Found stride GCD of 4 for distance 48120000, which is beyond loop boundary
+			vs: [RAX-0x20d0]_0 by 373  Base (0x0)
+			SCEV: {0x14b399f9,+,0x10*l106,+,0x20d0*l105} - {0x1677df39,+,0x20d0*l107}
+			rdiff: {-0x1c44540,+,-0x20d0*l107,+,0x10*l106,+,0x20d0*l105}
+			Found stride GCD of 16 for distance 29640000, which is beyond loop boundary
+
+This loop is a DOALL loop !
+---------------------------------------------------------
+Loop 107 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 107 range [376954681:8400:395426281]@L107 trip count 2200
+		Loop 105 range [347314681:8400:363266281]@L105 trip count 1900
+		Loop 106 range [0:16:8384]@L106 trip count 525
+
+	Step 1: Analyse each memory access in the loop:
+		371 XMM0 <-- [RDX-0x4]
+			Memory expression: RDX_61@L107 constructed
+			Expr:RDX_61@L107
+			Scalar evolution: {0x1791dab9,+,0x4*l107,+,0x2260*l105}
+			Insert new array base (0x0) with location [RDX-0x4]_7 Base (0x0)
+		373 XMM0 <-- [RAX-0x20d0]
+			Memory expression: RAX_163@L107 constructed
+			Expr:RAX_163@L107
+			Scalar evolution: {0x1677df39,+,0x20d0*l107}
+			Found existing array base (0x0) with new location [RAX-0x20d0]_0 Base (0x0)
+
+	Identified read set: 
+		[RDX-0x4]_7 by 371  Base (0x0)
+		[RAX-0x20d0]_0 by 373  Base (0x0)
+	Identified write set: 
+	Recognised array bases:
+		0x0 r371 r373 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+
+This loop is a DOALL loop !
+---------------------------------------------------------
+Loop 138 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 138 range [239383801:358400:]@L138 trip count 0
+		Loop 139 range [R12_2:1:(-0x1 + [RSP]_0)]@L139 trip count 0
+		Loop 140 range [347313401:4:347313397]@L140 trip count 0
+		Loop 141 range [0:1280:(-0x500 + RSI_25)]@L141 trip count 0
+
+	Step 1: Analyse each memory access in the loop:
+		204 XMM0 <-- [RDX]
+			Memory expression: RDX_39@L141 constructed
+			Expr:RDX_39@L141
+			Scalar evolution: {RCX_17,+,0x4*l141}
+			Insert new array base (RCX_17) with location [RDX]_0 Base (RCX_17)
+		207 XMM0 <-- [RAX-0x500]
+			Memory expression: RAX_84@L141 constructed
+			Expr:RAX_84@L141
+			Scalar evolution: {0x0,+,0x500*l141}
+			Insert new array base (0x0) with location [RAX-0x500]_0 Base (0x0)
+		211 [RDI] <-- XMM1
+			Memory expression: RDI_14@L140 constructed
+			Expr:RDI_14@L140
+			Scalar evolution: {0x14b394f9,+,0x4*l140}
+			Found existing array base (0x0) with new location [RDI]_0 Base (0x0)
+
+	Identified read set: 
+		[RDX]_0 by 204  Base (RCX_17)
+		[RAX-0x500]_0 by 207  Base (0x0)
+	Identified write set: 
+		[RDI]_0 from 211  Base (0x0)
+	Recognised array bases:
+		0x0 r207 w211 
+		RCX_17 r204 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+		Check write: [RDI]_0 from 211  Base (0x0)
+		Found a write after write dependency. 
+		It could be resolved by privatizing memories :[RDI]_0 from 211  Base (0x0)
+---------------------------------------------------------
+Loop 140 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 140 range [347313401:4:347313397]@L140 trip count 0
+		Loop 138 range [239383801:358400:]@L138 trip count 0
+		Loop 139 range [R12_2:1:(-0x1 + [RSP]_0)]@L139 trip count 0
+		Loop 141 range [0:1280:(-0x500 + RSI_25)]@L141 trip count 0
+
+	Step 1: Analyse each memory access in the loop:
+		204 XMM0 <-- [RDX]
+			Memory expression: RDX_39@L141 constructed
+			Expr:RDX_39@L141
+			Scalar evolution: {RCX_17,+,0x4*l141}
+			Insert new array base (RCX_17) with location [RDX]_0 Base (RCX_17)
+		207 XMM0 <-- [RAX-0x500]
+			Memory expression: RAX_84@L141 constructed
+			Expr:RAX_84@L141
+			Scalar evolution: {0x0,+,0x500*l141}
+			Insert new array base (0x0) with location [RAX-0x500]_0 Base (0x0)
+		211 [RDI] <-- XMM1
+			Memory expression: RDI_14@L140 constructed
+			Expr:RDI_14@L140
+			Scalar evolution: {0x14b394f9,+,0x4*l140}
+			Found existing array base (0x0) with new location [RDI]_0 Base (0x0)
+
+	Identified read set: 
+		[RDX]_0 by 204  Base (RCX_17)
+		[RAX-0x500]_0 by 207  Base (0x0)
+	Identified write set: 
+		[RDI]_0 from 211  Base (0x0)
+	Recognised array bases:
+		0x0 r207 w211 
+		RCX_17 r204 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+		Check write: [RDI]_0 from 211  Base (0x0)
+			vs: [RAX-0x500]_0 by 207  Base (0x0)
+			SCEV: {0x14b394f9,+,0x4*l140} - {0x0,+,0x500*l141}
+			rdiff: {0x14b394f9,+,-0x500*l141,+,0x4*l140}
+			Found stride GCD of 4 could not divide distance 347313401, therefore no dependency
+
+This loop is a DOALL loop with runtime array base check of 1
+---------------------------------------------------------
+Loop 141 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 141 range [0:1280:(-0x500 + RSI_25)]@L141 trip count 0
+		Loop 138 range [239383801:358400:]@L138 trip count 0
+		Loop 139 range [R12_2:1:(-0x1 + [RSP]_0)]@L139 trip count 0
+		Loop 140 range [347313401:4:347313397]@L140 trip count 0
+
+	Step 1: Analyse each memory access in the loop:
+		204 XMM0 <-- [RDX]
+			Memory expression: RDX_39@L141 constructed
+			Expr:RDX_39@L141
+			Scalar evolution: {RCX_17,+,0x4*l141}
+			Insert new array base (RCX_17) with location [RDX]_0 Base (RCX_17)
+		207 XMM0 <-- [RAX-0x500]
+			Memory expression: RAX_84@L141 constructed
+			Expr:RAX_84@L141
+			Scalar evolution: {0x0,+,0x500*l141}
+			Insert new array base (0x0) with location [RAX-0x500]_0 Base (0x0)
+
+	Identified read set: 
+		[RDX]_0 by 204  Base (RCX_17)
+		[RAX-0x500]_0 by 207  Base (0x0)
+	Identified write set: 
+	Recognised array bases:
+		0x0 r207 
+		RCX_17 r204 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+
+This loop is a DOALL loop !
+---------------------------------------------------------
+Loop 165 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 165 range [RSI_11:1:1599]@L165 trip count 0
+		Loop 162 range [RBP_1:1:1599]@L162 trip count 0
+		Loop 166 range [0:6400:8953600]@L166 trip count 1400
+
+	Step 1: Analyse each memory access in the loop:
+		231 XMM0 <-- [R11+R13]
+			Memory expression: R15_0 ? RAX_84@L166 ? R13_4@L162 constructed
+			Expr:R15_0 ? RAX_84@L166 ? R13_4@L162
+			Scalar evolution: {R15_0,+,0x1900*l166,+,0x4*l162}
+			Insert new array base (R15_0) with location [R11+R13]_0 Base (R15_0)
+		232 XMM0 <-- [RCX+RDX]
+			Memory expression: R14_0 ? RAX_84@L166 ? RDX_45@L165 constructed
+			Expr:R14_0 ? RAX_84@L166 ? RDX_45@L165
+			Scalar evolution: {0x4 + R14_0,+,0x1900*l166,+,0x4*l165,+,0x4*l162}
+			Insert new array base (R14_0) with location [RCX+RDX]_2 Base (R14_0)
+		237 [RBX+RAX*4] <-- XMM1
+			Memory expression: RBX_2 + RDI_10*0x4 + RSI_24@L165*0x4 constructed
+			Expr:RBX_2 + RDI_10*0x4 + RSI_24@L165*0x4
+			Scalar evolution: {0x4 + RBX_2 + RDI_10*0x4,+,0x4*l165,+,0x4*l162}
+			Insert new array base (0x4 + RBX_2 + RDI_10*0x4) with location [RBX+RAX*4]_0 Base (0x4 + RBX_2 + RDI_10*0x4)
+		244 [RCX+RDX] <-- XMM0
+			Memory expression: R14_0 ? RAX_85 ? RDX_45@L165 constructed
+			Expr:R14_0 ? RAX_85 ? RDX_45@L165
+			Scalar evolution: {0x4 + R14_0 + RAX_85,+,0x4*l165,+,0x4*l162}
+			Insert new array base (0x4 + R14_0 + RAX_85) with location [RCX+RDX]_0 Base (0x4 + R14_0 + RAX_85)
+		249 XMM2 <-- [R11+R13]
+			Memory expression: R15_0 ? RAX_85 ? R13_4@L162 constructed
+			Expr:R15_0 ? RAX_85 ? R13_4@L162
+			Scalar evolution: {R15_0 + RAX_85,+,0x4*l162}
+			Insert new array base (R15_0 + RAX_85) with location [R11+R13]_1 Base (R15_0 + RAX_85)
+		251 XMM0 <-- [RCX+RDX]
+			Memory expression: R14_0 ? RAX_85 ? RDX_45@L165 constructed
+			Expr:R14_0 ? RAX_85 ? RDX_45@L165
+			Scalar evolution: {0x4 + R14_0 + RAX_85,+,0x4*l165,+,0x4*l162}
+			Insert new array base (0x4 + R14_0 + RAX_85) with location [RCX+RDX]_3 Base (0x4 + R14_0 + RAX_85)
+		258 [RCX+RDX] <-- 0x42f60000
+			Memory expression: R14_0 ? RAX_85 ? RDX_45@L165 constructed
+			Expr:R14_0 ? RAX_85 ? RDX_45@L165
+			Scalar evolution: {0x4 + R14_0 + RAX_85,+,0x4*l165,+,0x4*l162}
+			Insert new array base (0x4 + R14_0 + RAX_85) with location [RCX+RDX]_1 Base (0x4 + R14_0 + RAX_85)
+
+	Identified read set: 
+		[R11+R13]_0 by 231  Base (R15_0)
+		[RCX+RDX]_2 by 232  Base (R14_0)
+		[R11+R13]_1 by 249  Base (R15_0 + RAX_85)
+		[RCX+RDX]_3 by 251  Base (0x4 + R14_0 + RAX_85)
+	Identified write set: 
+		[RBX+RAX*4]_0 from 237  Base (0x4 + RBX_2 + RDI_10*0x4)
+		[RCX+RDX]_0 from 244  Base (0x4 + R14_0 + RAX_85)
+		[RCX+RDX]_1 from 258  Base (0x4 + R14_0 + RAX_85)
+	Recognised array bases:
+		R14_0 r232 
+		R15_0 r231 
+		0x4 + RBX_2 + RDI_10*0x4 w237 
+		0x4 + R14_0 + RAX_85 w244 
+		R15_0 + RAX_85 r249 
+		0x4 + R14_0 + RAX_85 r251 
+		0x4 + R14_0 + RAX_85 w258 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+		Check write: [RBX+RAX*4]_0 from 237  Base (0x4 + RBX_2 + RDI_10*0x4)
+		Check write: [RCX+RDX]_0 from 244  Base (0x4 + R14_0 + RAX_85)
+		Check write: [RCX+RDX]_1 from 258  Base (0x4 + R14_0 + RAX_85)
+
+This loop is a DOALL loop with runtime array base check of 18
+---------------------------------------------------------
+Loop 166 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 166 range [0:6400:8953600]@L166 trip count 1400
+		Loop 162 range [RBP_1:1:1599]@L162 trip count 0
+		Loop 165 range [RSI_11:1:1599]@L165 trip count 0
+
+	Step 1: Analyse each memory access in the loop:
+		231 XMM0 <-- [R11+R13]
+			Memory expression: R15_0 ? RAX_84@L166 ? R13_4@L162 constructed
+			Expr:R15_0 ? RAX_84@L166 ? R13_4@L162
+			Scalar evolution: {R15_0,+,0x1900*l166,+,0x4*l162}
+			Insert new array base (R15_0) with location [R11+R13]_0 Base (R15_0)
+		232 XMM0 <-- [RCX+RDX]
+			Memory expression: R14_0 ? RAX_84@L166 ? RDX_45@L165 constructed
+			Expr:R14_0 ? RAX_84@L166 ? RDX_45@L165
+			Scalar evolution: {0x4 + R14_0,+,0x1900*l166,+,0x4*l165,+,0x4*l162}
+			Insert new array base (R14_0) with location [RCX+RDX]_2 Base (R14_0)
+
+	Identified read set: 
+		[R11+R13]_0 by 231  Base (R15_0)
+		[RCX+RDX]_2 by 232  Base (R14_0)
+	Identified write set: 
+	Recognised array bases:
+		R14_0 r232 
+		R15_0 r231 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+
+This loop is a DOALL loop !
+---------------------------------------------------------
+Loop 195 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 195 range [0:4:-4]@L195 trip count 0
+		Loop 196 range [0:8:11192]@L196 trip count 1400
+
+	Step 1: Analyse each memory access in the loop:
+		249 RDI <-- [R14+RAX]
+			Memory expression: R14_0 + RAX_109@L196 constructed
+			Expr:R14_0 + RAX_109@L196
+			Scalar evolution: {R14_0,+,0x8*l196}
+			Insert new array base (R14_0) with location [R14+RAX]_1 Base (R14_0)
+		250 RDX <-- [R12+RAX]
+			Memory expression: R12_0 + RAX_109@L196 constructed
+			Expr:R12_0 + RAX_109@L196
+			Scalar evolution: {R12_0,+,0x8*l196}
+			Insert new array base (R12_0) with location [R12+RAX]_1 Base (R12_0)
+		253 XMM0 <-- [RDI+R15]
+			Memory expression: [R14+RAX]_1 + R15_9 constructed
+			Expr:[R14+RAX]_1 + R15_9
+			Scalar evolution: {[R14+RAX]_1 + R15_9}
+			Insert new array base ([R14+RAX]_1 + R15_9) with location [RDI+R15]_0 Base ([R14+RAX]_1 + R15_9)
+		254 XMM0 <-- [RDX+RSI]
+			Memory expression: [R12+RAX]_1 + RSI_28@L195 constructed
+			Expr:[R12+RAX]_1 + RSI_28@L195
+			Scalar evolution: {[R12+RAX]_1,+,0x4*l195}
+			Insert new array base ([R12+RAX]_1) with location [RDX+RSI]_0 Base ([R12+RAX]_1)
+		257 [RBX+RSI] <-- XMM1
+			Memory expression: RBX_3 + RSI_28@L195 constructed
+			Expr:RBX_3 + RSI_28@L195
+			Scalar evolution: {RBX_3,+,0x4*l195}
+			Insert new array base (RBX_3) with location [RBX+RSI]_0 Base (RBX_3)
+		264 [RDX] <-- XMM0
+			Memory expression: [R12+RAX]_2 + RSI_28@L195 constructed
+			Expr:[R12+RAX]_2 + RSI_28@L195
+			Scalar evolution: {[R12+RAX]_2,+,0x4*l195}
+			Insert new array base ([R12+RAX]_2) with location [RDX]_0 Base ([R12+RAX]_2)
+		267 RDI <-- [R14+RAX]
+			Memory expression: 0x8 ? R14_0 ? RAX_55 ? RAX_110 constructed
+			Expr:0x8 ? R14_0 ? RAX_55 ? RAX_110
+			Scalar evolution: {0x8 + R14_0 + RAX_55 + RAX_110}
+			Insert new array base (0x8 + R14_0 + RAX_55 + RAX_110) with location [R14+RAX]_2 Base (0x8 + R14_0 + RAX_55 + RAX_110)
+		269 RDX <-- [R12+RAX]
+			Memory expression: 0x8 ? R12_0 ? RAX_55 ? RAX_110 constructed
+			Expr:0x8 ? R12_0 ? RAX_55 ? RAX_110
+			Scalar evolution: {0x8 + R12_0 + RAX_55 + RAX_110}
+			Insert new array base (0x8 + R12_0 + RAX_55 + RAX_110) with location [R12+RAX]_2 Base (0x8 + R12_0 + RAX_55 + RAX_110)
+		270 XMM2 <-- [RDI+R15]
+			Memory expression: [R14+RAX]_2 + R15_9 constructed
+			Expr:[R14+RAX]_2 + R15_9
+			Scalar evolution: {[R14+RAX]_2 + R15_9}
+			Insert new array base ([R14+RAX]_2 + R15_9) with location [RDI+R15]_1 Base ([R14+RAX]_2 + R15_9)
+		272 XMM0 <-- [RDX]
+			Memory expression: [R12+RAX]_2 + RSI_28@L195 constructed
+			Expr:[R12+RAX]_2 + RSI_28@L195
+			Scalar evolution: {[R12+RAX]_2,+,0x4*l195}
+			Found existing array base ([R12+RAX]_2) with existing location [RDX]_0 from 264  Base ([R12+RAX]_2)
+		279 [RDX] <-- 0x42f60000
+			Memory expression: [R12+RAX]_2 + RSI_28@L195 constructed
+			Expr:[R12+RAX]_2 + RSI_28@L195
+			Scalar evolution: {[R12+RAX]_2,+,0x4*l195}
+			Found existing array base ([R12+RAX]_2) with existing location [RDX]_0 by 272  from 264  Base ([R12+RAX]_2)
+
+	Identified read set: 
+		[R14+RAX]_1 by 249  Base (R14_0)
+		[R12+RAX]_1 by 250  Base (R12_0)
+		[RDI+R15]_0 by 253  Base ([R14+RAX]_1 + R15_9)
+		[RDX+RSI]_0 by 254  Base ([R12+RAX]_1)
+		[RDX]_0 by 272  from 264 279  Base ([R12+RAX]_2)
+		[R14+RAX]_2 by 267  Base (0x8 + R14_0 + RAX_55 + RAX_110)
+		[R12+RAX]_2 by 269  Base (0x8 + R12_0 + RAX_55 + RAX_110)
+		[RDI+R15]_1 by 270  Base ([R14+RAX]_2 + R15_9)
+	Identified write set: 
+		[RBX+RSI]_0 from 257  Base (RBX_3)
+		[RDX]_0 by 272  from 264 279  Base ([R12+RAX]_2)
+	Recognised array bases:
+		[R12+RAX]_1 r254 
+		[R12+RAX]_2 r272 w264 w279 
+		R12_0 r250 
+		R14_0 r249 
+		RBX_3 w257 
+		[R14+RAX]_1 + R15_9 r253 
+		0x8 + R14_0 + RAX_55 + RAX_110 r267 
+		0x8 + R12_0 + RAX_55 + RAX_110 r269 
+		[R14+RAX]_2 + R15_9 r270 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+		Check write: [RBX+RSI]_0 from 257  Base (RBX_3)
+		Check write: [RDX]_0 by 272  from 264 279  Base ([R12+RAX]_2)
+
+This loop is a DOALL loop with runtime array base check of 16
+---------------------------------------------------------
+Loop 196 Alias Analysis
+
+	Step 0: Extracting loop ranges in the loop nest:
+		Main Loop 196 range [0:8:11192]@L196 trip count 1400
+		Loop 195 range [0:4:-4]@L195 trip count 0
+
+	Step 1: Analyse each memory access in the loop:
+		249 RDI <-- [R14+RAX]
+			Memory expression: R14_0 + RAX_109@L196 constructed
+			Expr:R14_0 + RAX_109@L196
+			Scalar evolution: {R14_0,+,0x8*l196}
+			Insert new array base (R14_0) with location [R14+RAX]_1 Base (R14_0)
+		250 RDX <-- [R12+RAX]
+			Memory expression: R12_0 + RAX_109@L196 constructed
+			Expr:R12_0 + RAX_109@L196
+			Scalar evolution: {R12_0,+,0x8*l196}
+			Insert new array base (R12_0) with location [R12+RAX]_1 Base (R12_0)
+		253 XMM0 <-- [RDI+R15]
+			Memory expression: [R14+RAX]_1 + R15_9 constructed
+			Expr:[R14+RAX]_1 + R15_9
+			Scalar evolution: {[R14+RAX]_1 + R15_9}
+			Insert new array base ([R14+RAX]_1 + R15_9) with location [RDI+R15]_0 Base ([R14+RAX]_1 + R15_9)
+		254 XMM0 <-- [RDX+RSI]
+			Memory expression: [R12+RAX]_1 + RSI_28@L195 constructed
+			Expr:[R12+RAX]_1 + RSI_28@L195
+			Scalar evolution: {[R12+RAX]_1,+,0x4*l195}
+			Insert new array base ([R12+RAX]_1) with location [RDX+RSI]_0 Base ([R12+RAX]_1)
+
+	Identified read set: 
+		[R14+RAX]_1 by 249  Base (R14_0)
+		[R12+RAX]_1 by 250  Base (R12_0)
+		[RDI+R15]_0 by 253  Base ([R14+RAX]_1 + R15_9)
+		[RDX+RSI]_0 by 254  Base ([R12+RAX]_1)
+	Identified write set: 
+	Recognised array bases:
+		[R12+RAX]_1 r254 
+		R12_0 r250 
+		R14_0 r249 
+		[R14+RAX]_1 + R15_9 r253 
+
+	Step 2: Performing SCEV-based alias analysis on loop memory accesses
+
+This loop is a DOALL loop !

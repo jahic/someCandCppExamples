@@ -1,0 +1,628 @@
+Found executable LoopIntensiveOperationsInC
+[1;31mRewrite Schedule for Parallelisation not found - falling back to slow path[0m
+Running loop coverage profiler.........
+Start.
+		--- sum=2200200000.
+		--- sum=200010000.
+	- computationKernelPolybenchCholesky...COMPLETE.
+		--- sum=2200200000.
+		--- sum=200010000.
+	- computationKernelPolybenchCholeskyD...COMPLETE.
+		--- sum=22020000.000000.
+		--- sum=-1624395.785872.
+	- computationKernelPolybenchLu...COMPLETE.
+		--- sum array1=11565000.000000.
+		--- sum array2=12336000.000000.
+		--- sum array3=12334000.000000.
+		--- sum array4=13107000.000000.
+		--- sum array5=13107000.000000.
+		--- sum array1=629342482938.397217.
+		--- sum array2=44574352400.000000.
+		--- sum array3=12342900.000000.
+		--- sum array4=13107000.000000.
+		--- sum array5=5500782619657000.000000.
+	- computationKernelPolybench2mm...COMPLETE.
+		--- sum array1=18829000.000000.
+		--- sum array2=20919000.000000.
+		--- sum array3=23012000.000000.
+		--- sum array4=25431000.000000.
+		--- sum array5=18829000.000000.
+		--- sum array6=21966000.000000.
+		--- sum array1=753414045535400.000000.
+		--- sum array2=20927000.000000.
+		--- sum array3=22986000.000000.
+		--- sum array4=25431000.000000.
+		--- sum array5=476760574731000.000000.
+		--- sum array6=266008260000.000000.
+	- computationKernelPolybench3mm...COMPLETE.
+		--- sum sum=1770.000000.
+		--- sum C4=566400.000000.
+		--- sum A=121856000.000000.
+		--- sum sum=5097600.000000.
+		--- sum C4=566800.000000.
+		--- sum A=215685120000.000000.
+	- computationKernelPolybenchDoitgen...COMPLETE.
+		--- sum array1=12336000.000000.
+		--- sum array2=14096000.000000.
+		--- sum array3=12336000.000000.
+		--- sum array1=6120759.428811.
+		--- sum array2=5468526104633.609375.
+		--- sum array3=-27212711.585962.
+	- computationKernelPolybenchGramschmidt---COMPLETE.
+		--- computationKernelPolybenchGramschmidtD.
+		--- sum array1=12336000.000000.
+		--- sum array2=14096000.000000.
+		--- sum array3=12336000.000000.
+		--- sum array1=6120759.428811.
+		--- sum array2=5468526104633.609375.
+		--- sum array3=-27212711.585962.
+	- computationKernelPolybenchGramschmidtD---COMPLETE.
+		--- sum sum=38510.000000.
+		--- sum x_tislov=38510.000000.
+		--- sum L_tislov=269570000.000000.
+		--- sum b_tislov=1010100.000000.
+		--- sum x_tislov=-1367800.000000.
+		--- sum L_tislov=266371942.000000.
+	- computationKernelPolybenchTislov---COMPLETE.
+		--- sum array1_generic=560.000000.
+		--- sum array2_generic=560.000000.
+		--- computationKernelGenericLoop1D2A computing complete.
+		--- sum array1_generic=155044.793678.
+		--- sum array2_generic=4530.000000.
+	- computationKernelGenericLoop1D2A---COMPLETE.
+		--- sum sum=560.000000.
+		--- sum sum=560.000000.
+		--- sum array1_generic=155044.793678.
+		--- sum array2_generic=4530.000000.
+	- computationKernelGenericLoop1D2AD---COMPLETE.
+		--- sum array1=56000.000000.
+		--- sum array2=56000.000000.
+		--- sum array1_generic=453000.000000.
+		--- sum array2_generic=50833683.529556.
+	- computationKernelGenericLoop2D2A---COMPLETE.
+		--- sum array1=56000.000000.
+		--- sum array2=56000.000000.
+		--- sum array1_generic=453000.000000.
+		--- sum array2_generic=50833683.529556.
+	- computationKernelGenericLoop2D2AD---COMPLETE.
+		--- sum A=4600000.000000.
+		--- sum A=4600000.000000.
+		--- sum array1_generic=29500000.000000.
+		--- sum array2_generic=484000000.000000.
+	- computationKernelGenericLoop3D2A---COMPLETE.
+Exit.
+LoopIntensiveOperationsInC contains 1708 loops for coverage analysis
+--------------------------------------------------
+Janus Dynamic Loop Coverage- Sample-based Profiling - Results:
+Total Loops found: 1708
+      id  fraction(%)   invocation    iteration   inaccurate         function:
+       3         0.22            1        20000            0 computationKernelPolybenchCholesky: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:18 + 0
+       4         0.22        19989     99945000            0 computationKernelPolybenchCholesky: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:945 + 26
+       5         0.11            1        20000            0 computationKernelPolybenchCholesky: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1142 + 0
+       6         0.10        20000    100000000            0 computationKernelPolybenchCholesky: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:948 + 0
+       7         1.33            1        20000            0 computationKernelPolybenchCholesky: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:31 + 16
+       8         1.31        20000    200010000            0 computationKernelPolybenchCholesky: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:31 + 24
+       9         0.11            1        20000            0 computationKernelPolybenchCholesky: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:31 + 7
+      10         0.11        20000    100000000            0 computationKernelPolybenchCholesky: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1141 + 14
+      12         0.01            1        20000            0 computationKernelPolybenchCholeskyD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:911 + 5
+      13         0.22            1        20000            0 computationKernelPolybenchCholeskyD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:913 + 5
+      14         0.22        19989     99945000            0 computationKernelPolybenchCholeskyD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:994 + 27
+      15         0.10            1        20000            0 computationKernelPolybenchCholeskyD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1117 + 0
+      16         0.10        20000    100000000            0 computationKernelPolybenchCholeskyD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:997 + 0
+      17         1.34            1        20000            0 computationKernelPolybenchCholeskyD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:69 + 0
+      18         1.32        20000    200010000            0 computationKernelPolybenchCholeskyD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:69 + 8
+      19         0.11            1        20000            0 computationKernelPolybenchCholeskyD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1117 + 0
+      20         0.11        20000    100000000            0 computationKernelPolybenchCholeskyD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:69 + 0
+      21         0.00            1        20000            0 computationKernelPolybenchCholeskyD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:88 + 0
+      22         0.00           11        55000            0 computationKernelPolybenchCholeskyD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:994 + 26
+      23         0.01            1         2000            0 computationKernelPolybenchLu: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:96 + 0
+      24         0.01         1989      3978000            1 computationKernelPolybenchLu: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:99 + 68
+      25         0.00            1         2000            0 computationKernelPolybenchLu: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+      26         0.00         2000      4000000            0 computationKernelPolybenchLu: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 30
+      27         0.01            1         2000            0 computationKernelPolybenchLu: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:109 + 0
+      28         0.01         2000      1000000            0 computationKernelPolybenchLu: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:109 + 42
+      29         7.01            1         2000            0 computationKernelPolybenchLu: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:107 + 18
+      30         3.23         2000      2001000            0 computationKernelPolybenchLu: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:107 + 57
+      31         3.15      1999000   1333333000            1 computationKernelPolybenchLu: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:121 + 5
+      32         3.78         1999      1999000            0 computationKernelPolybenchLu: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:111 + 17
+      33         3.62      1997001   1331334000            0 computationKernelPolybenchLu: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:112 + 2
+      35         0.00            1         2000            0 computationKernelPolybenchLu: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:959 + 34
+      36         0.00         2000      4000000            0 computationKernelPolybenchLu: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 13
+      37         0.00            1         1400            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:135 + 0
+      38         0.00         1389      2083500            1 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:150 + 68
+      39         0.00            1         1400            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+      40         0.00         1400      2100000            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 23
+      41         0.00            1         1400            0 computationKernelPolybench2mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 29
+      42         0.00         1389      2222400            1 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 69
+      43         0.00            1         1400            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+      44         0.00         1400      2240000            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 30
+      45         0.00            1         1600            0 computationKernelPolybench2mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 29
+      46         0.00         1589      2224600            1 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 69
+      47         0.00            1         1600            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+      48         0.00         1600      2240000            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 30
+      49         0.00            1         1400            0 computationKernelPolybench2mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 29
+      50         0.00         1389      2361300            1 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 69
+      51         0.00            1         1400            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+      52         0.00         1400      2380000            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 30
+      53         0.00            1         1400            0 computationKernelPolybench2mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 33
+      54         0.00         1389      2361300            1 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 69
+      55         0.00            1         1400            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+      56         0.00         1400      2380000            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 30
+      57         4.39            1         1400            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:198 + 0
+      58         4.39         1400       525000            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 0
+      59         4.34       525000    840000000            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:198 + 0
+      60         5.81            1         1400            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:194 + 26
+      61         5.81         1400       490000            0 computationKernelPolybench2mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 0
+      62         5.76       490000    735000000            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:210 + 0
+      63         0.00            1         1400            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:206 + 5
+      64         0.00         1400      2100000            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 13
+      65         0.00            1         1400            0 computationKernelPolybench2mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+      66         0.00         1400      2240000            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 13
+      67         0.00            1         1600            0 computationKernelPolybench2mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+      68         0.00         1600      2240000            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 13
+      69         0.00            1         1400            0 computationKernelPolybench2mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+      70         0.00         1400      2380000            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 13
+      71         0.00            1         1400            0 computationKernelPolybench2mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+      72         0.00         1400      2380000            0 computationKernelPolybench2mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 13
+      78         0.01            1         1800            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:235 + 0
+      79         0.01         1789      3399100            1 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:244 + 68
+      80         0.00            1         1800            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+      81         0.00         1800      3420000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 30
+      82         0.01            1         2000            0 computationKernelPolybench3mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 29
+      83         0.01         1989      3779100            1 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 69
+      84         0.00            1         2000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+      85         0.00         2000      3800000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 30
+      86         0.01            1         1900            0 computationKernelPolybench3mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 29
+      87         0.01         1889      4155800            1 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 69
+      88         0.00            1         1900            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+      89         0.00         1900      4180000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 30
+      90         0.01            1         2200            0 computationKernelPolybench3mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 29
+      91         0.01         2189      4596900            1 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 69
+      92         0.00            1         2200            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+      93         0.00         2200      4620000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 34
+      94         0.01            1         1800            0 computationKernelPolybench3mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+      95         0.01         1789      3399100            1 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:280 + 60
+      96         0.00            1         1800            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+      97         0.00         1800      3420000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 23
+      98         0.00            1         1900            0 computationKernelPolybench3mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+      99         0.00         1889      3966900            1 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:289 + 60
+     100         0.00            1         1900            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+     101         0.00         1900      3990000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 30
+     102        13.87            1         1800            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:301 + 0
+     103        13.87         1800       855000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 0
+     104        13.74       855000   1710000000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:301 + 0
+     105        17.78            1         1900            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:309 + 0
+     106        17.78         1900       997500            0 computationKernelPolybench3mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 0
+     107        17.64       997500   2194500000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:309 + 0
+     108         0.01            1         1800            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:306 + 5
+     109         0.01         1800      3420000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 13
+     110         0.01            1         2000            0 computationKernelPolybench3mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+     111         0.01         2000      3800000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 13
+     112         0.01            1         1900            0 computationKernelPolybench3mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+     113         0.01         1900      4180000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 13
+     114         0.01            1         2200            0 computationKernelPolybench3mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+     115         0.01         2200      4620000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 13
+     116         0.00            1         1800            0 computationKernelPolybench3mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+     117         0.00         1800      3420000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 13
+     118         0.00            1         1900            0 computationKernelPolybench3mm: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+     119         0.00         1900      3990000            0 computationKernelPolybench3mm: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 13
+     127         0.00            1          320            0 computationKernelPolybenchDoitgen: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:937 + 18
+     128         0.00            1          320            0 computationKernelPolybenchDoitgen: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 29
+     132         0.04            1          300            0 computationKernelPolybenchDoitgen: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+     133         0.04          300        84000            0 computationKernelPolybenchDoitgen: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:979 + 0
+     134         0.03        80920     25894400            1 computationKernelPolybenchDoitgen: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 13
+     135         0.03            1          300            0 computationKernelPolybenchDoitgen: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:972 + 24
+     136         0.03          300        84000            0 computationKernelPolybenchDoitgen: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:972 + 42
+     137         0.03        84000     26880000            0 computationKernelPolybenchDoitgen: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:972 + 49
+     138        13.16            1          300            0 computationKernelPolybenchDoitgen: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:374 + 21
+     139        13.16          300        84000            0 computationKernelPolybenchDoitgen: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:375 + 0
+     140        13.14        84000     26880000            0 computationKernelPolybenchDoitgen: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:377 + 0
+     141        12.20     26880000   8601600000            0 computationKernelPolybenchDoitgen: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:377 + 15
+     145         0.03            1          300            0 computationKernelPolybenchDoitgen: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1189 + 0
+     146         0.03          300        84000            0 computationKernelPolybenchDoitgen: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1178 + 0
+     147         0.03        84000     26880000            0 computationKernelPolybenchDoitgen: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1178 + 8
+     149         0.00         3080       985600            0 computationKernelPolybenchDoitgen: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:959 + 10
+     150         0.00            1         1400            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:400 + 0
+     151         0.00         1389      2222400            1 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:406 + 73
+     152         0.00            1         1400            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+     153         0.00         1400      2240000            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 30
+     154         0.00            1         1600            0 computationKernelPolybenchGramschmidt: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 29
+     155         0.00         1589      2542400            1 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 69
+     156         0.00            1         1600            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+     157         0.00         1600      2560000            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 30
+     158         0.00            1         1400            0 computationKernelPolybenchGramschmidt: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 29
+     159         0.00         1389      2222400            1 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 69
+     160         0.00            1         1400            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+     161         0.00         1400      2240000            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 30
+     162        17.01            1         1600            0 computationKernelPolybenchGramschmidt: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 25
+     163         0.02         1600      2240000            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:466 + 10
+     164         0.01         1600      2240000            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 0
+     165        16.98         1599      1279200            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:452 + 17
+     166         8.11      1279200   1790880000            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:452 + 17
+     167         8.64      1279200   1790880000            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:455 + 2
+     168         0.00           11        17600            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:452 + 8
+     171         0.00            1         1400            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:443 + 44
+     172         0.00         1400      2240000            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 16
+     173         0.00            1         1600            0 computationKernelPolybenchGramschmidt: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+     174         0.00         1600      2560000            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 13
+     175         0.00            1         1400            0 computationKernelPolybenchGramschmidt: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+     176         0.00         1400      2240000            0 computationKernelPolybenchGramschmidt: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 13
+     177         0.00            1         1400            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:911 + 5
+     178         0.00            1         1400            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:913 + 6
+     179         0.00         1389      2222400            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:913 + 79
+     180         0.00            1         1400            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1017 + 12
+     181         0.00         1400      2240000            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1017 + 19
+     182         0.00            1         1600            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:911 + 5
+     183         0.00            1         1600            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:913 + 7
+     184         0.00         1589      2542400            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:913 + 80
+     185         0.00            1         1600            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1017 + 12
+     186         0.00         1600      2560000            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1017 + 19
+     187         0.00            1         1400            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:911 + 5
+     188         0.00            1         1400            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:913 + 7
+     189         0.00         1389      2222400            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:913 + 80
+     190         0.00            1         1400            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1017 + 12
+     191         0.00         1400      2240000            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1017 + 19
+     192        16.24            1         1600            1 computationKernelPolybenchGramschmidtD: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 25
+     193         0.02         1600      2240000            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1017 + 0
+     194         0.01         1600      2240000            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1017 + 0
+     195        16.21         1599      1279200            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:555 + 13
+     196         7.57      1279200   1790880000            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:555 + 13
+     197         8.42      1279200   1790880000            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:558 + 2
+     198         0.00            1         1400            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:539 + 13
+     199         0.00         1400      2240000            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:539 + 29
+     200         0.00            1         1600            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1099 + 0
+     201         0.00         1600      2560000            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1099 + 4
+     202         0.00            1         1400            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1099 + 0
+     203         0.00         1400      2240000            0 computationKernelPolybenchGramschmidtD: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 3
+     204         0.00            1         1400            0 computationKernelPolybenchGramschmidtD: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 0
+     205         0.00            1         1600            1 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:596 + 6
+     206         0.00            1         1400            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:598 + 0
+     208         0.00           11        17600            0 computationKernelPolybenchGramschmidtD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1017 + 21
+     214         0.10            1         7000            0 computationKernelPolybenchTislov: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 29
+     215         0.10         6989     48923000            1 computationKernelPolybenchTislov: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:962 + 17
+     216         0.08            1         7000            0 computationKernelPolybenchTislov: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 12
+     217         0.08         7000     49000000            0 computationKernelPolybenchTislov: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 36
+     218         0.00            1         1400            0 computationKernelPolybenchTislov: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:644 + 0
+     219         0.00         1397       244650            0 computationKernelPolybenchTislov: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:642 + 29
+     220         0.00            1         7000            0 computationKernelPolybenchTislov: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:639 + 14
+     222         0.09            1         7000            0 computationKernelPolybenchTislov: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+     223         0.09         7000     49000000            0 computationKernelPolybenchTislov: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1178 + 20
+     225         0.00            1          100            0 computationKernelGenericLoop1D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:660 + 0
+     227         0.00            1          100            0 computationKernelGenericLoop1D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:672 + 0
+     230         0.00            1          100            0 computationKernelGenericLoop1D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1166 + 0
+     238         0.00            1          100            0 computationKernelGenericLoop1D2AD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1087 + 0
+     239         0.00            1          100            0 computationKernelGenericLoop2D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:745 + 0
+     243         0.00            1          100            0 computationKernelGenericLoop2D2A: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 29
+     245         0.00            1          100            0 computationKernelGenericLoop2D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 9
+     246         0.00          100        10000            0 computationKernelGenericLoop2D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:957 + 27
+     247         0.29            1          100            0 computationKernelGenericLoop2D2A: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 5
+     248         0.29          100        10000            0 computationKernelGenericLoop2D2A: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 25
+     249         0.29         9900       495000            1 computationKernelGenericLoop2D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:771 + 2
+     250         0.26       495000     49500000            0 computationKernelGenericLoop2D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:771 + 2
+     251         0.00            1          100            0 computationKernelGenericLoop2D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:765 + 13
+     252         0.00          100        10000            0 computationKernelGenericLoop2D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1176 + 13
+     258         0.00            1          100            0 computationKernelGenericLoop2D2AD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:913 + 6
+     259         0.00           89         8900            1 computationKernelGenericLoop2D2AD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:913 + 79
+     263         0.00            1          100            0 computationKernelGenericLoop2D2AD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:913 + 7
+     267         0.24            1          100            0 computationKernelGenericLoop2D2AD: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 5
+     268         0.24          100        10000            0 computationKernelGenericLoop2D2AD: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+     269         0.24         9900       495000            1 computationKernelGenericLoop2D2AD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:824 + 2
+     270         0.22       495000     49500000            0 computationKernelGenericLoop2D2AD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:824 + 2
+     276         0.00           11         1100            0 computationKernelGenericLoop2D2AD: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1019 + 10
+     277         0.00            1          100            0 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:846 + 0
+     278         0.00          100        10000            0 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:979 + 0
+     279         0.00         8900       890000            1 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:846 + 13
+     280         0.00            1          100            0 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:972 + 17
+     281         0.00          100        10000            0 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:972 + 35
+     282         0.00        10000      1000000            0 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:972 + 46
+     283         0.00            1          100            0 computationKernelGenericLoop3D2A: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 22
+     284         0.00          100        10000            0 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:979 + 0
+     285         0.00         8900       890000            1 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:972 + 13
+     286         0.00            1          100            0 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:972 + 17
+     287         0.00          100        10000            0 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:972 + 28
+     288         0.00        10000      1000000            0 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:972 + 44
+     289         0.00            1          100            0 computationKernelGenericLoop3D2A: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 29
+     290         0.00          100        10000            0 computationKernelGenericLoop3D2A: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 39
+     291         0.00        10000       250000            0 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:972 + 11
+     292         0.00            1          100            0 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1189 + 0
+     293         0.00          100        10000            0 computationKernelGenericLoop3D2A: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 0
+     294         0.00        10000      1000000            0 computationKernelGenericLoop3D2A: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 17
+     295         0.00            1          100            0 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1189 + 0
+     296         0.00          100        10000            0 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1191 + 0
+     297         0.00        10000      1000000            0 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1191 + 9
+     298         0.00         1100       110000            0 computationKernelGenericLoop3D2A: /usr/include/x86_64-linux-gnu/bits/stdio2.h:104 + 10
+     299         0.00         1100       110000            0 computationKernelGenericLoop3D2A: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:976 + 10
+     348         0.00            1           24            0    __libc_start_main: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 1139
+     354         0.00            1            2            0      __libc_csu_init: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 3431
+     355         0.00            1            2            0      __libc_csu_fini: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 3515
+     443         0.00            1            2            0  __run_exit_handlers: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 56483
+     444         0.00            2            2            0  __run_exit_handlers: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 56516
+     445         0.00            1            2            1  __run_exit_handlers: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 56551
+     446         0.00            1            1            0  __run_exit_handlers: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 57024
+     497         0.00            1            3            0          _IO_cleanup: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 85421
+     545         0.00        24413        24413            0          _int_malloc: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 115265
+     546         0.00            1           31            0          _int_malloc: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 116699
+     845         0.01        84000       756000            0 __memcpy_avx_unaligned_erms: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 288023
+     849         0.01        84000       756000            0 __memmove_avx_unaligned_erms: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 288023
+     862        98.28          931         7238            0 __memset_avx2_unaligned_erms: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 290592
+     864         0.00            6           15            0 intel_check_word_isra_0: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 291763
+     865         0.00           12           81            1 intel_check_word_isra_0: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 291860
+     869         0.00            3            3            0 handle_intel_constprop_1: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 292518
+     916         0.00            1            1            0      __tunables_init: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 308155
+     917         0.00            0           61            1      __tunables_init: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 308155
+     919         0.00           10           10            1      __tunables_init: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 308286
+    1157         0.00           68          884            0        __printf_fp_l: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 404209
+    1159         0.00           68          525            0        __printf_fp_l: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 406131
+    1160         0.00           68          476            0        __printf_fp_l: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 406236
+    1161         0.00          338          338            1        __printf_fp_l: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 406478
+    1162         0.01           65            0            0        __printf_fp_l: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 406965
+    1173         0.00           68         1001            0        __printf_fp_l: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 410214
+    1175         0.00           65          934            0        __printf_fp_l: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 410991
+    1391       100.00            0            0            0       _dl_new_object: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 502670
+    1404         0.00            1            4            0 _dl_important_hwcaps: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 510430
+    1648         0.00            0            0            0 __deregister_frame_info_bases: /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c:1203 + 582233
+--------------------------------------------------
+ 
+[0;32mLoop coverage profiling complete.[0m
+ 
+Running Janus Plan tool for automatic profiling....
+	7 1.33 20000
+	8 1.31 10000
+	17 1.34 20000
+	18 1.32 10000
+	29 7.01 2000
+	30 3.23 1000
+	31 3.15 667
+	32 3.78 1000
+	33 3.62 666
+	57 4.39 1400
+	58 4.39 375
+	59 4.34 1600
+	60 5.81 1400
+	61 5.81 350
+	62 5.76 1500
+	102 13.87 1800
+	103 13.87 475
+	104 13.74 2000
+	105 17.78 1900
+	106 17.78 525
+	107 17.64 2200
+	138 13.16 300
+	139 13.16 280
+	140 13.14 320
+	141 12.2 320
+	162 17.01 1600
+	165 16.98 800
+	166 8.11 1400
+	167 8.64 1400
+	192 16.24 1600
+	195 16.21 800
+	196 7.57 1400
+	197 8.42 1400
+
+Calling Janus Planner on loop 7 with coverage %1.33 ave iter 20000 in function computationKernelPolybenchCholesky
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 52.5
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 8 with coverage %1.31 ave iter 10000 in function computationKernelPolybenchCholesky
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 101
+total iteration: 5150
+Average memory instructions per iteration: 1
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 17 with coverage %1.34 ave iter 20000 in function computationKernelPolybenchCholeskyD
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 54.5
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 18 with coverage %1.32 ave iter 10000 in function computationKernelPolybenchCholeskyD
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 101
+total iteration: 5150
+Average memory instructions per iteration: 1
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 29 with coverage %7.01 ave iter 2000 in function computationKernelPolybenchLu
+No profiling mode specified. Default mode is DOALL_LIGHT
+Loop 29: cross memory dependences found - not a dynamic DOALL
+
+Calling Janus Planner on loop 30 with coverage %3.23 ave iter 1000 in function computationKernelPolybenchLu
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 0
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 31 with coverage %3.15 ave iter 667 in function computationKernelPolybenchLu
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 194951
+total iteration: 9761750
+Average memory instructions per iteration: 3
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 32 with coverage %3.78 ave iter 1000 in function computationKernelPolybenchLu
+No profiling mode specified. Default mode is DOALL_LIGHT
+Loop 32: cross memory dependences found - not a dynamic DOALL
+
+Calling Janus Planner on loop 33 with coverage %3.62 ave iter 666 in function computationKernelPolybenchLu
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 5151
+total iteration: 176850
+Average memory instructions per iteration: 3
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 57 with coverage %4.39 ave iter 1400 in function computationKernelPolybench2mm
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 1.20075e+06
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 58 with coverage %4.39 ave iter 375 in function computationKernelPolybench2mm
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 3202
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 59 with coverage %4.34 ave iter 1600 in function computationKernelPolybench2mm
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 2
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 60 with coverage %5.81 ave iter 1400 in function computationKernelPolybench2mm
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 1.05105e+06
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 61 with coverage %5.81 ave iter 350 in function computationKernelPolybench2mm
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 3003
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 62 with coverage %5.76 ave iter 1500 in function computationKernelPolybench2mm
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 2
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 102 with coverage %13.87 ave iter 1800 in function computationKernelPolybench3mm
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 1.90095e+06
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 103 with coverage %13.87 ave iter 475 in function computationKernelPolybench3mm
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 4002
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 104 with coverage %13.74 ave iter 2000 in function computationKernelPolybench3mm
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 2
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 105 with coverage %17.78 ave iter 1900 in function computationKernelPolybench3mm
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 2.31105e+06
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 106 with coverage %17.78 ave iter 525 in function computationKernelPolybench3mm
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 4402
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 107 with coverage %17.64 ave iter 2200 in function computationKernelPolybench3mm
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 2
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 138 with coverage %13.16 ave iter 300 in function computationKernelPolybenchDoitgen
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 5.7437e+07
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 139 with coverage %13.16 ave iter 280 in function computationKernelPolybenchDoitgen
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 205132
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 140 with coverage %13.14 ave iter 320 in function computationKernelPolybenchDoitgen
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 641
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 141 with coverage %12.2 ave iter 320 in function computationKernelPolybenchDoitgen
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 2
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 162 with coverage %17.01 ave iter 1600 in function computationKernelPolybenchGramschmidt
+No profiling mode specified. Default mode is DOALL_LIGHT
+Loop 162: cross memory dependences found - not a dynamic DOALL
+
+Calling Janus Planner on loop 165 with coverage %16.98 ave iter 800 in function computationKernelPolybenchGramschmidt
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 8401
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 166 with coverage %8.11 ave iter 1400 in function computationKernelPolybenchGramschmidt
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 2
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 167 with coverage %8.64 ave iter 1400 in function computationKernelPolybenchGramschmidt
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 4
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 192 with coverage %16.24 ave iter 1600 in function computationKernelPolybenchGramschmidtD
+No profiling mode specified. Default mode is DOALL_LIGHT
+Loop 192: cross memory dependences found - not a dynamic DOALL
+
+Calling Janus Planner on loop 195 with coverage %16.21 ave iter 800 in function computationKernelPolybenchGramschmidtD
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 14001
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 196 with coverage %7.57 ave iter 1400 in function computationKernelPolybenchGramschmidtD
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 4
+Cross Iteration Memory Dependences: 0
+
+Calling Janus Planner on loop 197 with coverage %8.42 ave iter 1400 in function computationKernelPolybenchGramschmidtD
+No profiling mode specified. Default mode is DOALL_LIGHT
+total invocation: 1
+total iteration: 100
+Average memory instructions per iteration: 6
+Cross Iteration Memory Dependences: 0
+ 
+[0;32mAutomatic profiling complete.[0m
+ 
+Running Janus static analyser for Paralleliser....
+	Final selected DOALL loops: 17 30 33 57 60 102 105 138 165 195 
+ 
+Starting Janus Paralleliser....
+Runtime check case not yet handled
