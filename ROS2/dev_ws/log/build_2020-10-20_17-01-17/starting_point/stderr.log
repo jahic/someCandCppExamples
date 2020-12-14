@@ -1,0 +1,4 @@
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::timer_callback()[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:27:29:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kthread_id[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   27 |             std::thread::id [01;35m[Kthread_id[m[K = std::this_thread::get_id();
+      |                             [01;35m[K^~~~~~~~~[m[K

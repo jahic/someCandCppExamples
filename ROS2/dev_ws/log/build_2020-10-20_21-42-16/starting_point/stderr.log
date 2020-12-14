@@ -1,0 +1,10 @@
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisherNonBlockingThread::timer_callback()[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:131:24:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K([m[K’ token
+  131 |             std::thread[01;31m[K([m[Kthis->&thread_calc, std::move(promise)).detach();
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:131:31:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+  131 |             std::thread(this->[01;31m[K&[m[Kthread_calc, std::move(promise)).detach();
+      |                               [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/minimal_examples.dir/build.make:63: CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_examples.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

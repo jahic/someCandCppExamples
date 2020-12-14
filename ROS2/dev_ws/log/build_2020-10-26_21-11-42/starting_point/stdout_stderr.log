@@ -1,0 +1,10 @@
+[35m[1mScanning dependencies of target minimal_examples[0m
+[ 50%] Built target starting_point
+[ 75%] [32mBuilding CXX object CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o[0m
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisherSharedPtr::publish_message()[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:348:115:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd::chrono::_V2::system_clock::time_point[m[K’ {aka ‘[01m[Kstruct std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’} has no member named ‘[01m[Kcount[m[K’
+  348 |             ss << std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now().[01;31m[Kcount[m[K();
+      |                                                                                                                   [01;31m[K^~~~~[m[K
+make[2]: *** [CMakeFiles/minimal_examples.dir/build.make:63: CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_examples.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

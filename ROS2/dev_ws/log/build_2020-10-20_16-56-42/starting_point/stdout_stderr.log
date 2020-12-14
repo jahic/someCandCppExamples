@@ -1,0 +1,43 @@
+-- Found ament_cmake: 0.9.7 (/home/arian/ros2_foxy/install/ament_cmake/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 2.2.0 (/home/arian/ros2_foxy/install/rclcpp/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c;rosidl_typesupport_connext_c
+-- Found rosidl_adapter: 1.1.0 (/home/arian/ros2_foxy/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Found RTI Connext: /home/arian/rti_connext_dds-5.3.1
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_connext_cpp
+-- Found rmw_implementation_cmake: 1.0.1 (/home/arian/ros2_foxy/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found ament_lint_auto: 0.9.5 (/home/arian/ros2_foxy/install/ament_lint_auto/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/arian/dev_ws/build/starting_point
+[ 25%] [32m[1mLinking CXX executable minimal_examples[0m
+[ 75%] Built target starting_point
+[100%] Built target minimal_examples
+-- Install configuration: ""
+-- Up-to-date: /home/arian/dev_ws/install/starting_point/lib/starting_point/starting_point
+-- Installing: /home/arian/dev_ws/install/starting_point/lib/starting_point/minimal_examples
+-- Set runtime path of "/home/arian/dev_ws/install/starting_point/lib/starting_point/minimal_examples" to ""
+-- Up-to-date: /home/arian/dev_ws/install/starting_point/share/ament_index/resource_index/package_run_dependencies/starting_point
+-- Up-to-date: /home/arian/dev_ws/install/starting_point/share/ament_index/resource_index/parent_prefix_path/starting_point
+-- Installing: /home/arian/dev_ws/install/starting_point/share/starting_point/environment/ament_prefix_path.dsv
+-- Installing: /home/arian/dev_ws/install/starting_point/share/starting_point/environment/path.dsv
+-- Up-to-date: /home/arian/dev_ws/install/starting_point/share/starting_point/local_setup.bash
+-- Up-to-date: /home/arian/dev_ws/install/starting_point/share/starting_point/local_setup.sh
+-- Up-to-date: /home/arian/dev_ws/install/starting_point/share/starting_point/local_setup.zsh
+-- Installing: /home/arian/dev_ws/install/starting_point/share/starting_point/local_setup.dsv
+-- Installing: /home/arian/dev_ws/install/starting_point/share/starting_point/package.dsv
+-- Up-to-date: /home/arian/dev_ws/install/starting_point/share/ament_index/resource_index/packages/starting_point
+-- Up-to-date: /home/arian/dev_ws/install/starting_point/share/starting_point/cmake/starting_pointConfig.cmake
+-- Up-to-date: /home/arian/dev_ws/install/starting_point/share/starting_point/cmake/starting_pointConfig-version.cmake
+-- Up-to-date: /home/arian/dev_ws/install/starting_point/share/starting_point/package.xml

@@ -1,0 +1,4 @@
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In lambda function:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:46:128:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmessage[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   46 |             subscriber = this->create_subscription<std_msgs::msg::String>("topic", 10, [this]([01;35m[Kstd_msgs::msg::String::SharedPtr message[m[K) {
+      |                                                                                               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K

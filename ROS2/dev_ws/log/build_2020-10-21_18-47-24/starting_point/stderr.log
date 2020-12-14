@@ -1,0 +1,8 @@
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisherMultipleBlockingThreads::timer_callback()[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:188:54:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kobject[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  188 |             MinimalPublisherMultipleBlockingThreads* [01;35m[Kobject[m[K = new MinimalPublisherMultipleBlockingThreads();
+      |                                                      [01;35m[K^~~~~~[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisherMultipleBlockingThreads::thread_calc(int)[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:200:30:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kinstance[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  200 |         void thread_calc([01;35m[Kint instance[m[K)
+      |                          [01;35m[K~~~~^~~~~~~~[m[K

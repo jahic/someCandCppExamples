@@ -1,0 +1,7 @@
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisherNonBlockingThread::thread_calc()[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:164:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalculation_finished[m[K’ was not declared in this scope
+  164 |             [01;31m[Kcalculation_finished[m[K = true;
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/minimal_examples.dir/build.make:63: CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_examples.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

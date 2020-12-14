@@ -1,0 +1,13 @@
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisherMultipleBlockingThreads::thread_calc(int)[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:223:13:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kfor[m[K’ clause does not guard... [[01;35m[K-Wmisleading-indentation[m[K]
+  223 |             [01;35m[Kfor[m[K(int i = instance; i < 1000000000; i = i + 10);
+      |             [01;35m[K^~~[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:224:17:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kfor[m[K’
+  224 |                 [01;36m[Ksum[m[K+= i;
+      |                 [01;36m[K^~~[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:224:23:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+  224 |                 sum+= [01;31m[Ki[m[K;
+      |                       [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/minimal_examples.dir/build.make:63: CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_examples.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

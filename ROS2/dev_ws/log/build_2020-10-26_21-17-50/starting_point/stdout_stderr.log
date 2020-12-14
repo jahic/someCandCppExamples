@@ -1,0 +1,13 @@
+[35m[1mScanning dependencies of target minimal_examples[0m
+[ 50%] Built target starting_point
+[ 75%] [32mBuilding CXX object CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o[0m
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisherSharedPtr::publish_message()[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:345:72:[m[K [01;31m[Kerror: [m[Kconversion from ‘[01m[Kint[m[K’ to non-scalar type ‘[01m[Kstd::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >[m[K’ requested
+  345 |             std::chrono::time_point<std::chrono::system_clock> after = [01;31m[K0[m[K;
+      |                                                                        [01;31m[K^[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:350:19:[m[K [01;31m[Kerror: [m[K‘[01m[Ka[m[K’ was not declared in this scope
+  350 |             ss << [01;31m[Ka[m[K.count();
+      |                   [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/minimal_examples.dir/build.make:63: CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_examples.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

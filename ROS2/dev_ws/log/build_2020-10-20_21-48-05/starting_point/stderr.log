@@ -1,0 +1,10 @@
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisherNonBlockingThread::timer_callback()[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:130:69:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kvoid MinimalPublisherNonBlockingThread::thread_calc(std::promise<int>)[m[K’
+  130 |             std::thread(std::ref([01;31m[KMinimalPublisherNonBlockingThread::thread_calc[m[K), std::move(promise))).detach();
+      |                                  [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:148:14:[m[K [01;36m[Knote: [m[Kdeclared here
+  148 |         void [01;36m[Kthread_calc[m[K(std::promise<int> promise)
+      |              [01;36m[K^~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/minimal_examples.dir/build.make:63: CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_examples.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

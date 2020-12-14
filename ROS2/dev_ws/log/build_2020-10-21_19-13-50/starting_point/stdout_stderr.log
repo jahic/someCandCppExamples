@@ -1,0 +1,19 @@
+[35m[1mScanning dependencies of target minimal_examples[0m
+[ 50%] Built target starting_point
+[ 75%] [32mBuilding CXX object CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o[0m
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisherMultipleBlockingThreads::timer_callback()[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:189:37:[m[K [01;31m[Kerror: [m[Kmissing template arguments before ‘[01m[Kbefore[m[K’
+  189 |             std::chrono::time_point [01;31m[Kbefore[m[K = std::chrono::high_resolution_clock::now();
+      |                                     [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:190:37:[m[K [01;31m[Kerror: [m[Kmissing template arguments before ‘[01m[Kmessage[m[K’
+  190 |             std::chrono::time_point [01;31m[Kmessage[m[K = std_msgs::msg::String();
+      |                                     [01;31m[K^~~~~~~[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:202:81:[m[K [01;31m[Kerror: [m[K‘[01m[Kbefore[m[K’ was not declared in this scope
+  202 |             ss << std::chrono::duration_cast<std::chrono::milliseconds>(after - [01;31m[Kbefore[m[K).count();
+      |                                                                                 [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:203:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage[m[K’ was not declared in this scope
+  203 |             [01;31m[Kmessage[m[K.data = ss.str();
+      |             [01;31m[K^~~~~~~[m[K
+make[2]: *** [CMakeFiles/minimal_examples.dir/build.make:63: CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_examples.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

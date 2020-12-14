@@ -1,0 +1,10 @@
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In constructor ‘[01m[KMinimalPublisherNonBlockingThread::MinimalPublisherNonBlockingThread()[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:166:14:[m[K [01;35m[Kwarning: [m[K‘[01m[KMinimalPublisherNonBlockingThread::calculation_finished[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+  166 |         bool [01;35m[Kcalculation_finished[m[K;
+      |              [01;35m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:165:14:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kbool MinimalPublisherNonBlockingThread::thread_created[m[K’ [[01;35m[K-Wreorder[m[K]
+  165 |         bool [01;35m[Kthread_created[m[K;
+      |              [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:117:9:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+  117 |         [01;35m[KMinimalPublisherNonBlockingThread[m[K() : Node("minimal_publisher_blocking_thread"), calculation_finished(false), thread_created(false)
+      |         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K

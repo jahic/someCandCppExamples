@@ -1,0 +1,14 @@
+[35m[1mScanning dependencies of target minimal_examples[0m
+[ 50%] Built target starting_point
+[ 75%] [32mBuilding CXX object CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o[0m
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In constructor ‘[01m[KMinimalPublisherMultipleNonBlockingThreads::MinimalPublisherMultipleNonBlockingThreads()[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:233:174:[m[K [01;31m[Kerror: [m[Kincompatible types in assignment of ‘[01m[Kbool[m[K’ to ‘[01m[Kbool [4][m[K’
+  233 |         MinimalPublisherMultipleNonBlockingThreads() : Node("minimal_publisher_multiple_non_blocking_threads"), calculation_finished(false), thread_created(false), counter(0[01;31m[K)[m[K
+      |                                                                                                                                                                              [01;31m[K^[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisherMultipleNonBlockingThreads::thread_calc(int)[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:300:34:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+  300 |             calculation_finished[[01;31m[Ki[m[K] = true;
+      |                                  [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/minimal_examples.dir/build.make:63: CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_examples.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

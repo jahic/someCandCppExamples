@@ -1,0 +1,19 @@
+[35m[1mScanning dependencies of target starting_point[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/starting_point.dir/src/main.cpp.o[0m
+[01m[K/home/arian/dev_ws/src/starting_point/src/main.cpp:13:1:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+   13 | /* This example creates a subclass of Node and uses std::bind() to register a
+      |  
+[01m[K/home/arian/dev_ws/src/starting_point/src/main.cpp:147:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprivate[m[K’
+  147 | [01;31m[Kprivate[m[K:
+      | [01;31m[K^~~~~~~[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/main.cpp:[m[K In member function ‘[01m[Kvoid DualThreadedNode::subscriber1_cb(std_msgs::msg::String_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/main.cpp:164:32:[m[K [01;31m[Kerror: [m[K‘[01m[Ktiming_string[m[K’ was not declared in this scope
+  164 |     auto message_received_at = [01;31m[Ktiming_string[m[K();
+      |                                [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/main.cpp:[m[K In member function ‘[01m[Kvoid DualThreadedNode::subscriber2_cb(std_msgs::msg::String_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/main.cpp:178:32:[m[K [01;31m[Kerror: [m[K‘[01m[Ktiming_string[m[K’ was not declared in this scope
+  178 |     auto message_received_at = [01;31m[Ktiming_string[m[K();
+      |                                [01;31m[K^~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/starting_point.dir/build.make:63: CMakeFiles/starting_point.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/starting_point.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

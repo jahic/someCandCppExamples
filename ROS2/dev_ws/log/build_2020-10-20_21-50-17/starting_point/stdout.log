@@ -1,0 +1,3 @@
+[35m[1mScanning dependencies of target minimal_examples[0m
+[ 50%] Built target starting_point
+[ 75%] [32mBuilding CXX object CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o[0m

@@ -1,0 +1,98 @@
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisherSharedPtr::publish_message()[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:344:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing SharedPtr = class std::shared_ptr<std_msgs::msg::String_<std::allocator<void> > >[m[K’ {aka ‘[01m[Kclass std::shared_ptr<std_msgs::msg::String_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdata[m[K’
+  344 |             message.[01;31m[Kdata[m[K = "I am message";
+      |                     [01;31m[K^~~~[m[K
+In file included from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:6[m[K:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:346:59:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing SharedPtr = class std::shared_ptr<std_msgs::msg::String_<std::allocator<void> > >[m[K’ {aka ‘[01m[Kclass std::shared_ptr<std_msgs::msg::String_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdata[m[K’
+  346 |             RCLCPP_INFO(this->get_logger(), "%s", message.[01;31m[Kdata[m[K.c_str());
+      |                                                           [01;31m[K^~~~[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:348:39:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > >::publish(std_msgs::msg::String_<std::allocator<void> >::SharedPtr&)[m[K’
+  348 |             publisher->publish(message[01;31m[K)[m[K;
+      |                                       [01;31m[K^[m[K
+In file included from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:31[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/subscription.hpp:50[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:6[m[K:
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/publisher.hpp:185:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(std::unique_ptr<MessageT, typename std::conditional<std::is_same<typename std::allocator_traits<typename std::allocator_traits<_Alloc>::rebind_traits<MessageT>::allocator_type>::rebind_alloc<MessageT>, typename std::allocator<void>::rebind<_Tp1>::other>::value, std::default_delete<_Tp>, rclcpp::allocator::AllocatorDeleter<typename std::allocator_traits<_Alloc>::rebind_traits<MessageT>::allocator_type> >::type>) [with MessageT = std_msgs::msg::String_<std::allocator<void> >; AllocatorT = std::allocator<void>; typename std::conditional<std::is_same<typename std::allocator_traits<typename std::allocator_traits<_Alloc>::rebind_traits<MessageT>::allocator_type>::rebind_alloc<MessageT>, typename std::allocator<void>::rebind<_Tp1>::other>::value, std::default_delete<_Tp>, rclcpp::allocator::AllocatorDeleter<typename std::allocator_traits<_Alloc>::rebind_traits<MessageT>::allocator_type> >::type = std::default_delete<std_msgs::msg::String_<std::allocator<void> > >][m[K’
+  185 |   [01;36m[Kpublish[m[K(std::unique_ptr<MessageT, MessageDeleter> msg)
+      |   [01;36m[K^~~~~~~[m[K
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/publisher.hpp:185:53:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::String_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<std_msgs::msg::String_<std::allocator<void> > >[m[K’} to ‘[01m[Kstd::unique_ptr<std_msgs::msg::String_<std::allocator<void> >, std::default_delete<std_msgs::msg::String_<std::allocator<void> > > >[m[K’
+  185 |   publish([01;36m[Kstd::unique_ptr<MessageT, MessageDeleter> msg[m[K)
+      |           [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/publisher.hpp:209:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(const MessageT&) [with MessageT = std_msgs::msg::String_<std::allocator<void> >; AllocatorT = std::allocator<void>][m[K’
+  209 |   [01;36m[Kpublish[m[K(const MessageT & msg)
+      |   [01;36m[K^~~~~~~[m[K
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/publisher.hpp:209:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::String_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<std_msgs::msg::String_<std::allocator<void> > >[m[K’} to ‘[01m[Kconst std_msgs::msg::String_<std::allocator<void> >&[m[K’
+  209 |   publish([01;36m[Kconst MessageT & msg[m[K)
+      |           [01;36m[K~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/publisher.hpp:226:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(const rcl_serialized_message_t&) [with MessageT = std_msgs::msg::String_<std::allocator<void> >; AllocatorT = std::allocator<void>; rcl_serialized_message_t = rcutils_uint8_array_t][m[K’
+  226 |   [01;36m[Kpublish[m[K(const rcl_serialized_message_t & serialized_msg)
+      |   [01;36m[K^~~~~~~[m[K
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/publisher.hpp:226:44:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::String_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<std_msgs::msg::String_<std::allocator<void> > >[m[K’} to ‘[01m[Kconst rcl_serialized_message_t&[m[K’ {aka ‘[01m[Kconst rcutils_uint8_array_t&[m[K’}
+  226 |   publish([01;36m[Kconst rcl_serialized_message_t & serialized_msg[m[K)
+      |           [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/publisher.hpp:232:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(const rclcpp::SerializedMessage&) [with MessageT = std_msgs::msg::String_<std::allocator<void> >; AllocatorT = std::allocator<void>][m[K’
+  232 |   [01;36m[Kpublish[m[K(const SerializedMessage & serialized_msg)
+      |   [01;36m[K^~~~~~~[m[K
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/publisher.hpp:232:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::String_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<std_msgs::msg::String_<std::allocator<void> > >[m[K’} to ‘[01m[Kconst rclcpp::SerializedMessage&[m[K’
+  232 |   publish([01;36m[Kconst SerializedMessage & serialized_msg[m[K)
+      |           [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/publisher.hpp:246:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(rclcpp::LoanedMessage<MessageT, AllocatorT>&&) [with MessageT = std_msgs::msg::String_<std::allocator<void> >; AllocatorT = std::allocator<void>][m[K’
+  246 |   [01;36m[Kpublish[m[K(rclcpp::LoanedMessage<MessageT, AllocatorT> && loaned_msg)
+      |   [01;36m[K^~~~~~~[m[K
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/publisher.hpp:246:58:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd_msgs::msg::String_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<std_msgs::msg::String_<std::allocator<void> > >[m[K’} to ‘[01m[Krclcpp::LoanedMessage<std_msgs::msg::String_<std::allocator<void> >, std::allocator<void> >&&[m[K’
+  246 |   publish([01;36m[Krclcpp::LoanedMessage<MessageT, AllocatorT> && loaned_msg[m[K)
+      |           [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:394:38:[m[K [01;31m[Kerror: [m[K‘[01m[KMinimalPublisherSharedPutter[m[K’ was not declared in this scope; did you mean ‘[01m[KMinimalPublisherSharedPtr[m[K’?
+  394 |     auto pub_node = std::make_shared<[01;31m[KMinimalPublisherSharedPutter[m[K>();
+      |                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                      [32m[KMinimalPublisherSharedPtr[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:394:68:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+  394 |     auto pub_node = std::make_shared<MinimalPublisherSharedPutter>([01;31m[K)[m[K;
+      |                                                                    [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:3[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:714:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+  714 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:714:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:394:68:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  394 |     auto pub_node = std::make_shared<MinimalPublisherSharedPutter>([01;31m[K)[m[K;
+      |                                                                    [01;31m[K^[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:395:38:[m[K [01;31m[Kerror: [m[K‘[01m[KMinimalSubscriberSharedPutter[m[K’ was not declared in this scope; did you mean ‘[01m[KMinimalSubscriberSharedPtr[m[K’?
+  395 |     auto sub_node = std::make_shared<[01;31m[KMinimalSubscriberSharedPutter[m[K>();
+      |                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                      [32m[KMinimalSubscriberSharedPtr[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:395:69:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >()[m[K’
+  395 |     auto sub_node = std::make_shared<MinimalSubscriberSharedPutter>([01;31m[K)[m[K;
+      |                                                                     [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/memory:81[m[K,
+                 from [01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:3[m[K:
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:714:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)[m[K’
+  714 |     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+      |     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/shared_ptr.h:714:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:395:69:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  395 |     auto sub_node = std::make_shared<MinimalSubscriberSharedPutter>([01;31m[K)[m[K;
+      |                                                                     [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/minimal_examples.dir/build.make:63: CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_examples.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

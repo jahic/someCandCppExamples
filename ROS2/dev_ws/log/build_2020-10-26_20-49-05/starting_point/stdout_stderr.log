@@ -1,0 +1,69 @@
+[35m[1mScanning dependencies of target minimal_examples[0m
+[ 50%] Built target starting_point
+[ 75%] [32mBuilding CXX object CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o[0m
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In constructor ‘[01m[KMinimalPublisherSharedPtr::MinimalPublisherSharedPtr()[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:332:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kname[m[K’ was not declared in this scope; did you mean ‘[01m[Krosidl_generator_traits::name[m[K’?
+  332 |         MinimalPublisherSharedPtr() : Node([01;31m[Kname[m[K)
+      |                                            [01;31m[K^~~~[m[K
+      |                                            [32m[Krosidl_generator_traits::name[m[K
+In file included from [01m[K/home/arian/ros2_foxy/install/builtin_interfaces/include/builtin_interfaces/msg/detail/duration__traits.hpp:9[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/builtin_interfaces/include/builtin_interfaces/msg/duration.hpp:9[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/duration.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/qos.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/client.hpp:34[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:6[m[K:
+[01m[K/home/arian/ros2_foxy/install/rosidl_runtime_cpp/include/rosidl_runtime_cpp/traits.hpp:27:21:[m[K [01;36m[Knote: [m[K‘[01m[Krosidl_generator_traits::name[m[K’ declared here
+   27 | inline const char * [01;36m[Kname[m[K();
+      |                     [01;36m[K^~~~[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:396:31:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::executors::SingleThreadedExecutor::add_node(std::shared_ptr<MinimalPublisherSharedPtr> (*&)())[m[K’
+  396 |     executor.add_node(pub_node[01;31m[K)[m[K;
+      |                               [01;31m[K^[m[K
+In file included from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:6[m[K:
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:89:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual void rclcpp::Executor::add_node(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr, bool)[m[K’
+   89 |   [01;36m[Kadd_node[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr, bool notify = true);
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:89:66:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<MinimalPublisherSharedPtr> (*)()[m[K’ to ‘[01m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<rclcpp::node_interfaces::NodeBaseInterface>[m[K’}
+   89 |   add_node([01;36m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr[m[K, bool notify = true);
+      |            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:97:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual void rclcpp::Executor::add_node(std::shared_ptr<rclcpp::Node>, bool)[m[K’
+   97 |   [01;36m[Kadd_node[m[K(std::shared_ptr<rclcpp::Node> node_ptr, bool notify = true);
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:97:42:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<MinimalPublisherSharedPtr> (*)()[m[K’ to ‘[01m[Kstd::shared_ptr<rclcpp::Node>[m[K’
+   97 |   add_node([01;36m[Kstd::shared_ptr<rclcpp::Node> node_ptr[m[K, bool notify = true);
+      |            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:397:31:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::executors::SingleThreadedExecutor::add_node(std::shared_ptr<MinimalSubscriberSharedPtr> (*&)())[m[K’
+  397 |     executor.add_node(sub_node[01;31m[K)[m[K;
+      |                               [01;31m[K^[m[K
+In file included from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/dev_ws/src/starting_point/src/minimal_examples.cpp:6[m[K:
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:89:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual void rclcpp::Executor::add_node(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr, bool)[m[K’
+   89 |   [01;36m[Kadd_node[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr, bool notify = true);
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:89:66:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<MinimalSubscriberSharedPtr> (*)()[m[K’ to ‘[01m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<rclcpp::node_interfaces::NodeBaseInterface>[m[K’}
+   89 |   add_node([01;36m[Krclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr[m[K, bool notify = true);
+      |            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:97:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvirtual void rclcpp::Executor::add_node(std::shared_ptr<rclcpp::Node>, bool)[m[K’
+   97 |   [01;36m[Kadd_node[m[K(std::shared_ptr<rclcpp::Node> node_ptr, bool notify = true);
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:97:42:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kstd::shared_ptr<MinimalSubscriberSharedPtr> (*)()[m[K’ to ‘[01m[Kstd::shared_ptr<rclcpp::Node>[m[K’
+   97 |   add_node([01;36m[Kstd::shared_ptr<rclcpp::Node> node_ptr[m[K, bool notify = true);
+      |            [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/minimal_examples.dir/build.make:63: CMakeFiles/minimal_examples.dir/src/minimal_examples.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:80: CMakeFiles/minimal_examples.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
