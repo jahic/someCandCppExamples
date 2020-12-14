@@ -1,2 +1,0 @@
-# Hashes of file build rules.
-02cac88e057f32810a2ce2e81cdf9f0c CMakeFiles/starting_point_uninstall

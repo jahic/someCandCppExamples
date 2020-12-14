@@ -26,8 +26,8 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 
-add_executable(starting_point src/main.cpp)
-ament_target_dependencies(starting_point rclcpp std_msgs)
+#add_executable(starting_point src/main.cpp)
+#ament_target_dependencies(starting_point rclcpp std_msgs)
 
 add_executable(minimal_examples src/minimal_examples.cpp)
 ament_target_dependencies(minimal_examples rclcpp std_msgs)
@@ -43,9 +43,9 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-install(TARGETS
-  starting_point
-  DESTINATION lib/${PROJECT_NAME})
+#install(TARGETS
+#  starting_point
+#  DESTINATION lib/${PROJECT_NAME})
 
 install(TARGETS
   minimal_examples
