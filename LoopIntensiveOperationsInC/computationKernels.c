@@ -16,7 +16,7 @@
 // Polybench, cholesky
 void computationKernelPolybenchCholesky()
 {
-	//printf("computationKernelPolybenchCholesky.\n");
+	printf("		--- computationKernelPolybenchCholesky.\n");
 
 	ARRAY_LENGTH_D1 = POLY_CHOLESKY_ARRAY_001_LENGTH_D1;
 	ARRAY_LENGTH_D2 = POLY_CHOLESKY_ARRAY_001_LENGTH_D2;
@@ -26,6 +26,9 @@ void computationKernelPolybenchCholesky()
 
 	// Calculate the sum before array modification.
 	long sum = sum2DIntArrayS(array_cholesky, POLY_CHOLESKY_ARRAY_001_LENGTH_D1, POLY_CHOLESKY_ARRAY_001_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_cholesky_result.initArraySum=sum;
+
 	printf("		--- sum=%lu.\n", sum);
 
     for (int i = 0; i < ARRAY_LENGTH_D1; i++)
@@ -44,6 +47,8 @@ void computationKernelPolybenchCholesky()
 
     // Calculate the sum after array modification.
     sum = sum2DIntArrayS(array_cholesky, POLY_CHOLESKY_ARRAY_001_LENGTH_D1, POLY_CHOLESKY_ARRAY_001_LENGTH_D2);
+    // - Log the modified array sum.
+    poly_cholesky_result.modifiedArraySum=sum;
     printf("		--- sum=%lu.\n", sum);
 }
 
@@ -51,7 +56,7 @@ void computationKernelPolybenchCholesky()
 // - Dynamically allocated arrays.
 void computationKernelPolybenchCholeskyD()
 {
-	//(printf("computationKernelPolybenchCholeskyD.\n");
+	printf("		--- computationKernelPolybenchCholeskyD.\n");
 
 	ARRAY_LENGTH_D1 = POLY_CHOLESKY_ARRAY_001_LENGTH_D1;
 	ARRAY_LENGTH_D2 = POLY_CHOLESKY_ARRAY_001_LENGTH_D2;
@@ -64,6 +69,9 @@ void computationKernelPolybenchCholeskyD()
 
 	// Calculate the sum before array modification.
 	long sum = sum2DIntArrayD(array_cholesky, ARRAY_LENGTH_D1, ARRAY_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_cholesky_d_result.initArraySum=sum;
+
 	printf("		--- sum=%lu.\n", sum);
 
     for (int i = 0; i < ARRAY_LENGTH_D1; i++)
@@ -82,6 +90,8 @@ void computationKernelPolybenchCholeskyD()
 
     // Calculate the sum after array modification.
     sum = sum2DIntArrayD(array_cholesky, POLY_CHOLESKY_ARRAY_001_LENGTH_D1, POLY_CHOLESKY_ARRAY_001_LENGTH_D2);
+    // - Log the modified array sum.
+    poly_cholesky_d_result.modifiedArraySum=sum;
     printf("		--- sum=%lu.\n", sum);
 
     // Free the memory, avoid memory leak.
@@ -94,6 +104,7 @@ void computationKernelPolybenchCholeskyD()
 // Polybench, lu
 void computationKernelPolybenchLu()
 {
+	printf("		--- computationKernelPolybenchLu.\n");
 	// Stack arrays.
 	ARRAY_LENGTH_D1 = POLY_LU_ARRAY_001_LENGTH_D1;
 	ARRAY_LENGTH_D2 = POLY_LU_ARRAY_001_LENGTH_D2;
@@ -102,6 +113,8 @@ void computationKernelPolybenchLu()
 
 	// Calculate the sum before array modification.
 	double sum = sum2DFloatArrayS(array_lu, POLY_LU_ARRAY_001_LENGTH_D1, POLY_LU_ARRAY_001_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_lu_result.initArraySum=sum;
 	printf("		--- sum=%f.\n", sum);
 
     for(int i = 0; i < POLY_LU_ARRAY_001_LENGTH_D1; i++)
@@ -127,13 +140,15 @@ void computationKernelPolybenchLu()
 
     // Calculate the sum after array modification.
     sum = sum2DFloatArrayS(array_lu, POLY_LU_ARRAY_001_LENGTH_D1, POLY_LU_ARRAY_001_LENGTH_D2);
+    // - Log the modified array sum.
+    poly_lu_result.modifiedArraySum=sum;
     printf("		--- sum=%f.\n", sum);
 }
 
 // Polybench, 2mm
 void computationKernelPolybench2mm()
 {
-
+	printf("		--- computationKernelPolybench2mm.\n");
 //	_PB_NI = 180 - ARRAY_001_LENGTH, ARRAY_002_LENGTH, ARRAY_005_LENGTH
 //	_PB_NJ = 190 - ARRAY_001_WIDTH, ARRAY_003_WIDTH, ARRAY_004_LENGTH
 //	_PB_NK = 210 - ARRAY_002_WIDTH, ARRAY_003_LENGTH
@@ -141,9 +156,9 @@ void computationKernelPolybench2mm()
 //	alpha = 7064880.
 //	beta = 7064880.
 	//long alpha = 7064880; // Original
-	long alpha = 7; // Modified
+	long alpha = 3; // Modified
 	//long beta = 7064880; // Original
-	long beta = 7; // Modified
+	long beta = 3; // Modified
 
 	// Stack arrays:
 	ARRAY_LENGTH_D1 = POLY_2MM_ARRAY_001_LENGTH_D1;
@@ -153,6 +168,8 @@ void computationKernelPolybench2mm()
 
 	// Calculate the sum before array modification.
 	double sum = sum2DFloatArrayS(array1_2mm, POLY_2MM_ARRAY_001_LENGTH_D1, POLY_2MM_ARRAY_001_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_2mm_result.initArray1Sum=sum;
 	printf("		--- sum array1=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = POLY_2MM_ARRAY_002_LENGTH_D1;
@@ -162,6 +179,8 @@ void computationKernelPolybench2mm()
 
 	// Calculate the sum before array modification.
 	sum = sum2DFloatArrayS(array2_2mm, POLY_2MM_ARRAY_002_LENGTH_D1, POLY_2MM_ARRAY_002_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_2mm_result.initArray2Sum=sum;
 	printf("		--- sum array2=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = POLY_2MM_ARRAY_003_LENGTH_D1;
@@ -171,6 +190,8 @@ void computationKernelPolybench2mm()
 
 	// Calculate the sum before array modification.
 	sum = sum2DFloatArrayS(array3_2mm, POLY_2MM_ARRAY_003_LENGTH_D1, POLY_2MM_ARRAY_003_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_2mm_result.initArray3Sum=sum;
 	printf("		--- sum array3=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = POLY_2MM_ARRAY_004_LENGTH_D1;
@@ -180,6 +201,8 @@ void computationKernelPolybench2mm()
 
 	// Calculate the sum before array modification.
 	sum = sum2DFloatArrayS(array4_2mm, POLY_2MM_ARRAY_004_LENGTH_D1, POLY_2MM_ARRAY_004_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_2mm_result.initArray4Sum=sum;
 	printf("		--- sum array4=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = POLY_2MM_ARRAY_005_LENGTH_D1;
@@ -189,6 +212,8 @@ void computationKernelPolybench2mm()
 
 	// Calculate the sum before array modification.
 	sum = sum2DFloatArrayS(array5_2mm, POLY_2MM_ARRAY_005_LENGTH_D1, POLY_2MM_ARRAY_005_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_2mm_result.initArray5Sum=sum;
 	printf("		--- sum array5=%f.\n", sum);
 
     for (int i = 0; i < POLY_2MM_ARRAY_001_LENGTH_D1; i++)
@@ -198,7 +223,8 @@ void computationKernelPolybench2mm()
             array1_2mm[i][j] = 0.0;
             for (int k = 0; k < POLY_2MM_ARRAY_002_LENGTH_D2; ++k)
             {
-            	array1_2mm[i][j] += alpha * array2_2mm[i][k] * array3_2mm[k][j]; // Original
+            	// array1_2mm[i][j] += alpha * array2_2mm[i][k] * array3_2mm[k][j]; // Original
+            	array1_2mm[i][j] += (alpha * array2_2mm[i][k] * array3_2mm[k][j])/POLY_2MM_ARRAY_002_LENGTH_D2; // Modified
             }
 
         }
@@ -209,31 +235,44 @@ void computationKernelPolybench2mm()
         {
         	array5_2mm[i][j] *= beta;
             for (int k = 0; k < POLY_2MM_ARRAY_001_LENGTH_D2; ++k)
-            	array5_2mm[i][j] += array1_2mm[i][k] * array4_2mm[k][j];
+            {
+            	//array5_2mm[i][j] += array1_2mm[i][k] * array4_2mm[k][j]; // Original
+            	array5_2mm[i][j] += (array1_2mm[i][k]/POLY_2MM_ARRAY_001_LENGTH_D1) * (array4_2mm[k][j]/POLY_2MM_ARRAY_001_LENGTH_D2); // Modified
+            }
         }
     }
 
     // Calculate the sum after array modification.
     sum = sum2DFloatArrayS(array1_2mm, POLY_2MM_ARRAY_001_LENGTH_D1, POLY_2MM_ARRAY_001_LENGTH_D2);
+    // - Log the modified array sum.
+    poly_2mm_result.modifiedArray1Sum=sum;
     printf("		--- sum array1=%f.\n", sum);
 
     sum = sum2DFloatArrayS(array2_2mm, POLY_2MM_ARRAY_002_LENGTH_D1, POLY_2MM_ARRAY_002_LENGTH_D2);
+    // - Log the modified array sum.
+    poly_2mm_result.modifiedArray2Sum=sum;
     printf("		--- sum array2=%f.\n", sum);
 
     sum = sum2DFloatArrayS(array3_2mm, POLY_2MM_ARRAY_003_LENGTH_D1, POLY_2MM_ARRAY_003_LENGTH_D2);
+    // - Log the modified array sum.
+    poly_2mm_result.modifiedArray3Sum=sum;
     printf("		--- sum array3=%f.\n", sum);
 
     sum = sum2DFloatArrayS(array4_2mm, POLY_2MM_ARRAY_004_LENGTH_D1, POLY_2MM_ARRAY_004_LENGTH_D2);
+    // - Log the modified array sum.
+    poly_2mm_result.modifiedArray4Sum=sum;
     printf("		--- sum array4=%f.\n", sum);
 
     sum = sum2DFloatArrayS(array5_2mm, POLY_2MM_ARRAY_005_LENGTH_D1, POLY_2MM_ARRAY_005_LENGTH_D2);
+    // - Log the modified array sum.
+    poly_2mm_result.modifiedArray5Sum=sum;
     printf("		--- sum array5=%f.\n", sum);
 }
 
 // Polybench, 3mm
 void computationKernelPolybench3mm()
 {
-
+	printf("		--- computationKernelPolybench3mm.\n");
 //	_PB_NI = 180. - ARRAY_001_LENGTH, ARRAY_005_LENGTH
 //	_PB_NJ = 190. - ARRAY_001_WIDTH, ARRAY_002_WIDTH, ARRAY_003_LENGTH, ARRAY_005_WIDTH, ARRAY_006_LENGTH
 //	_PB_NK = 200. - ARRAY_002_LENGTH,
@@ -247,6 +286,8 @@ void computationKernelPolybench3mm()
 
 	// Calculate the sum before array modification.
 	double sum = sum2DFloatArrayS(array1_3mm, POLY_3MM_ARRAY_001_LENGTH_D1, POLY_3MM_ARRAY_001_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_3mm_result.initArray1Sum=sum;
 	printf("		--- sum array1=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = POLY_3MM_ARRAY_002_LENGTH_D1;
@@ -256,6 +297,8 @@ void computationKernelPolybench3mm()
 
 	// Calculate the sum before array modification.
 	sum = sum2DFloatArrayS(array2_3mm, POLY_3MM_ARRAY_002_LENGTH_D1, POLY_3MM_ARRAY_002_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_3mm_result.initArray2Sum=sum;
 	printf("		--- sum array2=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = POLY_3MM_ARRAY_003_LENGTH_D1;
@@ -265,6 +308,8 @@ void computationKernelPolybench3mm()
 
 	// Calculate the sum before array modification.
 	sum = sum2DFloatArrayS(array3_3mm, POLY_3MM_ARRAY_003_LENGTH_D1, POLY_3MM_ARRAY_003_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_3mm_result.initArray3Sum=sum;
 	printf("		--- sum array3=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = POLY_3MM_ARRAY_004_LENGTH_D1;
@@ -274,6 +319,8 @@ void computationKernelPolybench3mm()
 
 	// Calculate the sum before array modification.
 	sum = sum2DFloatArrayS(array4_3mm, POLY_3MM_ARRAY_004_LENGTH_D1, POLY_3MM_ARRAY_004_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_3mm_result.initArray4Sum=sum;
 	printf("		--- sum array4=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = POLY_3MM_ARRAY_005_LENGTH_D1;
@@ -283,6 +330,8 @@ void computationKernelPolybench3mm()
 
 	// Calculate the sum before array modification.
 	sum = sum2DFloatArrayS(array5_3mm, POLY_3MM_ARRAY_005_LENGTH_D1, POLY_3MM_ARRAY_005_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_3mm_result.initArray5Sum=sum;
 	printf("		--- sum array5=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = POLY_3MM_ARRAY_006_LENGTH_D1;
@@ -292,6 +341,8 @@ void computationKernelPolybench3mm()
 
 	// Calculate the sum before array modification.
 	sum = sum2DFloatArrayS(array6_3mm, POLY_3MM_ARRAY_006_LENGTH_D1, POLY_3MM_ARRAY_006_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_3mm_result.initArray6Sum=sum;
 	printf("		--- sum array6=%f.\n", sum);
 
     // E := A*B
@@ -300,7 +351,10 @@ void computationKernelPolybench3mm()
         {
         	array5_3mm[i][j] = 0.0;
             for (int k = 0; k < POLY_3MM_ARRAY_002_LENGTH_D1; ++k)
-            	array5_3mm[i][j] += array1_3mm[i][k] * array2_3mm[k][j];
+            {
+            	// array5_3mm[i][j] += array1_3mm[i][k] * array2_3mm[k][j]; // Original
+            	array5_3mm[i][j] += (array1_3mm[i][k] * array2_3mm[k][j])/POLY_3MM_ARRAY_002_LENGTH_D1; // Modified
+            }
         }
     // F := C*D
     for (int i = 0; i < POLY_3MM_ARRAY_006_LENGTH_D1; i++)
@@ -308,31 +362,47 @@ void computationKernelPolybench3mm()
         {
         	array6_3mm[i][j] = 0.0;
             for (int k = 0; k < POLY_3MM_ARRAY_004_LENGTH_D1; ++k)
-            	array6_3mm[i][j] += array3_3mm[i][k] * array4_3mm[k][j];
+            {
+            	// array6_3mm[i][j] += array3_3mm[i][k] * array4_3mm[k][j]; // Original
+            	array6_3mm[i][j] += (array3_3mm[i][k] * array4_3mm[k][j])/POLY_3MM_ARRAY_002_LENGTH_D2; // Modified
+            }
         }
     // Calculate the sum after array modification.
 	sum = sum2DFloatArrayS(array1_3mm, POLY_3MM_ARRAY_001_LENGTH_D1, POLY_3MM_ARRAY_001_LENGTH_D2);
+    // - Log the modified array sum.
+    poly_3mm_result.modifiedArray1Sum=sum;
 	printf("		--- sum array1=%f.\n", sum);
 
 	sum = sum2DFloatArrayS(array2_3mm, POLY_3MM_ARRAY_002_LENGTH_D1, POLY_3MM_ARRAY_002_LENGTH_D2);
+    // - Log the modified array sum.
+    poly_3mm_result.modifiedArray2Sum=sum;
 	printf("		--- sum array2=%f.\n", sum);
 
 	sum = sum2DFloatArrayS(array3_3mm, POLY_3MM_ARRAY_003_LENGTH_D1, POLY_3MM_ARRAY_003_LENGTH_D2);
+    // - Log the modified array sum.
+    poly_3mm_result.modifiedArray3Sum=sum;
 	printf("		--- sum array3=%f.\n", sum);
 
 	sum = sum2DFloatArrayS(array4_3mm, POLY_3MM_ARRAY_004_LENGTH_D1, POLY_3MM_ARRAY_004_LENGTH_D2);
+    // - Log the modified array sum.
+    poly_3mm_result.modifiedArray4Sum=sum;
 	printf("		--- sum array4=%f.\n", sum);
 
 	sum = sum2DFloatArrayS(array5_3mm, POLY_3MM_ARRAY_005_LENGTH_D1, POLY_3MM_ARRAY_005_LENGTH_D2);
+    // - Log the modified array sum.
+    poly_3mm_result.modifiedArray5Sum=sum;
 	printf("		--- sum array5=%f.\n", sum);
 
 	sum = sum2DFloatArrayS(array6_3mm, POLY_3MM_ARRAY_006_LENGTH_D1, POLY_3MM_ARRAY_006_LENGTH_D2);
+    // - Log the modified array sum.
+    poly_3mm_result.modifiedArray6Sum=sum;
 	printf("		--- sum array6=%f.\n", sum);
 }
 
 // Polybench, doitgen
 void computationKernelPolybenchDoitgen()
 {
+	printf("		--- computationKernelPolybenchDoitgen.\n");
     // _PB_NR = 150.
 	// _PB_NQ = 140.
 	// _PB_NP = 1600.748019
@@ -344,6 +414,8 @@ void computationKernelPolybenchDoitgen()
 
 	// Calculate the sum before array modification.
 	double sumArray = sum1DFloatArrayS(sum, POLY_DOITGEN_ARRAY_001_LENGTH_D1);
+	// - Log the initial array sum.
+	poly_doitgen_result.initSumSum=sumArray;
 	printf("		--- sum sum=%f.\n", sumArray);
 
 	ARRAY_LENGTH_D1 = POLY_DOITGEN_ARRAY_002_LENGTH_D1;
@@ -355,6 +427,8 @@ void computationKernelPolybenchDoitgen()
 
 	// Calculate the sum before array modification.
 	sumArray = sum2DFloatArrayS(C4, POLY_DOITGEN_ARRAY_002_LENGTH_D1, POLY_DOITGEN_ARRAY_002_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_doitgen_result.initC4Sum=sumArray;
 	printf("		--- sum C4=%f.\n", sumArray);
 
 	//printf("		--- populate2DFloatArrayS populated.\n");
@@ -367,6 +441,8 @@ void computationKernelPolybenchDoitgen()
 
 	// Calculate the sum before array modification.
 	sumArray = sum3DFloatArrayS(A, POLY_DOITGEN_ARRAY_003_LENGTH_D1, POLY_DOITGEN_ARRAY_003_LENGTH_D2, POLY_DOITGEN_ARRAY_003_LENGTH_D3);
+	// - Log the initial array sum.
+	poly_doitgen_result.initASum=sumArray;
 	printf("		--- sum A=%f.\n", sumArray);
 
 	//printf("		--- populate3DFloatArrayS populated.\n");
@@ -387,17 +463,24 @@ void computationKernelPolybenchDoitgen()
     // Calculate the sum after array modification.
     sumArray = sum1DFloatArrayS(sum, POLY_DOITGEN_ARRAY_001_LENGTH_D1);
    	printf("		--- sum sum=%f.\n", sumArray);
+    // - Log the modified array sum.
+   	poly_doitgen_result.modifiedSumSum=sumArray;
 
    	sumArray = sum2DFloatArrayS(C4, POLY_DOITGEN_ARRAY_002_LENGTH_D1, POLY_DOITGEN_ARRAY_002_LENGTH_D2);
    	printf("		--- sum C4=%f.\n", sumArray);
+    // - Log the modified array sum.
+   	poly_doitgen_result.modifiedC4Sum=sumArray;
 
    	sumArray = sum3DFloatArrayS(A, POLY_DOITGEN_ARRAY_003_LENGTH_D1, POLY_DOITGEN_ARRAY_003_LENGTH_D2, POLY_DOITGEN_ARRAY_003_LENGTH_D3);
    	printf("		--- sum A=%f.\n", sumArray);
+    // - Log the modified array sum.
+   	poly_doitgen_result.modifiedASum=sumArray;
 }
 
 // Polybench, gramschmidt
 void computationKernelPolybenchGramschmidt()
 {
+	printf("		--- computationKernelPolybenchGramschmidt.\n");
 	// _PB_N = 1600. ARRAY_001_WIDTH, ARRAY_002_LENGTH, ARRAY_002_WIDTH, ARRAY_003_WIDTH
 	// _PB_M = 1400. ARRAY_001_LENGTH, ARRAY_003_LENGTH
 
@@ -407,10 +490,10 @@ void computationKernelPolybenchGramschmidt()
 	static float array1_gramschmidt[POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D1][POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D2];
 	populate2DFloatArrayS(array1_gramschmidt, ARRAY_LENGTH_D1, ARRAY_LENGTH_D2);
 
-
-
 	// Calculate the sum before array modification.
 	double sum = sum2DFloatArrayS(array1_gramschmidt, POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D1, POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_gramschmidt_result.initArray1Sum=sum;
 	printf("		--- sum array1=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = POLY_GRAMSCHMIDT_ARRAY_002_LENGTH_D1;
@@ -422,6 +505,8 @@ void computationKernelPolybenchGramschmidt()
 
 	// Calculate the sum before array modification.
 	sum = sum2DFloatArrayS(array2_gramschmidt, POLY_GRAMSCHMIDT_ARRAY_002_LENGTH_D1, POLY_GRAMSCHMIDT_ARRAY_002_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_gramschmidt_result.initArray2Sum=sum;
 	printf("		--- sum array2=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = POLY_GRAMSCHMIDT_ARRAY_003_LENGTH_D1;
@@ -431,6 +516,8 @@ void computationKernelPolybenchGramschmidt()
 
 	// Calculate the sum before array modification.
 	sum = sum2DFloatArrayS(array3_gramschmidt, POLY_GRAMSCHMIDT_ARRAY_003_LENGTH_D1, POLY_GRAMSCHMIDT_ARRAY_003_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_gramschmidt_result.initArray3Sum=sum;
 	printf("		--- sum array3=%f.\n", sum);
 
     for (int k = 0; k < POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D2; k++)
@@ -454,8 +541,8 @@ void computationKernelPolybenchGramschmidt()
         	array2_gramschmidt[k][j] = 0.0;
             for (int i = 0; i < POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D1; i++)
             {
-            	array2_gramschmidt[k][j] += array3_gramschmidt[i][k] * array1_gramschmidt[i][j]; // Original
-            	//array2_gramschmidt[k][j] += array3_gramschmidt[i][k] * array1_gramschmidt[i][j]/(array1_gramschmidt[i][j]+i+1); // Modified
+            	//array2_gramschmidt[k][j] += array3_gramschmidt[i][k] * array1_gramschmidt[i][j]; // Original
+            	array2_gramschmidt[k][j] += (array3_gramschmidt[i][k] * array1_gramschmidt[i][j])/POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D2; // Modified
             }
             for (int i = 0; i < POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D1; i++)
             {
@@ -482,12 +569,18 @@ void computationKernelPolybenchGramschmidt()
     // Calculate the sum after array modification.
     sum = sum2DFloatArrayS(array1_gramschmidt, POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D1, POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D2);
     printf("		--- sum array1=%f.\n", sum);
+    // - Log the modified array sum.
+    poly_gramschmidt_result.modifiedArray1Sum=sum;
 
     sum = sum2DFloatArrayS(array2_gramschmidt, POLY_GRAMSCHMIDT_ARRAY_002_LENGTH_D1, POLY_GRAMSCHMIDT_ARRAY_002_LENGTH_D2);
     printf("		--- sum array2=%f.\n", sum);
+    // - Log the modified array sum.
+    poly_gramschmidt_result.modifiedArray2Sum=sum;
 
    	sum = sum2DFloatArrayS(array3_gramschmidt, POLY_GRAMSCHMIDT_ARRAY_003_LENGTH_D1, POLY_GRAMSCHMIDT_ARRAY_003_LENGTH_D2);
    	printf("		--- sum array3=%f.\n", sum);
+    // - Log the modified array sum.
+    poly_gramschmidt_result.modifiedArray3Sum=sum;
 }
 
 // Polybench, gramschmidt
@@ -512,6 +605,8 @@ void computationKernelPolybenchGramschmidtD()
 
 	// Calculate the sum before array modification.
 	double sum = sum2DFloatArrayD(array1_gramschmidt, POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D1, POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_gramschmidt_d_result.initArray1Sum=sum;
 	printf("		--- sum array1=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = POLY_GRAMSCHMIDT_ARRAY_002_LENGTH_D1;
@@ -523,6 +618,8 @@ void computationKernelPolybenchGramschmidtD()
 
 	// Calculate the sum before array modification.
 	sum = sum2DFloatArrayD(array2_gramschmidt, ARRAY_LENGTH_D1, ARRAY_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_gramschmidt_d_result.initArray2Sum=sum;
 	printf("		--- sum array2=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = POLY_GRAMSCHMIDT_ARRAY_003_LENGTH_D1;
@@ -534,6 +631,8 @@ void computationKernelPolybenchGramschmidtD()
 
 	// Calculate the sum before array modification.
 	sum = sum2DFloatArrayD(array3_gramschmidt, POLY_GRAMSCHMIDT_ARRAY_003_LENGTH_D1, POLY_GRAMSCHMIDT_ARRAY_003_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_gramschmidt_d_result.initArray3Sum=sum;
 	printf("		--- sum array3=%f.\n", sum);
 
     for (int k = 0; k < POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D2; k++)
@@ -557,8 +656,8 @@ void computationKernelPolybenchGramschmidtD()
         	array2_gramschmidt[k][j] = 0.0;
             for (int i = 0; i < POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D1; i++)
             {
-            	array2_gramschmidt[k][j] += array3_gramschmidt[i][k] * array1_gramschmidt[i][j]; // Original
-            	//array2_gramschmidt[k][j] += array3_gramschmidt[i][k] * array1_gramschmidt[i][j]/(array1_gramschmidt[i][j]+i+1); // Modified
+            	//array2_gramschmidt[k][j] += array3_gramschmidt[i][k] * array1_gramschmidt[i][j]; // Original
+            	array2_gramschmidt[k][j] += (array3_gramschmidt[i][k] * array1_gramschmidt[i][j])/POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D2; // Modified
             }
             for (int i = 0; i < POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D1; i++)
             {
@@ -585,12 +684,16 @@ void computationKernelPolybenchGramschmidtD()
     // Calculate the sum after array modification.
     sum = sum2DFloatArrayD(array1_gramschmidt, POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D1, POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D2);
     printf("		--- sum array1=%f.\n", sum);
+    // - Log the modified array sum.
+    poly_gramschmidt_d_result.modifiedArray1Sum=sum;
 
     sum = sum2DFloatArrayD(array2_gramschmidt, POLY_GRAMSCHMIDT_ARRAY_002_LENGTH_D1, POLY_GRAMSCHMIDT_ARRAY_002_LENGTH_D2);
     printf("		--- sum array2=%f.\n", sum);
+    poly_gramschmidt_d_result.modifiedArray2Sum=sum;
 
    	sum = sum2DFloatArrayD(array3_gramschmidt, POLY_GRAMSCHMIDT_ARRAY_003_LENGTH_D1, POLY_GRAMSCHMIDT_ARRAY_003_LENGTH_D2);
    	printf("		--- sum array3=%f.\n", sum);
+   	poly_gramschmidt_d_result.modifiedArray3Sum=sum;
 
    	// Free the memory, avoid memory leak.
 	for(int i=0; i<POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D1; i++)
@@ -609,6 +712,7 @@ void computationKernelPolybenchGramschmidtD()
 // Polybench, tislov
 void computationKernelPolybenchTislov()
 {
+	printf("		--- computationKernelPolybenchTislov.\n");
 	// n=150000
 	// Stack arrays:
 	ARRAY_LENGTH_D1 = POLY_TISLOV_ARRAY_001_LENGTH_D1;
@@ -617,6 +721,8 @@ void computationKernelPolybenchTislov()
 
 	// Calculate the sum before array modification.
 	double sum = sum1DFloatArrayS(b_tislov, POLY_TISLOV_ARRAY_001_LENGTH_D1);
+	// - Log the initial array sum.
+	poly_tislov_result.initBSum=sum;
 	printf("		--- sum sum=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = POLY_TISLOV_ARRAY_002_LENGTH_D1;
@@ -625,6 +731,8 @@ void computationKernelPolybenchTislov()
 
 	// Calculate the sum before array modification.
 	sum = sum1DFloatArrayS(x_tislov, POLY_TISLOV_ARRAY_002_LENGTH_D1);
+	// - Log the initial array sum.
+	poly_tislov_result.initXSum=sum;
 	printf("		--- sum x_tislov=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = POLY_TISLOV_ARRAY_003_LENGTH_D1;
@@ -634,6 +742,8 @@ void computationKernelPolybenchTislov()
 
 	// Calculate the sum before array modification.
 	sum = sum2DFloatArrayS(L_tislov, POLY_TISLOV_ARRAY_003_LENGTH_D1, POLY_TISLOV_ARRAY_003_LENGTH_D2);
+	// - Log the initial array sum.
+	poly_tislov_result.initLSum=sum;
 	printf("		--- sum L_tislov=%f.\n", sum);
 
     for (int i = 0; i < POLY_GRAMSCHMIDT_ARRAY_001_LENGTH_D1; i++)
@@ -647,17 +757,24 @@ void computationKernelPolybenchTislov()
     // Calculate the sum after array modification.
     sum = sum1DFloatArrayS(b_tislov, POLY_TISLOV_ARRAY_001_LENGTH_D1);
     printf("		--- sum b_tislov=%f.\n", sum);
+    // - Log the modified array sum.
+    poly_tislov_result.modifiedBSum=sum;
 
 	sum = sum1DFloatArrayS(x_tislov, POLY_TISLOV_ARRAY_002_LENGTH_D1);
 	printf("		--- sum x_tislov=%f.\n", sum);
+    // - Log the modified array sum.
+	poly_tislov_result.modifiedXSum=sum;
 
    	sum = sum2DFloatArrayS(L_tislov, POLY_TISLOV_ARRAY_003_LENGTH_D1, POLY_TISLOV_ARRAY_003_LENGTH_D2);
    	printf("		--- sum L_tislov=%f.\n", sum);
+    // - Log the modified array sum.
+   	poly_tislov_result.modifiedLSum=sum;
 }
 
 // Generic 1D loop, 2 arrays.
 void computationKernelGenericLoop1D2A()
 {
+	printf("		--- computationKernelGenericLoop1D2A.\n");
 	// Stack arrays:
 	ARRAY_LENGTH_D1 = GENERIC_ARRAY_001_D1;
 	static float array1_generic[GENERIC_ARRAY_001_D1];
@@ -666,6 +783,8 @@ void computationKernelGenericLoop1D2A()
 
 	// Calculate the sum before array modification.
 	double sumArray = sum1DFloatArrayS(array1_generic, GENERIC_ARRAY_001_D1);
+	// - Log the initial array sum.
+	genericLoop1D2A_result.initArray1Sum=sumArray;
 	printf("		--- sum array1_generic=%f.\n", sumArray);
 
 	// Stack arrays:
@@ -676,6 +795,8 @@ void computationKernelGenericLoop1D2A()
 
 	// Calculate the sum before array modification.
 	sumArray = sum1DFloatArrayS(array2_generic, GENERIC_ARRAY_001_D1);
+	// - Log the initial array sum.
+	genericLoop1D2A_result.initArray2Sum=sumArray;
 	printf("		--- sum array2_generic=%f.\n", sumArray);
 
 	for (int i = 0; i < ARRAY_LENGTH_D1; i++)
@@ -685,21 +806,25 @@ void computationKernelGenericLoop1D2A()
 		array1_generic[i] = (1+(array2_generic[i] * (tmp)))*(i+1)/(ARRAY_LENGTH_D1-i);
 	}
 
-
-	printf("		--- computationKernelGenericLoop1D2A computing complete.\n");
+	//printf("		--- computationKernelGenericLoop1D2A computing complete.\n");
 
 	// Calculate the sum after array modification.
 	sumArray = sum1DFloatArrayS(array1_generic, GENERIC_ARRAY_001_D1);
 	printf("		--- sum array1_generic=%f.\n", sumArray);
+    // - Log the modified array sum.
+	genericLoop1D2A_result.modifiedArray1Sum=sumArray;
 
 	sumArray = sum1DFloatArrayS(array2_generic, GENERIC_ARRAY_001_D1);
 	printf("		--- sum array2_generic=%f.\n", sumArray);
+    // - Log the modified array sum.
+	genericLoop1D2A_result.modifiedArray2Sum=sumArray;
 }
 
 // Generic 1D loop, 2 arrays.
 // - Dynamically allocated arrays
 void computationKernelGenericLoop1D2AD()
 {
+	printf("		--- computationKernelGenericLoop1D2AD.\n");
 	// Dynamic arrays:
 	ARRAY_LENGTH_D1 = GENERIC_ARRAY_001_D1;
 	float* array1_generic;
@@ -710,6 +835,8 @@ void computationKernelGenericLoop1D2AD()
 
 	// Calculate the sum before array modification.
 	double sumArray = sum1DFloatArrayD(array1_generic, ARRAY_LENGTH_D1);
+	// - Log the initial array sum.
+	genericLoop1D2AD_result.initArray1Sum=sumArray;
 	printf("		--- sum sum=%f.\n", sumArray);
 
 	// Stack arrays:
@@ -721,6 +848,8 @@ void computationKernelGenericLoop1D2AD()
 
 	// Calculate the sum before array modification.
 	sumArray = sum1DFloatArrayD(array2_generic, ARRAY_LENGTH_D1);
+	// - Log the initial array sum.
+	genericLoop1D2AD_result.initArray2Sum=sumArray;
 	printf("		--- sum sum=%f.\n", sumArray);
 
 	//printf("		--- populate3DFloatArrayS populated.\n");
@@ -735,14 +864,19 @@ void computationKernelGenericLoop1D2AD()
 	// Calculate the sum after array modification.
 	sumArray = sum1DFloatArrayD(array1_generic, GENERIC_ARRAY_001_D1);
 	printf("		--- sum array1_generic=%f.\n", sumArray);
+    // - Log the modified array sum.
+	genericLoop1D2AD_result.modifiedArray1Sum=sumArray;
 
 	sumArray = sum1DFloatArrayD(array2_generic, GENERIC_ARRAY_001_D1);
 	printf("		--- sum array2_generic=%f.\n", sumArray);
+    // - Log the modified array sum.
+	genericLoop1D2AD_result.modifiedArray2Sum=sumArray;
 }
 
 // Generic 2D loop, 2 arrays.
 void computationKernelGenericLoop2D2A()
 {
+	printf("		--- computationKernelGenericLoop2D2A.\n");
 	// Stack arrays:
 	ARRAY_LENGTH_D1 = GENERIC_ARRAY_001_D1;
 	ARRAY_LENGTH_D2 = GENERIC_ARRAY_001_D2;
@@ -751,6 +885,8 @@ void computationKernelGenericLoop2D2A()
 
 	// Calculate the sum before array modification.
 	double sum = sum2DFloatArrayS(array1_generic, GENERIC_ARRAY_001_D1, GENERIC_ARRAY_001_D2);
+	// - Log the initial array sum.
+	genericLoop2D2A_result.initArray1Sum=sum;
 	printf("		--- sum array1=%f.\n", sum);
 
 	ARRAY_LENGTH_D1 = GENERIC_ARRAY_002_D1;
@@ -760,6 +896,8 @@ void computationKernelGenericLoop2D2A()
 
 	// Calculate the sum before array modification.
 	sum = sum2DFloatArrayS(array2_generic, GENERIC_ARRAY_002_D1, GENERIC_ARRAY_002_D2);
+	// - Log the initial array sum.
+	genericLoop2D2A_result.initArray2Sum=sum;
 	printf("		--- sum array2=%f.\n", sum);
 
 	for (int i = 0; i < GENERIC_ARRAY_001_D1; i++)
@@ -783,67 +921,81 @@ void computationKernelGenericLoop2D2A()
 	// Calculate the sum after array modification.
 	sum = sum2DFloatArrayS(array1_generic, GENERIC_ARRAY_001_D1, GENERIC_ARRAY_001_D2);
 	printf("		--- sum array1_generic=%f.\n", sum);
+    // - Log the modified array sum.
+	genericLoop2D2A_result.modifiedArray1Sum=sum;
 
 	sum = sum2DFloatArrayS(array2_generic, GENERIC_ARRAY_002_D1, GENERIC_ARRAY_002_D2);
 	printf("		--- sum array2_generic=%f.\n", sum);
+    // - Log the modified array sum.
+	genericLoop2D2A_result.modifiedArray2Sum=sum;
 }
 
 // Generic 2D loop, 2 arrays.
 // - Dynamic allocation of arrays.
 void computationKernelGenericLoop2D2AD()
 {
+	printf("		--- computationKernelGenericLoop2D2AD.\n");
 	// Stack arrays:
-	ARRAY_LENGTH_D1 = GENERIC_ARRAY_001_D1;
-	ARRAY_LENGTH_D2 = GENERIC_ARRAY_001_D2;
+	ARRAY_LENGTH_D1 = GENERIC_ARRAY_D_001_D1;
+	ARRAY_LENGTH_D2 = GENERIC_ARRAY_D_001_D2;
 	float** array1_generic;
 	allocate2DFloatArrayD(&array1_generic, ARRAY_LENGTH_D1, ARRAY_LENGTH_D2);
 
 	populate2DFloatArrayD(&array1_generic, ARRAY_LENGTH_D1, ARRAY_LENGTH_D2);
 
 	// Calculate the sum before array modification.
-	double sum = sum2DFloatArrayD(array1_generic, GENERIC_ARRAY_001_D1, GENERIC_ARRAY_001_D2);
+	double sum = sum2DFloatArrayD(array1_generic, GENERIC_ARRAY_D_001_D1, GENERIC_ARRAY_D_001_D2);
+	// - Log the initial array sum.
+	genericLoop2D2AD_result.initArray1Sum=sum;
 	printf("		--- sum array1=%f.\n", sum);
 
-	ARRAY_LENGTH_D1 = GENERIC_ARRAY_002_D1;
-	ARRAY_LENGTH_D2 = GENERIC_ARRAY_002_D2;
+	ARRAY_LENGTH_D1 = GENERIC_ARRAY_D_002_D1;
+	ARRAY_LENGTH_D2 = GENERIC_ARRAY_D_002_D2;
 	float** array2_generic;
 	allocate2DFloatArrayD(&array2_generic, ARRAY_LENGTH_D1, ARRAY_LENGTH_D2);
 
 	populate2DFloatArrayD(&array2_generic, ARRAY_LENGTH_D1, ARRAY_LENGTH_D2);
 
 	// Calculate the sum before array modification.
-	sum = sum2DFloatArrayD(array2_generic, GENERIC_ARRAY_002_D1, GENERIC_ARRAY_002_D2);
+	sum = sum2DFloatArrayD(array2_generic, GENERIC_ARRAY_D_002_D1, GENERIC_ARRAY_D_002_D2);
+	// - Log the initial array sum.
+	genericLoop2D2AD_result.initArray2Sum=sum;
 	printf("		--- sum array2=%f.\n", sum);
 
-	for (int i = 0; i < GENERIC_ARRAY_001_D1; i++)
+	for (int i = 0; i < GENERIC_ARRAY_D_001_D1; i++)
 	{
-		for (int j = 0; j < GENERIC_ARRAY_001_D2; j++)
+		for (int j = 0; j < GENERIC_ARRAY_D_001_D2; j++)
 		{
 			array1_generic[i][j] += array1_generic[i][j] * array1_generic[i][j];
 
-			for (int k = 1+i; k < GENERIC_ARRAY_002_D1; k++)
+			for (int k = 1+i; k < GENERIC_ARRAY_D_002_D1; k++)
 			{
-				for (int l = 0; l < GENERIC_ARRAY_001_D2; l++)
+				for (int l = 0; l < GENERIC_ARRAY_D_002_D2; l++)
 				{
-					float tmp1 = GENERIC_ARRAY_001_D2%(l+1);
-					float tmp2 = GENERIC_ARRAY_001_D2%(k+1);
-					array2_generic[k][l] += (array2_generic[i][j] + tmp1 +1)/(array2_generic[i][j] + tmp2 +1) ;
+					float tmp1 = GENERIC_ARRAY_D_001_D2%(l+1);
+					float tmp2 = GENERIC_ARRAY_D_001_D2%(k+1);
+					array2_generic[k][l] += (array2_generic[i][j] + tmp1 +1)/(array2_generic[i][j] + tmp2 +1);
 				}
 			}
 		}
 	}
 
 	// Calculate the sum after array modification.
-	sum = sum2DFloatArrayD(array1_generic, GENERIC_ARRAY_001_D1, GENERIC_ARRAY_001_D2);
+	sum = sum2DFloatArrayD(array1_generic, GENERIC_ARRAY_D_001_D1, GENERIC_ARRAY_D_001_D2);
 	printf("		--- sum array1_generic=%f.\n", sum);
+    // - Log the modified array sum.
+	genericLoop2D2AD_result.modifiedArray1Sum=sum;
 
-	sum = sum2DFloatArrayD(array2_generic, GENERIC_ARRAY_002_D1, GENERIC_ARRAY_002_D2);
+	sum = sum2DFloatArrayD(array2_generic, GENERIC_ARRAY_D_002_D1, GENERIC_ARRAY_D_002_D2);
 	printf("		--- sum array2_generic=%f.\n", sum);
+    // - Log the modified array sum.
+	genericLoop2D2AD_result.modifiedArray2Sum=sum;
 }
 
 // Generic 3D loop, 2 arrays.
 void computationKernelGenericLoop3D2A()
 {
+	printf("		--- computationKernelGenericLoop3D2A.\n");
 	ARRAY_LENGTH_D1 = GENERIC_ARRAY_001_D1;
 	ARRAY_LENGTH_D2 = GENERIC_ARRAY_001_D2;
 	ARRAY_LENGTH_D3 = GENERIC_ARRAY_001_D3;
@@ -852,7 +1004,9 @@ void computationKernelGenericLoop3D2A()
 
 	// Calculate the sum before array modification.
 	double sumArray = sum3DFloatArrayS(array1_generic, GENERIC_ARRAY_001_D1, GENERIC_ARRAY_001_D2, GENERIC_ARRAY_001_D3);
-	printf("		--- sum A=%f.\n", sumArray);
+	// - Log the initial array sum.
+	genericLoop3D2A_result.initArray1Sum=sumArray;
+	printf("		--- sum array1_generic=%f.\n", sumArray);
 
 	ARRAY_LENGTH_D1 = GENERIC_ARRAY_002_D1;
 	ARRAY_LENGTH_D2 = GENERIC_ARRAY_002_D2;
@@ -862,7 +1016,9 @@ void computationKernelGenericLoop3D2A()
 
 	// Calculate the sum before array modification.
 	sumArray = sum3DFloatArrayS(array2_generic, GENERIC_ARRAY_002_D1, GENERIC_ARRAY_002_D2, GENERIC_ARRAY_002_D3);
-	printf("		--- sum A=%f.\n", sumArray);
+	// - Log the initial array sum.
+	genericLoop3D2A_result.initArray2Sum=sumArray;
+	printf("		--- sum array2_generic=%f.\n", sumArray);
 
 	for (int i = 0; i < GENERIC_ARRAY_001_D1; i++)
 	{
@@ -879,9 +1035,13 @@ void computationKernelGenericLoop3D2A()
 	// Calculate the sum after array modification.
 	sumArray = sum3DFloatArrayS(array1_generic, GENERIC_ARRAY_001_D1, GENERIC_ARRAY_001_D2, GENERIC_ARRAY_001_D3);
 	printf("		--- sum array1_generic=%f.\n", sumArray);
+    // - Log the modified array sum.
+	genericLoop3D2A_result.modifiedArray1Sum=sumArray;
 
 	sumArray = sum3DFloatArrayS(array2_generic, GENERIC_ARRAY_002_D1, GENERIC_ARRAY_002_D2, GENERIC_ARRAY_002_D3);
 	printf("		--- sum array2_generic=%f.\n", sumArray);
+    // - Log the modified array sum.
+	genericLoop3D2A_result.modifiedArray2Sum=sumArray;
 }
 
 void allocate1DIntArrayD(int** array, long arrayLength)

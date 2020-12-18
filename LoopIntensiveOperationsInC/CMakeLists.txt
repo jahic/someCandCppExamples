@@ -17,8 +17,12 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3 -g -static")
 # Common infrastructure for kernels to manipulate their arrays.
 add_executable(LoopIntensiveOperationsInC LoopIntensiveOperationsInC.c computationKernels.c)
 
+# Tests
+add_executable(testAllKernels tests/testAllKernels.c computationKernels.c)
+
 # Link against math lib.
 target_link_libraries(LoopIntensiveOperationsInC m)
+target_link_libraries(testAllKernels m)
 
 AUX_SOURCE_DIRECTORY(kernels KERNELS) 
 

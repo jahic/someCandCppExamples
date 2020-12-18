@@ -16,10 +16,16 @@ int main(int argc, char **argv)
 	printf("Start.\n");
 
 	// Polybench, cholesky
-	computationKernelPolybenchCholesky();
+ 	computationKernelPolybenchCholesky();
 	printf("	- computationKernelPolybenchCholesky...COMPLETE.\n");
 	computationKernelPolybenchCholeskyD();
 	printf("	- computationKernelPolybenchCholeskyD...COMPLETE.\n");
+
+	// Polybench, gramschmidt
+	computationKernelPolybenchGramschmidt();
+	printf("	- computationKernelPolybenchGramschmidt---COMPLETE.\n");
+	computationKernelPolybenchGramschmidtD();
+	printf("	- computationKernelPolybenchGramschmidtD---COMPLETE.\n");
 
 	// Polybench, lu
 	computationKernelPolybenchLu();
@@ -37,12 +43,6 @@ int main(int argc, char **argv)
 	computationKernelPolybenchDoitgen();
 	printf("	- computationKernelPolybenchDoitgen...COMPLETE.\n");
 
-	// Polybench, gramschmidt
-	computationKernelPolybenchGramschmidt();
-	printf("	- computationKernelPolybenchGramschmidt---COMPLETE.\n");
-	computationKernelPolybenchGramschmidtD();
-	printf("	- computationKernelPolybenchGramschmidtD---COMPLETE.\n");
-
 	// Polybench, tislov
 	computationKernelPolybenchTislov();
 	printf("	- computationKernelPolybenchTislov---COMPLETE.\n");
@@ -53,7 +53,7 @@ int main(int argc, char **argv)
 	computationKernelGenericLoop1D2AD();
 	printf("	- computationKernelGenericLoop1D2AD---COMPLETE.\n");
 
-	// Generic 2D loop, 2 arrays.
+    // Generic 2D loop, 2 arrays.
 	computationKernelGenericLoop2D2A();
 	printf("	- computationKernelGenericLoop2D2A---COMPLETE.\n");
 	computationKernelGenericLoop2D2AD();
