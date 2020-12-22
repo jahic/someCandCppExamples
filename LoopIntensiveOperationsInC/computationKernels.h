@@ -4,6 +4,16 @@
  *
  */
 
+#include <stdio.h>
+
+//#define LOG_RESULTS
+//#define LOG_RESULTS_BINARY
+//#define LOG_RESULTS_JPAR
+
+#ifdef LOG_RESULTS
+FILE *logFile;
+#endif /* MACRO */
+
 // Polybench, cholesky
 // - Arrays on stack.
 void computationKernelPolybenchCholesky();

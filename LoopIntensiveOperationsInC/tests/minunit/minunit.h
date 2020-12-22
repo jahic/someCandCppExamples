@@ -69,7 +69,7 @@
 #define MINUNIT_MESSAGE_LEN 1024
 /*  Accuracy with which floats are compared */
 //#define MINUNIT_EPSILON 1E-12
-#define MINUNIT_EPSILON 1E-6
+#define MINUNIT_EPSILON 1E-8
 
 /*  Misc. counters */
 static int minunit_run = 0;
@@ -185,7 +185,22 @@ static void (*minunit_teardown)(void) = NULL;
 		printf(".");\
 	}\
 )
-
+// -- Added by Jasmin ---
+#define mu_assert_long_eq(expected, result) MU__SAFE_BLOCK(\
+	long minunit_tmp_e;\
+	long minunit_tmp_r;\
+	minunit_assert++;\
+	minunit_tmp_e = (expected);\
+	minunit_tmp_r = (result);\
+	if (minunit_tmp_e != minunit_tmp_r) {\
+		snprintf(minunit_last_message, MINUNIT_MESSAGE_LEN, "%s failed:\n\t%s:%d: %lu expected but was %lu", __func__, __FILE__, __LINE__, minunit_tmp_e, minunit_tmp_r);\
+		minunit_status = 1;\
+		return;\
+	} else {\
+		printf(".");\
+	}\
+)
+// ---------------------
 #define mu_assert_double_eq(expected, result) MU__SAFE_BLOCK(\
 	double minunit_tmp_e;\
 	double minunit_tmp_r;\

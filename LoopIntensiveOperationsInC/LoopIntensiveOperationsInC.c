@@ -15,6 +15,12 @@ int main(int argc, char **argv)
 {
 	printf("Start.\n");
 
+	#ifdef LOG_RESULTS
+	// Restart the file
+	logFile = fopen("log.txt", "w+");
+	fclose(logFile);
+	#endif /* MACRO */
+
 	// Polybench, cholesky
  	computationKernelPolybenchCholesky();
 	printf("	- computationKernelPolybenchCholesky...COMPLETE.\n");
@@ -28,8 +34,8 @@ int main(int argc, char **argv)
 	printf("	- computationKernelPolybenchGramschmidtD---COMPLETE.\n");
 
 	// Polybench, lu
-	computationKernelPolybenchLu();
-	printf("	- computationKernelPolybenchLu...COMPLETE.\n");
+	//computationKernelPolybenchLu();
+	//printf("	- computationKernelPolybenchLu...COMPLETE.\n");
 
 	// Polybench, 2mm
 	computationKernelPolybench2mm();
@@ -40,8 +46,8 @@ int main(int argc, char **argv)
 	printf("	- computationKernelPolybench3mm...COMPLETE.\n");
 
 	// Polybench, doitgen
-	computationKernelPolybenchDoitgen();
-	printf("	- computationKernelPolybenchDoitgen...COMPLETE.\n");
+	//computationKernelPolybenchDoitgen();
+	//printf("	- computationKernelPolybenchDoitgen...COMPLETE.\n");
 
 	// Polybench, tislov
 	computationKernelPolybenchTislov();
@@ -60,8 +66,8 @@ int main(int argc, char **argv)
 	printf("	- computationKernelGenericLoop2D2AD---COMPLETE.\n");
 
 	// Generic 3D loop, 2 arrays.
-	computationKernelGenericLoop3D2A();
-	printf("	- computationKernelGenericLoop3D2A---COMPLETE.\n");
+	//computationKernelGenericLoop3D2A();
+	//printf("	- computationKernelGenericLoop3D2A---COMPLETE.\n");
 
 	printf("Exit.\n");
 

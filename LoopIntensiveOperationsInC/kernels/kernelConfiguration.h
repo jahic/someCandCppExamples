@@ -6,6 +6,7 @@
 // - The dimensions should be equal.
 #define POLY_CHOLESKY_ARRAY_001_LENGTH_D1 20000
 #define POLY_CHOLESKY_ARRAY_001_LENGTH_D2 20000
+
 // - Results:
 struct POLY_CHOLESKY_RESULT
 {
@@ -27,8 +28,8 @@ struct POLY_CHOLESKY_D_RESULT
 // - Results:
 struct POLY_LU_RESULT
 {
-	double initArraySum;
-	double modifiedArraySum;
+	long initArraySum;
+	long modifiedArraySum;
 } poly_lu_result;
 
 // - Polybench, 2mm
@@ -49,17 +50,17 @@ struct POLY_LU_RESULT
 // - Results:
 struct POLY_2MM_RESULT
 {
-	double initArray1Sum;
-	double initArray2Sum;
-	double initArray3Sum;
-	double initArray4Sum;
-	double initArray5Sum;
+	long initArray1Sum;
+	long initArray2Sum;
+	long initArray3Sum;
+	long initArray4Sum;
+	long initArray5Sum;
 
-	double modifiedArray1Sum;
-	double modifiedArray2Sum;
-	double modifiedArray3Sum;
-	double modifiedArray4Sum;
-	double modifiedArray5Sum;
+	long modifiedArray1Sum;
+	long modifiedArray2Sum;
+	long modifiedArray3Sum;
+	long modifiedArray4Sum;
+	long modifiedArray5Sum;
 } poly_2mm_result;
 
 // - Polybench, 3mm
@@ -83,40 +84,40 @@ struct POLY_2MM_RESULT
 // - Results:
 struct POLY_3MM_RESULT
 {
-	double initArray1Sum;
-	double initArray2Sum;
-	double initArray3Sum;
-	double initArray4Sum;
-	double initArray5Sum;
-	double initArray6Sum;
+	long initArray1Sum;
+	long initArray2Sum;
+	long initArray3Sum;
+	long initArray4Sum;
+	long initArray5Sum;
+	long initArray6Sum;
 
-	double modifiedArray1Sum;
-	double modifiedArray2Sum;
-	double modifiedArray3Sum;
-	double modifiedArray4Sum;
-	double modifiedArray5Sum;
-	double modifiedArray6Sum;
+	long modifiedArray1Sum;
+	long modifiedArray2Sum;
+	long modifiedArray3Sum;
+	long modifiedArray4Sum;
+	long modifiedArray5Sum;
+	long modifiedArray6Sum;
 } poly_3mm_result;
 
 // - Polybench, doitgen
-#define POLY_DOITGEN_ARRAY_001_LENGTH_D1 320
+#define POLY_DOITGEN_ARRAY_001_LENGTH_D1 200
 
-#define POLY_DOITGEN_ARRAY_002_LENGTH_D1 320
-#define POLY_DOITGEN_ARRAY_002_LENGTH_D2 320
+#define POLY_DOITGEN_ARRAY_002_LENGTH_D1 220
+#define POLY_DOITGEN_ARRAY_002_LENGTH_D2 220
 
-#define POLY_DOITGEN_ARRAY_003_LENGTH_D1 300
-#define POLY_DOITGEN_ARRAY_003_LENGTH_D2 280
-#define POLY_DOITGEN_ARRAY_003_LENGTH_D3 320
+#define POLY_DOITGEN_ARRAY_003_LENGTH_D1 200
+#define POLY_DOITGEN_ARRAY_003_LENGTH_D2 180
+#define POLY_DOITGEN_ARRAY_003_LENGTH_D3 220
 // - Results:
 struct POLY_DOITGEN_RESULT
 {
-	double initSumSum;
-	double initC4Sum;
-	double initASum;
+	long initSumSum;
+	long initC4Sum;
+	long initASum;
 
-	double modifiedSumSum;
-	double modifiedC4Sum;
-	double modifiedASum;
+	long modifiedSumSum;
+	long modifiedC4Sum;
+	long modifiedASum;
 } poly_doitgen_result;
 
 // - Polybench, gramschmidt
@@ -131,24 +132,24 @@ struct POLY_DOITGEN_RESULT
 // - Results:
 struct POLY_GRAMSCHMIDT_RESULT
 {
-	double initArray1Sum;
-	double initArray2Sum;
-	double initArray3Sum;
+	long initArray1Sum;
+	long initArray2Sum;
+	long initArray3Sum;
 
-	double modifiedArray1Sum;
-	double modifiedArray2Sum;
-	double modifiedArray3Sum;
+	long modifiedArray1Sum;
+	long modifiedArray2Sum;
+	long modifiedArray3Sum;
 } poly_gramschmidt_result;
 // - Results:
 struct POLY_GRAMSCHMIDT_D_RESULT
 {
-	double initArray1Sum;
-	double initArray2Sum;
-	double initArray3Sum;
+	long initArray1Sum;
+	long initArray2Sum;
+	long initArray3Sum;
 
-	double modifiedArray1Sum;
-	double modifiedArray2Sum;
-	double modifiedArray3Sum;
+	long modifiedArray1Sum;
+	long modifiedArray2Sum;
+	long modifiedArray3Sum;
 } poly_gramschmidt_d_result;
 
 // - Polybench, tislov
@@ -162,13 +163,13 @@ struct POLY_GRAMSCHMIDT_D_RESULT
 // - Results:
 struct POLY_TISLOV_RESULT
 {
-	double initBSum;
-	double initXSum;
-	double initLSum;
+	long initBSum;
+	long initXSum;
+	long initLSum;
 
-	double modifiedBSum;
-	double modifiedXSum;
-	double modifiedLSum;
+	long modifiedBSum;
+	long modifiedXSum;
+	long modifiedLSum;
 } poly_tislov_result;
 
 // - Generic arrays
@@ -191,45 +192,45 @@ struct POLY_TISLOV_RESULT
 // - Results:
 struct GENERIC_1D2A_RESULT
 {
-	double initArray1Sum;
-	double initArray2Sum;
+	long initArray1Sum;
+	long initArray2Sum;
 
-	double modifiedArray1Sum;
-	double modifiedArray2Sum;
+	long modifiedArray1Sum;
+	long modifiedArray2Sum;
 } genericLoop1D2A_result;
 // - Results:
 struct GENERIC_1D2AD_RESULT
 {
-	double initArray1Sum;
-	double initArray2Sum;
+	long initArray1Sum;
+	long initArray2Sum;
 
-	double modifiedArray1Sum;
-	double modifiedArray2Sum;
+	long modifiedArray1Sum;
+	long modifiedArray2Sum;
 } genericLoop1D2AD_result;
 
 struct GENERIC_2D2A_RESULT
 {
-	double initArray1Sum;
-	double initArray2Sum;
+	long initArray1Sum;
+	long initArray2Sum;
 
-	double modifiedArray1Sum;
-	double modifiedArray2Sum;
+	long modifiedArray1Sum;
+	long modifiedArray2Sum;
 } genericLoop2D2A_result;
 
 struct GENERIC_2D2AD_RESULT
 {
-	double initArray1Sum;
-	double initArray2Sum;
+	long initArray1Sum;
+	long initArray2Sum;
 
-	double modifiedArray1Sum;
-	double modifiedArray2Sum;
+	long modifiedArray1Sum;
+	long modifiedArray2Sum;
 } genericLoop2D2AD_result;
 
 struct GENERIC_3D2A_RESULT
 {
-	double initArray1Sum;
-	double initArray2Sum;
+	long initArray1Sum;
+	long initArray2Sum;
 
-	double modifiedArray1Sum;
-	double modifiedArray2Sum;
+	long modifiedArray1Sum;
+	long modifiedArray2Sum;
 } genericLoop3D2A_result;
