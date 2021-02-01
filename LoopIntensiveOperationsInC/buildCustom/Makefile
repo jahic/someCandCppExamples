@@ -48,24 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC
+CMAKE_SOURCE_DIR = /home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom
+CMAKE_BINARY_DIR = /home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -78,11 +67,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles /home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,19 @@ LoopIntensiveOperationsInC/fast:
 	$(MAKE) -f CMakeFiles/LoopIntensiveOperationsInC.dir/build.make CMakeFiles/LoopIntensiveOperationsInC.dir/build
 .PHONY : LoopIntensiveOperationsInC/fast
 
+#=============================================================================
+# Target rules for targets named testAllKernels
+
+# Build rule for target.
+testAllKernels: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 testAllKernels
+.PHONY : testAllKernels
+
+# fast build rule for target.
+testAllKernels/fast:
+	$(MAKE) -f CMakeFiles/testAllKernels.dir/build.make CMakeFiles/testAllKernels.dir/build
+.PHONY : testAllKernels/fast
+
 LoopIntensiveOperationsInC.o: LoopIntensiveOperationsInC.c.o
 
 .PHONY : LoopIntensiveOperationsInC.o
@@ -157,6 +170,7 @@ computationKernels.o: computationKernels.c.o
 # target to build an object file
 computationKernels.c.o:
 	$(MAKE) -f CMakeFiles/LoopIntensiveOperationsInC.dir/build.make CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.o
+	$(MAKE) -f CMakeFiles/testAllKernels.dir/build.make CMakeFiles/testAllKernels.dir/computationKernels.c.o
 .PHONY : computationKernels.c.o
 
 computationKernels.i: computationKernels.c.i
@@ -166,6 +180,7 @@ computationKernels.i: computationKernels.c.i
 # target to preprocess a source file
 computationKernels.c.i:
 	$(MAKE) -f CMakeFiles/LoopIntensiveOperationsInC.dir/build.make CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.i
+	$(MAKE) -f CMakeFiles/testAllKernels.dir/build.make CMakeFiles/testAllKernels.dir/computationKernels.c.i
 .PHONY : computationKernels.c.i
 
 computationKernels.s: computationKernels.c.s
@@ -175,7 +190,35 @@ computationKernels.s: computationKernels.c.s
 # target to generate assembly for a file
 computationKernels.c.s:
 	$(MAKE) -f CMakeFiles/LoopIntensiveOperationsInC.dir/build.make CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.s
+	$(MAKE) -f CMakeFiles/testAllKernels.dir/build.make CMakeFiles/testAllKernels.dir/computationKernels.c.s
 .PHONY : computationKernels.c.s
+
+tests/testAllKernels.o: tests/testAllKernels.c.o
+
+.PHONY : tests/testAllKernels.o
+
+# target to build an object file
+tests/testAllKernels.c.o:
+	$(MAKE) -f CMakeFiles/testAllKernels.dir/build.make CMakeFiles/testAllKernels.dir/tests/testAllKernels.c.o
+.PHONY : tests/testAllKernels.c.o
+
+tests/testAllKernels.i: tests/testAllKernels.c.i
+
+.PHONY : tests/testAllKernels.i
+
+# target to preprocess a source file
+tests/testAllKernels.c.i:
+	$(MAKE) -f CMakeFiles/testAllKernels.dir/build.make CMakeFiles/testAllKernels.dir/tests/testAllKernels.c.i
+.PHONY : tests/testAllKernels.c.i
+
+tests/testAllKernels.s: tests/testAllKernels.c.s
+
+.PHONY : tests/testAllKernels.s
+
+# target to generate assembly for a file
+tests/testAllKernels.c.s:
+	$(MAKE) -f CMakeFiles/testAllKernels.dir/build.make CMakeFiles/testAllKernels.dir/tests/testAllKernels.c.s
+.PHONY : tests/testAllKernels.c.s
 
 # Help Target
 help:
@@ -183,15 +226,19 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... LoopIntensiveOperationsInC"
-	@echo "... edit_cache"
+	@echo "... testAllKernels"
 	@echo "... LoopIntensiveOperationsInC.o"
 	@echo "... LoopIntensiveOperationsInC.i"
 	@echo "... LoopIntensiveOperationsInC.s"
 	@echo "... computationKernels.o"
 	@echo "... computationKernels.i"
 	@echo "... computationKernels.s"
+	@echo "... tests/testAllKernels.o"
+	@echo "... tests/testAllKernels.i"
+	@echo "... tests/testAllKernels.s"
 .PHONY : help
 
 

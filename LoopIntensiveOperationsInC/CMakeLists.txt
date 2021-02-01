@@ -9,10 +9,16 @@ endif()
 set(CMAKE_C_FLAGS "-Wall -Wextra")
 set(CMAKE_C_FLAGS_DEBUG "-O3 -g -static")
 set(CMAKE_C_FLAGS_RELEASE "-O3 -g -static")
+# No compiler optimisations
+#set(CMAKE_C_FLAGS_DEBUG "-O0 -g -static")
+#set(CMAKE_C_FLAGS_RELEASE "-O0 -g -static")
 
 set(CMAKE_CXX_FLAGS "-Wall -Wextra")
 set(CMAKE_CXX_FLAGS_DEBUG "-O3 -g -static")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3 -g -static")
+# No compiler optimisations
+#set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -static")
+#set(CMAKE_CXX_FLAGS_RELEASE "-O0 -g -static")
 
 # Common infrastructure for kernels to manipulate their arrays.
 add_executable(LoopIntensiveOperationsInC LoopIntensiveOperationsInC.c computationKernels.c)

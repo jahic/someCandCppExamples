@@ -1,3 +1,4 @@
-/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles/rebuild_cache.dir
-/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles/LoopIntensiveOperationsInC.dir
-/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles/edit_cache.dir
+/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles/edit_cache.dir
+/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles/rebuild_cache.dir
+/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles/LoopIntensiveOperationsInC.dir
+/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles/testAllKernels.dir

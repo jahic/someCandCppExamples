@@ -23,6 +23,7 @@ void populate1DIntArrayS(int array[ARRAY_LENGTH_D1], long d1);
 void populate1DFloatArrayS(float array[ARRAY_LENGTH_D1], long d1);
 void populate2DIntArrayS(int array[ARRAY_LENGTH_D1][ARRAY_LENGTH_D2], long arrayLength, long arrayWidth);
 void populate2DFloatArrayS(float[ARRAY_LENGTH_D1][ARRAY_LENGTH_D2], long arrayLength, long arrayWidth);
+void populate3DIntArrayS(int array[ARRAY_LENGTH_D1][ARRAY_LENGTH_D2][ARRAY_LENGTH_D3], long D1, long D2, long D3);
 void populate3DFloatArrayS(float array[ARRAY_LENGTH_D1][ARRAY_LENGTH_D2][ARRAY_LENGTH_D3], long D1, long D2, long D3);
 void populate1DIntArrayD(int** array, long arrayLength);
 void populate1DFloatArrayD(float** array, long arrayLength);

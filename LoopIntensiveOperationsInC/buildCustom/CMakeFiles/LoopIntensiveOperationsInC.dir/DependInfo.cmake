@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/LoopIntensiveOperationsInC.c" "/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.o"
-  "/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c" "/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.o"
+  "/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/LoopIntensiveOperationsInC.c" "/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles/LoopIntensiveOperationsInC.dir/LoopIntensiveOperationsInC.c.o"
+  "/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c" "/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/buildCustom/CMakeFiles/LoopIntensiveOperationsInC.dir/computationKernels.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

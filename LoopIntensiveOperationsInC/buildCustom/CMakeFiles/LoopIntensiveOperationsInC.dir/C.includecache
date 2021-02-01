@@ -6,43 +6,41 @@
 
 #IncludeRegexTransform: 
 
-/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/LoopIntensiveOperationsInC.c
+/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/LoopIntensiveOperationsInC.c
 stdio.h
 -
 stdlib.h
 -
 computationKernels.h
-/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.h
+/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.h
 
-/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c
-stdio.h
--
+/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.c
 unistd.h
 -
 string.h
 -
 math.h
 -
-stdio.h
+stdbool.h
 -
 stdlib.h
 -
-math.h
--
 populateArrays.h
-/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/populateArrays.h
+/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/populateArrays.h
 computationKernels.h
-/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.h
+/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.h
 
-/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.h
+/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/computationKernels.h
+stdio.h
+-
 
-/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/globalConfiguration.h
+/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/globalConfiguration.h
 
-/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/kernels/kernelConfiguration.h
+/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/kernels/kernelConfiguration.h
 
-/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/populateArrays.h
+/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/populateArrays.h
 kernels/kernelConfiguration.h
-/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/kernels/kernelConfiguration.h
+/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/kernels/kernelConfiguration.h
 globalConfiguration.h
-/home/jahic/git/someCandCppExamples/LoopIntensiveOperationsInC/globalConfiguration.h
+/home/jahic/git/repository/someCandCppExamples/LoopIntensiveOperationsInC/globalConfiguration.h
 
