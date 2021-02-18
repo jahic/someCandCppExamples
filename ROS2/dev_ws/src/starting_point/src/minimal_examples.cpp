@@ -419,9 +419,9 @@ int main(int argc, char ** argv)
     //Normal rclcpp::spin - single threaded. Most commonly used in ROS1.
     /** WARNING: ONLY ONE NODE */ 
     //Uncomment and compile the row below to be able to use it.
-    /*
-        rclcpp::spin(std::make_shared<MinimalPublisher>());
-    */
+    
+    rclcpp::spin(std::make_shared<MinimalPublisher>());
+    
 //END DEMO 1
 
 //DEMO 2
