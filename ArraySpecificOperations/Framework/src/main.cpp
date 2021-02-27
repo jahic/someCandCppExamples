@@ -10,6 +10,9 @@
 
 
 
+
+
+
 int main(int argc, char ** argv)
 {
 
@@ -27,12 +30,18 @@ int main(int argc, char ** argv)
     //  input i = input();
     //   i.matrixinput(matrix);
     //   
+
+    //  
+
+
+
     //   f.setInput(i);
     //   f.transform().rotate()    -- complex operations
 
     //  Problem evaluation
     //
     //  f.parallelize()
+    
     //
     //
     //
