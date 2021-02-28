@@ -4,10 +4,17 @@ project(ParallelizationApproaches LANGUAGES CXX)
 
 find_package(Threads)
 find_package(OpenMP REQUIRED)
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
 
 
 
 # Common infrastructure for kernels to manipulate their arrays.
 add_executable(MatrixMultiplication src/MatrixMultiplication.cpp)
+add_executable(ImageGrayscaling src/ImageGrayscaling.cpp)
+add_executable(GrayscaleParallel src/GrayscaleParallel.cpp)
+
+target_link_libraries(ImageGrayscaling ${OpenCV_LIBS})
+target_link_libraries(GrayscaleParallel ${OpenCV_LIBS} "${OpenMP_CXX_FLAGS}")
 target_link_libraries(MatrixMultiplication PRIVATE "${OpenMP_CXX_FLAGS}")
 target_compile_options(MatrixMultiplication PRIVATE "${OpenMP_CXX_FLAGS}")
