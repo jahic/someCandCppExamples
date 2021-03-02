@@ -13,8 +13,13 @@ include_directories( ${OpenCV_INCLUDE_DIRS} )
 add_executable(MatrixMultiplication src/MatrixMultiplication.cpp)
 add_executable(ImageGrayscaling src/ImageGrayscaling.cpp)
 add_executable(GrayscaleParallel src/GrayscaleParallel.cpp)
+add_executable(Filtering src/Filtering.cpp)
 
 target_link_libraries(ImageGrayscaling ${OpenCV_LIBS})
 target_link_libraries(GrayscaleParallel ${OpenCV_LIBS} "${OpenMP_CXX_FLAGS}")
 target_link_libraries(MatrixMultiplication PRIVATE "${OpenMP_CXX_FLAGS}")
 target_compile_options(MatrixMultiplication PRIVATE "${OpenMP_CXX_FLAGS}")
+
+target_link_libraries(Filtering PRIVATE "${OpenMP_CXX_FLAGS}")
+target_compile_options(Filtering PRIVATE "${OpenMP_CXX_FLAGS}")
+
