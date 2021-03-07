@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/core.dir/src/main.cpp.o  -o core  -pthread 

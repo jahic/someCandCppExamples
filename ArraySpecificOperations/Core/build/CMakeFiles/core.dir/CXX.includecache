@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/arian/Desktop/someCandCppExamples/ArraySpecificOperations/Core/src/main.cpp
+stdio.h
+-
+sched.h
+-
+stdlib.h
+-
+thread
+-
+iostream
+-
+chrono
+-
+pthread.h
+-
+unistd.h
+-
+math.h
+-
+vector
+-
+
