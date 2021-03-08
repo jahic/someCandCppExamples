@@ -1,0 +1,15 @@
+[35m[1mScanning dependencies of target talker[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/main.cpp.o[0m
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::timer_callback_parallel()[m[K’:
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:37:30:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   37 |             for(int i = 0; [01;35m[Ki < arr_length[m[K; i++)
+      |                            [01;35m[K~~^~~~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:45:35:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kvoid* MinimalPublisher::heavy_function(int*, int)[m[K’
+   45 |                 *it = std::thread([01;31m[Kheavy_function[m[K, arr_, iterator);
+      |                                   [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:61:16:[m[K [01;36m[Knote: [m[Kdeclared here
+   61 |         void * [01;36m[Kheavy_function[m[K(int* arr_, int iterator)
+      |                [01;36m[K^~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/talker.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

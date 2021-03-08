@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/arian/Desktop/someCandCppExamples/ArraySpecificOperations/Core/src/thread.cpp
+iostream
+-
+vector
+-
+thread
+-
+pthread.h
+-
+sched.h
+-
+math.h
+-
+chrono
+-
+
