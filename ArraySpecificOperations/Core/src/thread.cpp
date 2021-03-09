@@ -59,11 +59,11 @@ int main(int argc, const char ** argv)
             CPU_SET(i, &cpuset);
             pthread_setaffinity_np(it->native_handle(), sizeof(cpuset), &cpuset);
             
-           // int policy;
-           // struct sched_param param;
-           // pthread_getschedparam(it->native_handle(), &policy, &param);
-           // param.sched_priority = sched_get_priority_max(policy);
-           // pthread_setschedparam(it->native_handle(), policy, &param);
+            int policy;
+            struct sched_param param;
+            pthread_getschedparam(it->native_handle(), &policy, &param);
+            param.sched_priority = 130;
+            pthread_setschedparam(it->native_handle(), SCHED_RR, &param);
             CPU_CLR(i, &cpuset);
             i = i + 3;
             j++;

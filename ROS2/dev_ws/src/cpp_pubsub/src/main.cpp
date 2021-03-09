@@ -6,6 +6,7 @@
 #include<vector>
 #include<thread>
 #include<sched.h>
+#include<pthread.h>
 
 
 class MinimalPublisher : public rclcpp::Node
@@ -51,6 +52,13 @@ class MinimalPublisher : public rclcpp::Node
                 *it = std::thread(std::bind(&MinimalPublisher::heavy_function, this, arr_, iterator));
                 CPU_SET(j, &cpuset);
                 pthread_setaffinity_np(it->native_handle(), sizeof(cpuset), &cpuset);
+
+                int policy;
+                struct sched_param param;
+                //pthread_getschedparam(it->native_handle(), &policy, &param);
+                param.sched_priority = 99;
+                pthread_setschedparam(it->native_handle(), SCHED_RR, &param);
+
                 CPU_CLR(j, &cpuset);
                 iterator++;
                 j = j + 3;
@@ -105,7 +113,7 @@ class MinimalPublisher : public rclcpp::Node
             {
                 result += arr_[i] * arr_[i]; 
             }
-
+            //std::this_thread::sleep_for(std::chrono_literals::operator""ms(2000));
             return NULL;
         }
 

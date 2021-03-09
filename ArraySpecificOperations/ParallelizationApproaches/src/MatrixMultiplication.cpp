@@ -1016,6 +1016,13 @@ int64_t data_2000_int_matrix_multiplication_pthreads_2()
     {
         iterator[i] = i;
         pthread_create(&threads[i], NULL, multiply_int_parallel_pthreads_2_2000, (void*)&iterator[i]);
+
+        int policy;
+            struct sched_param param;
+            
+            pthread_getschedparam(threads[i], &policy, &param);
+            param.sched_priority = 130;
+            pthread_setschedparam(threads[i], SCHED_RR, &param);
     }
 
     for(int i = 0; i < thread_number; i++)

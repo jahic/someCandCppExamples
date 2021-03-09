@@ -14,6 +14,9 @@ add_executable(MatrixMultiplication src/MatrixMultiplication.cpp)
 add_executable(ImageGrayscaling src/ImageGrayscaling.cpp)
 add_executable(GrayscaleParallel src/GrayscaleParallel.cpp)
 add_executable(Filtering src/Filtering.cpp)
+add_executable(Priority src/priority.cpp)
+
+target_link_libraries(Priority PRIVATE Threads::Threads)
 
 target_link_libraries(ImageGrayscaling ${OpenCV_LIBS})
 target_link_libraries(GrayscaleParallel ${OpenCV_LIBS} "${OpenMP_CXX_FLAGS}")
