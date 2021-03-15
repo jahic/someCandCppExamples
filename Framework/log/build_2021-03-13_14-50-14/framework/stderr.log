@@ -1,0 +1,13 @@
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:49:12:[m[K [01;31m[Kerror: [m[Ktoo few arguments to function ‘[01m[Kvoid sum(const std::vector<BufferT>&) [with T = int][m[K’
+   49 |   sum<int>([01;31m[K)[m[K;
+      |            [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:6:[m[K [01;36m[Knote: [m[Kdeclared here
+   12 | void [01;36m[Ksum[m[K(const std::vector<T>& vector)
+      |      [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:47:45:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kit[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   47 |   std::array<int, std::size_t(5)>::iterator [01;35m[Kit[m[K = d.begin();
+      |                                             [01;35m[K^~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

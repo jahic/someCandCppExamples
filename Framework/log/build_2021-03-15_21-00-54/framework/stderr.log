@@ -1,0 +1,22 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:11:22:[m[K [01;31m[Kerror: [m[Kexpected type-specifier before numeric constant
+   11 |     using PTHREADS = [01;31m[K0[m[K;
+      |                      [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:12:22:[m[K [01;31m[Kerror: [m[Kexpected type-specifier before numeric constant
+   12 |     using OPENMP   = [01;31m[K1[m[K;
+      |                      [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel::execute(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, const settings&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:119:80:[m[K [01;31m[Kerror: [m[K‘[01m[KPTHREADS[m[K’ is not a member of ‘[01m[KPARALLELIZATION_STRATEGY[m[K’
+  119 |             if(settings_.PARALLELIZATION_STRATEGY == PARALLELIZATION_STRATEGY::[01;31m[KPTHREADS[m[K)
+      |                                                                                [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:123:85:[m[K [01;31m[Kerror: [m[K‘[01m[KOPENMP[m[K’ is not a member of ‘[01m[KPARALLELIZATION_STRATEGY[m[K’
+  123 |             else if(settings_.PARALLELIZATION_STRATEGY == PARALLELIZATION_STRATEGY::[01;31m[KOPENMP[m[K)
+      |                                                                                     [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:84:83:[m[K [01;31m[Kerror: [m[K‘[01m[KPTHREADS[m[K’ is not a member of ‘[01m[KPARALLELIZATION_STRATEGY[m[K’
+   84 |   settings settings_ = settings(4_THREADS, 1, 1, false, PARALLELIZATION_STRATEGY::[01;31m[KPTHREADS[m[K);
+      |                                                                                   [01;31m[K^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

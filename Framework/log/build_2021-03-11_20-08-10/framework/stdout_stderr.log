@@ -1,0 +1,18 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main(int, const char**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:26:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   26 | int main([01;35m[Kint argc[m[K, const char ** argv)
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:26:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   26 | int main(int argc, [01;35m[Kconst char ** argv[m[K)
+      |                    [01;35m[K~~~~~~~~~~~~~~^~~~[m[K
+[100%] [32m[1mLinking CXX executable main[0m
+/usr/bin/ld: CMakeFiles/main.dir/src/main.cpp.o: in function `Arian::arian()':
+main.cpp:(.text._ZN5Arian5arianEv[_ZN5Arian5arianEv]+0x10): undefined reference to `Arian::instance'
+/usr/bin/ld: main.cpp:(.text._ZN5Arian5arianEv[_ZN5Arian5arianEv]+0x31): undefined reference to `Arian::instance'
+/usr/bin/ld: main.cpp:(.text._ZN5Arian5arianEv[_ZN5Arian5arianEv]+0x38): undefined reference to `Arian::instance'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/main.dir/build.make:131: main] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

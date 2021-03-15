@@ -1,0 +1,118 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel::execute(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, const settings&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:121:34:[m[K [01;35m[Kwarning: [m[Kvalue computed is not used [[01;35m[K-Wunused-value[m[K]
+  121 |                         ([01;35m[K(i + 1) * ((matrix_a_.size() / sqrt(matrix_a_.size()) / settings_.THREAD_NUMBER))[m[K,
+      |                          [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:120:28:[m[K [01;35m[Kwarning: [m[Kvalue computed is not used [[01;35m[K-Wunused-value[m[K]
+  120 |                         ([01;35m[Ki * ((matrix_a_.size() / sqrt(matrix_a_.size()) / settings_.THREAD_NUMBER))[m[K,
+      |                          [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:123:22:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+  123 |                     )[01;31m[K;[m[K
+      |                      [01;31m[K^[m[K
+      |                      [32m[K)[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:120:25:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+  120 |                         [01;36m[K([m[Ki * ((matrix_a_.size() / sqrt(matrix_a_.size()) / settings_.THREAD_NUMBER)),
+      |                         [01;36m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:123:22:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+  123 |                     )[01;31m[K;[m[K
+      |                      [01;31m[K^[m[K
+      |                      [32m[K)[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:118:50:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+  118 |                     iterators_[i] = new iterators[01;36m[K([m[K
+      |                                                  [01;36m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:123:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kiterators::iterators()[m[K’
+  123 |                     )[01;31m[K;[m[K
+      |                      [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:34:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kiterators::iterators(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, int, int, int, int)[m[K’
+   34 |     [01;36m[Kiterators[m[K(
+      |     [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:34:5:[m[K [01;36m[Knote: [m[K  candidate expects 7 arguments, 0 provided
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr iterators::iterators(const iterators&)[m[K’
+   31 | struct [01;36m[Kiterators[m[K
+      |        [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr iterators::iterators(iterators&&)[m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:132:21:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Ksqrt(std::vector<int>::size_type, std::vector<int>::size_type, __gnu_cxx::__enable_if<true, double>::__type)[m[K’
+  132 |                     [01;31m[K)[m[K;
+      |                     [01;31m[K^[m[K
+In file included from [01m[K/usr/include/features.h:461[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h:39[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h:524[m[K,
+                 from [01m[K/usr/include/c++/9/iostream:38[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[01m[K/usr/include/x86_64-linux-gnu/bits/mathcalls.h:143:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kdouble sqrt(double)[m[K’
+  143 | [01;36m[K__MATHCALL[m[K (sqrt,, (_Mdouble_ __x));
+      | [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/x86_64-linux-gnu/bits/mathcalls.h:143:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+In file included from [01m[K/home/arian/ros2_foxy/install/libstatistics_collector/include/libstatistics_collector/moving_average_statistics/types.hpp:18[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/libstatistics_collector/include/libstatistics_collector/collector/generate_statistics_message.hpp:24[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/subscription.hpp:50[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/cmath:475:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Tp> constexpr typename __gnu_cxx::__enable_if<std::__is_integer<_Tp>::__value, double>::__type std::sqrt(_Tp)[m[K’
+  475 |     [01;36m[Ksqrt[m[K(_Tp __x)
+      |     [01;36m[K^~~~[m[K
+[01m[K/usr/include/c++/9/cmath:475:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:132:21:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+  132 |                     [01;36m[K)[m[K;
+      |                     [01;36m[K^[m[K
+In file included from [01m[K/home/arian/ros2_foxy/install/libstatistics_collector/include/libstatistics_collector/moving_average_statistics/types.hpp:18[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/libstatistics_collector/include/libstatistics_collector/collector/generate_statistics_message.hpp:24[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/subscription.hpp:50[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/any_executable.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/cmath:467:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr long double std::sqrt(long double)[m[K’
+  467 |   [01;36m[Ksqrt[m[K(long double __x)
+      |   [01;36m[K^~~~[m[K
+[01m[K/usr/include/c++/9/cmath:467:3:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/usr/include/c++/9/cmath:463:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr float std::sqrt(float)[m[K’
+  463 |   [01;36m[Ksqrt[m[K(float __x)
+      |   [01;36m[K^~~~[m[K
+[01m[K/usr/include/c++/9/cmath:463:3:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:132:22:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+  132 |                     )[01;31m[K;[m[K
+      |                      [01;31m[K^[m[K
+      |                      [32m[K)[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:129:25:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+  129 |                         [01;36m[K([m[Ki * ((matrix_a_.size() / sqrt(matrix_a_.size()) / settings_.THREAD_NUMBER)),
+      |                         [01;36m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:132:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kiterators::iterators()[m[K’
+  132 |                     )[01;31m[K;[m[K
+      |                      [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:34:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kiterators::iterators(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, int, int, int, int)[m[K’
+   34 |     [01;36m[Kiterators[m[K(
+      |     [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:34:5:[m[K [01;36m[Knote: [m[K  candidate expects 7 arguments, 0 provided
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr iterators::iterators(const iterators&)[m[K’
+   31 | struct [01;36m[Kiterators[m[K
+      |        [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr iterators::iterators(iterators&&)[m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

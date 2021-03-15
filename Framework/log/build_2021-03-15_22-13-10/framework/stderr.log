@@ -1,0 +1,12 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:12:5:[m[K [01;35m[Kwarning: [m[Kliteral operator suffixes not preceded by ‘[01m[K_[m[K’ are reserved for future standardization [[01;35m[K-Wliteral-suffix[m[K]
+   12 |     [01;35m[Koperator[m[K"" THREADS(unsigned long long _hours)
+      |     [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel::execute_pthread_sched(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, const settings&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:256:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam[m[K’ was not declared in this scope
+  256 |             [01;31m[Kparam[m[K->sched_priority = settings_.PRIORITY;
+      |             [01;31m[K^~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

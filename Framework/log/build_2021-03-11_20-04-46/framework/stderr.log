@@ -1,0 +1,19 @@
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:10:22:[m[K [01;31m[Kerror: [m[Kconstructor cannot be static member function
+   10 |         static Arian([01;31m[K)[m[K
+      |                      [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:17:5:[m[K [01;31m[Kerror: [m[K‘[01m[KArian::Arian()[m[K’ cannot be overloaded with ‘[01m[KArian::Arian()[m[K’
+   17 |     [01;31m[KArian[m[K() {};
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:10:16:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[KArian::Arian()[m[K’
+   10 |         static [01;36m[KArian[m[K()
+      |                [01;36m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main(int, const char**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:22:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   22 | int main([01;35m[Kint argc[m[K, const char ** argv)
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:22:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   22 | int main(int argc, [01;35m[Kconst char ** argv[m[K)
+      |                    [01;35m[K~~~~~~~~~~~~~~^~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,23 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:22:[m[K [01;31m[Kerror: [m[Kuninitialized const ‘[01m[Kfn[m[K’ [[01;31m[K-fpermissive[m[K]
+   12 |     constexpr void*(*[01;31m[Kfn[m[K)(void*);
+      |                      [01;31m[K^~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:13:19:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Alloc> class std::vector[m[K’
+   13 |     std::vector<fn[01;31m[K>[m[K a;
+      |                   [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:13:19:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[Kfn[m[K’
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:13:19:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:13:21:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ka[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   13 |     std::vector<fn> [01;35m[Ka[m[K;
+      |                     [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:10:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   10 | int main([01;35m[Kint argc[m[K, char ** argv)
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:10:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   10 | int main(int argc, [01;35m[Kchar ** argv[m[K)
+      |                    [01;35m[K~~~~~~~~^~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

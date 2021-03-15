@@ -1,0 +1,14 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In function ‘[01m[Kvoid* multiply_parallel_pthread(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:64:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kiterators_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   64 | void * multiply_parallel_pthread([01;35m[Kvoid * iterators_[m[K)
+      |                                  [01;35m[K~~~~~~~^~~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel::execute(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, const settings&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:104:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kthreads[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  104 |             pthread_t* [01;35m[Kthreads[m[K = new pthread_t[settings_.THREAD_NUMBER];
+      |                        [01;35m[K^~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:74:21:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ka[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   74 |   multiply_parallel [01;35m[Ka[m[K = multiply_parallel(matrix, matrix, matrix_result, settings_);
+      |                     [01;35m[K^[m[K

@@ -1,0 +1,21 @@
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:33:[m[K [01;31m[Kerror: [m[Kvariable or field ‘[01m[Kprint[m[K’ declared void
+   12 | void print(std::array<T, size>::[01;31m[Kiterator[m[K a)
+      |                                 [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ka[m[K’
+   12 | void print[34m[K([m[Kstd::array<T, size>::iterator[01;31m[K [m[K[32m[Ka[m[K)
+      |           [34m[K~[m[K                             [01;31m[K^[m[K[32m[K~[m[K
+      |                                         [32m[K)[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:49:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kprint[m[K’ was not declared in this scope; did you mean ‘[01m[Kprintf[m[K’?
+   49 |   [01;31m[Kprint[m[K<>(a.begin());
+      |   [01;31m[K^~~~~[m[K
+      |   [32m[Kprintf[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:49:9:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   49 |   print<[01;31m[K>[m[K(a.begin());
+      |         [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:47:45:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kit[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   47 |   std::array<int, std::size_t(5)>::iterator [01;35m[Kit[m[K = a.begin();
+      |                                             [01;35m[K^~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

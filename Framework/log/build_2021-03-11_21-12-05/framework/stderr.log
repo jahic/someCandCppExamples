@@ -1,0 +1,56 @@
+In file included from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/context.hpp:19[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/contexts/default_context.hpp:18[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:32[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+/usr/include/c++/9/functional: In instantiation of ‘[01m[Kstruct std::_Bind_check_arity<void* (framework::utilities::multiply::*)(void*)>[m[K’:
+[01m[K/usr/include/c++/9/functional:787:12:[m[K   required from ‘[01m[Kstruct std::_Bind_helper<false, void* (framework::utilities::multiply::*)(void*)>[m[K’
+[01m[K/usr/include/c++/9/functional:808:5:[m[K   required by substitution of ‘[01m[Ktemplate<class _Func, class ... _BoundArgs> typename std::_Bind_helper<std::__is_socketlike<_Func>::value, _Func, _BoundArgs ...>::type std::bind(_Func&&, _BoundArgs&& ...) [with _Func = void* (framework::utilities::multiply::*)(void*); _BoundArgs = {}][m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:24:89:[m[K   required from here
+[01m[K/usr/include/c++/9/functional:775:7:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: Wrong number of arguments for pointer-to-member
+  774 |       static_assert(_Varargs::[01;31m[Kvalue[m[K
+      |                               [01;31m[K~~~~~[m[K
+  775 | [01;31m[K      ? sizeof...(_BoundArgs) >= _Arity::value + 1[m[K
+      |       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  776 | [01;31m[K      : sizeof...(_BoundArgs) == _Arity::value + 1[m[K,
+      |       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+/usr/include/c++/9/functional: In substitution of ‘[01m[Ktemplate<class _Functor, class ... _Bound_args> template<class _Fn, class _CallArgs, class ... _BArgs> using _Res_type_impl = typename std::result_of<_Fn&(std::_Bind<_Functor(_Bound_args ...)>::_Mu_type<_BArgs, _CallArgs>&& ...)>::type [with _Fn = void* (framework::utilities::multiply::*)(void*); _CallArgs = _CallArgs; _BArgs = {}; _Functor = void* (framework::utilities::multiply::*)(void*); _Bound_args = {}][m[K’:
+[01m[K/usr/include/c++/9/functional:447:8:[m[K   required from ‘[01m[Kstruct std::_Bind<void* (framework::utilities::multiply::*())(void*)>[m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:24:89:[m[K   required from here
+[01m[K/usr/include/c++/9/functional:443:8:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kclass std::result_of<void* (framework::utilities::multiply::*&())(void*)>[m[K’
+  443 |  using [01;31m[K_Res_type_impl[m[K
+      |        [01;31m[K^~~~~~~~~~~~~~[m[K
+/usr/include/c++/9/functional: In substitution of ‘[01m[Ktemplate<class _Functor, class ... _Bound_args> template<class _Fn, class _CallArgs, class ... _BArgs> using _Res_type_impl = typename std::result_of<_Fn&(std::_Bind<_Functor(_Bound_args ...)>::_Mu_type<_BArgs, _CallArgs>&& ...)>::type [with _Fn = void* (framework::utilities::multiply::*)(void*); _CallArgs = std::tuple<_Tps ...>; _BArgs = {}; _Functor = void* (framework::utilities::multiply::*)(void*); _Bound_args = {}][m[K’:
+[01m[K/usr/include/c++/9/functional:447:8:[m[K   required by substitution of ‘[01m[Ktemplate<class _Functor, class ... _Bound_args> template<class _CallArgs> using _Res_type = std::_Bind<_Functor(_Bound_args ...)>::_Res_type_impl<_Functor, _CallArgs, _Bound_args ...> [with _CallArgs = std::tuple<_Tps ...>; _Functor = void* (framework::utilities::multiply::*)(void*); _Bound_args = {}][m[K’
+[01m[K/usr/include/c++/9/functional:480:2:[m[K   required from ‘[01m[Kstruct std::_Bind<void* (framework::utilities::multiply::*())(void*)>[m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:24:89:[m[K   required from here
+[01m[K/usr/include/c++/9/functional:443:8:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kclass std::result_of<void* (framework::utilities::multiply::*&())(void*)>[m[K’
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:6[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:24:38:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Kstd::bind(_Func&&, _BoundArgs&& ...) [with _Func = void* (framework::utilities::multiply::*)(void*); _BoundArgs = {}; typename std::_Bind_helper<std::__is_socketlike<_Func>::value, _Func, _BoundArgs ...>::type = std::_Bind<void* (framework::utilities::multiply::*())(void*)>]()[m[K’ from ‘[01m[Kstd::_Bind_helper<false, void* (framework::utilities::multiply::*)(void*)>::type[m[K’ {aka ‘[01m[Kstd::_Bind<void* (framework::utilities::multiply::*())(void*)>[m[K’} to ‘[01m[Kvoid* (*)(void*)[m[K’
+   24 |                             [01;31m[Kstd::bind(&framework::utilities::multiply::multiply_function)[m[K)
+      |                             [01;31m[K~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                      [01;31m[K|[m[K
+      |                                      [01;31m[Kstd::_Bind_helper<false, void* (framework::utilities::multiply::*)(void*)>::type {aka std::_Bind<void* (framework::utilities::multiply::*())(void*)>}[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main(int, const char**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:33:28:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::_Bind_helper<false, void* (framework::utilities::multiply::*)(void*)>::type[m[K’ {aka ‘[01m[Kstd::_Bind<void* (framework::utilities::multiply::*())(void*)>[m[K’} to ‘[01m[Kvoid* (*)(void*)[m[K’
+   33 |     multiplication.run(a, b[01;31m[K)[m[K;
+      |                            [01;31m[K^[m[K
+      |                            [01;31m[K|[m[K
+      |                            [01;31m[Kstd::_Bind_helper<false, void* (framework::utilities::multiply::*)(void*)>::type {aka std::_Bind<void* (framework::utilities::multiply::*())(void*)>}[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:6[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:23:33:[m[K [01;36m[Knote: [m[K  initializing argument 3 of ‘[01m[Kvoid framework::utilities::multiply::run(int**, int**, void* (*)(void*))[m[K’
+   23 |                         [01;36m[Kvoid* (*fn)(void*) =[m[K
+      |                         [01;36m[K~~~~~~~~^~~~~~~~~~~~[m[K
+   24 | [01;36m[K                            std::bind(&framework::utilities::multiply::multiply_function)[m[K)
+      |                             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:10:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   10 | int main([01;35m[Kint argc[m[K, const char ** argv)
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:10:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   10 | int main(int argc, [01;35m[Kconst char ** argv[m[K)
+      |                    [01;35m[K~~~~~~~~~~~~~~^~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,17 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:6[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:21:79:[m[K [01;31m[Kerror: [m[K‘[01m[Kmultiply_function[m[K’ is not a member of ‘[01m[Kframework::utilities[m[K’
+   21 |                         void* (*fn)(void*) = std::bind(&framework::utilities::[01;31m[Kmultiply_function[m[K, this, std::placeholders::_1))
+      |                                                                               [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:21:98:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ may not be used in this context
+   21 |                         void* (*fn)(void*) = std::bind(&framework::utilities::multiply_function, [01;31m[Kthis[m[K, std::placeholders::_1))
+      |                                                                                                  [01;31m[K^~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main(int, const char**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   12 | int main([01;35m[Kint argc[m[K, const char ** argv)
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   12 | int main(int argc, [01;35m[Kconst char ** argv[m[K)
+      |                    [01;35m[K~~~~~~~~~~~~~~^~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

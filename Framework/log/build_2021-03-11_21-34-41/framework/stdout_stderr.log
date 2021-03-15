@@ -1,0 +1,33 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:6[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid framework::utilities::Multiply::run(int**, int**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:30:60:[m[K [01;31m[Kerror: [m[KISO C++ forbids taking the address of an unqualified or parenthesized non-static member function to form a pointer to member function.  Say ‘[01m[K&framework::utilities::Multiply::multiply_function[m[K’ [[01;31m[K-fpermissive[m[K]
+   30 |                         pthread_create(&threads[i], NULL, &[01;31m[Kmultiply_function[m[K, this), NULL);
+      |                                                            [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:30:59:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kvoid* (framework::utilities::Multiply::*)(void*)[m[K’ to ‘[01m[Kvoid* (*)(void*)[m[K’
+   30 |                         pthread_create(&threads[i], NULL, [01;31m[K&multiply_function[m[K, this), NULL);
+      |                                                           [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+      |                                                           [01;31m[K|[m[K
+      |                                                           [01;31m[Kvoid* (framework::utilities::Multiply::*)(void*)[m[K
+In file included from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/gthr-default.h:35[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/c++/9/bits/gthr.h:148[m[K,
+                 from [01m[K/usr/include/c++/9/ext/atomicity.h:35[m[K,
+                 from [01m[K/usr/include/c++/9/bits/ios_base.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/ios:42[m[K,
+                 from [01m[K/usr/include/c++/9/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[01m[K/usr/include/pthread.h:200:15:[m[K [01;36m[Knote: [m[K  initializing argument 3 of ‘[01m[Kint pthread_create(pthread_t*, const pthread_attr_t*, void* (*)(void*), void*)[m[K’
+  200 |       [01;36m[Kvoid *(*__start_routine) (void *)[m[K,
+      |       [01;36m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main(int, const char**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   12 | int main([01;35m[Kint argc[m[K, const char ** argv)
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   12 | int main(int argc, [01;35m[Kconst char ** argv[m[K)
+      |                    [01;35m[K~~~~~~~~~~~~~~^~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

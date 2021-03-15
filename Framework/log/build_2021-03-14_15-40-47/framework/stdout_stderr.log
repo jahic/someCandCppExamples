@@ -1,0 +1,38 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kdouble summer(std::vector<double, std::allocator<double> >)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:52:20:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double, std::allocator<double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   52 |   for(int i = 0; [01;35m[Ki < my_big_sum.size()[m[K; i++)
+      |                  [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:56:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   56 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K At global scope:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:63:10:[m[K [01;31m[Kerror: [m[Kdeclaration of template parameter ‘[01m[KT[m[K’ shadows template parameter
+   63 | template<[01;31m[Ktypename[m[K T>
+      |          [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:59:10:[m[K [01;36m[Knote: [m[Ktemplate parameter ‘[01m[KT[m[K’ declared here
+   59 | template<[01;36m[Ktypename[m[K T>
+      |          [01;36m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:64:15:[m[K [01;31m[Kerror: [m[Ktoo many template-parameter-lists
+   64 | std::vector<T>[01;31m[K*[m[K my_vector;
+      |               [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:60:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_vector[m[K’ was not declared in this scope
+   60 | #define my_vector [01;31m[Kmy_vector[m[K<T>
+      |                   [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:134:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kmy_vector[m[K’
+  134 |     [01;36m[Kmy_vector[m[K = new std::vector<int>();
+      |     [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:60:29:[m[K [01;31m[Kerror: [m[K‘[01m[KT[m[K’ was not declared in this scope
+   60 | #define my_vector my_vector<[01;31m[KT[m[K>
+      |                             [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:134:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kmy_vector[m[K’
+  134 |     [01;36m[Kmy_vector[m[K = new std::vector<int>();
+      |     [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:134:15:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K=[m[K’ token
+  134 |     my_vector [01;31m[K=[m[K new std::vector<int>();
+      |               [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

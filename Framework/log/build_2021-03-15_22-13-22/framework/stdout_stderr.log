@@ -1,0 +1,27 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:12:5:[m[K [01;35m[Kwarning: [m[Kliteral operator suffixes not preceded by ‘[01m[K_[m[K’ are reserved for future standardization [[01;35m[K-Wliteral-suffix[m[K]
+   12 |     [01;35m[Koperator[m[K"" THREADS(unsigned long long _hours)
+      |     [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel::execute_pthread_sched(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, const settings&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:256:42:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksched_param_[m[K’ may be used uninitialized in this function [[01;35m[K-Wmaybe-uninitialized[m[K]
+  256 |             [01;35m[Ksched_param_->sched_priority = settings_.PRIORITY[m[K;
+      |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable main[0m
+[100%] Built target main
+-- Install configuration: ""
+-- Up-to-date: /home/arian/Framework/install/framework/share/ament_index/resource_index/package_run_dependencies/framework
+-- Up-to-date: /home/arian/Framework/install/framework/share/ament_index/resource_index/parent_prefix_path/framework
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/environment/path.dsv
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/local_setup.bash
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/local_setup.sh
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/local_setup.zsh
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/local_setup.dsv
+-- Installing: /home/arian/Framework/install/framework/share/framework/package.dsv
+-- Up-to-date: /home/arian/Framework/install/framework/share/ament_index/resource_index/packages/framework
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/cmake/frameworkConfig.cmake
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/cmake/frameworkConfig-version.cmake
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/package.xml

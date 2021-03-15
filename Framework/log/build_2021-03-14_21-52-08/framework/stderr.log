@@ -1,0 +1,10 @@
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:70:5:[m[K [01;35m[Kwarning: [m[Kliteral operator suffixes not preceded by ‘[01m[K_[m[K’ are reserved for future standardization [[01;35m[K-Wliteral-suffix[m[K]
+   70 |     [01;35m[Koperator[m[K"" threads(unsigned long long _hours)
+      |     [01;35m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kvoid function(long double)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:76:10:[m[K [01;31m[Kerror: [m[Kreturn-statement with a value, in function returning ‘[01m[Kvoid[m[K’ [[01;31m[K-fpermissive[m[K]
+   76 |   return [01;31m[K_hours[m[K;
+      |          [01;31m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

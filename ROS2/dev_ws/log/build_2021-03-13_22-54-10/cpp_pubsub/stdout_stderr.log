@@ -1,0 +1,209 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/main.cpp.o[0m
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:38:14:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K)[m[K’ token
+   38 |             }[01;31m[K)[m[K;
+      |              [01;31m[K^[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:40:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+   40 |         }
+      |          [01;31m[K^[m[K
+      |          [32m[K;[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:17:49:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KMinimalPublisher[m[K’ does not have any field named ‘[01m[Kcount_[m[K’
+   17 |         MinimalPublisher() : Node("publisher"), [01;31m[Kcount_[m[K(0), thread_number(4), arr_length(36000)
+      |                                                 [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:17:60:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KMinimalPublisher[m[K’ does not have any field named ‘[01m[Kthread_number[m[K’
+   17 |         MinimalPublisher() : Node("publisher"), count_(0), [01;31m[Kthread_number[m[K(4), arr_length(36000)
+      |                                                            [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:17:78:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KMinimalPublisher[m[K’ does not have any field named ‘[01m[Karr_length[m[K’
+   17 |         MinimalPublisher() : Node("publisher"), count_(0), thread_number(4), [01;31m[Karr_length[m[K(36000)
+      |                                                                              [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:19:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   19 |             [01;31m[Kpublisher_[m[K = this->create_publisher<std_msgs::msg::String>("topic", 10);
+      |             [01;31m[K^~~~~~~~~~[m[K
+      |             [32m[Krcl_publisher_t[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:20:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+   20 |             [01;31m[Ktimer_[m[K = this->create_wall_timer(
+      |             [01;31m[K^~~~~~[m[K
+      |             [32m[Ktimer_t[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:21:87:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_callback_parallel_affinity[m[K’ is not a member of ‘[01m[KMinimalPublisher[m[K’
+   21 |                 std::chrono_literals::operator""ms(500), std::bind(&MinimalPublisher::[01;31m[Ktimer_callback_parallel_affinity[m[K, this));
+      |                                                                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:[m[K At global scope:
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:42:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprivate[m[K’
+   42 |     [01;31m[Kprivate[m[K:
+      |     [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/service.hpp:34[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/callback_group.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:2[m[K:
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:[m[K In function ‘[01m[Kvoid timer_callback()[m[K’:
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:78:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   78 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Publishing: %s", message.data.c_str());
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:78:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:78:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   78 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Publishing: %s", message.data.c_str());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:78:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   78 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Publishing: %s", message.data.c_str());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:78:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   78 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Publishing: %s", message.data.c_str());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:2[m[K:
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:78:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   78 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Publishing: %s", message.data.c_str());
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:78:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   78 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Publishing: %s", message.data.c_str());
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:79:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+   79 |             [01;31m[Kpublisher_[m[K->publish(message);
+      |             [01;31m[K^~~~~~~~~~[m[K
+      |             [32m[Krcl_publisher_t[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:[m[K In function ‘[01m[Kvoid timer_callback_parallel_affinity()[m[K’:
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:84:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kthread_number[m[K’ was not declared in this scope
+   84 |             std::vector<std::thread> threads([01;31m[Kthread_number[m[K);
+      |                                              [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:90:13:[m[K [01;31m[Kerror: [m[K‘[01m[Karr_[m[K’ was not declared in this scope
+   90 |             [01;31m[Karr_[m[K = new int[arr_length];
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:90:28:[m[K [01;31m[Kerror: [m[K‘[01m[Karr_length[m[K’ was not declared in this scope
+   90 |             arr_ = new int[[01;31m[Karr_length[m[K];
+      |                            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:101:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kheavy_function[m[K’ is not a member of ‘[01m[KMinimalPublisher[m[K’
+  101 |                 *it = std::thread(std::bind(&MinimalPublisher::[01;31m[Kheavy_function[m[K, this, arr_, iterator));
+      |                                                                [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:101:80:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  101 |                 *it = std::thread(std::bind(&MinimalPublisher::heavy_function, [01;31m[Kthis[m[K, arr_, iterator));
+      |                                                                                [01;31m[K^~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:105:21:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpolicy[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  105 |                 int [01;35m[Kpolicy[m[K;
+      |                     [01;35m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/service.hpp:34[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/callback_group.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:2[m[K:
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:123:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  123 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "EXEC TIME: %d", std::chrono::duration_cast<std::chrono::nanoseconds>(after - before).count());
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:123:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:123:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  123 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "EXEC TIME: %d", std::chrono::duration_cast<std::chrono::nanoseconds>(after - before).count());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:123:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  123 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "EXEC TIME: %d", std::chrono::duration_cast<std::chrono::nanoseconds>(after - before).count());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:123:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  123 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "EXEC TIME: %d", std::chrono::duration_cast<std::chrono::nanoseconds>(after - before).count());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:2[m[K:
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:123:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  123 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "EXEC TIME: %d", std::chrono::duration_cast<std::chrono::nanoseconds>(after - before).count());
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:123:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  123 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "EXEC TIME: %d", std::chrono::duration_cast<std::chrono::nanoseconds>(after - before).count());
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:125:22:[m[K [01;31m[Kerror: [m[Ktype ‘[01m[K<type error>[m[K’ argument given to ‘[01m[Kdelete[m[K’, expected pointer
+  125 |             delete[] [01;31m[Karr_[m[K;
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:[m[K In function ‘[01m[Kvoid timer_callback_parallel()[m[K’:
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:130:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kthread_number[m[K’ was not declared in this scope
+  130 |             std::vector<std::thread> threads([01;31m[Kthread_number[m[K);
+      |                                              [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:132:13:[m[K [01;31m[Kerror: [m[K‘[01m[Karr_[m[K’ was not declared in this scope
+  132 |             [01;31m[Karr_[m[K = new int[arr_length];
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:132:28:[m[K [01;31m[Kerror: [m[K‘[01m[Karr_length[m[K’ was not declared in this scope
+  132 |             arr_ = new int[[01;31m[Karr_length[m[K];
+      |                            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:142:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kheavy_function[m[K’ is not a member of ‘[01m[KMinimalPublisher[m[K’
+  142 |                 *it = std::thread(std::bind(&MinimalPublisher::[01;31m[Kheavy_function[m[K, this, arr_, iterator));
+      |                                                                [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:142:80:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  142 |                 *it = std::thread(std::bind(&MinimalPublisher::heavy_function, [01;31m[Kthis[m[K, arr_, iterator));
+      |                                                                                [01;31m[K^~~~[m[K
+In file included from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/service.hpp:34[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/callback_group.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:2[m[K:
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:153:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  153 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "EXEC TIME: %d", std::chrono::duration_cast<std::chrono::nanoseconds>(after - before).count());
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:153:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:153:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  153 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "EXEC TIME: %d", std::chrono::duration_cast<std::chrono::nanoseconds>(after - before).count());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:153:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  153 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "EXEC TIME: %d", std::chrono::duration_cast<std::chrono::nanoseconds>(after - before).count());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:153:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  153 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "EXEC TIME: %d", std::chrono::duration_cast<std::chrono::nanoseconds>(after - before).count());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/callback_group.hpp:23[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategy.hpp:24[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:33[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:2[m[K:
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:153:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  153 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "EXEC TIME: %d", std::chrono::duration_cast<std::chrono::nanoseconds>(after - before).count());
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:153:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  153 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "EXEC TIME: %d", std::chrono::duration_cast<std::chrono::nanoseconds>(after - before).count());
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:155:22:[m[K [01;31m[Kerror: [m[Ktype ‘[01m[K<type error>[m[K’ argument given to ‘[01m[Kdelete[m[K’, expected pointer
+  155 |             delete[] [01;31m[Karr_[m[K;
+      |                      [01;31m[K^~~~[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:[m[K At global scope:
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:182:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  182 | [01;31m[K}[m[K;
+      | [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/talker.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

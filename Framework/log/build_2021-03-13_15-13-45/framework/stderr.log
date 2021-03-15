@@ -1,0 +1,8 @@
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kvoid* summer(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:21:7:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ksum[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   21 |   int [01;35m[Ksum[m[K = 0;
+      |       [01;35m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:48:20:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   48 |   for(int i = 0; [01;35m[Ki < my_big_sum.size()[m[K; i++)
+      |                  [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K

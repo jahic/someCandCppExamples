@@ -1,0 +1,240 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Ksettings::settings(int, int, int, bool, int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:27:10:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksettings::SCHED_STRATEGY[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+   27 |     int  [01;35m[KSCHED_STRATEGY[m[K;
+      |          [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:25:10:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kint settings::PRIORITY[m[K’ [[01;35m[K-Wreorder[m[K]
+   25 |     int  [01;35m[KPRIORITY[m[K;
+      |          [01;35m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:14:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+   14 |     [01;35m[Ksettings[m[K(int thread_number_, int sched_strategy_, int priority_, bool affinity_, int parallelization_strategy_) :
+      |     [01;35m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:14:5:[m[K [01;31m[Kerror: [m[Kmultiple initializations given for ‘[01m[Ksettings::SCHED_STRATEGY[m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:14:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kaffinity_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   14 |     settings(int thread_number_, int sched_strategy_, int priority_, [01;35m[Kbool affinity_[m[K, int parallelization_strategy_) :
+      |                                                                      [01;35m[K~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kiterators::iterators(int, int, int, int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:38:20:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[K__gnu_cxx::__normal_iterator<int*, std::vector<int> >::__normal_iterator(int&)[m[K’
+   38 |         width(width[01;31m[K)[m[K
+      |                    [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/ios:40[m[K,
+                 from [01m[K/usr/include/c++/9/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:811:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iter> __gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator(const __gnu_cxx::__normal_iterator<_Iter, typename __gnu_cxx::__enable_if<std::__are_same<_Iter, typename _Container::pointer>::__value, _Container>::__type>&)[m[K’
+  811 |         [01;36m[K__normal_iterator[m[K(const __normal_iterator<_Iter,
+      |         [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:811:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:38:20:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst __gnu_cxx::__normal_iterator<_Iter, typename __gnu_cxx::__enable_if<std::__are_same<_Iter, int*>::__value, std::vector<int> >::__type>[m[K’ and ‘[01m[Kint[m[K’
+   38 |         width(width[01;36m[K)[m[K
+      |                    [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/ios:40[m[K,
+                 from [01m[K/usr/include/c++/9/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:806:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[K__gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator(const _Iterator&) [with _Iterator = int*; _Container = std::vector<int>][m[K’ <near match>
+  806 |       [01;36m[K__normal_iterator[m[K(const _Iterator& __i) _GLIBCXX_NOEXCEPT
+      |       [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:806:7:[m[K [01;36m[Knote: [m[K  conversion of argument 1 would be ill-formed:
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:35:15:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kint*[m[K’ [[01;31m[K-fpermissive[m[K]
+   35 |         begin([01;31m[Kbegin[m[K),
+      |               [01;31m[K^~~~~[m[K
+      |               [01;31m[K|[m[K
+      |               [01;31m[Kint[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/ios:40[m[K,
+                 from [01m[K/usr/include/c++/9/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:802:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr __gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator() [with _Iterator = int*; _Container = std::vector<int>][m[K’
+  802 |       _GLIBCXX_CONSTEXPR [01;36m[K__normal_iterator[m[K() _GLIBCXX_NOEXCEPT
+      |                          [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:802:26:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr __gnu_cxx::__normal_iterator<int*, std::vector<int> >::__normal_iterator(const __gnu_cxx::__normal_iterator<int*, std::vector<int> >&)[m[K’
+  787 |     class [01;36m[K__normal_iterator[m[K
+      |           [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst __gnu_cxx::__normal_iterator<int*, std::vector<int> >&[m[K’
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr __gnu_cxx::__normal_iterator<int*, std::vector<int> >::__normal_iterator(__gnu_cxx::__normal_iterator<int*, std::vector<int> >&&)[m[K’
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[K__gnu_cxx::__normal_iterator<int*, std::vector<int> >&&[m[K’
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:38:20:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[K__gnu_cxx::__normal_iterator<int*, std::vector<int> >::__normal_iterator(int&)[m[K’
+   38 |         width(width[01;31m[K)[m[K
+      |                    [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/ios:40[m[K,
+                 from [01m[K/usr/include/c++/9/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:811:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iter> __gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator(const __gnu_cxx::__normal_iterator<_Iter, typename __gnu_cxx::__enable_if<std::__are_same<_Iter, typename _Container::pointer>::__value, _Container>::__type>&)[m[K’
+  811 |         [01;36m[K__normal_iterator[m[K(const __normal_iterator<_Iter,
+      |         [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:811:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:38:20:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst __gnu_cxx::__normal_iterator<_Iter, typename __gnu_cxx::__enable_if<std::__are_same<_Iter, int*>::__value, std::vector<int> >::__type>[m[K’ and ‘[01m[Kint[m[K’
+   38 |         width(width[01;36m[K)[m[K
+      |                    [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/ios:40[m[K,
+                 from [01m[K/usr/include/c++/9/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:806:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[K__gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator(const _Iterator&) [with _Iterator = int*; _Container = std::vector<int>][m[K’ <near match>
+  806 |       [01;36m[K__normal_iterator[m[K(const _Iterator& __i) _GLIBCXX_NOEXCEPT
+      |       [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:806:7:[m[K [01;36m[Knote: [m[K  conversion of argument 1 would be ill-formed:
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:36:13:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kint*[m[K’ [[01;31m[K-fpermissive[m[K]
+   36 |         end([01;31m[Kend[m[K),
+      |             [01;31m[K^~~[m[K
+      |             [01;31m[K|[m[K
+      |             [01;31m[Kint[m[K
+In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+                 from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+                 from [01m[K/usr/include/c++/9/ios:40[m[K,
+                 from [01m[K/usr/include/c++/9/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/9/iostream:39[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:802:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr __gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator() [with _Iterator = int*; _Container = std::vector<int>][m[K’
+  802 |       _GLIBCXX_CONSTEXPR [01;36m[K__normal_iterator[m[K() _GLIBCXX_NOEXCEPT
+      |                          [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:802:26:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr __gnu_cxx::__normal_iterator<int*, std::vector<int> >::__normal_iterator(const __gnu_cxx::__normal_iterator<int*, std::vector<int> >&)[m[K’
+  787 |     class [01;36m[K__normal_iterator[m[K
+      |           [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst __gnu_cxx::__normal_iterator<int*, std::vector<int> >&[m[K’
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr __gnu_cxx::__normal_iterator<int*, std::vector<int> >::__normal_iterator(__gnu_cxx::__normal_iterator<int*, std::vector<int> >&&)[m[K’
+[01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[K__gnu_cxx::__normal_iterator<int*, std::vector<int> >&&[m[K’
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In function ‘[01m[Kvoid* multiply_parallel_pthread(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:54:39:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+   54 |     iterators* iterators = (iterators*[01;31m[K)[m[Kiterators_;
+      |                                       [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:58:44:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+   58 |         for(int j = 0; j < iterators->size([01;31m[K)[m[K; j++)
+      |                                            [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:60:48:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+   60 |             for(int k = 0; k < iterators->size([01;31m[K)[m[K; k++)
+      |                                                [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:62:30:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kstd::vector<int>[m[K’ and ‘[01m[Kint[m[K’)
+   62 |                matrix_c[0] = [01;31m[K3[m[K;
+      |                              [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/vector:72[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/vector.tcc:198:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = int; _Alloc = std::allocator<int>][m[K’
+  198 |     [01;36m[Kvector<_Tp, _Alloc>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/vector.tcc:199:42:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst std::vector<int>&[m[K’
+  199 |     operator=([01;36m[Kconst vector<_Tp, _Alloc>& __x[m[K)
+      |               [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:706:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::vector<_Tp, _Alloc>&&) [with _Tp = int; _Alloc = std::allocator<int>][m[K’
+  706 |       [01;36m[Koperator[m[K=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:706:26:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kstd::vector<int>&&[m[K’
+  706 |       operator=([01;36m[Kvector&& __x[m[K) noexcept(_Alloc_traits::_S_nothrow_move())
+      |                 [01;36m[K~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:727:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::initializer_list<_Tp>) [with _Tp = int; _Alloc = std::allocator<int>][m[K’
+  727 |       [01;36m[Koperator[m[K=(initializer_list<value_type> __l)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/9/bits/stl_vector.h:727:46:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kstd::initializer_list<int>[m[K’
+  727 |       operator=([01;36m[Kinitializer_list<value_type> __l[m[K)
+      |                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kiterators_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   52 | void * multiply_parallel_pthread([01;35m[Kvoid * iterators_[m[K)
+      |                                  [01;35m[K~~~~~~~^~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kmultiply_parallel::multiply_parallel(const std::vector<int>&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:78:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_a[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   78 |         multiply_parallel([01;35m[Kconst std::vector<int>& matrix_a[m[K)
+      |                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kmultiply_parallel::multiply_parallel(const std::vector<int>&, const std::vector<int>&, int, int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:83:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_a[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   83 |         multiply_parallel([01;35m[Kconst std::vector<int>& matrix_a[m[K, const std::vector<int>& matrix_b, int height, int width)
+      |                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:83:85:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   83 |         multiply_parallel(const std::vector<int>& matrix_a, [01;35m[Kconst std::vector<int>& matrix_b[m[K, int height, int width)
+      |                                                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:83:99:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kheight[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   83 |         multiply_parallel(const std::vector<int>& matrix_a, const std::vector<int>& matrix_b, [01;35m[Kint height[m[K, int width)
+      |                                                                                               [01;35m[K~~~~^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:83:111:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwidth[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   83 |         multiply_parallel(const std::vector<int>& matrix_a, const std::vector<int>& matrix_b, int height, [01;35m[Kint width[m[K)
+      |                                                                                                           [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel::execute(const std::vector<int>&, const std::vector<int>&, settings*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:92:23:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Kthreads[m[K’ [[01;35m[K-Wvla[m[K]
+   92 |             pthread_t [01;35m[Kthreads[m[K[settings_->THREAD_NUMBER];
+      |                       [01;35m[K^~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:93:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ does not name a type
+   93 |             iterators** iterators = new [01;31m[Kiterators[m[K*[settings_->THREAD_NUMBER];
+      |                                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:93:61:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ before ‘[01m[K->[m[K’ token
+   93 |             iterators** iterators = new iterators*[settings_[01;31m[K-[m[K[32m[K>[m[KTHREAD_NUMBER];
+      |                                                             [01;31m[K^[m[K[32m[K~[m[K
+      |                                                             [32m[K,[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:93:61:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[K->[m[K’ token
+   93 |             iterators** iterators = new iterators*[settings_[01;31m[K->[m[KTHREAD_NUMBER];
+      |                                                             [01;31m[K^~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In lambda function:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:93:77:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K;[m[K’ token
+   93 |             iterators** iterators = new iterators*[settings_->THREAD_NUMBER][01;31m[K;[m[K
+      |                                                                             [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel::execute(const std::vector<int>&, const std::vector<int>&, settings*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:102:40:[m[K [01;31m[Kerror: [m[Kexpected type-specifier before ‘[01m[Kiterarors[m[K’
+  102 |                     iterators[i] = new [01;31m[Kiterarors[m[K(
+      |                                        [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:111:40:[m[K [01;31m[Kerror: [m[Kexpected type-specifier before ‘[01m[Kiterarors[m[K’
+  111 |                     iterators[i] = new [01;31m[Kiterarors[m[K(
+      |                                        [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:90:81:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   90 |         void execute(const std::vector<int>& matrix_a_, [01;35m[Kconst std::vector<int>& matrix_b_[m[K, settings * settings_)
+      |                                                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K At global scope:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:17:8:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kstruct iterators[m[K’
+   17 | struct [01;31m[Kiterators[m[K
+      |        [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[Kprevious definition of ‘[01m[Kstruct iterators[m[K’
+   31 | struct [01;36m[Kiterators[m[K
+      |        [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kvoid* summer(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:32:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct iterators[m[K’ has no member named ‘[01m[Kmy_begin[m[K’; did you mean ‘[01m[Kbegin[m[K’?
+   32 |   for(auto it = i->[01;31m[Kmy_begin[m[K; it < i->my_end; it++)
+      |                    [01;31m[K^~~~~~~~[m[K
+      |                    [32m[Kbegin[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:32:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct iterators[m[K’ has no member named ‘[01m[Kmy_end[m[K’
+   32 |   for(auto it = i->my_begin; it < i->[01;31m[Kmy_end[m[K; it++)
+      |                                      [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kdouble summer(std::vector<double, std::allocator<double> >)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:52:20:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double, std::allocator<double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   52 |   for(int i = 0; [01;35m[Ki < my_big_sum.size()[m[K; i++)
+      |                  [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:56:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   56 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:131:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  131 |   settings* [01;35m[Ksettings_[m[K = new settings(1, 1, 1, false, 1);
+      |             [01;35m[K^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

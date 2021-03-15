@@ -1,0 +1,67 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel::execute(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, const settings&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:121:34:[m[K [01;35m[Kwarning: [m[Kvalue computed is not used [[01;35m[K-Wunused-value[m[K]
+  121 |                         ([01;35m[K(i + 1) * ((matrix_a_.size() / sqrt(matrix_a_.size()) / settings_.THREAD_NUMBER))[m[K,
+      |                          [01;35m[K~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:120:28:[m[K [01;35m[Kwarning: [m[Kvalue computed is not used [[01;35m[K-Wunused-value[m[K]
+  120 |                         ([01;35m[Ki * ((matrix_a_.size() / sqrt(matrix_a_.size()) / settings_.THREAD_NUMBER))[m[K,
+      |                          [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:123:22:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+  123 |                     )[01;31m[K;[m[K
+      |                      [01;31m[K^[m[K
+      |                      [32m[K)[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:120:25:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+  120 |                         [01;36m[K([m[Ki * ((matrix_a_.size() / sqrt(matrix_a_.size()) / settings_.THREAD_NUMBER)),
+      |                         [01;36m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:123:22:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+  123 |                     )[01;31m[K;[m[K
+      |                      [01;31m[K^[m[K
+      |                      [32m[K)[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:118:50:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+  118 |                     iterators_[i] = new iterators[01;36m[K([m[K
+      |                                                  [01;36m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:123:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kiterators::iterators()[m[K’
+  123 |                     )[01;31m[K;[m[K
+      |                      [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:34:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kiterators::iterators(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, int, int, int, int)[m[K’
+   34 |     [01;36m[Kiterators[m[K(
+      |     [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:34:5:[m[K [01;36m[Knote: [m[K  candidate expects 7 arguments, 0 provided
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr iterators::iterators(const iterators&)[m[K’
+   31 | struct [01;36m[Kiterators[m[K
+      |        [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr iterators::iterators(iterators&&)[m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:129:28:[m[K [01;35m[Kwarning: [m[Kvalue computed is not used [[01;35m[K-Wunused-value[m[K]
+  129 |                         ([01;35m[Ki * ((matrix_a_.size() / sqrt(matrix_a_.size()) / settings_.THREAD_NUMBER))[m[K,
+      |                          [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:130:42:[m[K [01;35m[Kwarning: [m[Kvalue computed is not used [[01;35m[K-Wunused-value[m[K]
+  130 |                         [01;35m[Kmatrix_a_.size() / (int)sqrt(matrix_a_.size())[m[K,
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:132:22:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K;[m[K’ token
+  132 |                     )[01;31m[K;[m[K
+      |                      [01;31m[K^[m[K
+      |                      [32m[K)[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:127:50:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+  127 |                     iterators_[i] = new iterators[01;36m[K([m[K
+      |                                                  [01;36m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:132:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kiterators::iterators()[m[K’
+  132 |                     )[01;31m[K;[m[K
+      |                      [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:34:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kiterators::iterators(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, int, int, int, int)[m[K’
+   34 |     [01;36m[Kiterators[m[K(
+      |     [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:34:5:[m[K [01;36m[Knote: [m[K  candidate expects 7 arguments, 0 provided
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr iterators::iterators(const iterators&)[m[K’
+   31 | struct [01;36m[Kiterators[m[K
+      |        [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr iterators::iterators(iterators&&)[m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

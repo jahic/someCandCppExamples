@@ -1,0 +1,46 @@
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kvoid* summer(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:25:29:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(std::vector<int>::iterator {aka __gnu_cxx::__normal_iterator<int*, std::vector<int> >}) ()[m[K’
+   25 |   for(auto it = i->my_begin([01;31m[K)[m[K; it < i->my_end(); it++)
+      |                             [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:25:47:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(std::vector<int>::iterator {aka __gnu_cxx::__normal_iterator<int*, std::vector<int> >}) ()[m[K’
+   25 |   for(auto it = i->my_begin(); it < i->my_end([01;31m[K)[m[K; it++)
+      |                                               [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:30:10:[m[K [01;35m[Kwarning: [m[Kaddress of local variable ‘[01m[Ksum[m[K’ returned [[01;35m[K-Wreturn-local-addr[m[K]
+   30 |   return [01;35m[K(void*)&sum[m[K;
+      |          [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:21:7:[m[K [01;36m[Knote: [m[Kdeclared here
+   21 |   int [01;36m[Ksum[m[K = 0;
+      |       [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:43:23:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   43 |   for(auto it = 0; [01;35m[Kit < my_big_sum.size()[m[K; it++)
+      |                    [01;35m[K~~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:54:31:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand types are ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::iterator[m[K’ {aka ‘[01m[K__gnu_cxx::__normal_iterator<int*, std::vector<int> >[m[K’})
+   54 |   my_iterator_1->my_begin = [32m[K0[m[K [01;31m[K*[m[K [34m[Kmy_big_sum.begin()[m[K;
+      |                             [32m[K~[m[K [01;31m[K^[m[K [34m[K~~~~~~~~~~~~~~~~~~[m[K
+      |                             [32m[K|[m[K                   [34m[K|[m[K
+      |                             [32m[Kint[m[K                 [34m[Kstd::vector<int>::iterator {aka __gnu_cxx::__normal_iterator<int*, std::vector<int> >}[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:55:31:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand types are ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::iterator[m[K’ {aka ‘[01m[K__gnu_cxx::__normal_iterator<int*, std::vector<int> >[m[K’})
+   55 |   my_iterator_1->my_begin = [32m[K1[m[K [01;31m[K*[m[K [34m[Kmy_big_sum.end()[m[K;
+      |                             [32m[K~[m[K [01;31m[K^[m[K [34m[K~~~~~~~~~~~~~~~~[m[K
+      |                             [32m[K|[m[K                 [34m[K|[m[K
+      |                             [32m[Kint[m[K               [34m[Kstd::vector<int>::iterator {aka __gnu_cxx::__normal_iterator<int*, std::vector<int> >}[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:58:31:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand types are ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::iterator[m[K’ {aka ‘[01m[K__gnu_cxx::__normal_iterator<int*, std::vector<int> >[m[K’})
+   58 |   my_iterator_2->my_begin = [32m[K1[m[K [01;31m[K*[m[K [34m[Kmy_big_sum.begin()[m[K;
+      |                             [32m[K~[m[K [01;31m[K^[m[K [34m[K~~~~~~~~~~~~~~~~~~[m[K
+      |                             [32m[K|[m[K                   [34m[K|[m[K
+      |                             [32m[Kint[m[K                 [34m[Kstd::vector<int>::iterator {aka __gnu_cxx::__normal_iterator<int*, std::vector<int> >}[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:59:31:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand types are ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::iterator[m[K’ {aka ‘[01m[K__gnu_cxx::__normal_iterator<int*, std::vector<int> >[m[K’})
+   59 |   my_iterator_2->my_begin = [32m[K2[m[K [01;31m[K*[m[K [34m[Kmy_big_sum.end()[m[K;
+      |                             [32m[K~[m[K [01;31m[K^[m[K [34m[K~~~~~~~~~~~~~~~~[m[K
+      |                             [32m[K|[m[K                 [34m[K|[m[K
+      |                             [32m[Kint[m[K               [34m[Kstd::vector<int>::iterator {aka __gnu_cxx::__normal_iterator<int*, std::vector<int> >}[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:61:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kreturn_sum_1[m[K’ was not declared in this scope
+   61 |   (void*)[01;31m[Kreturn_sum_1[m[K;
+      |          [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:62:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kreturn_sum_2[m[K’ was not declared in this scope
+   62 |   (void*)[01;31m[Kreturn_sum_2[m[K;
+      |          [01;31m[K^~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

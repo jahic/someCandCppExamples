@@ -1,0 +1,14 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel::execute(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, const settings&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:121:61:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class std::vector<int>[m[K’ has no member named ‘[01m[Kwidth[m[K’
+  121 |                         (i * ((matrix_a_.size() / matrix_a_.[01;31m[Kwidth[m[K()) / settings_.THREAD_NUMBER)),
+      |                                                             [01;31m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:130:61:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class std::vector<int>[m[K’ has no member named ‘[01m[Kwidth[m[K’
+  130 |                         (i * ((matrix_a_.size() / matrix_a_.[01;31m[Kwidth[m[K()) / settings_.THREAD_NUMBER)),
+      |                                                             [01;31m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:131:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst class std::vector<int>[m[K’ has no member named ‘[01m[Kwidth[m[K’
+  131 |                         matrix_a_.size() / matrix_a_.[01;31m[Kwidth[m[K(),
+      |                                                      [01;31m[K^~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

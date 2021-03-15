@@ -1,0 +1,20 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:6[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid framework::utilities::Multiply::run(int**, int**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:31:105:[m[K [01;35m[Kwarning: [m[Kconverting from ‘[01m[Kvoid* (framework::utilities::Multiply::*)(void*)[m[K’ to ‘[01m[Kvoid* (*)(void*)[m[K’ [[01;35m[K-Wpedantic[m[K]
+   31 |                         pthread_create(&threads[i], NULL, (void*(*)(void*))(&Multiply::multiply_function[01;35m[K)[m[K , a);
+      |                                                                                                         [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K At global scope:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:18:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kreturn[m[K’
+   18 |     [01;31m[Kreturn[m[K NULL;
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In member function ‘[01m[Kvoid* My_Function::my_func(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:16:5:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   16 |     [01;35m[K}[m[K
+      |     [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In member function ‘[01m[Kvoid My_Thread::execute()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:32:82:[m[K [01;35m[Kwarning: [m[Kconverting from ‘[01m[Kvoid* (My_Function::*)(void*)[m[K’ to ‘[01m[Kvoid* (*)(void*)[m[K’ [[01;35m[K-Wpedantic[m[K]
+   32 |             pthread_create(&thread, NULL, (void*(*)(void*))(&My_Function::my_func[01;35m[K)[m[K, pointer);
+      |                                                                                  [01;35m[K^[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

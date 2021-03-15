@@ -1,0 +1,12 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kmultiply_parallel::multiply_parallel(const std::vector<int>&, std::vector<int>&, const settings&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:106:32:[m[K [01;35m[Kwarning: [m[Klist-initializer for non-class type must not be parenthesized
+  106 |             settings_(settings_[01;35m[K)[m[K
+      |                                [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:106:32:[m[K [01;35m[Kwarning: [m[Ka temporary bound to ‘[01m[Kmultiply_parallel::matrix_a_[m[K’ only persists until the constructor exits [[01;35m[K-Wextra[m[K]
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:106:32:[m[K [01;35m[Kwarning: [m[Klist-initializer for non-class type must not be parenthesized
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:106:32:[m[K [01;35m[Kwarning: [m[Ka temporary bound to ‘[01m[Kmultiply_parallel::matrix_b_[m[K’ only persists until the constructor exits [[01;35m[K-Wextra[m[K]
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:87:21:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ka[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   87 |   multiply_parallel [01;35m[Ka[m[K = multiply_parallel(matrix, matrix, matrix_result, settings_);
+      |                     [01;35m[K^[m[K

@@ -1,0 +1,30 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:6[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In static member function ‘[01m[Kstatic void* framework::utilities::Multiply::multiply_function(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:67:33:[m[K [01;31m[Kerror: [m[Kinvalid use of member ‘[01m[Kframework::utilities::Multiply::matrix_c[m[K’ in static member function
+   67 |                                 [01;31m[Kmatrix_c[m[K[i][j] += matrix_a[i][k] * matrix_b[k][j];
+      |                                 [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:55:23:[m[K [01;36m[Knote: [m[Kdeclared here
+   55 |                 int** [01;36m[Kmatrix_c[m[K;
+      |                       [01;36m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:67:51:[m[K [01;31m[Kerror: [m[Kinvalid use of member ‘[01m[Kframework::utilities::Multiply::matrix_a[m[K’ in static member function
+   67 |                                 matrix_c[i][j] += [01;31m[Kmatrix_a[m[K[i][k] * matrix_b[k][j];
+      |                                                   [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:53:23:[m[K [01;36m[Knote: [m[Kdeclared here
+   53 |                 int** [01;36m[Kmatrix_a[m[K;
+      |                       [01;36m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:67:68:[m[K [01;31m[Kerror: [m[Kinvalid use of member ‘[01m[Kframework::utilities::Multiply::matrix_b[m[K’ in static member function
+   67 |                                 matrix_c[i][j] += matrix_a[i][k] * [01;31m[Kmatrix_b[m[K[k][j];
+      |                                                                    [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:54:23:[m[K [01;36m[Knote: [m[Kdeclared here
+   54 |                 int** [01;36m[Kmatrix_b[m[K;
+      |                       [01;36m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main(int, const char**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   12 | int main([01;35m[Kint argc[m[K, const char ** argv)
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   12 | int main(int argc, [01;35m[Kconst char ** argv[m[K)
+      |                    [01;35m[K~~~~~~~~~~~~~~^~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

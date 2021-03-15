@@ -1,0 +1,13 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:6[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid framework::utilities::Multiply::run(int**, int**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:30:98:[m[K [01;35m[Kwarning: [m[Kconverting from ‘[01m[Kvoid* (framework::utilities::Multiply::*)(void*)[m[K’ to ‘[01m[Kvoid* (*)(void*)[m[K’ [[01;35m[K-Wpedantic[m[K]
+   30 |                     pthread_create(&threads, NULL, (void*(*)(void*))(&Multiply::multiply_function[01;35m[K)[m[K , a);
+      |                                                                                                  [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In member function ‘[01m[Kvoid My_Thread::execute()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:29:80:[m[K [01;35m[Kwarning: [m[Kconverting from ‘[01m[Kvoid* (My_Thread::*)(void*)[m[K’ to ‘[01m[Kvoid* (*)(void*)[m[K’ [[01;35m[K-Wpedantic[m[K]
+   29 |             pthread_create(&thread, NULL, (void*(*)(void*))(&My_Thread::my_func[01;35m[K)[m[K, pointer);
+      |                                                                                [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:51:10:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kmultiplication[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   51 |     auto [01;35m[Kmultiplication[m[K = framework::utilities::Multiply();
+      |          [01;35m[K^~~~~~~~~~~~~~[m[K

@@ -1,0 +1,32 @@
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:13:17:[m[K [01;31m[Kerror: [m[Kthe value of ‘[01m[Kfn[m[K’ is not usable in a constant expression
+   13 |     std::vector<[01;31m[Kfn[m[K, std::allacator<fn> >(5);
+      |                 [01;31m[K^~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:12:[m[K [01;36m[Knote: [m[K‘[01m[Kfn[m[K’ was not declared ‘[01m[Kconstexpr[m[K’
+   12 |     void*(*[01;36m[Kfn[m[K)(void*);
+      |            [01;36m[K^~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:13:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kallacator[m[K’ is not a member of ‘[01m[Kstd[m[K’; did you mean ‘[01m[Kallocator[m[K’?
+   13 |     std::vector<fn, std::[01;31m[Kallacator[m[K<fn> >(5);
+      |                          [01;31m[K^~~~~~~~~[m[K
+      |                          [32m[Kallocator[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:13:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kallacator[m[K’ is not a member of ‘[01m[Kstd[m[K’; did you mean ‘[01m[Kallocator[m[K’?
+   13 |     std::vector<fn, std::[01;31m[Kallacator[m[K<fn> >(5);
+      |                          [01;31m[K^~~~~~~~~[m[K
+      |                          [32m[Kallocator[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:13:38:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Alloc> class std::vector[m[K’
+   13 |     std::vector<fn, std::allacator<fn[01;31m[K>[m[K >(5);
+      |                                      [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:13:38:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[Kfn[m[K’
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:13:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:13:40:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K>[m[K’ token
+   13 |     std::vector<fn, std::allacator<fn> [01;31m[K>[m[K(5);
+      |                                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:10:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   10 | int main([01;35m[Kint argc[m[K, char ** argv)
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:10:28:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   10 | int main(int argc, [01;35m[Kchar ** argv[m[K)
+      |                    [01;35m[K~~~~~~~~^~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

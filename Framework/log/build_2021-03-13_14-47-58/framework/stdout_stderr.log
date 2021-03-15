@@ -1,0 +1,21 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[KT sum(T)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:14:11:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K+[m[K’ token
+   14 |   return T[01;31m[K+[m[KT;
+      |           [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:14:13:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K;[m[K’ token
+   14 |   return T+T[01;31m[K;[m[K
+      |             [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:47:45:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kit[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   47 |   std::array<int, std::size_t(5)>::iterator [01;35m[Kit[m[K = a.begin();
+      |                                             [01;35m[K^~[m[K
+/home/arian/Framework/src/framework/src/main.cpp: In instantiation of ‘[01m[KT sum(T) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:49:13:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:9:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ka[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   12 | T sum([01;35m[KT a[m[K)
+      |       [01;35m[K~~^[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

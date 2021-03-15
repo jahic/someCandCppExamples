@@ -1,0 +1,9 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kframework::utilities::matrix::matrix(int**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:21:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   21 |             matrix([01;35m[Kint** matrix[m[K)
+      |                    [01;35m[K~~~~~~^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In function ‘[01m[Kvoid* framework::utilities::parallel_multiply(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:50:40:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   50 |         void * parallel_multiply([01;35m[Kvoid* payload[m[K)
+      |                                  [01;35m[K~~~~~~^~~~~~~[m[K

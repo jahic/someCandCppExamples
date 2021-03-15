@@ -1,0 +1,10 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kframework::utilities::matrix::matrix(int**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:21:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   21 |             matrix([01;35m[Kint** matrix[m[K)
+      |                    [01;35m[K~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In function ‘[01m[Kvoid* framework::matrix_utilities::parallel_multiply_pthread_2(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:92:53:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmatrices[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   92 |             framework::container::matrix_container* [01;35m[Kmatrices[m[K = (framework::container::matrix_container*)container;
+      |                                                     [01;35m[K^~~~~~~~[m[K

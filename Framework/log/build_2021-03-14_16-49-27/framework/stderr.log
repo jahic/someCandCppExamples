@@ -1,0 +1,26 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel::execute(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, const settings&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:119:34:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kiterators*[m[K’ to ‘[01m[Kiterators**[m[K’ in assignment
+  119 |                     iterators_ = [01;31m[Knew iterators([m[K
+      |                                  [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                                  [01;31m[K|[m[K
+      |                                  [01;31m[Kiterators*[m[K
+  120 | [01;31m[K                        matrix_a_, matrix_b_, matrix_c_,[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  121 | [01;31m[K                        i * delimeter,[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~[m[K
+  122 | [01;31m[K                        (i + 1) * delimeter,[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~[m[K
+  123 | [01;31m[K                        matrix_a_.size(),[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~[m[K
+  124 | [01;31m[K                        (int)(sqrt(matrix_a_.size()))[m[K
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  125 | [01;31m[K                    )[m[K;
+      |                     [01;31m[K~[m[K             
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:133:35:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kstd::vector<_Tp, _Alloc>::size_type std::vector<_Tp, _Alloc>::size() const [with _Tp = int; _Alloc = std::allocator<int>; std::vector<_Tp, _Alloc>::size_type = long unsigned int][m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+  133 |                         [01;31m[Kmatrix_a_.size[m[K / sqrt(matrix_a_.size()),
+      |                         [01;31m[K~~~~~~~~~~^~~~[m[K
+      |                                       [32m[K()[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,38 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In member function ‘[01m[Kvoid My_Thread::execute()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:29:80:[m[K [01;35m[Kwarning: [m[Kconverting from ‘[01m[Kvoid* (My_Thread::*)(void*)[m[K’ to ‘[01m[Kvoid* (*)(void*)[m[K’ [[01;35m[K-Wpedantic[m[K]
+   29 |             pthread_create(&thread, NULL, (void*(*)(void*))(&My_Thread::my_func[01;35m[K)[m[K, pointer);
+      |                                                                                [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K At global scope:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:42:10:[m[K [01;31m[Kerror: [m[K‘[01m[KT[m[K’ has not been declared
+   42 | template<[01;31m[KT[m[K, int size>
+      |          [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:43:9:[m[K [01;31m[Kerror: [m[K‘[01m[KT[m[K’ was not declared in this scope
+   43 | int sum([01;31m[KT[m[K*, int size)
+      |         [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:43:11:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+   43 | int sum(T*[01;31m[K,[m[K int size)
+      |           [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:43:13:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kint[m[K’
+   43 | int sum(T*, [01;31m[Kint[m[K size)
+      |             [01;31m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:43:21:[m[K [01;31m[Kerror: [m[Kexpression list treated as compound expression in initializer [[01;31m[K-fpermissive[m[K]
+   43 | int sum(T*, int size[01;31m[K)[m[K
+      |                     [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:43:22:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K{[m[K’ token
+   43 | int sum(T*, int size)
+      |                      [01;31m[K^[m[K
+      |                      [32m[K;[m[K
+   44 | [32m[K{[m[K
+      | [32m[K~[m[K                     
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:50:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+   50 | }[01;35m[K;[m[K
+      |  [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:58:21:[m[K [01;31m[Kerror: [m[Kmissing template arguments before ‘[01m[K([m[K’ token
+   58 |     std::cout << sum[01;31m[K([m[Ka) << std::endl;
+      |                     [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

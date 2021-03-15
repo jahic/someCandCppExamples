@@ -1,0 +1,31 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from tutorial_interfaces:msg/Array.idl
+// generated code does not contain a copyright notice
+#include "tutorial_interfaces/msg/dds_connext/Num_.idl"
+
+#ifndef __tutorial_interfaces__msg__array__idl__
+#define __tutorial_interfaces__msg__array__idl__
+
+
+module tutorial_interfaces {
+
+module msg {
+
+module dds_ {
+
+
+struct Array_ {
+sequence<tutorial_interfaces::msg::dds_::Num_> member_;
+
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module tutorial_interfaces
+
+
+#endif  // __tutorial_interfaces__msg__array__idl__

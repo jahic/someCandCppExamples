@@ -1,0 +1,21 @@
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kdouble summer(std::vector<double, std::allocator<double> >)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:52:20:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double, std::allocator<double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   52 |   for(int i = 0; [01;35m[Ki < my_big_sum.size()[m[K; i++)
+      |                  [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:56:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   56 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K At global scope:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:66:1:[m[K [01;31m[Kerror: [m[Ktemplate declaration of ‘[01m[Ktypedef[m[K’
+   66 | [01;31m[Ktypedef[m[K my_vector<T> my_vector ;
+      | [01;31m[K^~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:66:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmy_vector<T>[m[K’ does not name a type
+   66 | typedef [01;31m[Kmy_vector<T>[m[K my_vector ;
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:134:15:[m[K [01;31m[Kerror: [m[Kmissing template arguments before ‘[01m[K=[m[K’ token
+  134 |     my_vector [01;31m[K=[m[K new std::vector<int>();
+      |               [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

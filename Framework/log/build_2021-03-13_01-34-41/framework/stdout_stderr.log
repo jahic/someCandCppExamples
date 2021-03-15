@@ -1,0 +1,27 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:10[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/types/matrix.hpp:[m[K In constructor ‘[01m[Kframework::types::matrix::matrix(int**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/types/matrix.hpp:17:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   17 |             matrix([01;35m[Kint** matrix[m[K)
+      |                    [01;35m[K~~~~~~^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:30:11:[m[K [01;31m[Kerror: [m[Kconflicting declaration ‘[01m[Kvoid* a[m[K’
+   30 |     void* [01;31m[Ka[m[K;
+      |           [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:20:[m[K [01;36m[Knote: [m[Kprevious declaration as ‘[01m[Kstd::vector<int> a[m[K’
+   12 |   std::vector<int> [01;36m[Ka[m[K;
+      |                    [01;36m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:32:35:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kstd::vector<int>[m[K’ to ‘[01m[Kvoid*[m[K’
+   32 |     ::parallel_multiply_pthread_2([01;31m[Ka[m[K);
+      |                                   [01;31m[K^[m[K
+      |                                   [01;31m[K|[m[K
+      |                                   [01;31m[Kstd::vector<int>[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:19:47:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid* {anonymous}::parallel_multiply_pthread_2(void*)[m[K’
+   19 |     void * parallel_multiply_pthread_2([01;36m[Kvoid * container[m[K)
+      |                                        [01;36m[K~~~~~~~^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

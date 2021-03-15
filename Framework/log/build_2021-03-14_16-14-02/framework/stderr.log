@@ -1,0 +1,51 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kiterators::iterators(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, int, int, int, int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:47:9:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[Kiterators[m[K’ does not have any field named ‘[01m[Ksize_[m[K’
+   47 |         [01;31m[Ksize_[m[K(size),
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:48:9:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[Kiterators[m[K’ does not have any field named ‘[01m[Kwidth_[m[K’
+   48 |         [01;31m[Kwidth_[m[K(width)
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:40:13:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksize_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   40 |         [01;35m[Kint size_[m[K,
+      |         [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:41:13:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwidth_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   41 |         [01;35m[Kint width_[m[K) :
+      |         [01;35m[K~~~~^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In function ‘[01m[Kvoid* multiply_parallel_pthread(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:66:39:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+   66 |     iterators* iterators = (iterators*[01;31m[K)[m[Kiterators_;
+      |                                       [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:70:44:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+   70 |         for(int j = 0; j < iterators->size([01;31m[K)[m[K; j++)
+      |                                            [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:72:48:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+   72 |             for(int k = 0; k < iterators->size([01;31m[K)[m[K; k++)
+      |                                                [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:74:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c[m[K’ was not declared in this scope
+   74 |                [01;31m[Kmatrix_c[m[K[0] = 3;
+      |                [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:64:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kiterators_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   64 | void * multiply_parallel_pthread([01;35m[Kvoid * iterators_[m[K)
+      |                                  [01;35m[K~~~~~~~^~~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kmultiply_parallel::multiply_parallel(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, const settings&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:87:60:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst settings[m[K’ to ‘[01m[Ksettings*[m[K’
+   87 |             this->execute(matrix_a_, matrix_b_, matrix_c_, [01;31m[Ksettings_[m[K);
+      |                                                            [01;31m[K^~~~~~~~~[m[K
+      |                                                            [01;31m[K|[m[K
+      |                                                            [01;31m[Kconst settings[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:102:132:[m[K [01;36m[Knote: [m[K  initializing argument 4 of ‘[01m[Kvoid multiply_parallel::execute(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, settings*)[m[K’
+  102 |         void execute(const std::vector<int>& matrix_a_, const std::vector<int>& matrix_b_, std::vector<int>& matrix_c_, [01;36m[Ksettings * settings_[m[K)
+      |                                                                                                                         [01;36m[K~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel::execute(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, settings*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:104:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kthreads[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  104 |             pthread_t* [01;35m[Kthreads[m[K = new pthread_t[settings_->THREAD_NUMBER];
+      |                        [01;35m[K^~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:72:24:[m[K [01;31m[Kerror: [m[Kconversion from ‘[01m[Ksettings*[m[K’ to non-scalar type ‘[01m[Ksettings[m[K’ requested
+   72 |   settings settings_ = [01;31m[Knew settings(1, 1, 1, false, 1)[m[K;
+      |                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

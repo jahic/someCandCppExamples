@@ -7,7 +7,7 @@
 #include<thread>
 #include<sched.h>
 #include<pthread.h>
-
+#include<tutorial_interfaces/msg/num.hpp>
 
 class MinimalPublisher : public rclcpp::Node
 {
@@ -15,11 +15,33 @@ class MinimalPublisher : public rclcpp::Node
         MinimalPublisher() : Node("publisher"), count_(0), thread_number(4), arr_length(36000)
         {
             publisher_ = this->create_publisher<std_msgs::msg::String>("topic", 10);
-            timer_ = this->create_wall_timer(
-                std::chrono_literals::operator""ms(500), std::bind(&MinimalPublisher::timer_callback_parallel_affinity, this));
+           // timer_ = this->create_wall_timer(
+             //   std::chrono_literals::operator""ms(500), std::bind(&MinimalPublisher::timer_callback_parallel_affinity, this));
+
+            mublisher_ = this->create_publisher<tutorial_interfaces::msg::Num>("topic_3", 10);
+
+         timer_2 = this->create_wall_timer(
+            std::chrono_literals::operator""ms(500), std::bind(&MinimalPublisher::timer_vector, this));
+
+            subscriber = this->create_subscription<tutorial_interfaces::msg::Num>("topic_3", 10, [this](tutorial_interfaces::msg::Num::SharedPtr message){
+
+                RCLCPP_INFO(this->get_logger(), "%d", message->data.size());
+            });
+
         }
 
     private:
+
+        void timer_vector()
+        {
+            auto message = tutorial_interfaces::msg::Num();
+
+            message.data.push_back(5);
+            message.data.push_back(4);
+            mublisher_->publish(message);
+            
+        }
+
         void timer_callback()
         {
             auto message = std_msgs::msg::String();
@@ -120,10 +142,15 @@ class MinimalPublisher : public rclcpp::Node
 
         rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
         rclcpp::TimerBase::SharedPtr timer_;
+        rclcpp::TimerBase::SharedPtr timer_2;
         size_t count_;
         int thread_number;
         int arr_length;
         int* arr_;
+
+       rclcpp::Publisher<tutorial_interfaces::msg::Num>::SharedPtr mublisher_;
+
+        rclcpp::Subscription<tutorial_interfaces::msg::Num>::SharedPtr subscriber;
 
 };
 

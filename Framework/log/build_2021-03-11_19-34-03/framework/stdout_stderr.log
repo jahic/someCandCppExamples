@@ -1,0 +1,29 @@
+-- Found ament_cmake: 0.9.7 (/home/arian/ros2_foxy/install/ament_cmake/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rclcpp: 2.2.0 (/home/arian/ros2_foxy/install/rclcpp/share/rclcpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c;rosidl_typesupport_connext_c
+-- Found rosidl_adapter: 1.1.0 (/home/arian/ros2_foxy/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Found FastRTPS: /home/arian/ros2_foxy/install/fastrtps/include  
+-- Found RTI Connext: /home/arian/rti_connext_dds-5.3.1
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_connext_cpp
+-- Found rmw_implementation_cmake: 1.0.1 (/home/arian/ros2_foxy/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+CMake Error at /home/arian/ros2_foxy/install/ament_cmake_target_dependencies/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:40 (message):
+  ament_target_dependencies() the first argument must be a valid target name
+Call Stack (most recent call first):
+  CMakeLists.txt:26 (ament_target_dependencies)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/arian/Framework/build/framework/CMakeFiles/CMakeOutput.log".
+See also "/home/arian/Framework/build/framework/CMakeFiles/CMakeError.log".
+make: *** [Makefile:222: cmake_check_build_system] Error 1

@@ -1,0 +1,19 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:159:26:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Kconst settings& multiply_parallel::settings[m[K’ changes meaning of ‘[01m[Ksettings[m[K’ [[01;31m[K-fpermissive[m[K]
+  159 |         const settings & [01;31m[Ksettings[m[K;
+      |                          [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:9:8:[m[K [01;36m[Knote: [m[K‘[01m[Ksettings[m[K’ declared here as ‘[01m[Kstruct settings[m[K’
+    9 | struct [01;36m[Ksettings[m[K
+      |        [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kmultiply_parallel::multiply_parallel(const std::vector<int>&, std::vector<int>&, const settings&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:106:31:[m[K [01;35m[Kwarning: [m[Klist-initializer for non-class type must not be parenthesized
+  106 |             settings(settings_[01;35m[K)[m[K
+      |                               [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:106:31:[m[K [01;35m[Kwarning: [m[Ka temporary bound to ‘[01m[Kmultiply_parallel::matrix_a[m[K’ only persists until the constructor exits [[01;35m[K-Wextra[m[K]
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:106:31:[m[K [01;35m[Kwarning: [m[Klist-initializer for non-class type must not be parenthesized
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:106:31:[m[K [01;35m[Kwarning: [m[Ka temporary bound to ‘[01m[Kmultiply_parallel::matrix_b[m[K’ only persists until the constructor exits [[01;35m[K-Wextra[m[K]
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,18 @@
+-- Found ament_cmake: 0.9.7 (/home/arian/ros2_foxy/install/ament_cmake/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.5", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found rosidl_default_generators: 1.0.0 (/home/arian/ros2_foxy/install/rosidl_default_generators/share/rosidl_default_generators/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_introspection_c;rosidl_typesupport_fastrtps_c;rosidl_typesupport_connext_c
+-- Found rosidl_adapter: 1.1.0 (/home/arian/ros2_foxy/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Found RTI Connext: /home/arian/rti_connext_dds-5.3.1
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_introspection_cpp;rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_connext_cpp
+CMake Error at /home/arian/ros2_foxy/install/ament_cmake_target_dependencies/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:66 (message):
+  ament_target_dependencies() the passed package name 'rclcpp' was not found
+  before
+Call Stack (most recent call first):
+  CMakeLists.txt:27 (ament_target_dependencies)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/build/tutorial_interfaces/CMakeFiles/CMakeOutput.log".
+make: *** [Makefile:1392: cmake_check_build_system] Error 1

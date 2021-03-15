@@ -1,0 +1,22 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In member function ‘[01m[Kvoid My_Thread::execute()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:29:80:[m[K [01;35m[Kwarning: [m[Kconverting from ‘[01m[Kvoid* (My_Thread::*)(void*)[m[K’ to ‘[01m[Kvoid* (*)(void*)[m[K’ [[01;35m[K-Wpedantic[m[K]
+   29 |             pthread_create(&thread, NULL, (void*(*)(void*))(&My_Thread::my_func[01;35m[K)[m[K, pointer);
+      |                                                                                [01;35m[K^[m[K
+[100%] [32m[1mLinking CXX executable main[0m
+[100%] Built target main
+-- Install configuration: ""
+-- Up-to-date: /home/arian/Framework/install/framework/share/ament_index/resource_index/package_run_dependencies/framework
+-- Up-to-date: /home/arian/Framework/install/framework/share/ament_index/resource_index/parent_prefix_path/framework
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/environment/path.dsv
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/local_setup.bash
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/local_setup.sh
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/local_setup.zsh
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/local_setup.dsv
+-- Installing: /home/arian/Framework/install/framework/share/framework/package.dsv
+-- Up-to-date: /home/arian/Framework/install/framework/share/ament_index/resource_index/packages/framework
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/cmake/frameworkConfig.cmake
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/cmake/frameworkConfig-version.cmake
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/package.xml

@@ -1,0 +1,78 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:10[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/types/matrix.hpp:[m[K In constructor ‘[01m[Kframework::utilities::matrix::matrix(int**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/types/matrix.hpp:14:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   14 |             matrix([01;35m[Kint** matrix[m[K)
+      |                    [01;35m[K~~~~~~^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K At global scope:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:18:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kframework::types[m[K’ has not been declared
+   18 |             matrix_container(framework::[01;31m[Ktypes[m[K::matrix a, framework::types::matrix b, framework::types::matrix c) : a(a), b(b), c(c) {}
+      |                                         [01;31m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:18:54:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ka[m[K’
+   18 |             matrix_container[34m[K([m[Kframework::types::matrix[01;31m[K [m[K[32m[Ka[m[K, framework::types::matrix b, framework::types::matrix c) : a(a), b(b), c(c) {}
+      |                             [34m[K~[m[K                        [01;31m[K^[m[K[32m[K~[m[K
+      |                                                      [32m[K)[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:20:24:[m[K [01;31m[Kerror: [m[K‘[01m[Ktypes[m[K’ in namespace ‘[01m[Kframework[m[K’ does not name a type
+   20 |             framework::[01;31m[Ktypes[m[K::matrix a;
+      |                        [01;31m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:21:24:[m[K [01;31m[Kerror: [m[K‘[01m[Ktypes[m[K’ in namespace ‘[01m[Kframework[m[K’ does not name a type
+   21 |             framework::[01;31m[Ktypes[m[K::matrix b;
+      |                        [01;31m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:22:24:[m[K [01;31m[Kerror: [m[K‘[01m[Ktypes[m[K’ in namespace ‘[01m[Kframework[m[K’ does not name a type
+   22 |             framework::[01;31m[Ktypes[m[K::matrix c;
+      |                        [01;31m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In function ‘[01m[Kvoid* framework::matrix_utilities::parallel_multiply_pthread_2(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:34:53:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kmatrices[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   34 |             framework::container::matrix_container* [01;35m[Kmatrices[m[K = (framework::container::matrix_container*)container;
+      |                                                     [01;35m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K At global scope:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:68:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kframework::types[m[K’ has not been declared
+   68 |                 framework::[01;31m[Ktypes[m[K::matrix a,
+      |                            [01;31m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:68:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ka[m[K’
+   68 |                 framework::types::matrix[01;31m[K [m[K[32m[Ka[m[K,
+      |                                         [01;31m[K^[m[K[32m[K~[m[K
+      |                                         [32m[K)[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:67:37:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   67 |             matrix_multiply_parallel[01;36m[K([m[K
+      |                                     [01;36m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:100:24:[m[K [01;31m[Kerror: [m[K‘[01m[Ktypes[m[K’ in namespace ‘[01m[Kframework[m[K’ does not name a type
+  100 |             framework::[01;31m[Ktypes[m[K::matrix matrix_a;
+      |                        [01;31m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:101:24:[m[K [01;31m[Kerror: [m[K‘[01m[Ktypes[m[K’ in namespace ‘[01m[Kframework[m[K’ does not name a type
+  101 |             framework::[01;31m[Ktypes[m[K::matrix matrix_b;
+      |                        [01;31m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:102:24:[m[K [01;31m[Kerror: [m[K‘[01m[Ktypes[m[K’ in namespace ‘[01m[Kframework[m[K’ does not name a type
+  102 |             framework::[01;31m[Ktypes[m[K::matrix matrix_c;
+      |                        [01;31m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid framework::matrix_multiply_parallel::execute()[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:78:111:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a[m[K’ was not declared in this scope
+   78 |                 framework::container::matrix_container* matrices = new framework::container::matrix_container([01;31m[Kmatrix_a[m[K, matrix_b, matrix_c);
+      |                                                                                                               [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:78:121:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b[m[K’ was not declared in this scope
+   78 |                 framework::container::matrix_container* matrices = new framework::container::matrix_container(matrix_a, [01;31m[Kmatrix_b[m[K, matrix_c);
+      |                                                                                                                         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:78:131:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c[m[K’ was not declared in this scope
+   78 |                 framework::container::matrix_container* matrices = new framework::container::matrix_container(matrix_a, matrix_b, [01;31m[Kmatrix_c[m[K);
+      |                                                                                                                                   [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:78:139:[m[K [01;31m[Kerror: [m[Knew initializer expression list treated as compound expression [[01;31m[K-fpermissive[m[K]
+   78 |                 framework::container::matrix_container* matrices = new framework::container::matrix_container(matrix_a, matrix_b, matrix_c[01;31m[K)[m[K;
+      |                                                                                                                                           [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:27:67:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kframework::matrix_multiply_parallel::matrix_multiply_parallel(framework::utilities::matrix&, framework::utilities::matrix&)[m[K’
+   27 |    auto b = framework::matrix_multiply_parallel(matrix_a, matrix_a[01;31m[K)[m[K;
+      |                                                                   [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:62:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr framework::matrix_multiply_parallel::matrix_multiply_parallel(const framework::matrix_multiply_parallel&)[m[K’
+   62 |     class [01;36m[Kmatrix_multiply_parallel[m[K
+      |           [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:62:11:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:62:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr framework::matrix_multiply_parallel::matrix_multiply_parallel(framework::matrix_multiply_parallel&&)[m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:62:11:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

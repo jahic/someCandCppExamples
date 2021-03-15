@@ -1,0 +1,18 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kframework::utilities::matrix::matrix(int**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:21:26:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   21 |             matrix([01;35m[Kint** matrix[m[K)
+      |                    [01;35m[K~~~~~~^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In function ‘[01m[Kvoid* framework::utilities::parallel_multiply(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:50:40:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpayload[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   50 |         void * parallel_multiply([01;35m[Kvoid* payload[m[K)
+      |                                  [01;35m[K~~~~~~^~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:26:22:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(std::vector<int>) (int, int)[m[K’
+   26 |    std::cout << a(1,0[01;31m[K)[m[K << std::endl;
+      |                      [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

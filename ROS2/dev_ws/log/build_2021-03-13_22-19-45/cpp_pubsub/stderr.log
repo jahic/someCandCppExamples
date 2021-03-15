@@ -1,0 +1,11 @@
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:[m[K In lambda function:
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:30:37:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Ktutorial_interfaces::msg::Num_<std::allocator<void> >::SharedPtr[m[K’ {aka ‘[01m[Kstd::shared_ptr<tutorial_interfaces::msg::Num_<std::allocator<void> > >[m[K’} and ‘[01m[Kint[m[K’)
+   30 |                 std::cout << message[01;31m[K[[m[K0] << std::endl;
+      |                                     [01;31m[K^[m[K
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::timer_callback_parallel_affinity()[m[K’:
+[01m[K/home/arian/Desktop/someCandCppExamples/ROS2/dev_ws/src/cpp_pubsub/src/main.cpp:78:21:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpolicy[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   78 |                 int [01;35m[Kpolicy[m[K;
+      |                     [01;35m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/talker.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

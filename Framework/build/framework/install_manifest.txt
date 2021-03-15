@@ -1,0 +1,13 @@
+/home/arian/Framework/install/framework/share/ament_index/resource_index/package_run_dependencies/framework
+/home/arian/Framework/install/framework/share/ament_index/resource_index/parent_prefix_path/framework
+/home/arian/Framework/install/framework/share/framework/environment/ament_prefix_path.dsv
+/home/arian/Framework/install/framework/share/framework/environment/path.dsv
+/home/arian/Framework/install/framework/share/framework/local_setup.bash
+/home/arian/Framework/install/framework/share/framework/local_setup.sh
+/home/arian/Framework/install/framework/share/framework/local_setup.zsh
+/home/arian/Framework/install/framework/share/framework/local_setup.dsv
+/home/arian/Framework/install/framework/share/framework/package.dsv
+/home/arian/Framework/install/framework/share/ament_index/resource_index/packages/framework
+/home/arian/Framework/install/framework/share/framework/cmake/frameworkConfig.cmake
+/home/arian/Framework/install/framework/share/framework/cmake/frameworkConfig-version.cmake
+/home/arian/Framework/install/framework/share/framework/package.xml

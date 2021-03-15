@@ -1,0 +1,16 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kvoid* summer(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:21:7:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ksum[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   21 |   int [01;35m[Ksum[m[K = 0;
+      |       [01;35m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:48:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   48 |   for(int it = 0; [01;35m[Kit < my_big_sum.size()[m[K; it++)
+      |                   [01;35m[K~~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:55:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmstd[m[K’ has not been declared
+   55 |     [01;31m[Kmstd[m[K::cout << my_big_sum[it] << std::endl;
+      |     [01;31m[K^~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

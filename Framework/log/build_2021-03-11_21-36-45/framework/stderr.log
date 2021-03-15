@@ -1,0 +1,24 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:6[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:21:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kthis[m[K’ may not be used in this context
+   21 |                         Multiply * this__ = [01;31m[Kthis[m[K)
+      |                                             [01;31m[K^~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid framework::utilities::Multiply::run(int**, int**, framework::utilities::Multiply*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:30:65:[m[K [01;31m[Kerror: [m[Kinvalid use of non-static member function ‘[01m[Kvoid* framework::utilities::Multiply::multiply_function(void*)[m[K’
+   30 |                         pthread_create(&threads[i], NULL, [01;31m[Kthis->multiply_function[m[K, this), NULL);
+      |                                                           [01;31m[K~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:58:24:[m[K [01;36m[Knote: [m[Kdeclared here
+   58 |                 void * [01;36m[Kmultiply_function[m[K(void *)
+      |                        [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:21:36:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kthis__[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   21 |                         [01;35m[KMultiply * this__ = this[m[K)
+      |                         [01;35m[K~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main(int, const char**)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   12 | int main([01;35m[Kint argc[m[K, const char ** argv)
+      |          [01;35m[K~~~~^~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:34:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   12 | int main(int argc, [01;35m[Kconst char ** argv[m[K)
+      |                    [01;35m[K~~~~~~~~~~~~~~^~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

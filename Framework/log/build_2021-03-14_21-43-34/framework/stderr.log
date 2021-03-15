@@ -1,0 +1,6 @@
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:79:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kchrono[m[K’ does not name a type
+   79 |  constexpr [01;31m[Kchrono[m[K::duration<long double, ratio<3600,1>>
+      |            [01;31m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

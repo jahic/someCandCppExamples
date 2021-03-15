@@ -1,0 +1,4 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:12:5:[m[K [01;35m[Kwarning: [m[Kliteral operator suffixes not preceded by ‘[01m[K_[m[K’ are reserved for future standardization [[01;35m[K-Wliteral-suffix[m[K]
+   12 |     [01;35m[Koperator[m[K"" THREADS(unsigned long long _hours)
+      |     [01;35m[K^~~~~~~~[m[K

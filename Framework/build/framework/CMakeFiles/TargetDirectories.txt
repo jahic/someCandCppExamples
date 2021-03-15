@@ -1,0 +1,10 @@
+/home/arian/Framework/build/framework/CMakeFiles/install/local.dir
+/home/arian/Framework/build/framework/CMakeFiles/install.dir
+/home/arian/Framework/build/framework/CMakeFiles/list_install_components.dir
+/home/arian/Framework/build/framework/CMakeFiles/rebuild_cache.dir
+/home/arian/Framework/build/framework/CMakeFiles/edit_cache.dir
+/home/arian/Framework/build/framework/CMakeFiles/test.dir
+/home/arian/Framework/build/framework/CMakeFiles/main.dir
+/home/arian/Framework/build/framework/CMakeFiles/install/strip.dir
+/home/arian/Framework/build/framework/CMakeFiles/framework_uninstall.dir
+/home/arian/Framework/build/framework/CMakeFiles/uninstall.dir

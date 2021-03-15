@@ -1,0 +1,213 @@
+[0.036s] Invoking command in '/home/arian/Framework/build/framework': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arian/ros2_foxy/install/ros2bag:/home/arian/ros2_foxy/install/tracetools_launch:/home/arian/ros2_foxy/install/topic_monitor:/home/arian/ros2_foxy/install/examples_tf2_py:/home/arian/ros2_foxy/install/sros2:/home/arian/ros2_foxy/install/rqt_topic:/home/arian/ros2_foxy/install/rqt_reconfigure:/home/arian/ros2_foxy/install/rqt_action:/home/arian/ros2_foxy/install/rqt:/home/arian/ros2_foxy/install/rqt_graph:/home/arian/ros2_foxy/install/rqt_gui_py:/home/arian/ros2_foxy/install/rqt_gui:/home/arian/ros2_foxy/install/ros2trace:/home/arian/ros2_foxy/install/ros2topic:/home/arian/ros2_foxy/install/ros2test:/home/arian/ros2_foxy/install/ros2component:/home/arian/ros2_foxy/install/ros2param:/home/arian/ros2_foxy/install/ros2lifecycle:/home/arian/ros2_foxy/install/ros2service:/home/arian/ros2_foxy/install/ros2run:/home/arian/ros2_foxy/install/ros2launch:/home/arian/ros2_foxy/install/ros2pkg:/home/arian/ros2_foxy/install/ros2node:/home/arian/ros2_foxy/install/ros2multicast:/home/arian/ros2_foxy/install/ros2interface:/home/arian/ros2_foxy/install/ros2doctor:/home/arian/ros2_foxy/install/ros2action:/home/arian/ros2_foxy/install/ros2cli:/home/arian/ros2_foxy/install/quality_of_service_demo_py:/home/arian/ros2_foxy/install/launch_testing_ros:/home/arian/ros2_foxy/install/launch_ros:/home/arian/ros2_foxy/install/examples_rclpy_minimal_subscriber:/home/arian/ros2_foxy/install/examples_rclpy_minimal_service:/home/arian/ros2_foxy/install/examples_rclpy_minimal_publisher:/home/arian/ros2_foxy/install/examples_rclpy_minimal_client:/home/arian/ros2_foxy/install/examples_rclpy_minimal_action_server:/home/arian/ros2_foxy/install/examples_rclpy_minimal_action_client:/home/arian/ros2_foxy/install/examples_rclpy_executors:/home/arian/ros2_foxy/install/demo_nodes_py:/home/arian/ros2_foxy/install/action_tutorials_py:/home/arian/ros2_foxy/install/ament_uncrustify:/home/arian/ros2_foxy/install/tracetools_trace:/home/arian/ros2_foxy/install/tracetools_read:/home/arian/ros2_foxy/install/test_launch_ros:/home/arian/ros2_foxy/install/rpyutils:/home/arian/ros2_foxy/install/rosidl_runtime_py:/home/arian/ros2_foxy/install/launch_yaml:/home/arian/ros2_foxy/install/launch_xml:/home/arian/ros2_foxy/install/launch_testing:/home/arian/ros2_foxy/install/launch:/home/arian/ros2_foxy/install/osrf_pycommon:/home/arian/ros2_foxy/install/domain_coordinator:/home/arian/ros2_foxy/install/ament_xmllint:/home/arian/ros2_foxy/install/ament_pyflakes:/home/arian/ros2_foxy/install/ament_pycodestyle:/home/arian/ros2_foxy/install/ament_pep257:/home/arian/ros2_foxy/install/ament_pclint:/home/arian/ros2_foxy/install/ament_package:/home/arian/ros2_foxy/install/ament_mypy:/home/arian/ros2_foxy/install/ament_lint_cmake:/home/arian/ros2_foxy/install/ament_flake8:/home/arian/ros2_foxy/install/ament_copyright:/home/arian/ros2_foxy/install/ament_lint:/home/arian/ros2_foxy/install/ament_index_python:/home/arian/ros2_foxy/install/ament_cpplint:/home/arian/ros2_foxy/install/ament_cppcheck:/home/arian/ros2_foxy/install/ament_clang_tidy:/home/arian/ros2_foxy/install/ament_clang_format /usr/bin/cmake --build /home/arian/Framework/build/framework -- -j12 -l12
+[0.121s] [35m[1mScanning dependencies of target main[0m
+[0.161s] [ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[1.346s] In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[1.346s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Ksettings::settings(int, int, int, bool, int)[m[K’:
+[1.347s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:27:10:[m[K [01;35m[Kwarning: [m[K‘[01m[Ksettings::SCHED_STRATEGY[m[K’ will be initialized after [[01;35m[K-Wreorder[m[K]
+[1.347s]    27 |     int  [01;35m[KSCHED_STRATEGY[m[K;
+[1.347s]       |          [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.347s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:25:10:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kint settings::PRIORITY[m[K’ [[01;35m[K-Wreorder[m[K]
+[1.347s]    25 |     int  [01;35m[KPRIORITY[m[K;
+[1.347s]       |          [01;35m[K^~~~~~~~[m[K
+[1.347s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:14:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K-Wreorder[m[K]
+[1.347s]    14 |     [01;35m[Ksettings[m[K(int thread_number_, int sched_strategy_, int priority_, bool affinity_, int parallelization_strategy_) :
+[1.347s]       |     [01;35m[K^~~~~~~~[m[K
+[1.347s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:14:5:[m[K [01;31m[Kerror: [m[Kmultiple initializations given for ‘[01m[Ksettings::SCHED_STRATEGY[m[K’
+[1.347s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:14:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kaffinity_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.347s]    14 |     settings(int thread_number_, int sched_strategy_, int priority_, [01;35m[Kbool affinity_[m[K, int parallelization_strategy_) :
+[1.347s]       |                                                                      [01;35m[K~~~~~^~~~~~~~~[m[K
+[1.349s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kiterators::iterators(int, int, int, int)[m[K’:
+[1.349s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:38:20:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[K__gnu_cxx::__normal_iterator<int*, std::vector<int> >::__normal_iterator(int&)[m[K’
+[1.349s]    38 |         width(width[01;31m[K)[m[K
+[1.349s]       |                    [01;31m[K^[m[K
+[1.349s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[1.349s]                  from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+[1.350s]                  from [01m[K/usr/include/c++/9/ios:40[m[K,
+[1.350s]                  from [01m[K/usr/include/c++/9/ostream:38[m[K,
+[1.350s]                  from [01m[K/usr/include/c++/9/iostream:39[m[K,
+[1.350s]                  from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[1.350s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:811:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iter> __gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator(const __gnu_cxx::__normal_iterator<_Iter, typename __gnu_cxx::__enable_if<std::__are_same<_Iter, typename _Container::pointer>::__value, _Container>::__type>&)[m[K’
+[1.350s]   811 |         [01;36m[K__normal_iterator[m[K(const __normal_iterator<_Iter,
+[1.350s]       |         [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.350s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:811:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.350s] In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[1.350s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:38:20:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst __gnu_cxx::__normal_iterator<_Iter, typename __gnu_cxx::__enable_if<std::__are_same<_Iter, int*>::__value, std::vector<int> >::__type>[m[K’ and ‘[01m[Kint[m[K’
+[1.350s]    38 |         width(width[01;36m[K)[m[K
+[1.350s]       |                    [01;36m[K^[m[K
+[1.350s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[1.351s]                  from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+[1.351s]                  from [01m[K/usr/include/c++/9/ios:40[m[K,
+[1.351s]                  from [01m[K/usr/include/c++/9/ostream:38[m[K,
+[1.351s]                  from [01m[K/usr/include/c++/9/iostream:39[m[K,
+[1.351s]                  from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[1.351s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:806:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[K__gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator(const _Iterator&) [with _Iterator = int*; _Container = std::vector<int>][m[K’ <near match>
+[1.351s]   806 |       [01;36m[K__normal_iterator[m[K(const _Iterator& __i) _GLIBCXX_NOEXCEPT
+[1.351s]       |       [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.351s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:806:7:[m[K [01;36m[Knote: [m[K  conversion of argument 1 would be ill-formed:
+[1.351s] In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[1.351s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:35:15:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kint*[m[K’ [[01;31m[K-fpermissive[m[K]
+[1.351s]    35 |         begin([01;31m[Kbegin[m[K),
+[1.351s]       |               [01;31m[K^~~~~[m[K
+[1.351s]       |               [01;31m[K|[m[K
+[1.351s]       |               [01;31m[Kint[m[K
+[1.352s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[1.352s]                  from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+[1.352s]                  from [01m[K/usr/include/c++/9/ios:40[m[K,
+[1.352s]                  from [01m[K/usr/include/c++/9/ostream:38[m[K,
+[1.352s]                  from [01m[K/usr/include/c++/9/iostream:39[m[K,
+[1.352s]                  from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[1.352s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:802:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr __gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator() [with _Iterator = int*; _Container = std::vector<int>][m[K’
+[1.352s]   802 |       _GLIBCXX_CONSTEXPR [01;36m[K__normal_iterator[m[K() _GLIBCXX_NOEXCEPT
+[1.352s]       |                          [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.352s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:802:26:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[1.352s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr __gnu_cxx::__normal_iterator<int*, std::vector<int> >::__normal_iterator(const __gnu_cxx::__normal_iterator<int*, std::vector<int> >&)[m[K’
+[1.352s]   787 |     class [01;36m[K__normal_iterator[m[K
+[1.352s]       |           [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.352s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst __gnu_cxx::__normal_iterator<int*, std::vector<int> >&[m[K’
+[1.352s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr __gnu_cxx::__normal_iterator<int*, std::vector<int> >::__normal_iterator(__gnu_cxx::__normal_iterator<int*, std::vector<int> >&&)[m[K’
+[1.352s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[K__gnu_cxx::__normal_iterator<int*, std::vector<int> >&&[m[K’
+[1.352s] In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[1.353s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:38:20:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[K__gnu_cxx::__normal_iterator<int*, std::vector<int> >::__normal_iterator(int&)[m[K’
+[1.353s]    38 |         width(width[01;31m[K)[m[K
+[1.353s]       |                    [01;31m[K^[m[K
+[1.353s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[1.353s]                  from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+[1.353s]                  from [01m[K/usr/include/c++/9/ios:40[m[K,
+[1.353s]                  from [01m[K/usr/include/c++/9/ostream:38[m[K,
+[1.353s]                  from [01m[K/usr/include/c++/9/iostream:39[m[K,
+[1.353s]                  from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[1.353s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:811:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Iter> __gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator(const __gnu_cxx::__normal_iterator<_Iter, typename __gnu_cxx::__enable_if<std::__are_same<_Iter, typename _Container::pointer>::__value, _Container>::__type>&)[m[K’
+[1.353s]   811 |         [01;36m[K__normal_iterator[m[K(const __normal_iterator<_Iter,
+[1.353s]       |         [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.353s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:811:9:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.353s] In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[1.353s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:38:20:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst __gnu_cxx::__normal_iterator<_Iter, typename __gnu_cxx::__enable_if<std::__are_same<_Iter, int*>::__value, std::vector<int> >::__type>[m[K’ and ‘[01m[Kint[m[K’
+[1.353s]    38 |         width(width[01;36m[K)[m[K
+[1.353s]       |                    [01;36m[K^[m[K
+[1.353s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[1.354s]                  from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+[1.354s]                  from [01m[K/usr/include/c++/9/ios:40[m[K,
+[1.354s]                  from [01m[K/usr/include/c++/9/ostream:38[m[K,
+[1.354s]                  from [01m[K/usr/include/c++/9/iostream:39[m[K,
+[1.354s]                  from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[1.354s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:806:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[K__gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator(const _Iterator&) [with _Iterator = int*; _Container = std::vector<int>][m[K’ <near match>
+[1.354s]   806 |       [01;36m[K__normal_iterator[m[K(const _Iterator& __i) _GLIBCXX_NOEXCEPT
+[1.354s]       |       [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.354s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:806:7:[m[K [01;36m[Knote: [m[K  conversion of argument 1 would be ill-formed:
+[1.354s] In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[1.354s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:36:13:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kint*[m[K’ [[01;31m[K-fpermissive[m[K]
+[1.354s]    36 |         end([01;31m[Kend[m[K),
+[1.354s]       |             [01;31m[K^~~[m[K
+[1.354s]       |             [01;31m[K|[m[K
+[1.354s]       |             [01;31m[Kint[m[K
+[1.354s] In file included from [01m[K/usr/include/c++/9/bits/stl_algobase.h:67[m[K,
+[1.354s]                  from [01m[K/usr/include/c++/9/bits/char_traits.h:39[m[K,
+[1.354s]                  from [01m[K/usr/include/c++/9/ios:40[m[K,
+[1.354s]                  from [01m[K/usr/include/c++/9/ostream:38[m[K,
+[1.355s]                  from [01m[K/usr/include/c++/9/iostream:39[m[K,
+[1.355s]                  from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[1.355s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:802:26:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr __gnu_cxx::__normal_iterator<_Iterator, _Container>::__normal_iterator() [with _Iterator = int*; _Container = std::vector<int>][m[K’
+[1.355s]   802 |       _GLIBCXX_CONSTEXPR [01;36m[K__normal_iterator[m[K() _GLIBCXX_NOEXCEPT
+[1.355s]       |                          [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.355s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:802:26:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+[1.355s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr __gnu_cxx::__normal_iterator<int*, std::vector<int> >::__normal_iterator(const __gnu_cxx::__normal_iterator<int*, std::vector<int> >&)[m[K’
+[1.355s]   787 |     class [01;36m[K__normal_iterator[m[K
+[1.355s]       |           [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.355s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst __gnu_cxx::__normal_iterator<int*, std::vector<int> >&[m[K’
+[1.355s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr __gnu_cxx::__normal_iterator<int*, std::vector<int> >::__normal_iterator(__gnu_cxx::__normal_iterator<int*, std::vector<int> >&&)[m[K’
+[1.355s] [01m[K/usr/include/c++/9/bits/stl_iterator.h:787:11:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[K__gnu_cxx::__normal_iterator<int*, std::vector<int> >&&[m[K’
+[1.355s] In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[1.355s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In function ‘[01m[Kvoid* multiply_parallel_pthread(void*)[m[K’:
+[1.355s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:54:39:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+[1.355s]    54 |     iterators* iterators = (iterators*[01;31m[K)[m[Kiterators_;
+[1.355s]       |                                       [01;31m[K^[m[K
+[1.356s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:58:44:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+[1.356s]    58 |         for(int j = 0; j < iterators->size([01;31m[K)[m[K; j++)
+[1.356s]       |                                            [01;31m[K^[m[K
+[1.356s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:60:48:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+[1.356s]    60 |             for(int k = 0; k < iterators->size([01;31m[K)[m[K; k++)
+[1.356s]       |                                                [01;31m[K^[m[K
+[1.356s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:62:30:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kstd::vector<int>[m[K’ and ‘[01m[Kint[m[K’)
+[1.356s]    62 |                matrix_c[0] = [01;31m[K3[m[K;
+[1.356s]       |                              [01;31m[K^[m[K
+[1.356s] In file included from [01m[K/usr/include/c++/9/vector:72[m[K,
+[1.356s]                  from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+[1.356s]                  from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[1.356s]                  from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+[1.356s]                  from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.356s]                  from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[1.356s] [01m[K/usr/include/c++/9/bits/vector.tcc:198:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = int; _Alloc = std::allocator<int>][m[K’
+[1.356s]   198 |     [01;36m[Kvector<_Tp, _Alloc>[m[K::
+[1.356s]       |     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[1.356s] [01m[K/usr/include/c++/9/bits/vector.tcc:199:42:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kconst std::vector<int>&[m[K’
+[1.357s]   199 |     operator=([01;36m[Kconst vector<_Tp, _Alloc>& __x[m[K)
+[1.357s]       |               [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[1.357s] In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+[1.357s]                  from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+[1.357s]                  from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[1.357s]                  from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+[1.357s]                  from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+[1.357s]                  from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[1.357s] [01m[K/usr/include/c++/9/bits/stl_vector.h:706:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::vector<_Tp, _Alloc>&&) [with _Tp = int; _Alloc = std::allocator<int>][m[K’
+[1.357s]   706 |       [01;36m[Koperator[m[K=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+[1.357s]       |       [01;36m[K^~~~~~~~[m[K
+[1.357s] [01m[K/usr/include/c++/9/bits/stl_vector.h:706:26:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kstd::vector<int>&&[m[K’
+[1.357s]   706 |       operator=([01;36m[Kvector&& __x[m[K) noexcept(_Alloc_traits::_S_nothrow_move())
+[1.357s]       |                 [01;36m[K~~~~~~~~~^~~[m[K
+[1.357s] [01m[K/usr/include/c++/9/bits/stl_vector.h:727:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::initializer_list<_Tp>) [with _Tp = int; _Alloc = std::allocator<int>][m[K’
+[1.357s]   727 |       [01;36m[Koperator[m[K=(initializer_list<value_type> __l)
+[1.357s]       |       [01;36m[K^~~~~~~~[m[K
+[1.357s] [01m[K/usr/include/c++/9/bits/stl_vector.h:727:46:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kint[m[K’ to ‘[01m[Kstd::initializer_list<int>[m[K’
+[1.358s]   727 |       operator=([01;36m[Kinitializer_list<value_type> __l[m[K)
+[1.358s]       |                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[1.358s] In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[1.358s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:41:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kiterators_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.358s]    52 | void * multiply_parallel_pthread([01;35m[Kvoid * iterators_[m[K)
+[1.358s]       |                                  [01;35m[K~~~~~~~^~~~~~~~~~[m[K
+[1.358s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kmultiply_parallel::multiply_parallel(const std::vector<int>&)[m[K’:
+[1.358s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:78:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_a[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.358s]    78 |         multiply_parallel([01;35m[Kconst std::vector<int>& matrix_a[m[K)
+[1.358s]       |                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[1.358s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kmultiply_parallel::multiply_parallel(const std::vector<int>&, const std::vector<int>&, int, int)[m[K’:
+[1.358s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:83:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_a[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.358s]    83 |         multiply_parallel([01;35m[Kconst std::vector<int>& matrix_a[m[K, const std::vector<int>& matrix_b, int height, int width)
+[1.358s]       |                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[1.358s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:83:85:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.358s]    83 |         multiply_parallel(const std::vector<int>& matrix_a, [01;35m[Kconst std::vector<int>& matrix_b[m[K, int height, int width)
+[1.358s]       |                                                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[1.359s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:83:99:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kheight[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.359s]    83 |         multiply_parallel(const std::vector<int>& matrix_a, const std::vector<int>& matrix_b, [01;35m[Kint height[m[K, int width)
+[1.359s]       |                                                                                               [01;35m[K~~~~^~~~~~[m[K
+[1.359s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:83:111:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwidth[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.359s]    83 |         multiply_parallel(const std::vector<int>& matrix_a, const std::vector<int>& matrix_b, int height, [01;35m[Kint width[m[K)
+[1.359s]       |                                                                                                           [01;35m[K~~~~^~~~~[m[K
+[1.359s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel::execute(const std::vector<int>&, const std::vector<int>&, settings*)[m[K’:
+[1.359s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:103:61:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct settings[m[K’ has no member named ‘[01m[KNUM_THREADS[m[K’
+[1.359s]   103 |                         (i * (matrix_a_.size() / settings_->[01;31m[KNUM_THREADS[m[K)) + matrix_a_.begin(),
+[1.359s]       |                                                             [01;31m[K^~~~~~~~~~~[m[K
+[1.359s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:104:67:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct settings[m[K’ has no member named ‘[01m[KNUM_THREADS[m[K’
+[1.359s]   104 |                         ((i + 1) * (matrix_a_.size() / settings_->[01;31m[KNUM_THREADS[m[K)) + matrix_a_.begin(),
+[1.359s]       |                                                                   [01;31m[K^~~~~~~~~~~[m[K
+[1.359s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:112:61:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct settings[m[K’ has no member named ‘[01m[KNUM_THREADS[m[K’
+[1.359s]   112 |                         (i * (matrix_a_.size() / settings_->[01;31m[KNUM_THREADS[m[K)) + matrix_a_.begin(),
+[1.359s]       |                                                             [01;31m[K^~~~~~~~~~~[m[K
+[1.359s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:113:40:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kmatrix_a_[m[K’
+[1.359s]   113 |                         matrix_a_.end()
+[1.360s]       |                                        [01;31m[K^[m[K
+[1.360s]       |                                        [32m[K)[m[K
+[1.360s]   114 |                         [32m[Kmatrix_a_[m[K.size(),
+[1.360s]       |                         [32m[K~~~~~~~~~[m[K       
+[1.360s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:111:50:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[1.360s]   111 |                     iterators_[i] = new iterators[01;36m[K([m[K
+[1.360s]       |                                                  [01;36m[K^[m[K
+[1.360s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:90:81:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[1.360s]    90 |         void execute(const std::vector<int>& matrix_a_, [01;35m[Kconst std::vector<int>& matrix_b_[m[K, settings * settings_)
+[1.360s]       |                                                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[1.360s] [01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[1.360s] [01m[K/home/arian/Framework/src/framework/src/main.cpp:70:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-variable[m[K]
+[1.360s]    70 |   settings* [01;35m[Ksettings_[m[K = new settings(1, 1, 1, false, 1);
+[1.360s]       |             [01;35m[K^~~~~~~~~[m[K
+[1.665s] make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+[1.665s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+[1.665s] make: *** [Makefile:141: all] Error 2
+[1.667s] Invoked command in '/home/arian/Framework/build/framework' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arian/ros2_foxy/install/ros2bag:/home/arian/ros2_foxy/install/tracetools_launch:/home/arian/ros2_foxy/install/topic_monitor:/home/arian/ros2_foxy/install/examples_tf2_py:/home/arian/ros2_foxy/install/sros2:/home/arian/ros2_foxy/install/rqt_topic:/home/arian/ros2_foxy/install/rqt_reconfigure:/home/arian/ros2_foxy/install/rqt_action:/home/arian/ros2_foxy/install/rqt:/home/arian/ros2_foxy/install/rqt_graph:/home/arian/ros2_foxy/install/rqt_gui_py:/home/arian/ros2_foxy/install/rqt_gui:/home/arian/ros2_foxy/install/ros2trace:/home/arian/ros2_foxy/install/ros2topic:/home/arian/ros2_foxy/install/ros2test:/home/arian/ros2_foxy/install/ros2component:/home/arian/ros2_foxy/install/ros2param:/home/arian/ros2_foxy/install/ros2lifecycle:/home/arian/ros2_foxy/install/ros2service:/home/arian/ros2_foxy/install/ros2run:/home/arian/ros2_foxy/install/ros2launch:/home/arian/ros2_foxy/install/ros2pkg:/home/arian/ros2_foxy/install/ros2node:/home/arian/ros2_foxy/install/ros2multicast:/home/arian/ros2_foxy/install/ros2interface:/home/arian/ros2_foxy/install/ros2doctor:/home/arian/ros2_foxy/install/ros2action:/home/arian/ros2_foxy/install/ros2cli:/home/arian/ros2_foxy/install/quality_of_service_demo_py:/home/arian/ros2_foxy/install/launch_testing_ros:/home/arian/ros2_foxy/install/launch_ros:/home/arian/ros2_foxy/install/examples_rclpy_minimal_subscriber:/home/arian/ros2_foxy/install/examples_rclpy_minimal_service:/home/arian/ros2_foxy/install/examples_rclpy_minimal_publisher:/home/arian/ros2_foxy/install/examples_rclpy_minimal_client:/home/arian/ros2_foxy/install/examples_rclpy_minimal_action_server:/home/arian/ros2_foxy/install/examples_rclpy_minimal_action_client:/home/arian/ros2_foxy/install/examples_rclpy_executors:/home/arian/ros2_foxy/install/demo_nodes_py:/home/arian/ros2_foxy/install/action_tutorials_py:/home/arian/ros2_foxy/install/ament_uncrustify:/home/arian/ros2_foxy/install/tracetools_trace:/home/arian/ros2_foxy/install/tracetools_read:/home/arian/ros2_foxy/install/test_launch_ros:/home/arian/ros2_foxy/install/rpyutils:/home/arian/ros2_foxy/install/rosidl_runtime_py:/home/arian/ros2_foxy/install/launch_yaml:/home/arian/ros2_foxy/install/launch_xml:/home/arian/ros2_foxy/install/launch_testing:/home/arian/ros2_foxy/install/launch:/home/arian/ros2_foxy/install/osrf_pycommon:/home/arian/ros2_foxy/install/domain_coordinator:/home/arian/ros2_foxy/install/ament_xmllint:/home/arian/ros2_foxy/install/ament_pyflakes:/home/arian/ros2_foxy/install/ament_pycodestyle:/home/arian/ros2_foxy/install/ament_pep257:/home/arian/ros2_foxy/install/ament_pclint:/home/arian/ros2_foxy/install/ament_package:/home/arian/ros2_foxy/install/ament_mypy:/home/arian/ros2_foxy/install/ament_lint_cmake:/home/arian/ros2_foxy/install/ament_flake8:/home/arian/ros2_foxy/install/ament_copyright:/home/arian/ros2_foxy/install/ament_lint:/home/arian/ros2_foxy/install/ament_index_python:/home/arian/ros2_foxy/install/ament_cpplint:/home/arian/ros2_foxy/install/ament_cppcheck:/home/arian/ros2_foxy/install/ament_clang_tidy:/home/arian/ros2_foxy/install/ament_clang_format /usr/bin/cmake --build /home/arian/Framework/build/framework -- -j12 -l12

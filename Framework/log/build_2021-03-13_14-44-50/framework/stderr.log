@@ -1,0 +1,33 @@
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:26:[m[K [01;31m[Kerror: [m[Kwrong number of template arguments (1, should be 2)
+   12 | void print(std::array<int[01;31m[K>[m[K::iterator a)
+      |                          [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/9/tuple:39[m[K,
+                 from [01m[K/usr/include/c++/9/bits/unique_ptr.h:37[m[K,
+                 from [01m[K/usr/include/c++/9/memory:80[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:144[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/array:94:12:[m[K [01;36m[Knote: [m[Kprovided for ‘[01m[Ktemplate<class _Tp, long unsigned int _Nm> struct std::array[m[K’
+   94 |     struct [01;36m[Karray[m[K
+      |            [01;36m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:38:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Ka[m[K’
+   12 | void print(std::array<int>::iterator [01;31m[Ka[m[K)
+      |                                      [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kvoid print(int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:14:17:[m[K [01;31m[Kerror: [m[K‘[01m[Ka[m[K’ was not declared in this scope
+   14 |   std::cout << *[01;31m[Ka[m[K << std::endl;
+      |                 [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kiterator[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   12 | void print([01;35m[Kstd::array<int>::iterator[m[K a)
+      |            [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:49:9:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kstd::array<int, 5>::iterator[m[K’ {aka ‘[01m[Kint*[m[K’} to ‘[01m[Kint[m[K’ [[01;31m[K-fpermissive[m[K]
+   49 |   print([01;31m[Kit[m[K);
+      |         [01;31m[K^~[m[K
+      |         [01;31m[K|[m[K
+      |         [01;31m[Kstd::array<int, 5>::iterator {aka int*}[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:29:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid print(int)[m[K’
+   12 | void print([01;36m[Kstd::array<int>::iterator[m[K a)
+      |            [01;36m[K~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

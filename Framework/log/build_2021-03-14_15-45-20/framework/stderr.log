@@ -1,0 +1,11 @@
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kdouble summer(std::vector<double, std::allocator<double> >)[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:52:20:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double, std::allocator<double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   52 |   for(int i = 0; [01;35m[Ki < my_big_sum.size()[m[K; i++)
+      |                  [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:56:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   56 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:132:23:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ka[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  132 |     std::vector<int>* [01;35m[Ka[m[K = new std::vector<int>();
+      |                       [01;35m[K^[m[K

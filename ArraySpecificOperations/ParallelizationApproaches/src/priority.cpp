@@ -31,7 +31,7 @@ int main(int argc, char ** argv)
     pthread_create(&my_thread, NULL, my_function, NULL);
 
     pthread_setschedparam(my_thread, SCHED_RR, &param);
-
+    
 
     pthread_join(my_thread, NULL);
 

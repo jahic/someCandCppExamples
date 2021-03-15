@@ -1,0 +1,15 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kmultiply_parallel::multiply_parallel(const std::vector<int>&, const settings&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:103:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope; did you mean ‘[01m[Kmatrix_a[m[K’?
+  103 |             [01;31m[Kmatrix_c_[m[K.reserve(matrix_a_size() / 2);
+      |             [01;31m[K^~~~~~~~~[m[K
+      |             [32m[Kmatrix_a[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:103:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_size[m[K’ was not declared in this scope; did you mean ‘[01m[Kmatrix_a[m[K’?
+  103 |             matrix_c_.reserve([01;31m[Kmatrix_a_size[m[K() / 2);
+      |                               [01;31m[K^~~~~~~~~~~~~[m[K
+      |                               [32m[Kmatrix_a[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

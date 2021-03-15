@@ -1,0 +1,4 @@
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:85:21:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Ka[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   85 |   multiply_parallel [01;35m[Ka[m[K = multiply_parallel(matrix, matrix, matrix_result, settings_);
+      |                     [01;35m[K^[m[K
