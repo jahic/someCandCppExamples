@@ -1,0 +1,22 @@
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:85:26:[m[K [01;31m[Kerror: [m[Kcannot declare variable ‘[01m[Ka[m[K’ to be of abstract type ‘[01m[Kmultiply_parallel<int>[m[K’
+   85 |   multiply_parallel<int> [01;31m[Ka[m[K(matrix_a, matrix_b, matrix_result, settings_);
+      |                          [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:139:7:[m[K [01;36m[Knote: [m[K  because the following virtual functions are pure within ‘[01m[Kmultiply_parallel<int>[m[K’:
+  139 | class [01;36m[Kmultiply_parallel[m[K : public base_parallel<T>
+      |       [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:135:22:[m[K [01;36m[Knote: [m[K	‘[01m[Kvoid base_parallel<T>::execute_openmp(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = int][m[K’
+  135 |         virtual void [01;36m[Kexecute_openmp[m[K(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_ ) = 0;
+      |                      [01;36m[K^~~~~~~~~~~~~~[m[K
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid multiply_parallel<T>::execute(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:145:19:[m[K   required from ‘[01m[Kmultiply_parallel<T>::multiply_parallel(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = int][m[K’
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:85:72:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:181:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kexecute_openmp[m[K’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [[01;31m[K-fpermissive[m[K]
+  181 |                 [01;31m[Kexecute_openmp(matrix_a_,matrix_b_, matrix_c_, settings_)[m[K;
+      |                 [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:181:31:[m[K [01;36m[Knote: [m[Kdeclarations in dependent base ‘[01m[Kbase_parallel<int>[m[K’ are not found by unqualified lookup
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:181:31:[m[K [01;36m[Knote: [m[Kuse ‘[01m[Kthis->execute_openmp[m[K’ instead
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,13 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:348:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  348 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:15:5:[m[K [01;35m[Kwarning: [m[Kliteral operator suffixes not preceded by ‘[01m[K_[m[K’ are reserved for future standardization [[01;35m[K-Wliteral-suffix[m[K]
+   15 |     [01;35m[Koperator[m[K"" THREADS(unsigned long long _hours)
+      |     [01;35m[K^~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel::execute_openmp(const std::vector<int>&, const std::vector<int>&, std::vector<int>&, const settings&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:346:145:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  346 |         void execute_openmp(const std::vector<int>& matrix_a_, const std::vector<int>& matrix_b_, std::vector<int>& matrix_c_, [01;35m[Kconst settings & settings_[m[K )
+      |                                                                                                                                [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K

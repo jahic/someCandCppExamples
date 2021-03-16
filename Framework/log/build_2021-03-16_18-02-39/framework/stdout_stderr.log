@@ -1,0 +1,25 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:388:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  388 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:141:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kbenchmark[m[K’ is not a class template
+  141 |         friend class [01;31m[Kbenchmark[m[K<T>;
+      |                      [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:406:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kbenchmark[m[K’ is not a template
+  406 | class [01;31m[Kbenchmark[m[K
+      |       [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:141:22:[m[K [01;36m[Knote: [m[Kprevious declaration here
+  141 |         friend class [01;36m[Kbenchmark[m[K<T>;
+      |                      [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:89:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kbenchmark[m[K’ was not declared in this scope
+   89 |   [01;31m[Kbenchmark[m[K<double> benchmark_(new multiply_parallel<double>(), true);
+      |   [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:89:13:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kdouble[m[K’
+   89 |   benchmark<[01;31m[Kdouble[m[K> benchmark_(new multiply_parallel<double>(), true);
+      |             [01;31m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

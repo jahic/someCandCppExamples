@@ -75,23 +75,39 @@ std::vector<T>* my_vector;
 int main()
 {
   
-  std::vector<int> matrix_a{1,2,3,4,5,6,7,8,9};
-  std::vector<int> matrix_b{1,2,3,4,5,6,7,8,9};
-  std::vector<int> matrix_result;
+  std::vector<double> matrix_a;
+  std::vector<double> matrix_b;
+  //std::vector<double> matrix_b{1,2,3,4,5,6,7,8,9};
+  std::vector<double> matrix_result;
 
 
-  settings settings_ = settings(4THREADS, SCHEDULING_STRATEGY::SCHEDULING_RR, 1, AFFINITY::FALSE, PARALLELIZATION_STRATEGY::OPENMP);
+  for(int i = 0; i < 800 * 800; i++)
+  {
+    matrix_a.push_back(i);
+    matrix_b.push_back(i);
+  }
 
-  multiply_parallel a(matrix_a, matrix_b, matrix_result, settings_);
+
+  settings settings_ = settings(4_THREADS, SCHEDULING_STRATEGY::SCHEDULING_TS, 19_PRIORITY, AFFINITY::FALSE, PARALLELIZATION_STRATEGY::PTHREADS);
+/*
+  multiply_parallel<int> a(matrix_a, matrix_b, matrix_result, settings_);
+*/
 
   
+  benchmark<double> benchmark_(new multiply_parallel<double>(), matrix_a, matrix_b, settings_);
 
+
+  std::cout << benchmark_.execute<TIME_FORMAT::NANO>() << std::endl;
+
+  //std::cout << benchmark_.execute().count() << std::endl;
   
+
+  /*
   for(int i = 0; i < 9; i++)
   {
     std::cout << matrix_result[i] << std::endl;
   }
-
+*/
   
   //function(2threads);
  

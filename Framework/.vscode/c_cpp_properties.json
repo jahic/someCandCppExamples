@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/${USER}/ros2_foxy/src/ros2/rclcpp/rclcpp/include/",
+                "/home/${USER}/ros2_foxy/install/std_msgs/include/",
+                "/usr/include/opencv4/"
+
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang-10",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}

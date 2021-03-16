@@ -1,0 +1,114 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:381:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  381 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:403:27:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Kmultiply_parallel[m[K’ with no type [[01;31m[K-fpermissive[m[K]
+  403 |         multiply_parallel([01;31m[K)[m[K
+      |                           [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:408:146:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Kmultiply_parallel[m[K’ with no type [[01;31m[K-fpermissive[m[K]
+  408 |         multiply_parallel(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_[01;31m[K)[m[K
+      |                                                                                                                                                  [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:414:113:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Kmultiply_parallel[m[K’ with no type [[01;31m[K-fpermissive[m[K]
+  414 |         multiply_parallel(const std::vector<T>& matrix_a_, std::vector<T>& matrix_c_, const settings & settings_[01;31m[K)[m[K
+      |                                                                                                                 [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kint summation_parallel<T>::multiply_parallel()[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:406:9:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  406 |         [01;35m[K}[m[K
+      |         [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kint summation_parallel<T>::multiply_parallel(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:412:9:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  412 |         [01;35m[K}[m[K
+      |         [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kint summation_parallel<T>::multiply_parallel(const std::vector<BufferT>&, std::vector<BufferT>&, const settings&)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:421:9:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+  421 |         [01;35m[K}[m[K
+      |         [01;35m[K^[m[K
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid summation_parallel<T>::execute(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:431:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:431:44:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_a_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  431 |         void execute([01;35m[Kconst std::vector<T>& matrix_a_[m[K, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:431:77:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  431 |         void execute(const std::vector<T>& matrix_a_, [01;35m[Kconst std::vector<T>& matrix_b_[m[K, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                                       [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:431:104:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_c_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  431 |         void execute(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, [01;35m[Kstd::vector<T>& matrix_c_[m[K, const settings & settings_)
+      |                                                                                        [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:431:132:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  431 |         void execute(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K)
+      |                                                                                                                   [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid summation_parallel<T>::execute_pthread(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:436:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:436:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_a_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  436 |         void execute_pthread([01;35m[Kconst std::vector<T>& matrix_a_[m[K, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:436:85:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  436 |         void execute_pthread(const std::vector<T>& matrix_a_, [01;35m[Kconst std::vector<T>& matrix_b_[m[K, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                                               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:436:112:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_c_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  436 |         void execute_pthread(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, [01;35m[Kstd::vector<T>& matrix_c_[m[K, const settings & settings_)
+      |                                                                                                [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:436:140:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  436 |         void execute_pthread(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K)
+      |                                                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid summation_parallel<T>::execute_pthread_affine(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:441:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:441:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_a_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  441 |         void execute_pthread_affine([01;35m[Kconst std::vector<T>& matrix_a_[m[K, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:441:92:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  441 |         void execute_pthread_affine(const std::vector<T>& matrix_a_, [01;35m[Kconst std::vector<T>& matrix_b_[m[K, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:441:119:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_c_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  441 |         void execute_pthread_affine(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, [01;35m[Kstd::vector<T>& matrix_c_[m[K, const settings & settings_)
+      |                                                                                                       [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:441:147:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  441 |         void execute_pthread_affine(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K)
+      |                                                                                                                                  [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid summation_parallel<T>::execute_pthread_sched(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:446:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:446:58:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_a_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  446 |         void execute_pthread_sched([01;35m[Kconst std::vector<T>& matrix_a_[m[K, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:446:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  446 |         void execute_pthread_sched(const std::vector<T>& matrix_a_, [01;35m[Kconst std::vector<T>& matrix_b_[m[K, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                                                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:446:118:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_c_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  446 |         void execute_pthread_sched(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, [01;35m[Kstd::vector<T>& matrix_c_[m[K, const settings & settings_)
+      |                                                                                                      [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:446:146:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  446 |         void execute_pthread_sched(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K)
+      |                                                                                                                                 [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid summation_parallel<T>::execute_pthread_affine_sched(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:451:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:451:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_a_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  451 |         void execute_pthread_affine_sched([01;35m[Kconst std::vector<T>& matrix_a_[m[K, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:451:98:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  451 |         void execute_pthread_affine_sched(const std::vector<T>& matrix_a_, [01;35m[Kconst std::vector<T>& matrix_b_[m[K, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                                                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:451:125:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_c_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  451 |         void execute_pthread_affine_sched(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, [01;35m[Kstd::vector<T>& matrix_c_[m[K, const settings & settings_)
+      |                                                                                                             [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:451:153:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  451 |         void execute_pthread_affine_sched(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K)
+      |                                                                                                                                        [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid summation_parallel<T>::execute_openmp(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:456:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:456:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_a_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  456 |         void execute_openmp([01;35m[Kconst std::vector<T>& matrix_a_[m[K, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_ )
+      |                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:456:84:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  456 |         void execute_openmp(const std::vector<T>& matrix_a_, [01;35m[Kconst std::vector<T>& matrix_b_[m[K, std::vector<T>& matrix_c_, const settings & settings_ )
+      |                                                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:456:111:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_c_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  456 |         void execute_openmp(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, [01;35m[Kstd::vector<T>& matrix_c_[m[K, const settings & settings_ )
+      |                                                                                               [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:456:139:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  456 |         void execute_openmp(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K )
+      |                                                                                                                          [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

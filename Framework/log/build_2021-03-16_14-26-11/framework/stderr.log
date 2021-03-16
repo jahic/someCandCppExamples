@@ -1,0 +1,30 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:355:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  355 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:14:30:[m[K [01;35m[Kwarning: [m[Kliteral operator suffixes not preceded by ‘[01m[K_[m[K’ are reserved for future standardization [[01;35m[K-Wliteral-suffix[m[K]
+   14 | constexpr unsigned long long [01;35m[Koperator[m[K"" THREADS(unsigned long long _threads)
+      |                              [01;35m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:19:63:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Koperator""PRIORTY[m[K’ as non-function
+   19 | constexpr unsigned long long operator"" PRIORTY(unsgined long [01;31m[Klong[m[K _priority)
+      |                                                               [01;31m[K^~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:19:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kunsgined[m[K’ was not declared in this scope; did you mean ‘[01m[Kunsigned[m[K’?
+   19 | constexpr unsigned long long operator"" PRIORTY([01;31m[Kunsgined[m[K long long _priority)
+      |                                                 [01;31m[K^~~~~~~~[m[K
+      |                                                 [32m[Kunsigned[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:83:79:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""PRIORITY[m[K’
+   83 |   settings settings_ = settings(4THREADS, SCHEDULING_STRATEGY::SCHEDULING_RR, [01;31m[K19PRIORITY[m[K, AFFINITY::FALSE, PARALLELIZATION_STRATEGY::OPENMP);
+      |                                                                               [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid multiply_parallel<T>::execute_openmp(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:168:17:[m[K   required from ‘[01m[Kvoid multiply_parallel<T>::execute(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = int][m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:132:19:[m[K   required from ‘[01m[Kmultiply_parallel<T>::multiply_parallel(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = int][m[K’
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:85:72:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:353:139:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  353 |         void execute_openmp(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K )
+      |                                                                                                                          [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

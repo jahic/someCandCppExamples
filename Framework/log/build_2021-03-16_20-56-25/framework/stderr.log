@@ -1,0 +1,15 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:395:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  395 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:97:54:[m[K [01;31m[Kerror: [m[Kwrong number of template arguments (0, should be 1)
+   97 |   benchmark<double> benchmark_(new multiply_parallel<[01;31m[K>[m[K(), matrix_a, matrix_b, settings_);
+      |                                                      [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:152:7:[m[K [01;36m[Knote: [m[Kprovided for ‘[01m[Ktemplate<class T> class multiply_parallel[m[K’
+  152 | class [01;36m[Kmultiply_parallel[m[K : public base_parallel<T>
+      |       [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,33 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:387:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  387 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:89:104:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kbenchmark<double>::benchmark(multiply_parallel<double>*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, bool)[m[K’
+   89 |   benchmark<double> benchmark_(new multiply_parallel<double>(), matrix_a, matrix_b, matrix_result, true[01;31m[K)[m[K;
+      |                                                                                                        [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:433:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbenchmark<T>::benchmark(base_parallel<T>*, std::vector<BufferT>, std::vector<BufferT>, settings, bool) [with T = double][m[K’
+  433 |         [01;36m[Kbenchmark[m[K(base_parallel<T>* base_parallel_, std::vector<T> input_a_, std::vector<T> input_b_, settings settings_, bool execute_ = false) :
+      |         [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:433:112:[m[K [01;36m[Knote: [m[K  no known conversion for argument 4 from ‘[01m[Kstd::vector<double, std::allocator<double> >[m[K’ to ‘[01m[Ksettings[m[K’
+  433 |         benchmark(base_parallel<T>* base_parallel_, std::vector<T> input_a_, std::vector<T> input_b_, [01;36m[Ksettings settings_[m[K, bool execute_ = false) :
+      |                                                                                                       [01;36m[K~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:409:9:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbenchmark<T>::benchmark(base_parallel<T>*, bool) [with T = double][m[K’
+  409 |         [01;36m[Kbenchmark[m[K(base_parallel<T>* base_parallel_, bool execute_ = false)
+      |         [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:409:9:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 5 provided
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:405:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbenchmark<double>::benchmark(const benchmark<double>&)[m[K’
+  405 | class [01;36m[Kbenchmark[m[K
+      |       [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:405:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 5 provided
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:405:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kbenchmark<double>::benchmark(benchmark<double>&&)[m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:405:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 5 provided
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid multiply_parallel<T>::execute_openmp(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = double][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:385:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:385:139:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  385 |         void execute_openmp(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K )
+      |                                                                                                                          [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

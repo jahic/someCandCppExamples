@@ -5,12 +5,20 @@
 #include<vector>
 #include<math.h>
 #include<sched.h>
+#include<chrono>
+#include<time.h>
+#include<stdlib.h>
 
 
+constexpr unsigned long long operator"" _THREADS(unsigned long long _threads)
+{ 
+    return  _threads; 
+}
 
-constexpr unsigned long long 
-    operator"" THREADS(unsigned long long _hours)
-    { return  _hours; }
+constexpr unsigned long long operator"" _PRIORITY(unsigned long long _priority)
+{
+    return _priority;
+}
 
 
 namespace PARALLELIZATION_STRATEGY
@@ -32,17 +40,25 @@ namespace SCHEDULING_STRATEGY
     int SCHEDULING_RR   = 2;
 }
 
+namespace TIME_FORMAT
+{
+    typedef std::milli MILLI;
+    typedef std::micro MICRO;
+    typedef std::nano  NANO;
+}
+
 struct settings
 {
 
     settings() 
     {
-        this->THREAD_NUMBER            =     2;
-        this->SCHED_STRATEGY           =     1;
-        this->PRIORITY                 =    19;
-        this->AFFINITY                 = false;
-        this->PARALLELIZATION_STRATEGY =     1;
+        this->THREAD_NUMBER            =     2_THREADS;
+        this->SCHED_STRATEGY           =     SCHEDULING_STRATEGY::SCHEDULING_TS;
+        this->PRIORITY                 =     19_PRIORITY;
+        this->AFFINITY                 =     AFFINITY::FALSE;
+        this->PARALLELIZATION_STRATEGY =     PARALLELIZATION_STRATEGY::PTHREADS;
     }
+
 
     settings(int thread_number_, int sched_strategy_, int priority_, bool affinity_, int parallelization_strategy_) :
         THREAD_NUMBER(thread_number_),
@@ -61,13 +77,14 @@ struct settings
     int  PARALLELIZATION_STRATEGY;
 };
 
+template<typename T>
 struct iterators
 {
 
     iterators(
-        const std::vector<int>& matrix_a_, 
-        const std::vector<int>& matrix_b_,
-        std::vector<int>& matrix_c_, 
+        const std::vector<T>& matrix_a_, 
+        const std::vector<T>& matrix_b_,
+        std::vector<T>& matrix_c_, 
         int begin_,
         int end_,
         int size_, 
@@ -83,20 +100,19 @@ struct iterators
 
     }
 
-    const std::vector<int>& matrix_a;
-    const std::vector<int>& matrix_b;
-    std::vector<int>& matrix_c;
+    const std::vector<T>& matrix_a;
+    const std::vector<T>& matrix_b;
+    std::vector<T>& matrix_c;
     int begin;
     int end;
     int size;
     int width;
-    //int width;
 };
 
-
+template<typename T>
 void * multiply_parallel_pthread(void * iterators__)
 {
-    iterators* iterators_ = (iterators*)iterators__;
+    iterators<T>* iterators_ = (iterators<T>*)iterators__;
 
     for(int i = iterators_->begin; i < iterators_->end; i++)
     {
@@ -113,27 +129,61 @@ void * multiply_parallel_pthread(void * iterators__)
     return NULL;   
 }
 
-class multiply_parallel
+template<typename T>
+class benchmark;
+
+template<typename T>
+class base_parallel
+{
+    protected:
+        virtual void ctor(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+    private:
+        virtual void execute(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+        virtual void execute_pthread(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+        virtual void execute_pthread_affine(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+        virtual void execute_pthread_sched(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+        virtual void execute_pthread_affine_sched(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+        virtual void execute_openmp(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_ ) = 0;
+
+        friend class benchmark<T>;
+};
+
+template<typename T>
+class multiply_parallel : public base_parallel<T>
 {
     public:
-        multiply_parallel(const std::vector<int>& matrix_a_, const std::vector<int>& matrix_b_, std::vector<int>& matrix_c_, const settings & settings_)
+
+        multiply_parallel() 
+        {
+            
+        }
+
+        multiply_parallel(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) 
         {
             matrix_c_.reserve(matrix_a_.size());
             this->execute(matrix_a_, matrix_b_, matrix_c_, settings_);
         }
 
-        multiply_parallel(const std::vector<int>& matrix_a_, std::vector<int>& matrix_c_, const settings & settings_)
+        multiply_parallel(const std::vector<T>& matrix_a_, std::vector<T>& matrix_c_, const settings & settings_) 
         {
             matrix_c_.reserve(matrix_a_.size() / 2);
 
-            const std::vector<int> matrix_one{matrix_a_.begin(), (matrix_a_.size() / 2) + matrix_a_.begin()};
-            const std::vector<int> matrix_two{(matrix_a_.size() / 2) + matrix_a_.begin(), matrix_a_.end()};
+            const std::vector<T> matrix_one{matrix_a_.begin(), (matrix_a_.size() / 2) + matrix_a_.begin()};
+            const std::vector<T> matrix_two{(matrix_a_.size() / 2) + matrix_a_.begin(), matrix_a_.end()};
             this->execute(matrix_one, matrix_two, matrix_c_, settings_);
         }
 
+    protected:
+        void ctor(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) 
+        {
+            matrix_c_.reserve(matrix_a_.size());
+            this->execute(matrix_a_, matrix_b_, matrix_c_, settings_);
+        }        
+
     private:
 
-        void execute(const std::vector<int>& matrix_a_, const std::vector<int>& matrix_b_, std::vector<int>& matrix_c_, const settings & settings_)
+
+        void execute(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
         {
             if(settings_.PARALLELIZATION_STRATEGY == PARALLELIZATION_STRATEGY::PTHREADS)
             {
@@ -160,17 +210,17 @@ class multiply_parallel
             
         }
 
-        void execute_pthread(const std::vector<int>& matrix_a_, const std::vector<int>& matrix_b_, std::vector<int>& matrix_c_, const settings & settings_)
+        void execute_pthread(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
         {
             pthread_t* threads = new pthread_t[settings_.THREAD_NUMBER];
-            iterators** iterators_ = new iterators*[settings_.THREAD_NUMBER];
+            iterators<T>** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER];
 
             for(int i = 0; i < settings_.THREAD_NUMBER; i++)
             {
                 if(i != settings_.THREAD_NUMBER - 1)
                 {
                     int delimeter = (int)((matrix_a_.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
-                    iterators_[i] = new iterators(
+                    iterators_[i] = new iterators<T>(
                         matrix_a_, matrix_b_, matrix_c_,
                         i * delimeter,
                         (i + 1) * delimeter,
@@ -181,7 +231,7 @@ class multiply_parallel
                 else
                 {
                     int delimeter = (int)((matrix_a_.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
-                    iterators_[i] = new iterators(
+                    iterators_[i] = new iterators<T>(
                         matrix_a_, matrix_b_, matrix_c_,
                         i * delimeter,
                         matrix_a_.size() / sqrt(matrix_a_.size()),
@@ -189,7 +239,7 @@ class multiply_parallel
                         (int)(sqrt(matrix_a_.size()))
                     );
                 }
-                pthread_create(threads + i, NULL, multiply_parallel_pthread, (void*)iterators_[i]);                  
+                pthread_create(threads + i, NULL, multiply_parallel_pthread<T>, (void*)iterators_[i]);                  
             }
 
             for(int i = 0; i < settings_.THREAD_NUMBER; i++)
@@ -198,10 +248,10 @@ class multiply_parallel
             }
         }
 
-        void execute_pthread_affine(const std::vector<int>& matrix_a_, const std::vector<int>& matrix_b_, std::vector<int>& matrix_c_, const settings & settings_)
+        void execute_pthread_affine(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
         {
             pthread_t* threads = new pthread_t[settings_.THREAD_NUMBER];
-            iterators** iterators_ = new iterators*[settings_.THREAD_NUMBER];
+            iterators<T>** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER];
 
             cpu_set_t cpuset;
             int cpu_counter = 0;
@@ -212,7 +262,7 @@ class multiply_parallel
                 if(i != settings_.THREAD_NUMBER - 1)
                 {
                     int delimeter = (int)((matrix_a_.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
-                    iterators_[i] = new iterators(
+                    iterators_[i] = new iterators<T>(
                         matrix_a_, matrix_b_, matrix_c_,
                         i * delimeter,
                         (i + 1) * delimeter,
@@ -223,7 +273,7 @@ class multiply_parallel
                 else
                 {
                     int delimeter = (int)((matrix_a_.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
-                    iterators_[i] = new iterators(
+                    iterators_[i] = new iterators<T>(
                         matrix_a_, matrix_b_, matrix_c_,
                         i * delimeter,
                         matrix_a_.size() / sqrt(matrix_a_.size()),
@@ -231,7 +281,7 @@ class multiply_parallel
                         (int)(sqrt(matrix_a_.size()))
                     );
                 }
-                pthread_create(threads + i, NULL, multiply_parallel_pthread, (void*)iterators_[i]);   
+                pthread_create(threads + i, NULL, multiply_parallel_pthread<T>, (void*)iterators_[i]);   
                 CPU_SET(cpu_counter, &cpuset);
                 pthread_setaffinity_np(*(threads + i), sizeof(cpuset), &cpuset);
                 
@@ -245,10 +295,10 @@ class multiply_parallel
             }
         }
 
-        void execute_pthread_sched(const std::vector<int>& matrix_a_, const std::vector<int>& matrix_b_, std::vector<int>& matrix_c_, const settings & settings_)
+        void execute_pthread_sched(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
         {
             pthread_t* threads = new pthread_t[settings_.THREAD_NUMBER];
-            iterators** iterators_ = new iterators*[settings_.THREAD_NUMBER];
+            iterators<T>** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER];
 
             struct sched_param  sched_param_;
             sched_param_.sched_priority = settings_.PRIORITY;
@@ -258,7 +308,7 @@ class multiply_parallel
                 if(i != settings_.THREAD_NUMBER - 1)
                 {
                     int delimeter = (int)((matrix_a_.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
-                    iterators_[i] = new iterators(
+                    iterators_[i] = new iterators<T>(
                         matrix_a_, matrix_b_, matrix_c_,
                         i * delimeter,
                         (i + 1) * delimeter,
@@ -269,7 +319,7 @@ class multiply_parallel
                 else
                 {
                     int delimeter = (int)((matrix_a_.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
-                    iterators_[i] = new iterators(
+                    iterators_[i] = new iterators<T>(
                         matrix_a_, matrix_b_, matrix_c_,
                         i * delimeter,
                         matrix_a_.size() / sqrt(matrix_a_.size()),
@@ -277,7 +327,7 @@ class multiply_parallel
                         (int)(sqrt(matrix_a_.size()))
                     );
                 }
-                pthread_create(threads + i, NULL, multiply_parallel_pthread, (void*)iterators_[i]);  
+                pthread_create(threads + i, NULL, multiply_parallel_pthread<T>, (void*)iterators_[i]);  
                 pthread_setschedparam(*(threads + i), settings_.SCHED_STRATEGY, &sched_param_);                
             }
 
@@ -287,10 +337,10 @@ class multiply_parallel
             }
         }
 
-        void execute_pthread_affine_sched(const std::vector<int>& matrix_a_, const std::vector<int>& matrix_b_, std::vector<int>& matrix_c_, const settings & settings_)
+        void execute_pthread_affine_sched(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
         {
             pthread_t* threads = new pthread_t[settings_.THREAD_NUMBER];
-            iterators** iterators_ = new iterators*[settings_.THREAD_NUMBER];
+            iterators<T>** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER];
             
             cpu_set_t cpuset;
             int cpu_counter = 0;
@@ -304,7 +354,7 @@ class multiply_parallel
                 if(i != settings_.THREAD_NUMBER - 1)
                 {
                     int delimeter = (int)((matrix_a_.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
-                    iterators_[i] = new iterators(
+                    iterators_[i] = new iterators<T>(
                         matrix_a_, matrix_b_, matrix_c_,
                         i * delimeter,
                         (i + 1) * delimeter,
@@ -315,7 +365,7 @@ class multiply_parallel
                 else
                 {
                     int delimeter = (int)((matrix_a_.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
-                    iterators_[i] = new iterators(
+                    iterators_[i] = new iterators<T>(
                         matrix_a_, matrix_b_, matrix_c_,
                         i * delimeter,
                         matrix_a_.size() / sqrt(matrix_a_.size()),
@@ -323,7 +373,7 @@ class multiply_parallel
                         (int)(sqrt(matrix_a_.size()))
                     );
                 }
-                pthread_create(threads + i, NULL, multiply_parallel_pthread, (void*)iterators_[i]); 
+                pthread_create(threads + i, NULL, multiply_parallel_pthread<T>, (void*)iterators_[i]); 
 
                 CPU_SET(cpu_counter, &cpuset);
                 pthread_setaffinity_np(*(threads + i), sizeof(cpuset), &cpuset); 
@@ -340,7 +390,7 @@ class multiply_parallel
             }
         }
 
-        void execute_openmp(const std::vector<int>& matrix_a_, const std::vector<int>& matrix_b_, std::vector<int>& matrix_c_, const settings & settings_ )
+        void execute_openmp(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_ )
         {
             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
             for(int i = 0; i < matrix_a_.size() / sqrt(matrix_a_.size()) ; i++)
@@ -357,5 +407,75 @@ class multiply_parallel
             }
         }
 };
+
+
+template<typename T>
+class benchmark
+{
+    public:
+
+        benchmark(base_parallel<T>* base_parallel_, bool execute_ = false)
+        {
+            if(execute_) 
+            {
+                input_a_ = std::vector<T>{1,2,3,4,5,6,7,8,9};
+                input_b_ = std::vector<T>{1,2,3,4,5,6,7,8,9};
+           
+                result_.reserve(input_a_.capacity());
+
+                settings settings_ = settings(2_THREADS, SCHEDULING_STRATEGY::SCHEDULING_TS, 19_PRIORITY, AFFINITY::FALSE, PARALLELIZATION_STRATEGY::PTHREADS);
+
+                base_parallel_->ctor(input_a_, input_b_, result_, settings_);
+            }
+            else 
+            {
+                input_a_ = std::vector<T>{1,2,3,4,5,6,7,8,9};
+                input_b_ = std::vector<T>{1,2,3,4,5,6,7,8,9};
+            
+                result_.reserve(input_a_.capacity());
+
+                settings settings_ = settings(2_THREADS, SCHEDULING_STRATEGY::SCHEDULING_TS, 19_PRIORITY, AFFINITY::FALSE, PARALLELIZATION_STRATEGY::PTHREADS);
+            }
+        }
+
+        benchmark(base_parallel<T>* base_parallel_, std::vector<T> input_a_, std::vector<T> input_b_, settings settings_, bool execute_ = false) : 
+            base_parallel_(base_parallel_),
+            input_a_(input_a_),
+            input_b_(input_b_),
+            settings_(settings_)
+        {
+            if(execute_)
+            {
+                result_.reserve(input_a_.capacity());
+                base_parallel_->ctor(input_a_, input_b_, result_, settings_);
+            }
+            else
+            {
+                result_.reserve(input_a_.capacity());
+            }
+        }
+
+        template<typename K = std::nano> 
+        unsigned long long
+        execute()
+        {
+            before = std::chrono::high_resolution_clock::now();
+            base_parallel_->ctor(input_a_, input_b_, result_, settings_);
+            after  = std::chrono::high_resolution_clock::now();
+
+            return std::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count();
+        }
+
+    private:
+        std::chrono::high_resolution_clock::time_point before;
+        std::chrono::high_resolution_clock::time_point after;
+
+        base_parallel<T>* base_parallel_;
+        std::vector<T> input_a_;
+        std::vector<T> input_b_;
+        std::vector<T> result_;
+        settings settings_;
+};
+
 
 #endif

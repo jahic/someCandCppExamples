@@ -15,6 +15,12 @@ math.h
 -
 sched.h
 -
+chrono
+-
+time.h
+-
+stdlib.h
+-
 
 /home/arian/Framework/src/framework/src/main.cpp
 iostream
