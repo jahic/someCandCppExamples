@@ -409,50 +409,48 @@ class multiply_parallel : public base_parallel<T>
 };
 
 
+template<typename T = int>
+class generator
+{
+    public:
+        static std::vector<T> generate(int size)
+        {
+            std::vector<T> temp(size * size);
+
+            srand(time(NULL));
+
+            for(int i = 0; i < temp.capacity(); i++)
+            {
+                temp[i] = (T)(((rand() % RAND_MAX) + 1)+(rand() / RAND_MAX));
+            }
+
+            return temp;
+        }
+};
+
+
 template<typename T>
 class benchmark
 {
     public:
 
-        benchmark(base_parallel<T>* base_parallel_, bool execute_ = false)
-        {
-            if(execute_) 
-            {
-                input_a_ = std::vector<T>{1,2,3,4,5,6,7,8,9};
-                input_b_ = std::vector<T>{1,2,3,4,5,6,7,8,9};
-           
-                result_.reserve(input_a_.capacity());
 
-                settings settings_ = settings(2_THREADS, SCHEDULING_STRATEGY::SCHEDULING_TS, 19_PRIORITY, AFFINITY::FALSE, PARALLELIZATION_STRATEGY::PTHREADS);
-
-                base_parallel_->ctor(input_a_, input_b_, result_, settings_);
-            }
-            else 
-            {
-                input_a_ = std::vector<T>{1,2,3,4,5,6,7,8,9};
-                input_b_ = std::vector<T>{1,2,3,4,5,6,7,8,9};
-            
-                result_.reserve(input_a_.capacity());
-
-                settings settings_ = settings(2_THREADS, SCHEDULING_STRATEGY::SCHEDULING_TS, 19_PRIORITY, AFFINITY::FALSE, PARALLELIZATION_STRATEGY::PTHREADS);
-            }
-        }
-
-        benchmark(base_parallel<T>* base_parallel_, std::vector<T> input_a_, std::vector<T> input_b_, settings settings_, bool execute_ = false) : 
+        benchmark(base_parallel<T>* base_parallel_, std::vector<T> input_a_, std::vector<T> input_b_, settings settings_) : 
             base_parallel_(base_parallel_),
             input_a_(input_a_),
             input_b_(input_b_),
             settings_(settings_)
         {
-            if(execute_)
-            {
-                result_.reserve(input_a_.capacity());
-                base_parallel_->ctor(input_a_, input_b_, result_, settings_);
-            }
-            else
-            {
-                result_.reserve(input_a_.capacity());
-            }
+            result_.reserve(input_a_.capacity());
+        }
+
+        benchmark(base_parallel<T>* base_parallel_, std::vector<std::vector<T> > inputs_a_, std::vector<std::vector<T> > inputs_b_, std::vector<settings> settingss_) :
+            base_parallel_(base_parallel_),
+            inputs_a_(inputs_a_),
+            inputs_b_(inputs_b_),
+            settingss_(settingss_)
+        {
+            
         }
 
         template<typename K = std::nano> 
@@ -466,15 +464,46 @@ class benchmark
             return std::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count();
         }
 
+        template<typename K = std::nano>
+        void
+        execute_all()
+        {
+            for(int i = 0; i < settingss_.size(); i++)
+            {
+                for(int j = 0; j < inputs_a_.size(); j++)
+                {
+                    result_.reserve(inputs_a_[j].capacity());
+                    before = std::chrono::high_resolution_clock::now();
+                    base_parallel_->ctor(inputs_a_[j], inputs_b_[j], result_, settingss_[i]);
+                    after  = std::chrono::high_resolution_clock::now();
+
+                    std::cout << std::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count() << std::endl;
+
+                    result_.clear();
+                }
+            }
+        }
+
+       
     private:
+    
         std::chrono::high_resolution_clock::time_point before;
         std::chrono::high_resolution_clock::time_point after;
 
         base_parallel<T>* base_parallel_;
+
         std::vector<T> input_a_;
         std::vector<T> input_b_;
         std::vector<T> result_;
         settings settings_;
+
+        std::vector<std::vector<T> > inputs_a_;
+        std::vector<std::vector<T> > inputs_b_;
+        
+        std::vector<std::vector<T>> results_;
+        std::vector<settings>       settingss_;
+
+        
 };
 
 

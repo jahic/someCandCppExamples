@@ -88,16 +88,24 @@ int main()
   }
 
 
-  settings settings_ = settings(4_THREADS, SCHEDULING_STRATEGY::SCHEDULING_TS, 19_PRIORITY, AFFINITY::FALSE, PARALLELIZATION_STRATEGY::PTHREADS);
+  settings settings_ = settings(2_THREADS, SCHEDULING_STRATEGY::SCHEDULING_TS, 19_PRIORITY, AFFINITY::FALSE, PARALLELIZATION_STRATEGY::PTHREADS);
+  settings settings2_ = settings(4_THREADS, SCHEDULING_STRATEGY::SCHEDULING_TS, 19_PRIORITY, AFFINITY::FALSE, PARALLELIZATION_STRATEGY::PTHREADS);
 /*
   multiply_parallel<int> a(matrix_a, matrix_b, matrix_result, settings_);
 */
 
-  
-  benchmark<double> benchmark_(new multiply_parallel<double>(), matrix_a, matrix_b, settings_);
+  std::vector<settings> settingss_{settings_, settings2_};
+
+  std::vector<std::vector<double> > inputs_a{generator<double>::generate(200), generator<double>::generate(500), generator<double>::generate(800)};
+  std::vector<std::vector<double> > inputs_b{generator<double>::generate(200), generator<double>::generate(500), generator<double>::generate(800)};
+
+  //benchmark<double> benchmark_ = benchmark<double>(new multiply_parallel<double>(), generator<double>::generate(800), generator<double>::generate(800), settings_);
 
 
-  std::cout << benchmark_.execute<TIME_FORMAT::NANO>() << std::endl;
+  benchmark<double> benchmark_ = benchmark<double>(new multiply_parallel<double>(), inputs_a, inputs_b, settingss_); 
+
+
+  benchmark_.execute_all<TIME_FORMAT::NANO>();
 
   //std::cout << benchmark_.execute().count() << std::endl;
   

@@ -1,0 +1,40 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:395:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  395 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:101:63:[m[K [01;31m[Kerror: [m[K‘[01m[Klong long unsigned int benchmark<T, SIZE>::execute(settings) [with K = std::ratio<1, 1000000000>; T = double; int SIZE = 800][m[K’ is protected within this context
+  101 |   std::cout << benchmark_.execute<TIME_FORMAT::NANO>(settings_[01;31m[K)[m[K << std::endl;
+      |                                                               [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:493:9:[m[K [01;36m[Knote: [m[Kdeclared protected here
+  493 |         [01;36m[Kexecute[m[K(settings local_settings_)
+      |         [01;36m[K^~~~~~~[m[K
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kbenchmark<T, SIZE>::benchmark(base_parallel<T>*) [with T = double; int SIZE = 800][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:98:68:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:437:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kbase_parallel_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  437 |         benchmark([01;35m[Kbase_parallel<T>* base_parallel_[m[K)
+      |                   [01;35m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Klong long unsigned int benchmark<T, SIZE>::execute(settings) [with K = std::ratio<1, 1000000000>; T = double; int SIZE = 800][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:101:63:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:496:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid base_parallel<T>::ctor(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = double][m[K’ is protected within this context
+  496 |             [01;31m[Kbase_parallel_[m[K->ctor(input_a_, input_b_, result_, local_settings_);
+      |             [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:139:22:[m[K [01;36m[Knote: [m[Kdeclared protected here
+  139 |         virtual void [01;36m[Kctor[m[K(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+      |                      [01;36m[K^~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kstatic std::vector<BufferT> generator<T>::generate(int) [with T = double][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:439:46:[m[K   required from ‘[01m[Kbenchmark<T, SIZE>::benchmark(base_parallel<T>*) [with T = double; int SIZE = 800][m[K’
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:98:68:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:422:30:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double, std::allocator<double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  422 |             for(int i = 0; i < temp.capacity(); i++)
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid multiply_parallel<T>::execute_openmp(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = double][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:393:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:393:139:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  393 |         void execute_openmp(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K )
+      |                                                                                                                          [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

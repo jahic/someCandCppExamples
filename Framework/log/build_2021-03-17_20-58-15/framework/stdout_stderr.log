@@ -1,0 +1,47 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:395:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  395 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:148:49:[m[K [01;31m[Kerror: [m[Kwrong number of template arguments (2, should be 1)
+  148 |         friend class benchmark<T, int size = 200[01;31m[K>[m[K;
+      |                                                 [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:133:7:[m[K [01;36m[Knote: [m[Kprovided for ‘[01m[Ktemplate<class T> class benchmark[m[K’
+  133 | class [01;36m[Kbenchmark[m[K;
+      |       [01;36m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:148:9:[m[K [01;31m[Kerror: [m[Kfriend declaration does not name a class or function
+  148 |         [01;31m[Kfriend[m[K class benchmark<T, int size = 200>;
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:433:7:[m[K [01;31m[Kerror: [m[Kredeclared with 2 template parameters
+  433 | class [01;31m[Kbenchmark[m[K
+      |       [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:133:7:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Ktemplate<class T> class benchmark[m[K’ used 1 template parameter
+  133 | class [01;36m[Kbenchmark[m[K;
+      |       [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:98:31:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[Kbenchmark<double> benchmark_[m[K’ has initializer but incomplete type
+   98 |   benchmark<double> benchmark_[01;31m[K([m[Knew multiply_parallel<double>(), generator<double>::generate(800), generator<double>::generate(800), settings_);
+      |                               [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:101:52:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  101 |   std::cout << benchmark_.execute<TIME_FORMAT::NANO[01;31m[K>[m[K() << std::endl;
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:101:54:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+  101 |   std::cout << benchmark_.execute<TIME_FORMAT::NANO>([01;31m[K)[m[K << std::endl;
+      |                                                      [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kstatic std::vector<BufferT> generator<T>::generate(int) [with T = double][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:98:84:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:422:30:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double, std::allocator<double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  422 |             for(int i = 0; i < temp.capacity(); i++)
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid multiply_parallel<T>::execute_openmp(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = double][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:393:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:393:139:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  393 |         void execute_openmp(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K )
+      |                                                                                                                          [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

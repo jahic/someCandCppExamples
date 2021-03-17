@@ -1,0 +1,24 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:395:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  395 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In static member function ‘[01m[Kstatic std::vector<BufferT> generator<T>::generate(int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:418:25:[m[K [01;31m[Kerror: [m[Kmissing template arguments before ‘[01m[Ktemp[m[K’
+  418 |             std::vector [01;31m[Ktemp[m[K(size * size);
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:422:32:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemp[m[K’ was not declared in this scope; did you mean ‘[01m[Kmktemp[m[K’?
+  422 |             for(int i = 0; i < [01;31m[Ktemp[m[K.capacity; i++)
+      |                                [01;31m[K^~~~[m[K
+      |                                [32m[Kmktemp[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:427:20:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemp[m[K’ was not declared in this scope; did you mean ‘[01m[Kmktemp[m[K’?
+  427 |             return [01;31m[Ktemp[m[K;
+      |                    [01;31m[K^~~~[m[K
+      |                    [32m[Kmktemp[m[K
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid multiply_parallel<T>::execute_openmp(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = double][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:393:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:393:139:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  393 |         void execute_openmp(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K )
+      |                                                                                                                          [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
