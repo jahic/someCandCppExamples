@@ -1,0 +1,47 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:396:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  396 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:458:38:[m[K [01;31m[Kerror: [m[Kdeclaration of ‘[01m[Kstatic std::vector<settings> generator::settings(std::initializer_list<settings>)[m[K’ changes meaning of ‘[01m[Ksettings[m[K’ [[01;31m[K-fpermissive[m[K]
+  458 |         static std::vector<settings> [01;31m[Ksettings[m[K(std::initializer_list<settings> settings_)
+      |                                      [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:51:8:[m[K [01;36m[Knote: [m[K‘[01m[Ksettings[m[K’ declared here as ‘[01m[Kstruct settings[m[K’
+   51 | struct [01;36m[Ksettings[m[K
+      |        [01;36m[K^~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In static member function ‘[01m[Kstatic std::vector<settings> generator::settings(std::initializer_list<settings>)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:460:33:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for ‘[01m[Ktemplate<class _Tp, class _Alloc> class std::vector[m[K’
+  460 |             std::vector<settings[01;31m[K>[m[K content;
+      |                                 [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:460:33:[m[K [01;36m[Knote: [m[K  expected a type, got ‘[01m[Kgenerator::settings[m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:460:33:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:464:25:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kpush_back[m[K’ in ‘[01m[Kcontent[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+  464 |                 content.[01;31m[Kpush_back[m[K(setting);
+      |                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:467:20:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Kcontent[m[K’ from ‘[01m[Kint[m[K’ to ‘[01m[Kstd::vector<settings>[m[K’
+  467 |             return [01;31m[Kcontent[m[K;
+      |                    [01;31m[K^~~~~~~[m[K
+      |                    [01;31m[K|[m[K
+      |                    [01;31m[Kint[m[K
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kstatic std::vector<std::vector<BufferT> > generator::inputs(std::initializer_list<int>) [with T = double][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:100:66:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:446:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double, std::allocator<double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  446 |                 for(int i = 0; i < temp.capacity(); i++)
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid benchmark<T>::execute_all() [with K = std::ratio<1, 1000000000>; T = double][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:110:45:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:513:30:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<settings>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  513 |             for(int i = 0; [01;35m[Ki < settingss_.size()[m[K; i++)
+      |                            [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:515:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  515 |                 for(int j = 0; j < inputs_a_.size(); j++)
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid multiply_parallel<T>::execute_openmp(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = double][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:394:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:394:139:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  394 |         void execute_openmp(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K )
+      |                                                                                                                          [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

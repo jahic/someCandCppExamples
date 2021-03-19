@@ -64,7 +64,9 @@ std::vector<T>* my_vector;
 */
 
 
-
+/*
+  multiply_parallel<int> a(matrix_a, matrix_b, matrix_result, settings_);
+*/
 
  
 
@@ -74,7 +76,11 @@ std::vector<T>* my_vector;
 
 int main()
 {
-  
+
+
+
+  //generator<int>::generate({2,3,4});
+  /*
   std::vector<double> matrix_a;
   std::vector<double> matrix_b;
   //std::vector<double> matrix_b{1,2,3,4,5,6,7,8,9};
@@ -87,25 +93,26 @@ int main()
     matrix_b.push_back(i);
   }
 
-
+  */
   settings settings_ = settings(2_THREADS, SCHEDULING_STRATEGY::SCHEDULING_TS, 19_PRIORITY, AFFINITY::FALSE, PARALLELIZATION_STRATEGY::PTHREADS);
   settings settings2_ = settings(4_THREADS, SCHEDULING_STRATEGY::SCHEDULING_TS, 19_PRIORITY, AFFINITY::FALSE, PARALLELIZATION_STRATEGY::PTHREADS);
-/*
-  multiply_parallel<int> a(matrix_a, matrix_b, matrix_result, settings_);
-*/
+  settings settings3_ = settings(8_THREADS, SCHEDULING_STRATEGY::SCHEDULING_TS, 19_PRIORITY, AFFINITY::FALSE, PARALLELIZATION_STRATEGY::PTHREADS);
 
-  std::vector<settings> settingss_{settings_, settings2_};
+  auto inputs_a = generator::generate_inputs<double>({200, 500}); 
+  auto inputs_b = generator::generate_inputs<double>({200, 500});
+  auto settings = generator::generate_settings({settings_, settings2_, settings3_});
 
-  std::vector<std::vector<double> > inputs_a{generator<double>::generate(200), generator<double>::generate(500), generator<double>::generate(800)};
-  std::vector<std::vector<double> > inputs_b{generator<double>::generate(200), generator<double>::generate(500), generator<double>::generate(800)};
-
-  //benchmark<double> benchmark_ = benchmark<double>(new multiply_parallel<double>(), generator<double>::generate(800), generator<double>::generate(800), settings_);
+  
 
 
-  benchmark<double> benchmark_ = benchmark<double>(new multiply_parallel<double>(), inputs_a, inputs_b, settingss_); 
+  auto benchmark_ = benchmark<double>(new multiply_parallel<double>(), inputs_a, inputs_b, settings); 
+
+  json_generator json = json_generator();
+
+  json.add(settings_);
 
 
-  benchmark_.execute_all<TIME_FORMAT::NANO>();
+  benchmark_.execute_all<TIME_FORMAT::MILLI>();
 
   //std::cout << benchmark_.execute().count() << std::endl;
   

@@ -1,0 +1,32 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:456:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  456 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kstatic std::vector<std::vector<BufferT> > generator::generate_inputs(std::initializer_list<int>) [with T = double][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:101:69:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:507:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double, std::allocator<double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  507 |                 for(int i = 0; i < temp.capacity(); i++)
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid benchmark<T>::execute_all() [with K = std::ratio<1, 1000000>; T = double][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:115:46:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:634:30:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<settings>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  634 |             for(int i = 0; [01;35m[Ki < settingss_.size()[m[K; i++)
+      |                            [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:643:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  643 |                 for(int j = 0; j < inputs_a_.size(); j++)
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:657:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  657 |                     if([01;35m[Kj != inputs_a_.size() - 1[m[K)
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:665:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<settings>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  665 |                 if([01;35m[Ki == settingss_.size() - 1[m[K)
+      |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kjson_generator& json_generator::add(const std::chrono::duration<long int, T>&) [with T = std::ratio<1, 1000000>][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:631:29:[m[K   required from ‘[01m[Kvoid benchmark<T>::execute_all() [with K = std::ratio<1, 1000000>; T = double][m[K’
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:115:46:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:563:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kduration[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  563 |         json_generator& add([01;35m[Kconst std::chrono::duration<int64_t, T>& duration[m[K)
+      |                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid multiply_parallel<T>::execute_openmp(const std::vector<BufferT>&, const std::vector<BufferT>&, std::vector<BufferT>&, const settings&) [with T = double][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:454:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:454:139:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  454 |         void execute_openmp(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K )
+      |                                                                                                                          [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K

@@ -1,0 +1,9 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:456:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  456 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Interrupt
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Interrupt
+make: *** [Makefile:141: all] Interrupt

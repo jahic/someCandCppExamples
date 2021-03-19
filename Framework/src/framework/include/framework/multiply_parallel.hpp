@@ -8,7 +8,8 @@
 #include<chrono>
 #include<time.h>
 #include<stdlib.h>
-
+#include<sstream>
+#include<fstream>
 
 constexpr unsigned long long operator"" _THREADS(unsigned long long _threads)
 { 
@@ -47,35 +48,86 @@ namespace TIME_FORMAT
     typedef std::nano  NANO;
 }
 
+
 struct settings
 {
+    public:
+        settings() 
+        {
+            this->THREAD_NUMBER            =     2_THREADS;
+            this->SCHED_STRATEGY           =     SCHEDULING_STRATEGY::SCHEDULING_TS;
+            this->PRIORITY                 =     19_PRIORITY;
+            this->AFFINITY                 =     AFFINITY::FALSE;
+            this->PARALLELIZATION_STRATEGY =     PARALLELIZATION_STRATEGY::PTHREADS;
+        }
 
-    settings() 
-    {
-        this->THREAD_NUMBER            =     2_THREADS;
-        this->SCHED_STRATEGY           =     SCHEDULING_STRATEGY::SCHEDULING_TS;
-        this->PRIORITY                 =     19_PRIORITY;
-        this->AFFINITY                 =     AFFINITY::FALSE;
-        this->PARALLELIZATION_STRATEGY =     PARALLELIZATION_STRATEGY::PTHREADS;
-    }
+        settings(int thread_number_, int parallelization_strategy_) :
+            THREAD_NUMBER(thread_number_),
+            SCHED_STRATEGY(SCHEDULING_STRATEGY::SCHEDULING_TS),
+            PRIORITY(19_PRIORITY),
+            AFFINITY(AFFINITY::FALSE),
+            PARALLELIZATION_STRATEGY(parallelization_strategy_)
+        {
 
+        }
 
-    settings(int thread_number_, int sched_strategy_, int priority_, bool affinity_, int parallelization_strategy_) :
-        THREAD_NUMBER(thread_number_),
-        SCHED_STRATEGY(sched_strategy_),
-        PRIORITY(priority_),
-        AFFINITY(affinity_),
-        PARALLELIZATION_STRATEGY(parallelization_strategy_)
-    {
+        settings(int thread_number_, int sched_strategy_, int priority_, bool affinity_, int parallelization_strategy_) :
+            THREAD_NUMBER(thread_number_),
+            SCHED_STRATEGY(sched_strategy_),
+            PRIORITY(priority_),
+            AFFINITY(affinity_),
+            PARALLELIZATION_STRATEGY(parallelization_strategy_)
+        {
 
-    }
+        }
 
-    int  THREAD_NUMBER;
-    int  SCHED_STRATEGY;
-    int  PRIORITY;
-    bool AFFINITY;
-    int  PARALLELIZATION_STRATEGY;
+        int  THREAD_NUMBER;
+        int  SCHED_STRATEGY;
+        int  PRIORITY;
+        bool AFFINITY;
+        int  PARALLELIZATION_STRATEGY;
+
+    private:
+
+        const char * get_scheduling_strategy(int scheduling_strategy) const
+        {
+            if(scheduling_strategy == SCHEDULING_STRATEGY::SCHEDULING_RR)
+                return "\"RR\"";
+            else if(scheduling_strategy == SCHEDULING_STRATEGY::SCHEDULING_FIFO)
+                return "\"FIFO\"";
+            
+            return "\"TS\"";
+        }
+
+        const char * get_affinity(bool affinity_) const
+        {
+            if(affinity_)
+                return "\"true\"";
+            
+            return "\"false\"";
+        }
+
+        const char * get_parallelization_strategy(int parallelization_strategy) const
+        {
+            if(parallelization_strategy == PARALLELIZATION_STRATEGY::OPENMP)
+                return "\"OPENMP\"";
+
+            return "\"PTHREADS\"";
+        }
+
+        friend std::ostream& operator<<(std::ostream& os, const settings& settings_);
 };
+
+std::ostream& operator<<(std::ostream& os, const settings& settings_)
+{
+    os << "[" << settings_.THREAD_NUMBER                                                    << ", "
+              << settings_.get_scheduling_strategy(settings_.SCHED_STRATEGY)                << ", "
+              << settings_.PRIORITY                                                         << ", "
+              << settings_.get_affinity(settings_.AFFINITY)                                 << ", " 
+              << settings_.get_parallelization_strategy(settings_.PARALLELIZATION_STRATEGY) << "]";
+
+    return os;
+}
 
 template<typename T>
 struct iterators
@@ -138,6 +190,9 @@ class base_parallel
     protected:
         virtual void ctor(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
     private:
+
+        virtual std::string get_name() const = 0;
+
         virtual void execute(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
         virtual void execute_pthread(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
         virtual void execute_pthread_affine(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
@@ -153,18 +208,18 @@ class multiply_parallel : public base_parallel<T>
 {
     public:
 
-        multiply_parallel() 
+        multiply_parallel() : name("multiply_parallel")
         {
             
         }
 
-        multiply_parallel(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) 
+        multiply_parallel(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) : name("multiply_parallel")
         {
             matrix_c_.reserve(matrix_a_.size());
             this->execute(matrix_a_, matrix_b_, matrix_c_, settings_);
         }
 
-        multiply_parallel(const std::vector<T>& matrix_a_, std::vector<T>& matrix_c_, const settings & settings_) 
+        multiply_parallel(const std::vector<T>& matrix_a_, std::vector<T>& matrix_c_, const settings & settings_) : name("multiply_parallel")
         {
             matrix_c_.reserve(matrix_a_.size() / 2);
 
@@ -182,6 +237,12 @@ class multiply_parallel : public base_parallel<T>
 
     private:
 
+        std::string name;
+
+        std::string get_name() const
+        {
+            return this->name;
+        }
 
         void execute(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
         {
@@ -409,11 +470,12 @@ class multiply_parallel : public base_parallel<T>
 };
 
 
-template<typename T = int>
-class generator
+
+class single_generator
 {
     public:
-        static std::vector<T> generate(int size)
+        template<typename T = int>
+        static std::vector<T> generate_input(int size)
         {
             std::vector<T> temp(size * size);
 
@@ -427,6 +489,103 @@ class generator
             return temp;
         }
 };
+
+
+class generator
+{
+    public:
+        template<typename T = int>
+        static std::vector<std::vector<T> > generate_inputs(std::initializer_list<int> sizes)
+        {
+            srand(time(NULL));
+            std::vector<std::vector<T> > content;
+
+            for(auto size : sizes)
+            {
+                std::vector<T> temp(size * size);
+
+                for(int i = 0; i < temp.capacity(); i++)
+                {
+                    temp[i] = (T)(((rand() % RAND_MAX) + 1)+(rand() / RAND_MAX));
+                }
+
+                content.push_back(temp);
+            }
+
+            return content;
+            
+        }
+
+        static std::vector<settings> generate_settings(std::initializer_list<settings> settings_)
+        {
+            std::vector<settings> content;
+
+            for(auto setting : settings_)
+            {
+                content.push_back(setting);
+            }
+
+            return content;
+        }
+};
+
+class json_generator
+{
+    public:
+
+        json_generator() = default;
+
+        json_generator& add(const settings& settings_)
+        {
+            output_stream << settings_;
+
+            return *this;
+        }
+
+        json_generator& add(const int&& iteration_)
+        {
+            output_stream << iteration_;
+
+            return *this;
+        }
+
+        json_generator& add(std::string text_stream)
+        {
+            output_stream << text_stream.c_str();
+
+            return *this;
+        }
+
+        template<typename T = TIME_FORMAT::NANO>
+        json_generator& add(const std::chrono::duration<int64_t, T>& duration)
+        {
+            if(T::den / 1000000000 == 1)
+                output_stream << "nano";
+            else if(T::den / 1000000 == 1)
+                output_stream << "micro";
+            else
+                output_stream << "milli";
+            return *this;
+        }
+
+        void save_to_json_file(const std::string& file_name)
+        {
+            std::ofstream ofs(file_name + ".json", std::ios::out);
+
+            ofs << output_stream.str();
+
+            ofs.close();
+        }
+
+        void print()
+        {
+            std::cout << output_stream.str() << std::endl;
+        }
+
+    private:
+        std::stringstream output_stream;
+};
+
 
 
 template<typename T>
@@ -453,7 +612,7 @@ class benchmark
             
         }
 
-        template<typename K = std::nano> 
+        template<typename K = TIME_FORMAT::NANO> 
         unsigned long long
         execute()
         {
@@ -464,12 +623,29 @@ class benchmark
             return std::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count();
         }
 
-        template<typename K = std::nano>
+        template<typename K = TIME_FORMAT::NANO>
         void
         execute_all()
         {
+
+            std::string name = base_parallel_->get_name();
+            
+            json_generator_.add("{\n\t\"name\" : \"")
+                           .add(name)
+                           .add("\",\n\t\"time_unit\" : \"")
+                           .add<K>(std::chrono::duration<int64_t, K>())
+                           .add("\",")
+                           .add("\n\t\"tests\" : {");
+
             for(int i = 0; i < settingss_.size(); i++)
             {
+                json_generator_.add("\n\t\t\"test_")
+                               .add(i + 1)
+                               .add("\" : {")
+                               .add("\n\t\t\t\"settings\" : ")
+                               .add(settingss_[i])
+                               .add(",\n\t\t\t\"measurements\" : {");
+
                 for(int j = 0; j < inputs_a_.size(); j++)
                 {
                     result_.reserve(inputs_a_[j].capacity());
@@ -477,11 +653,31 @@ class benchmark
                     base_parallel_->ctor(inputs_a_[j], inputs_b_[j], result_, settingss_[i]);
                     after  = std::chrono::high_resolution_clock::now();
 
-                    std::cout << std::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count() << std::endl;
+                    json_generator_.add("\n\t\t\t\t\"")
+                                   .add((int&&)sqrt(inputs_a_[j].size()))
+                                   .add("x")
+                                   .add((int&&)sqrt(inputs_a_[j].size()))
+                                   .add("\" : ")
+                                   .add((int&&)std::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count());
 
+                    if(j != inputs_a_.size() - 1)
+                        json_generator_.add(",");
+                   
                     result_.clear();
                 }
+
+                json_generator_.add("\n\t\t\t}");
+
+                if(i == settingss_.size() - 1)
+                    json_generator_.add("\n\t\t}");
+                else
+                    json_generator_.add("\n\t\t},");
+
             }
+
+            json_generator_.add("\n\t}\n}");
+
+            json_generator_.save_to_json_file(base_parallel_->get_name());
         }
 
        
@@ -503,8 +699,11 @@ class benchmark
         std::vector<std::vector<T>> results_;
         std::vector<settings>       settingss_;
 
+        json_generator json_generator_;
         
 };
+
+
 
 
 #endif

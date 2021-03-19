@@ -21,6 +21,10 @@ time.h
 -
 stdlib.h
 -
+sstream
+-
+fstream
+-
 
 /home/arian/Framework/src/framework/src/main.cpp
 iostream

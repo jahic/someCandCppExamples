@@ -1,0 +1,27 @@
+{
+	"name" : "multiply_parallel",
+	"time_unit" : "milli",
+	"tests" : {
+		"test_1" : {
+			"settings" : [2, "TS", 19, "false", "PTHREADS"],
+			"measurements" : {
+				"200x200" : 32,
+				"500x500" : 583
+			}
+		},
+		"test_2" : {
+			"settings" : [4, "TS", 19, "false", "PTHREADS"],
+			"measurements" : {
+				"200x200" : 17,
+				"500x500" : 321
+			}
+		},
+		"test_3" : {
+			"settings" : [8, "TS", 19, "false", "PTHREADS"],
+			"measurements" : {
+				"200x200" : 19,
+				"500x500" : 314
+			}
+		}
+	}
+}

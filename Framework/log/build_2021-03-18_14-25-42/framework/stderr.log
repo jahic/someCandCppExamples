@@ -1,0 +1,7 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:395:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  395 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:117:3:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+  117 |   /*
+      |    

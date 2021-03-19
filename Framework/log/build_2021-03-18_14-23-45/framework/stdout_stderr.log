@@ -1,0 +1,25 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:395:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  395 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:117:3:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+  117 |   /*
+      |    
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:435:37:[m[K [01;31m[Kerror: [m[Kexpansion pattern ‘[01m[Kint[m[K’ contains no parameter packs
+  435 |         static void generate(int... [01;31m[Ksize[m[K)
+      |                                     [01;31m[K^~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:82:35:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kgenerator<int>::generate(int, int, int)[m[K’
+   82 |   generator<int>::generate(2, 3, 4[01;31m[K)[m[K
+      |                                   [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:435:21:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstatic void generator<T>::generate() [with T = int][m[K’
+  435 |         static void [01;36m[Kgenerate[m[K(int... size)
+      |                     [01;36m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:435:21:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 3 provided
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

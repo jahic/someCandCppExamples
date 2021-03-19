@@ -1,0 +1,1161 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:13:[m[K [01;35m[Kwarning: [m[KISO C++11 requires whitespace after the macro name
+   52 |     #define [01;35m[Kstd[m[K::vector<std::vector<T> > T
+      |             [01;35m[K^~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:400:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  400 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:90:15:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+   90 |         const [01;36m[Kstd[m[K::vector<T>& matrix_a_,
+      |               [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:90:15:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+   90 |         const [01;36m[Kstd[m[K::vector<T>& matrix_a_,
+      |               [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:108:11:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  108 |     const [01;36m[Kstd[m[K::vector<T>& matrix_a;
+      |           [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:109:11:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  109 |     const [01;36m[Kstd[m[K::vector<T>& matrix_b;
+      |           [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:110:5:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  110 |     [01;36m[Kstd[m[K::vector<T>& matrix_c;
+      |     [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kiterators<T>::iterators(int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:97:9:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[Kiterators<T>[m[K’ does not have any field named ‘[01m[Kmatrix_a[m[K’
+   97 |         [01;31m[Kmatrix_a[m[K(matrix_a_),
+      |         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:97:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+   97 |         matrix_a([01;31m[Kmatrix_a_[m[K),
+      |                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:98:9:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[Kiterators<T>[m[K’ does not have any field named ‘[01m[Kmatrix_b[m[K’
+   98 |         [01;31m[Kmatrix_b[m[K(matrix_b_),
+      |         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:98:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+   98 |         matrix_b([01;31m[Kmatrix_b_[m[K),
+      |                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:99:9:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[Kiterators<T>[m[K’ does not have any field named ‘[01m[Kmatrix_c[m[K’
+   99 |         [01;31m[Kmatrix_c[m[K(matrix_c_),
+      |         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:99:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+   99 |         matrix_c([01;31m[Kmatrix_c_[m[K),
+      |                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:100:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kbegin_[m[K’ was not declared in this scope; did you mean ‘[01m[Kbegin[m[K’?
+  100 |         begin([01;31m[Kbegin_[m[K),
+      |               [01;31m[K^~~~~~[m[K
+      |               [32m[Kbegin[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:101:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kend_[m[K’ was not declared in this scope; did you mean ‘[01m[Kend[m[K’?
+  101 |         end([01;31m[Kend_[m[K),
+      |             [01;31m[K^~~~[m[K
+      |             [32m[Kend[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:102:14:[m[K [01;31m[Kerror: [m[K‘[01m[Ksize_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksize[m[K’?
+  102 |         size([01;31m[Ksize_[m[K),
+      |              [01;31m[K^~~~~[m[K
+      |              [32m[Ksize[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:103:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kwidth_[m[K’ was not declared in this scope; did you mean ‘[01m[Kwidth[m[K’?
+  103 |         width([01;31m[Kwidth_[m[K)
+      |               [01;31m[K^~~~~~[m[K
+      |               [32m[Kwidth[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K At global scope:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:144:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  144 |         virtual void ctor(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+      |                                 [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:144:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  144 |         virtual void ctor(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+      |                                 [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:146:36:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  146 |         virtual void execute(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+      |                                    [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:146:36:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  146 |         virtual void execute(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+      |                                    [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:147:44:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  147 |         virtual void execute_pthread(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+      |                                            [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:147:44:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  147 |         virtual void execute_pthread(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+      |                                            [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:148:51:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  148 |         virtual void execute_pthread_affine(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+      |                                                   [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:148:51:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  148 |         virtual void execute_pthread_affine(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+      |                                                   [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:149:50:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  149 |         virtual void execute_pthread_sched(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+      |                                                  [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:149:50:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  149 |         virtual void execute_pthread_sched(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+      |                                                  [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:150:57:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  150 |         virtual void execute_pthread_affine_sched(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+      |                                                         [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:150:57:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  150 |         virtual void execute_pthread_affine_sched(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) = 0;
+      |                                                         [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:151:43:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  151 |         virtual void execute_openmp(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_ ) = 0;
+      |                                           [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:151:43:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  151 |         virtual void execute_openmp(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_ ) = 0;
+      |                                           [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:166:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  166 |         multiply_parallel(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                 [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:166:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  166 |         multiply_parallel(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                 [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:172:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  172 |         multiply_parallel(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                 [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:172:33:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  172 |         multiply_parallel(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                 [01;36m[K^~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:172:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmultiply_parallel<T>::multiply_parallel(int)[m[K’ cannot be overloaded with ‘[01m[Kmultiply_parallel<T>::multiply_parallel(int)[m[K’
+  172 |         [01;31m[Kmultiply_parallel[m[K(const std::vector<T>& matrix_a_, std::vector<T>& matrix_c_, const settings & settings_)
+      |         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:166:9:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kmultiply_parallel<T>::multiply_parallel(int)[m[K’
+  166 |         [01;36m[Kmultiply_parallel[m[K(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |         [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:182:25:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  182 |         void ctor(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                         [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:182:25:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  182 |         void ctor(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                         [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:191:28:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  191 |         void execute(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                            [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:191:28:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  191 |         void execute(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                            [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:218:36:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  218 |         void execute_pthread(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                    [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:218:36:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  218 |         void execute_pthread(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                    [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:256:43:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  256 |         void execute_pthread_affine(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                           [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:256:43:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  256 |         void execute_pthread_affine(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                           [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:303:42:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  303 |         void execute_pthread_sched(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                          [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:303:42:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  303 |         void execute_pthread_sched(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                          [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:345:49:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  345 |         void execute_pthread_affine_sched(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                                 [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:345:49:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  345 |         void execute_pthread_affine_sched(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_)
+      |                                                 [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:398:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  398 |         void execute_openmp(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_ )
+      |                                   [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:398:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  398 |         void execute_openmp(const [01;36m[Kstd[m[K::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_ )
+      |                                   [01;36m[K^~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kmultiply_parallel<T>::multiply_parallel(int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:168:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  168 |             [01;31m[Kmatrix_c_[m[K.reserve(matrix_a_.size());
+      |             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:168:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  168 |             matrix_c_.reserve([01;31m[Kmatrix_a_[m[K.size());
+      |                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:169:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  169 |             this->execute(matrix_a_, [01;31m[Kmatrix_b_[m[K, matrix_c_, settings_);
+      |                                      [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:169:60:[m[K [01;31m[Kerror: [m[K‘[01m[Ksettings_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksettings[m[K’?
+  169 |             this->execute(matrix_a_, matrix_b_, matrix_c_, [01;31m[Ksettings_[m[K);
+      |                                                            [01;31m[K^~~~~~~~~[m[K
+      |                                                            [32m[Ksettings[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kmultiply_parallel<T>::multiply_parallel(int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:174:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  174 |             [01;31m[Kmatrix_c_[m[K.reserve(matrix_a_.size() / 2);
+      |             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:174:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  174 |             matrix_c_.reserve([01;31m[Kmatrix_a_[m[K.size() / 2);
+      |                               [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:176:19:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  176 |             const [01;36m[Kstd[m[K::vector<T> matrix_one{matrix_a_.begin(), (matrix_a_.size() / 2) + matrix_a_.begin()};
+      |                   [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:177:19:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  177 |             const [01;36m[Kstd[m[K::vector<T> matrix_two{(matrix_a_.size() / 2) + matrix_a_.begin(), matrix_a_.end()};
+      |                   [01;36m[K^~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:178:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_one[m[K’ was not declared in this scope
+  178 |             this->execute([01;31m[Kmatrix_one[m[K, matrix_two, matrix_c_, settings_);
+      |                           [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:178:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_two[m[K’ was not declared in this scope
+  178 |             this->execute(matrix_one, [01;31m[Kmatrix_two[m[K, matrix_c_, settings_);
+      |                                       [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:178:62:[m[K [01;31m[Kerror: [m[K‘[01m[Ksettings_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksettings[m[K’?
+  178 |             this->execute(matrix_one, matrix_two, matrix_c_, [01;31m[Ksettings_[m[K);
+      |                                                              [01;31m[K^~~~~~~~~[m[K
+      |                                                              [32m[Ksettings[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel<T>::ctor(int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:184:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  184 |             [01;31m[Kmatrix_c_[m[K.reserve(matrix_a_.size());
+      |             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:184:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  184 |             matrix_c_.reserve([01;31m[Kmatrix_a_[m[K.size());
+      |                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:185:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  185 |             this->execute(matrix_a_, [01;31m[Kmatrix_b_[m[K, matrix_c_, settings_);
+      |                                      [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:185:60:[m[K [01;31m[Kerror: [m[K‘[01m[Ksettings_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksettings[m[K’?
+  185 |             this->execute(matrix_a_, matrix_b_, matrix_c_, [01;31m[Ksettings_[m[K);
+      |                                                            [01;31m[K^~~~~~~~~[m[K
+      |                                                            [32m[Ksettings[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel<T>::execute(int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:193:16:[m[K [01;31m[Kerror: [m[K‘[01m[Ksettings_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksettings[m[K’?
+  193 |             if([01;31m[Ksettings_[m[K.PARALLELIZATION_STRATEGY == PARALLELIZATION_STRATEGY::PTHREADS)
+      |                [01;31m[K^~~~~~~~~[m[K
+      |                [32m[Ksettings[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:198:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  198 |                         execute_pthread_affine_sched([01;31m[Kmatrix_a_[m[K,matrix_b_, matrix_c_, settings_);
+      |                                                      [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:198:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  198 |                         execute_pthread_affine_sched(matrix_a_,[01;31m[Kmatrix_b_[m[K, matrix_c_, settings_);
+      |                                                                [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:198:75:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  198 |                         execute_pthread_affine_sched(matrix_a_,matrix_b_, [01;31m[Kmatrix_c_[m[K, settings_);
+      |                                                                           [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:200:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  200 |                         execute_pthread_affine([01;31m[Kmatrix_a_[m[K,matrix_b_, matrix_c_, settings_);
+      |                                                [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:200:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  200 |                         execute_pthread_affine(matrix_a_,[01;31m[Kmatrix_b_[m[K, matrix_c_, settings_);
+      |                                                          [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:200:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  200 |                         execute_pthread_affine(matrix_a_,matrix_b_, [01;31m[Kmatrix_c_[m[K, settings_);
+      |                                                                     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:205:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  205 |                         execute_pthread_sched([01;31m[Kmatrix_a_[m[K,matrix_b_, matrix_c_, settings_);
+      |                                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:205:57:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  205 |                         execute_pthread_sched(matrix_a_,[01;31m[Kmatrix_b_[m[K, matrix_c_, settings_);
+      |                                                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:205:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  205 |                         execute_pthread_sched(matrix_a_,matrix_b_, [01;31m[Kmatrix_c_[m[K, settings_);
+      |                                                                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:207:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  207 |                         execute_pthread([01;31m[Kmatrix_a_[m[K,matrix_b_, matrix_c_, settings_);
+      |                                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:207:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  207 |                         execute_pthread(matrix_a_,[01;31m[Kmatrix_b_[m[K, matrix_c_, settings_);
+      |                                                   [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:207:62:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  207 |                         execute_pthread(matrix_a_,matrix_b_, [01;31m[Kmatrix_c_[m[K, settings_);
+      |                                                              [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:213:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  213 |                 execute_openmp([01;31m[Kmatrix_a_[m[K,matrix_b_, matrix_c_, settings_);
+      |                                [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:213:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  213 |                 execute_openmp(matrix_a_,[01;31m[Kmatrix_b_[m[K, matrix_c_, settings_);
+      |                                          [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:213:53:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  213 |                 execute_openmp(matrix_a_,matrix_b_, [01;31m[Kmatrix_c_[m[K, settings_);
+      |                                                     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel<T>::execute_pthread(int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:220:48:[m[K [01;31m[Kerror: [m[K‘[01m[Ksettings_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksettings[m[K’?
+  220 |             pthread_t* threads = new pthread_t[[01;31m[Ksettings_[m[K.THREAD_NUMBER];
+      |                                                [01;31m[K^~~~~~~~~[m[K
+      |                                                [32m[Ksettings[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:227:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  227 |                     int delimeter = (int)(([01;31m[Kmatrix_a_[m[K.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
+      |                                            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:229:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  229 |                         matrix_a_, [01;31m[Kmatrix_b_[m[K, matrix_c_,
+      |                                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:229:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  229 |                         matrix_a_, matrix_b_, [01;31m[Kmatrix_c_[m[K,
+      |                                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:238:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  238 |                     int delimeter = (int)(([01;31m[Kmatrix_a_[m[K.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
+      |                                            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:240:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  240 |                         matrix_a_, [01;31m[Kmatrix_b_[m[K, matrix_c_,
+      |                                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:240:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  240 |                         matrix_a_, matrix_b_, [01;31m[Kmatrix_c_[m[K,
+      |                                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel<T>::execute_pthread_affine(int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:258:48:[m[K [01;31m[Kerror: [m[K‘[01m[Ksettings_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksettings[m[K’?
+  258 |             pthread_t* threads = new pthread_t[[01;31m[Ksettings_[m[K.THREAD_NUMBER];
+      |                                                [01;31m[K^~~~~~~~~[m[K
+      |                                                [32m[Ksettings[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:269:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  269 |                     int delimeter = (int)(([01;31m[Kmatrix_a_[m[K.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
+      |                                            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:271:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  271 |                         matrix_a_, [01;31m[Kmatrix_b_[m[K, matrix_c_,
+      |                                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:271:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  271 |                         matrix_a_, matrix_b_, [01;31m[Kmatrix_c_[m[K,
+      |                                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:280:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  280 |                     int delimeter = (int)(([01;31m[Kmatrix_a_[m[K.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
+      |                                            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:282:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  282 |                         matrix_a_, [01;31m[Kmatrix_b_[m[K, matrix_c_,
+      |                                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:282:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  282 |                         matrix_a_, matrix_b_, [01;31m[Kmatrix_c_[m[K,
+      |                                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel<T>::execute_pthread_sched(int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:305:48:[m[K [01;31m[Kerror: [m[K‘[01m[Ksettings_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksettings[m[K’?
+  305 |             pthread_t* threads = new pthread_t[[01;31m[Ksettings_[m[K.THREAD_NUMBER];
+      |                                                [01;31m[K^~~~~~~~~[m[K
+      |                                                [32m[Ksettings[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:315:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  315 |                     int delimeter = (int)(([01;31m[Kmatrix_a_[m[K.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
+      |                                            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:317:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  317 |                         matrix_a_, [01;31m[Kmatrix_b_[m[K, matrix_c_,
+      |                                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:317:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  317 |                         matrix_a_, matrix_b_, [01;31m[Kmatrix_c_[m[K,
+      |                                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:326:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  326 |                     int delimeter = (int)(([01;31m[Kmatrix_a_[m[K.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
+      |                                            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:328:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  328 |                         matrix_a_, [01;31m[Kmatrix_b_[m[K, matrix_c_,
+      |                                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:328:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  328 |                         matrix_a_, matrix_b_, [01;31m[Kmatrix_c_[m[K,
+      |                                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel<T>::execute_pthread_affine_sched(int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:347:48:[m[K [01;31m[Kerror: [m[K‘[01m[Ksettings_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksettings[m[K’?
+  347 |             pthread_t* threads = new pthread_t[[01;31m[Ksettings_[m[K.THREAD_NUMBER];
+      |                                                [01;31m[K^~~~~~~~~[m[K
+      |                                                [32m[Ksettings[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:361:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  361 |                     int delimeter = (int)(([01;31m[Kmatrix_a_[m[K.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
+      |                                            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:363:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  363 |                         matrix_a_, [01;31m[Kmatrix_b_[m[K, matrix_c_,
+      |                                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:363:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  363 |                         matrix_a_, matrix_b_, [01;31m[Kmatrix_c_[m[K,
+      |                                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:372:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  372 |                     int delimeter = (int)(([01;31m[Kmatrix_a_[m[K.size() / sqrt(matrix_a_.size())) / settings_.THREAD_NUMBER);
+      |                                            [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:374:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  374 |                         matrix_a_, [01;31m[Kmatrix_b_[m[K, matrix_c_,
+      |                                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:374:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  374 |                         matrix_a_, matrix_b_, [01;31m[Kmatrix_c_[m[K,
+      |                                               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel<T>::execute_openmp(int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:401:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_a_[m[K’ was not declared in this scope
+  401 |             for(int i = 0; i < [01;31m[Kmatrix_a_[m[K.size() / sqrt(matrix_a_.size()) ; i++)
+      |                                [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:407:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_c_[m[K’ was not declared in this scope
+  407 |                         [01;31m[Kmatrix_c_[m[K[i * sqrt(matrix_a_.size()) + j] +=
+      |                         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:409:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kmatrix_b_[m[K’ was not declared in this scope
+  409 |                             [01;31m[Kmatrix_b_[m[K[k * sqrt(matrix_a_.size()) + j];
+      |                             [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K At global scope:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:421:16:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  421 |         static [01;36m[Kstd[m[K::vector<T> generate(int size)
+      |                [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:440:16:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  440 |         static [01;36m[Kstd[m[K::vector<std::vector<T> > generate(std::initializer_list<int> sizes)
+      |                [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:469:53:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  469 |         benchmark(base_parallel<T>* base_parallel_, [01;36m[Kstd[m[K::vector<T> input_a_, std::vector<T> input_b_, settings settings_) :
+      |                                                     [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:469:53:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  469 |         benchmark(base_parallel<T>* base_parallel_, [01;36m[Kstd[m[K::vector<T> input_a_, std::vector<T> input_b_, settings settings_) :
+      |                                                     [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:478:53:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  478 |         benchmark(base_parallel<T>* base_parallel_, [01;36m[Kstd[m[K::vector<std::vector<T> > inputs_a_, std::vector<std::vector<T> > inputs_b_, std::vector<settings> settingss_) :
+      |                                                     [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:478:53:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  478 |         benchmark(base_parallel<T>* base_parallel_, [01;36m[Kstd[m[K::vector<std::vector<T> > inputs_a_, std::vector<std::vector<T> > inputs_b_, std::vector<settings> settingss_) :
+      |                                                     [01;36m[K^~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:478:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kbenchmark<T>::benchmark(base_parallel<T>*, int)[m[K’ cannot be overloaded with ‘[01m[Kbenchmark<T>::benchmark(base_parallel<T>*, int)[m[K’
+  478 |         [01;31m[Kbenchmark[m[K(base_parallel<T>* base_parallel_, std::vector<std::vector<T> > inputs_a_, std::vector<std::vector<T> > inputs_b_, std::vector<settings> settingss_) :
+      |         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:469:9:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kbenchmark<T>::benchmark(base_parallel<T>*, int)[m[K’
+  469 |         [01;36m[Kbenchmark[m[K(base_parallel<T>* base_parallel_, std::vector<T> input_a_, std::vector<T> input_b_, settings settings_) :
+      |         [01;36m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:487:31:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  487 |         template<typename K = [01;36m[Kstd[m[K::nano>
+      |                               [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K>[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:487:31:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  487 |         template<typename K = [01;36m[Kstd[m[K::nano>
+      |                               [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:498:31:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  498 |         template<typename K = [01;36m[Kstd[m[K::nano>
+      |                               [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K>[m[K’ before ‘[01m[K<[m[K’ token
+   52 |     #define std::vector[01;31m[K<[m[Kstd::vector<T> > T
+      |                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:498:31:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  498 |         template<typename K = [01;36m[Kstd[m[K::nano>
+      |                               [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:521:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  521 |         [01;36m[Kstd[m[K::chrono::high_resolution_clock::time_point before;
+      |         [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:522:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  522 |         [01;36m[Kstd[m[K::chrono::high_resolution_clock::time_point after;
+      |         [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:526:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  526 |         [01;36m[Kstd[m[K::vector<T> input_a_;
+      |         [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:527:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  527 |         [01;36m[Kstd[m[K::vector<T> input_b_;
+      |         [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:528:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  528 |         [01;36m[Kstd[m[K::vector<T> result_;
+      |         [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:531:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  531 |         [01;36m[Kstd[m[K::vector<std::vector<T> > inputs_a_;
+      |         [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:532:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  532 |         [01;36m[Kstd[m[K::vector<std::vector<T> > inputs_b_;
+      |         [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:534:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  534 |         [01;36m[Kstd[m[K::vector<std::vector<T>> results_;
+      |         [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector[m[K’ in namespace ‘[01m[K::[m[K’ does not name a template type
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:535:9:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  535 |         [01;36m[Kstd[m[K::vector<settings>       settingss_;
+      |         [01;36m[K^~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kbenchmark<T>::benchmark(base_parallel<T>*, int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:471:13:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[Kbenchmark<T>[m[K’ does not have any field named ‘[01m[Kinput_a_[m[K’
+  471 |             [01;31m[Kinput_a_[m[K(input_a_),
+      |             [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:471:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kinput_a_[m[K’ was not declared in this scope
+  471 |             input_a_([01;31m[Kinput_a_[m[K),
+      |                      [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:472:13:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[Kbenchmark<T>[m[K’ does not have any field named ‘[01m[Kinput_b_[m[K’
+  472 |             [01;31m[Kinput_b_[m[K(input_b_),
+      |             [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:472:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kinput_b_[m[K’ was not declared in this scope
+  472 |             input_b_([01;31m[Kinput_b_[m[K),
+      |                      [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:475:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_[m[K’ was not declared in this scope
+  475 |             [01;31m[Kresult_[m[K.reserve(input_a_.capacity());
+      |             [01;31m[K^~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In constructor ‘[01m[Kbenchmark<T>::benchmark(base_parallel<T>*, int)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:480:13:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[Kbenchmark<T>[m[K’ does not have any field named ‘[01m[Kinputs_a_[m[K’
+  480 |             [01;31m[Kinputs_a_[m[K(inputs_a_),
+      |             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:480:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kinputs_a_[m[K’ was not declared in this scope
+  480 |             inputs_a_([01;31m[Kinputs_a_[m[K),
+      |                       [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:481:13:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[Kbenchmark<T>[m[K’ does not have any field named ‘[01m[Kinputs_b_[m[K’
+  481 |             [01;31m[Kinputs_b_[m[K(inputs_b_),
+      |             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:481:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kinputs_b_[m[K’ was not declared in this scope
+  481 |             inputs_b_([01;31m[Kinputs_b_[m[K),
+      |                       [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:482:13:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[Kbenchmark<T>[m[K’ does not have any field named ‘[01m[Ksettingss_[m[K’
+  482 |             [01;31m[Ksettingss_[m[K(settingss_)
+      |             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:482:24:[m[K [01;31m[Kerror: [m[K‘[01m[Ksettingss_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksettings_[m[K’?
+  482 |             settingss_([01;31m[Ksettingss_[m[K)
+      |                        [01;31m[K^~~~~~~~~~[m[K
+      |                        [32m[Ksettings_[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Klong long unsigned int benchmark<T>::execute()[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:491:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kbefore[m[K’ was not declared in this scope
+  491 |             [01;31m[Kbefore[m[K = std::chrono::high_resolution_clock::now();
+      |             [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared; did you mean ‘[01m[Kstd::vector[m[K’?
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:491:22:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  491 |             before = [01;36m[Kstd[m[K::chrono::high_resolution_clock::now();
+      |                      [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:386:11:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ declared here
+  386 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   52 |     #define std::vector<std::vector<T> [01;31m[K>[m[K T
+      |                                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:491:22:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  491 |             before = [01;36m[Kstd[m[K::chrono::high_resolution_clock::now();
+      |                      [01;36m[K^~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:492:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kinput_a_[m[K’ was not declared in this scope
+  492 |             base_parallel_->ctor([01;31m[Kinput_a_[m[K, input_b_, result_, settings_);
+      |                                  [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:492:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kinput_b_[m[K’ was not declared in this scope
+  492 |             base_parallel_->ctor(input_a_, [01;31m[Kinput_b_[m[K, result_, settings_);
+      |                                            [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:492:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_[m[K’ was not declared in this scope
+  492 |             base_parallel_->ctor(input_a_, input_b_, [01;31m[Kresult_[m[K, settings_);
+      |                                                      [01;31m[K^~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:493:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kafter[m[K’ was not declared in this scope
+  493 |             [01;31m[Kafter[m[K  = std::chrono::high_resolution_clock::now();
+      |             [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared; did you mean ‘[01m[Kstd::vector[m[K’?
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:493:22:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  493 |             after  = [01;36m[Kstd[m[K::chrono::high_resolution_clock::now();
+      |                      [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:386:11:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ declared here
+  386 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   52 |     #define std::vector<std::vector<T> [01;31m[K>[m[K T
+      |                                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:493:22:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  493 |             after  = [01;36m[Kstd[m[K::chrono::high_resolution_clock::now();
+      |                      [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared; did you mean ‘[01m[Kstd::vector[m[K’?
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:495:20:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  495 |             return [01;36m[Kstd[m[K::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count();
+      |                    [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:386:11:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ declared here
+  386 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   52 |     #define std::vector<std::vector<T> [01;31m[K>[m[K T
+      |                                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:495:20:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  495 |             return [01;36m[Kstd[m[K::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count();
+      |                    [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared; did you mean ‘[01m[Kstd::vector[m[K’?
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:495:47:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  495 |             return std::chrono::duration_cast<[01;36m[Kstd[m[K::chrono::duration<int64_t, K> >(after - before).count();
+      |                                               [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:386:11:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ declared here
+  386 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   52 |     #define std::vector<std::vector<T> [01;31m[K>[m[K T
+      |                                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:495:47:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  495 |             return std::chrono::duration_cast<[01;36m[Kstd[m[K::chrono::duration<int64_t, K> >(after - before).count();
+      |                                               [01;36m[K^~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:495:76:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+  495 |             return std::chrono::duration_cast<std::chrono::duration<int64_t[01;31m[K,[m[K K> >(after - before).count();
+      |                                                                            [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:495:79:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  495 |             return std::chrono::duration_cast<std::chrono::duration<int64_t, K[01;31m[K>[m[K >(after - before).count();
+      |                                                                               [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:495:81:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  495 |             return std::chrono::duration_cast<std::chrono::duration<int64_t, K> [01;31m[K>[m[K(after - before).count();
+      |                                                                                 [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid benchmark<T>::execute_all()[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:502:32:[m[K [01;31m[Kerror: [m[K‘[01m[Ksettingss_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksettings_[m[K’?
+  502 |             for(int i = 0; i < [01;31m[Ksettingss_[m[K.size(); i++)
+      |                                [01;31m[K^~~~~~~~~~[m[K
+      |                                [32m[Ksettings_[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:504:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kinputs_a_[m[K’ was not declared in this scope
+  504 |                 for(int j = 0; j < [01;31m[Kinputs_a_[m[K.size(); j++)
+      |                                    [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:506:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kresult_[m[K’ was not declared in this scope
+  506 |                     [01;31m[Kresult_[m[K.reserve(inputs_a_[j].capacity());
+      |                     [01;31m[K^~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:507:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kbefore[m[K’ was not declared in this scope
+  507 |                     [01;31m[Kbefore[m[K = std::chrono::high_resolution_clock::now();
+      |                     [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared; did you mean ‘[01m[Kstd::vector[m[K’?
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:507:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  507 |                     before = [01;36m[Kstd[m[K::chrono::high_resolution_clock::now();
+      |                              [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:386:11:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ declared here
+  386 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   52 |     #define std::vector<std::vector<T> [01;31m[K>[m[K T
+      |                                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:507:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  507 |                     before = [01;36m[Kstd[m[K::chrono::high_resolution_clock::now();
+      |                              [01;36m[K^~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:508:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kinputs_b_[m[K’ was not declared in this scope
+  508 |                     base_parallel_->ctor(inputs_a_[j], [01;31m[Kinputs_b_[m[K[j], result_, settingss_[i]);
+      |                                                        [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:509:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kafter[m[K’ was not declared in this scope
+  509 |                     [01;31m[Kafter[m[K  = std::chrono::high_resolution_clock::now();
+      |                     [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared; did you mean ‘[01m[Kstd::vector[m[K’?
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:509:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  509 |                     after  = [01;36m[Kstd[m[K::chrono::high_resolution_clock::now();
+      |                              [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:386:11:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ declared here
+  386 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   52 |     #define std::vector<std::vector<T> [01;31m[K>[m[K T
+      |                                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:509:30:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  509 |                     after  = [01;36m[Kstd[m[K::chrono::high_resolution_clock::now();
+      |                              [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared; did you mean ‘[01m[Kstd::vector[m[K’?
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:511:21:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  511 |                     [01;36m[Kstd[m[K::cout << std::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count() << std::endl;
+      |                     [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:386:11:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ declared here
+  386 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   52 |     #define std::vector<std::vector<T> [01;31m[K>[m[K T
+      |                                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:511:21:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  511 |                     [01;36m[Kstd[m[K::cout << std::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count() << std::endl;
+      |                     [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared; did you mean ‘[01m[Kstd::vector[m[K’?
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:511:34:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  511 |                     std::cout << [01;36m[Kstd[m[K::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count() << std::endl;
+      |                                  [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:386:11:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ declared here
+  386 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   52 |     #define std::vector<std::vector<T> [01;31m[K>[m[K T
+      |                                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:511:34:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  511 |                     std::cout << [01;36m[Kstd[m[K::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count() << std::endl;
+      |                                  [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared; did you mean ‘[01m[Kstd::vector[m[K’?
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:511:61:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  511 |                     std::cout << std::chrono::duration_cast<[01;36m[Kstd[m[K::chrono::duration<int64_t, K> >(after - before).count() << std::endl;
+      |                                                             [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:386:11:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ declared here
+  386 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   52 |     #define std::vector<std::vector<T> [01;31m[K>[m[K T
+      |                                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:511:61:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  511 |                     std::cout << std::chrono::duration_cast<[01;36m[Kstd[m[K::chrono::duration<int64_t, K> >(after - before).count() << std::endl;
+      |                                                             [01;36m[K^~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:511:90:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K,[m[K’ token
+  511 |                     std::cout << std::chrono::duration_cast<std::chrono::duration<int64_t[01;31m[K,[m[K K> >(after - before).count() << std::endl;
+      |                                                                                          [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:511:93:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  511 |                     std::cout << std::chrono::duration_cast<std::chrono::duration<int64_t, K[01;31m[K>[m[K >(after - before).count() << std::endl;
+      |                                                                                             [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:511:95:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  511 |                     std::cout << std::chrono::duration_cast<std::chrono::duration<int64_t, K> [01;31m[K>[m[K(after - before).count() << std::endl;
+      |                                                                                               [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared; did you mean ‘[01m[Kstd::vector[m[K’?
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:511:124:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  511 |                     std::cout << std::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count() << [01;36m[Kstd[m[K::endl;
+      |                                                                                                                            [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:386:11:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ declared here
+  386 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:40:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   52 |     #define std::vector<std::vector<T> [01;31m[K>[m[K T
+      |                                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:511:124:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  511 |                     std::cout << std::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count() << [01;36m[Kstd[m[K::endl;
+      |                                                                                                                            [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:82:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kgenerate[m[K’ is not a member of ‘[01m[Kgenerator<int>[m[K’
+   82 |   generator<int>::[01;31m[Kgenerate[m[K({2,3,4});
+      |                   [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared; did you mean ‘[01m[Kstd::vector[m[K’?
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:101:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  101 |   [01;36m[Kstd[m[K::vector<settings> settingss_{settings_, settings2_};
+      |   [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:386:11:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ declared here
+  386 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:37:[m[K [01;31m[Kerror: [m[K‘[01m[KT[m[K’ was not declared in this scope
+   52 |     #define std::vector<std::vector<[01;31m[KT[m[K> > T
+      |                                     [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:101:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  101 |   [01;36m[Kstd[m[K::vector<settings> settingss_{settings_, settings2_};
+      |   [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   52 |     #define std::vector<std::vector<T[01;31m[K>[m[K > T
+      |                                      [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:101:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  101 |   [01;36m[Kstd[m[K::vector<settings> settingss_{settings_, settings2_};
+      |   [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+   52 |     #define std::vector<std::vector<T[01;31m[K>[m[K > T
+      |                                      [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:101:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  101 |   [01;36m[Kstd[m[K::vector<settings> settingss_{settings_, settings2_};
+      |   [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:42:[m[K [01;31m[Kerror: [m[K‘[01m[KT[m[K’ is not a class, namespace, or enumeration
+   52 |     #define std::vector<std::vector<T> > [01;31m[KT[m[K
+      |                                          [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:101:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  101 |   [01;36m[Kstd[m[K::vector<settings> settingss_{settings_, settings2_};
+      |   [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:101:23:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  101 |   std::vector<settings[01;31m[K>[m[K settingss_{settings_, settings2_};
+      |                       [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:101:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ksettingss_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksettings2_[m[K’?
+  101 |   std::vector<settings> [01;31m[Ksettingss_[m[K{settings_, settings2_};
+      |                         [01;31m[K^~~~~~~~~~[m[K
+      |                         [32m[Ksettings2_[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared; did you mean ‘[01m[Kstd::vector[m[K’?
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:103:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  103 |   [01;36m[Kstd[m[K::vector<std::vector<double> > inputs_a = generator<double>::generate({200, 500, 800});
+      |   [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:386:11:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ declared here
+  386 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+   52 |     #define std::vector<std::vector<T[01;31m[K>[m[K > T
+      |                                      [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:103:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  103 |   [01;36m[Kstd[m[K::vector<std::vector<double> > inputs_a = generator<double>::generate({200, 500, 800});
+      |   [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:42:[m[K [01;31m[Kerror: [m[K‘[01m[KT[m[K’ is not a class, namespace, or enumeration
+   52 |     #define std::vector<std::vector<T> > [01;31m[KT[m[K
+      |                                          [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:103:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  103 |   [01;36m[Kstd[m[K::vector<std::vector<double> > inputs_a = generator<double>::generate({200, 500, 800});
+      |   [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared; did you mean ‘[01m[Kstd::vector[m[K’?
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:103:15:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  103 |   std::vector<[01;36m[Kstd[m[K::vector<double> > inputs_a = generator<double>::generate({200, 500, 800});
+      |               [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:386:11:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ declared here
+  386 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+   52 |     #define std::vector<std::vector<T[01;31m[K>[m[K > T
+      |                                      [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:103:15:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  103 |   std::vector<[01;36m[Kstd[m[K::vector<double> > inputs_a = generator<double>::generate({200, 500, 800});
+      |               [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:42:[m[K [01;31m[Kerror: [m[K‘[01m[KT[m[K’ is not a class, namespace, or enumeration
+   52 |     #define std::vector<std::vector<T> > [01;31m[KT[m[K
+      |                                          [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:103:15:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  103 |   std::vector<[01;36m[Kstd[m[K::vector<double> > inputs_a = generator<double>::generate({200, 500, 800});
+      |               [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:103:27:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kdouble[m[K’
+  103 |   std::vector<std::vector<[01;31m[Kdouble[m[K> > inputs_a = generator<double>::generate({200, 500, 800});
+      |                           [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:103:91:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+  103 |   std::vector<std::vector<double> > inputs_a = generator<double>::generate({200, 500, 800}[01;31m[K)[m[K;
+      |                                                                                           [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared; did you mean ‘[01m[Kstd::vector[m[K’?
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:104:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  104 |   [01;36m[Kstd[m[K::vector<std::vector<double> > inputs_b = generator<double>::generate({200, 500, 800});
+      |   [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:386:11:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ declared here
+  386 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+   52 |     #define std::vector<std::vector<T[01;31m[K>[m[K > T
+      |                                      [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:104:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  104 |   [01;36m[Kstd[m[K::vector<std::vector<double> > inputs_b = generator<double>::generate({200, 500, 800});
+      |   [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:42:[m[K [01;31m[Kerror: [m[K‘[01m[KT[m[K’ is not a class, namespace, or enumeration
+   52 |     #define std::vector<std::vector<T> > [01;31m[KT[m[K
+      |                                          [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:104:3:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  104 |   [01;36m[Kstd[m[K::vector<std::vector<double> > inputs_b = generator<double>::generate({200, 500, 800});
+      |   [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:18:[m[K [01;31m[Kerror: [m[K‘[01m[K::vector[m[K’ has not been declared; did you mean ‘[01m[Kstd::vector[m[K’?
+   52 |     #define std::[01;31m[Kvector[m[K<std::vector<T> > T
+      |                  [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:104:15:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  104 |   std::vector<[01;36m[Kstd[m[K::vector<double> > inputs_b = generator<double>::generate({200, 500, 800});
+      |               [01;36m[K^~~[m[K
+In file included from [01m[K/usr/include/c++/9/vector:67[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executor.hpp:27[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/home/arian/ros2_foxy/install/rclcpp/include/rclcpp/rclcpp.hpp:146[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/usr/include/c++/9/bits/stl_vector.h:386:11:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::vector[m[K’ declared here
+  386 |     class [01;36m[Kvector[m[K : protected _Vector_base<_Tp, _Alloc>
+      |           [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+   52 |     #define std::vector<std::vector<T[01;31m[K>[m[K > T
+      |                                      [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:104:15:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  104 |   std::vector<[01;36m[Kstd[m[K::vector<double> > inputs_b = generator<double>::generate({200, 500, 800});
+      |               [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:42:[m[K [01;31m[Kerror: [m[K‘[01m[KT[m[K’ is not a class, namespace, or enumeration
+   52 |     #define std::vector<std::vector<T> > [01;31m[KT[m[K
+      |                                          [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:104:15:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  104 |   std::vector<[01;36m[Kstd[m[K::vector<double> > inputs_b = generator<double>::generate({200, 500, 800});
+      |               [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:104:27:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kdouble[m[K’
+  104 |   std::vector<std::vector<[01;31m[Kdouble[m[K> > inputs_b = generator<double>::generate({200, 500, 800});
+      |                           [01;31m[K^~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:104:91:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+  104 |   std::vector<std::vector<double> > inputs_b = generator<double>::generate({200, 500, 800}[01;31m[K)[m[K;
+      |                                                                                           [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:109:85:[m[K [01;31m[Kerror: [m[K‘[01m[Kinputs_a[m[K’ was not declared in this scope
+  109 |   benchmark<double> benchmark_ = benchmark<double>(new multiply_parallel<double>(), [01;31m[Kinputs_a[m[K, inputs_b, settingss_);
+      |                                                                                     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:109:95:[m[K [01;31m[Kerror: [m[K‘[01m[Kinputs_b[m[K’ was not declared in this scope
+  109 |   benchmark<double> benchmark_ = benchmark<double>(new multiply_parallel<double>(), inputs_a, [01;31m[Kinputs_b[m[K, settingss_);
+      |                                                                                               [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid benchmark<T>::execute_all() [with K = std::ratio<1, 1000000000>; T = double][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:112:45:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:507:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kdouble[m[K’ is not a class, struct, or union type
+  507 |                     before = std::chrono::high_resolution_clock::now[01;31m[K([m[K);
+      |                                                                     [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:509:69:[m[K [01;31m[Kerror: [m[K‘[01m[Kdouble[m[K’ is not a class, struct, or union type
+  509 |                     after  = std::chrono::high_resolution_clock::now[01;31m[K([m[K);
+      |                                                                     [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:511:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kcout[m[K’ is not a member of ‘[01m[Kdouble[m[K’
+  511 |                     std::cout [01;31m[K<[m[K< std::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count() << std::endl;
+      |                               [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:12[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kdouble[m[K’ is not a class, struct, or union type
+   52 |     #define std::vector<std::vector<T> [01;31m[K>[m[K T
+      |                                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:511:34:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  511 |                     std::cout << [01;36m[Kstd[m[K::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count() << std::endl;
+      |                                  [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kdouble[m[K’ is not a class, struct, or union type
+   52 |     #define std::vector<std::vector<T> [01;31m[K>[m[K T
+      |                                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:511:61:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  511 |                     std::cout << std::chrono::duration_cast<[01;36m[Kstd[m[K::chrono::duration<int64_t, K> >(after - before).count() << std::endl;
+      |                                                             [01;36m[K^~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:52:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kendl[m[K’ is not a member of ‘[01m[Kdouble[m[K’
+   52 |     #define std::vector<std::vector<T> [01;31m[K>[m[K T
+      |                                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:511:124:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[Kstd[m[K’
+  511 |                     std::cout << std::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count() << [01;36m[Kstd[m[K::endl;
+      |                                                                                                                            [01;36m[K^~~[m[K
+/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid* multiply_parallel_pthread(void*) [with T = double][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:247:31:[m[K   required from ‘[01m[Kvoid multiply_parallel<T>::execute_pthread(int) [with T = double][m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:218:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:128:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct iterators<double>[m[K’ has no member named ‘[01m[Kmatrix_c[m[K’
+  128 |                 [01;31m[Kiterators_->matrix_c[m[K[i * iterators_->width + j] +=
+      |                 [01;31m[K~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:129:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct iterators<double>[m[K’ has no member named ‘[01m[Kmatrix_a[m[K’
+  129 |                     [01;31m[Kiterators_->matrix_a[m[K[i * iterators_->width + k] *
+      |                     [01;31m[K~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:130:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct iterators<double>[m[K’ has no member named ‘[01m[Kmatrix_b[m[K’
+  130 |                     [01;31m[Kiterators_->matrix_b[m[K[k * iterators_->width + j];
+      |                     [01;31m[K~~~~~~~~~~~~^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
