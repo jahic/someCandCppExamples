@@ -1,0 +1,8 @@
+CMake Error at CMakeLists.txt:34 (ament_package):
+  Unknown CMake command "ament_package".
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/arian/Framework/build/framework/CMakeFiles/CMakeOutput.log".
+See also "/home/arian/Framework/build/framework/CMakeFiles/CMakeError.log".
+make: *** [Makefile:266: cmake_check_build_system] Error 1

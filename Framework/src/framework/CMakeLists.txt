@@ -15,6 +15,8 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+
+
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
@@ -24,9 +26,12 @@ find_package(OpenMP REQUIRED)
 # find_package(<dependency> REQUIRED)
 
 add_executable(main src/main.cpp)
-
-target_include_directories(main PRIVATE include)
 ament_target_dependencies(main rclcpp std_msgs)
+
+
+target_include_directories(main PUBLIC include)
+target_link_libraries(main   "${OpenMP_CXX_FLAGS}")
+target_compile_options(main PUBLIC  "${OpenMP_CXX_FLAGS}")
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

@@ -1,0 +1,6 @@
+Matrix Size;Serial Int;Serial Double;Pthread 2 Threads Int;Pthread 4 Threads Int;Pthread 12 Threads Int;OpenMP 2 Threads Int;OpenMP 4 Threads Int;OpenMP 12 Threads Int;
+200x200;62ms;33ms;18ms;9ms;7ms;16ms;8ms;6ms;
+500x500;589ms;614ms;332ms;176ms;119ms;298ms;160ms;111ms;
+800x800;2507ms;3218ms;1496ms;753ms;799ms;1269ms;684ms;587ms;
+1000x1000;5519ms;7965ms;3146ms;1605ms;1403ms;2766ms;1893ms;1327ms;
+2000x2000;68330ms;82545ms;39003ms;20548ms;15493ms;17437ms;9006ms;6616ms

@@ -1,0 +1,12 @@
+CMake Error at CMakeLists.txt:33 (target_link_libraries):
+  The plain signature for target_link_libraries has already been used with
+  the target "main".  All uses of target_link_libraries with a target must be
+  either all-keyword or all-plain.
+
+  The uses of the plain signature are here:
+
+   * /home/arian/ros2_foxy/install/ament_cmake_target_dependencies/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:134 (target_link_libraries)
+
+
+
+make: *** [Makefile:266: cmake_check_build_system] Error 1

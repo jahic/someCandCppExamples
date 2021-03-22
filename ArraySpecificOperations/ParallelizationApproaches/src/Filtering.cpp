@@ -23,8 +23,8 @@ std::vector<data> result_openmp;
 
 std::mutex mylock;
 
-int iteration = 5000000;
-int thread_number = 4;
+int iteration = 15'000'000;
+int thread_number = 12;
 
 std::vector<data> container;
 

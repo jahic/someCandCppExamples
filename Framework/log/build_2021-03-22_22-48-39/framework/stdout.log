@@ -1,0 +1,18 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[100%] [32m[1mLinking CXX executable main[0m
+[100%] Built target main
+-- Install configuration: ""
+-- Up-to-date: /home/arian/Framework/install/framework/share/ament_index/resource_index/package_run_dependencies/framework
+-- Up-to-date: /home/arian/Framework/install/framework/share/ament_index/resource_index/parent_prefix_path/framework
+-- Installing: /home/arian/Framework/install/framework/share/framework/environment/ament_prefix_path.dsv
+-- Installing: /home/arian/Framework/install/framework/share/framework/environment/path.dsv
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/local_setup.bash
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/local_setup.sh
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/local_setup.zsh
+-- Installing: /home/arian/Framework/install/framework/share/framework/local_setup.dsv
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/package.dsv
+-- Up-to-date: /home/arian/Framework/install/framework/share/ament_index/resource_index/packages/framework
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/cmake/frameworkConfig.cmake
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/cmake/frameworkConfig-version.cmake
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/package.xml

@@ -1,0 +1,79 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:294:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+  294 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+      | 
+In file included from [01m[K/home/arian/Framework/src/framework/include/framework/settings/settings.hpp:5[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:9[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/settings/time_format.hpp:6:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kmilli[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+    6 |     typedef std::[01;31m[Kmilli[m[K MILLI;
+      |                  [01;31m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/settings/time_format.hpp:7:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kmicro[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+    7 |     typedef std::[01;31m[Kmicro[m[K MICRO;
+      |                  [01;31m[K^~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/settings/time_format.hpp:8:18:[m[K [01;31m[Kerror: [m[K‘[01m[Knano[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+    8 |     typedef std::[01;31m[Knano[m[K  NANO;
+      |                  [01;31m[K^~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:9[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/settings/settings.hpp:89:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kostream[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+   89 |         friend std::[01;31m[Kostream[m[K& operator<<(std::ostream& os, const settings& settings_);
+      |                     [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:9[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/settings/settings.hpp:10:1:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::ostream[m[K’ is defined in header ‘[01m[K<ostream>[m[K’; did you forget to ‘[01m[K#include <ostream>[m[K’?
+    9 | #include <framework/overloading/overloading.hpp>
+  +++ |+[32m[K#include <ostream>[m[K
+   10 | 
+In file included from [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:9[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/settings/settings.hpp:92:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kostream[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+   92 | std::[01;31m[Kostream[m[K& operator<<(std::ostream& os, const settings& settings_)
+      |      [01;31m[K^~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/settings/settings.hpp:92:1:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::ostream[m[K’ is defined in header ‘[01m[K<ostream>[m[K’; did you forget to ‘[01m[K#include <ostream>[m[K’?
+   92 | [01;36m[Kstd[m[K::ostream& operator<<(std::ostream& os, const settings& settings_)
+      | [01;36m[K^~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In function ‘[01m[Kvoid* multiply_parallel_pthread(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:16:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ was not declared in this scope; did you mean ‘[01m[Kiterators__[m[K’?
+   16 |     [01;31m[Kiterators[m[K<T>* iterators_ = (iterators<T>*)iterators__;
+      |     [01;31m[K^~~~~~~~~[m[K
+      |     [32m[Kiterators__[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:16:16:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   16 |     iterators<T[01;31m[K>[m[K* iterators_ = (iterators<T>*)iterators__;
+      |                [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:16:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators_[m[K’ was not declared in this scope; did you mean ‘[01m[Kiterators__[m[K’?
+   16 |     iterators<T>* [01;31m[Kiterators_[m[K = (iterators<T>*)iterators__;
+      |                   [01;31m[K^~~~~~~~~~[m[K
+      |                   [32m[Kiterators__[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:16:44:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   16 |     iterators<T>* iterators_ = (iterators<T[01;31m[K>[m[K*)iterators__;
+      |                                            [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:16:46:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+   16 |     iterators<T>* iterators_ = (iterators<T>*[01;31m[K)[m[Kiterators__;
+      |                                              [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:16:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kiterators__[m[K’
+   16 |     iterators<T>* iterators_ = (iterators<T>*)[01;31m[Ki[m[K[32m[Kterators__[m[K;
+      |                                               [01;31m[K^[m[K[32m[K~~~~~~~~~~[m[K
+      |                                               [32m[K;[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K At global scope:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:35:47:[m[K [01;31m[Kerror: [m[Kexpected template-name before ‘[01m[K<[m[K’ token
+   35 | class multiply_parallel : public base_parallel[01;31m[K<[m[KT>
+      |                                               [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:35:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K<[m[K’ token
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:308:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+  308 | }[01;35m[K;[m[K
+      |  [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:12:32:[m[K [01;31m[Kerror: [m[Kvariable ‘[01m[Kmultiply_parallel<double> mp[m[K’ has initializer but incomplete type
+   12 |   multiply_parallel<double> mp([01;31m[Kmatrix_a[m[K, matrix_b, matrix_result, settings_);
+      |                                [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+/home/arian/Framework/src/framework/include/framework/generators/single_generator.hpp: In instantiation of ‘[01m[Kstatic std::vector<T> single_generator::generate_input(int) [with T = double][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:7:63:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/generators/single_generator.hpp:18:30:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double, std::allocator<double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   18 |             for(int i = 0; i < temp.capacity(); i++)
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

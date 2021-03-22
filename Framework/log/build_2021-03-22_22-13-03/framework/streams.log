@@ -1,0 +1,388 @@
+[0.036s] Invoking command in '/home/arian/Framework/build/framework': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arian/ros2_foxy/install/ros2bag:/home/arian/ros2_foxy/install/tracetools_launch:/home/arian/ros2_foxy/install/topic_monitor:/home/arian/ros2_foxy/install/examples_tf2_py:/home/arian/ros2_foxy/install/sros2:/home/arian/ros2_foxy/install/rqt_topic:/home/arian/ros2_foxy/install/rqt_reconfigure:/home/arian/ros2_foxy/install/rqt_action:/home/arian/ros2_foxy/install/rqt:/home/arian/ros2_foxy/install/rqt_graph:/home/arian/ros2_foxy/install/rqt_gui_py:/home/arian/ros2_foxy/install/rqt_gui:/home/arian/ros2_foxy/install/ros2trace:/home/arian/ros2_foxy/install/ros2topic:/home/arian/ros2_foxy/install/ros2test:/home/arian/ros2_foxy/install/ros2component:/home/arian/ros2_foxy/install/ros2param:/home/arian/ros2_foxy/install/ros2lifecycle:/home/arian/ros2_foxy/install/ros2service:/home/arian/ros2_foxy/install/ros2run:/home/arian/ros2_foxy/install/ros2launch:/home/arian/ros2_foxy/install/ros2pkg:/home/arian/ros2_foxy/install/ros2node:/home/arian/ros2_foxy/install/ros2multicast:/home/arian/ros2_foxy/install/ros2interface:/home/arian/ros2_foxy/install/ros2doctor:/home/arian/ros2_foxy/install/ros2action:/home/arian/ros2_foxy/install/ros2cli:/home/arian/ros2_foxy/install/quality_of_service_demo_py:/home/arian/ros2_foxy/install/launch_testing_ros:/home/arian/ros2_foxy/install/launch_ros:/home/arian/ros2_foxy/install/examples_rclpy_minimal_subscriber:/home/arian/ros2_foxy/install/examples_rclpy_minimal_service:/home/arian/ros2_foxy/install/examples_rclpy_minimal_publisher:/home/arian/ros2_foxy/install/examples_rclpy_minimal_client:/home/arian/ros2_foxy/install/examples_rclpy_minimal_action_server:/home/arian/ros2_foxy/install/examples_rclpy_minimal_action_client:/home/arian/ros2_foxy/install/examples_rclpy_executors:/home/arian/ros2_foxy/install/demo_nodes_py:/home/arian/ros2_foxy/install/action_tutorials_py:/home/arian/ros2_foxy/install/ament_uncrustify:/home/arian/ros2_foxy/install/tracetools_trace:/home/arian/ros2_foxy/install/tracetools_read:/home/arian/ros2_foxy/install/test_launch_ros:/home/arian/ros2_foxy/install/rpyutils:/home/arian/ros2_foxy/install/rosidl_runtime_py:/home/arian/ros2_foxy/install/launch_yaml:/home/arian/ros2_foxy/install/launch_xml:/home/arian/ros2_foxy/install/launch_testing:/home/arian/ros2_foxy/install/launch:/home/arian/ros2_foxy/install/osrf_pycommon:/home/arian/ros2_foxy/install/domain_coordinator:/home/arian/ros2_foxy/install/ament_xmllint:/home/arian/ros2_foxy/install/ament_pyflakes:/home/arian/ros2_foxy/install/ament_pycodestyle:/home/arian/ros2_foxy/install/ament_pep257:/home/arian/ros2_foxy/install/ament_pclint:/home/arian/ros2_foxy/install/ament_package:/home/arian/ros2_foxy/install/ament_mypy:/home/arian/ros2_foxy/install/ament_lint_cmake:/home/arian/ros2_foxy/install/ament_flake8:/home/arian/ros2_foxy/install/ament_copyright:/home/arian/ros2_foxy/install/ament_lint:/home/arian/ros2_foxy/install/ament_index_python:/home/arian/ros2_foxy/install/ament_cpplint:/home/arian/ros2_foxy/install/ament_cppcheck:/home/arian/ros2_foxy/install/ament_clang_tidy:/home/arian/ros2_foxy/install/ament_clang_format /usr/bin/cmake --build /home/arian/Framework/build/framework -- -j12 -l12
+[0.115s] [35m[1mScanning dependencies of target main[0m
+[0.136s] [ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+[0.203s] In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[0.203s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:294:[m[K [01;35m[Kwarning: [m[Kignoring #pragma omp parallel [[01;35m[K-Wunknown-pragmas[m[K]
+[0.203s]   294 |             #pragma omp parallel num_threads(settings_.THREAD_NUMBER)
+[0.203s]       | 
+[0.293s] In file included from [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:9[m[K,
+[0.293s]                  from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[0.293s] [01m[K/home/arian/Framework/src/framework/include/framework/settings/settings.hpp:89:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kostream[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+[0.293s]    89 |         friend std::[01;31m[Kostream[m[K& operator<<(std::ostream& os, const settings& settings_);
+[0.293s]       |                     [01;31m[K^~~~~~~[m[K
+[0.293s] In file included from [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:9[m[K,
+[0.293s]                  from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[0.294s] [01m[K/home/arian/Framework/src/framework/include/framework/settings/settings.hpp:10:1:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::ostream[m[K’ is defined in header ‘[01m[K<ostream>[m[K’; did you forget to ‘[01m[K#include <ostream>[m[K’?
+[0.294s]     9 | #include <framework/overloading/overloading.hpp>
+[0.294s]   +++ |+[32m[K#include <ostream>[m[K
+[0.294s]    10 | 
+[0.294s] In file included from [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:9[m[K,
+[0.294s]                  from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[0.294s] [01m[K/home/arian/Framework/src/framework/include/framework/settings/settings.hpp:92:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kostream[m[K’ in namespace ‘[01m[Kstd[m[K’ does not name a type
+[0.294s]    92 | std::[01;31m[Kostream[m[K& operator<<(std::ostream& os, const settings& settings_)
+[0.295s]       |      [01;31m[K^~~~~~~[m[K
+[0.295s] [01m[K/home/arian/Framework/src/framework/include/framework/settings/settings.hpp:92:1:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::ostream[m[K’ is defined in header ‘[01m[K<ostream>[m[K’; did you forget to ‘[01m[K#include <ostream>[m[K’?
+[0.295s]    92 | [01;36m[Kstd[m[K::ostream& operator<<(std::ostream& os, const settings& settings_)
+[0.295s]       | [01;36m[K^~~[m[K
+[0.334s] In file included from [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:10[m[K,
+[0.335s]                  from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[0.335s] [01m[K/home/arian/Framework/src/framework/include/framework/interfaces/base_parallel.hpp:25:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kbenchmark[m[K’ is not a class template
+[0.335s]    25 |         friend class [01;31m[Kbenchmark[m[K<T>;
+[0.335s]       |                      [01;31m[K^~~~~~~~~[m[K
+[0.335s] In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[0.336s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In function ‘[01m[Kvoid* multiply_parallel_pthread(void*)[m[K’:
+[0.336s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:16:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ was not declared in this scope; did you mean ‘[01m[Kiterators__[m[K’?
+[0.336s]    16 |     [01;31m[Kiterators[m[K<T>* iterators_ = (iterators<T>*)iterators__;
+[0.336s]       |     [01;31m[K^~~~~~~~~[m[K
+[0.336s]       |     [32m[Kiterators__[m[K
+[0.336s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:16:16:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.336s]    16 |     iterators<T[01;31m[K>[m[K* iterators_ = (iterators<T>*)iterators__;
+[0.336s]       |                [01;31m[K^[m[K
+[0.337s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:16:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators_[m[K’ was not declared in this scope; did you mean ‘[01m[Kiterators__[m[K’?
+[0.337s]    16 |     iterators<T>* [01;31m[Kiterators_[m[K = (iterators<T>*)iterators__;
+[0.337s]       |                   [01;31m[K^~~~~~~~~~[m[K
+[0.337s]       |                   [32m[Kiterators__[m[K
+[0.337s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:16:44:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.337s]    16 |     iterators<T>* iterators_ = (iterators<T[01;31m[K>[m[K*)iterators__;
+[0.337s]       |                                            [01;31m[K^[m[K
+[0.337s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:16:46:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+[0.337s]    16 |     iterators<T>* iterators_ = (iterators<T>*[01;31m[K)[m[Kiterators__;
+[0.337s]       |                                              [01;31m[K^[m[K
+[0.338s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:16:47:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kiterators__[m[K’
+[0.338s]    16 |     iterators<T>* iterators_ = (iterators<T>*)[01;31m[Ki[m[K[32m[Kterators__[m[K;
+[0.338s]       |                                               [01;31m[K^[m[K[32m[K~~~~~~~~~~[m[K
+[0.338s]       |                                               [32m[K;[m[K
+[0.338s] In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[0.338s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel<T>::execute_pthread(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&)[m[K’:
+[0.339s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:105:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ was not declared in this scope; did you mean ‘[01m[Koperator=[m[K’?
+[0.339s]   105 |             [01;31m[Kiterators[m[K<T>** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER];
+[0.339s]       |             [01;31m[K^~~~~~~~~[m[K
+[0.339s]       |             [32m[Koperator=[m[K
+[0.339s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:105:24:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.339s]   105 |             iterators<T[01;31m[K>[m[K** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER];
+[0.339s]       |                        [01;31m[K^[m[K
+[0.340s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:105:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators_[m[K’ was not declared in this scope
+[0.340s]   105 |             iterators<T>** [01;31m[Kiterators_[m[K = new iterators<T>*[settings_.THREAD_NUMBER];
+[0.340s]       |                            [01;31m[K^~~~~~~~~~[m[K
+[0.342s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:105:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ does not name a type
+[0.342s]   105 |             iterators<T>** iterators_ = new [01;31m[Kiterators[m[K<T>*[settings_.THREAD_NUMBER];
+[0.342s]       |                                             [01;31m[K^~~~~~~~~[m[K
+[0.342s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:105:56:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.342s]   105 |             iterators<T>** iterators_ = new iterators<T[01;31m[K>[m[K*[settings_.THREAD_NUMBER];
+[0.342s]       |                                                        [01;31m[K^[m[K
+[0.342s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:105:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ before ‘[01m[K.[m[K’ token
+[0.342s]   105 |             iterators<T>** iterators_ = new iterators<T>*[settings_[01;31m[K.[m[KTHREAD_NUMBER];
+[0.342s]       |                                                                    [01;31m[K^[m[K
+[0.343s]       |                                                                    [32m[K,[m[K
+[0.343s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:105:68:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[K.[m[K’ token
+[0.343s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In lambda function:
+[0.343s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:105:83:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K;[m[K’ token
+[0.343s]   105 |             iterators<T>** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER][01;31m[K;[m[K
+[0.343s]       |                                                                                   [01;31m[K^[m[K
+[0.343s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel<T>::execute_pthread(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&)[m[K’:
+[0.344s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:112:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ does not name a type
+[0.344s]   112 |                     iterators_[i] = new [01;31m[Kiterators[m[K<T>(
+[0.344s]       |                                         [01;31m[K^~~~~~~~~[m[K
+[0.344s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:112:52:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.344s]   112 |                     iterators_[i] = new iterators<T[01;31m[K>[m[K(
+[0.344s]       |                                                    [01;31m[K^[m[K
+[0.345s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:123:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ does not name a type
+[0.345s]   123 |                     iterators_[i] = new [01;31m[Kiterators[m[K<T>(
+[0.345s]       |                                         [01;31m[K^~~~~~~~~[m[K
+[0.345s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:123:52:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.345s]   123 |                     iterators_[i] = new iterators<T[01;31m[K>[m[K(
+[0.345s]       |                                                    [01;31m[K^[m[K
+[0.346s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel<T>::execute_pthread_affine(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&)[m[K’:
+[0.347s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:143:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ was not declared in this scope; did you mean ‘[01m[Koperator=[m[K’?
+[0.347s]   143 |             [01;31m[Kiterators[m[K<T>** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER];
+[0.347s]       |             [01;31m[K^~~~~~~~~[m[K
+[0.347s]       |             [32m[Koperator=[m[K
+[0.347s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:143:24:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.347s]   143 |             iterators<T[01;31m[K>[m[K** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER];
+[0.347s]       |                        [01;31m[K^[m[K
+[0.348s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:143:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators_[m[K’ was not declared in this scope
+[0.348s]   143 |             iterators<T>** [01;31m[Kiterators_[m[K = new iterators<T>*[settings_.THREAD_NUMBER];
+[0.348s]       |                            [01;31m[K^~~~~~~~~~[m[K
+[0.349s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:143:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ does not name a type
+[0.349s]   143 |             iterators<T>** iterators_ = new [01;31m[Kiterators[m[K<T>*[settings_.THREAD_NUMBER];
+[0.350s]       |                                             [01;31m[K^~~~~~~~~[m[K
+[0.350s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:143:56:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.350s]   143 |             iterators<T>** iterators_ = new iterators<T[01;31m[K>[m[K*[settings_.THREAD_NUMBER];
+[0.350s]       |                                                        [01;31m[K^[m[K
+[0.350s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:143:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ before ‘[01m[K.[m[K’ token
+[0.350s]   143 |             iterators<T>** iterators_ = new iterators<T>*[settings_[01;31m[K.[m[KTHREAD_NUMBER];
+[0.350s]       |                                                                    [01;31m[K^[m[K
+[0.350s]       |                                                                    [32m[K,[m[K
+[0.350s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:143:68:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[K.[m[K’ token
+[0.350s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In lambda function:
+[0.350s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:143:83:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K;[m[K’ token
+[0.351s]   143 |             iterators<T>** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER][01;31m[K;[m[K
+[0.351s]       |                                                                                   [01;31m[K^[m[K
+[0.351s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel<T>::execute_pthread_affine(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&)[m[K’:
+[0.351s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:155:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ does not name a type
+[0.351s]   155 |                     iterators_[i] = new [01;31m[Kiterators[m[K<T>(
+[0.351s]       |                                         [01;31m[K^~~~~~~~~[m[K
+[0.352s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:155:52:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.352s]   155 |                     iterators_[i] = new iterators<T[01;31m[K>[m[K(
+[0.352s]       |                                                    [01;31m[K^[m[K
+[0.353s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:166:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ does not name a type
+[0.353s]   166 |                     iterators_[i] = new [01;31m[Kiterators[m[K<T>(
+[0.353s]       |                                         [01;31m[K^~~~~~~~~[m[K
+[0.353s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:166:52:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.353s]   166 |                     iterators_[i] = new iterators<T[01;31m[K>[m[K(
+[0.353s]       |                                                    [01;31m[K^[m[K
+[0.355s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel<T>::execute_pthread_sched(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&)[m[K’:
+[0.355s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:200:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ was not declared in this scope; did you mean ‘[01m[Koperator=[m[K’?
+[0.355s]   200 |             [01;31m[Kiterators[m[K<T>** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER];
+[0.355s]       |             [01;31m[K^~~~~~~~~[m[K
+[0.355s]       |             [32m[Koperator=[m[K
+[0.355s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:200:24:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.355s]   200 |             iterators<T[01;31m[K>[m[K** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER];
+[0.355s]       |                        [01;31m[K^[m[K
+[0.356s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:200:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators_[m[K’ was not declared in this scope
+[0.356s]   200 |             iterators<T>** [01;31m[Kiterators_[m[K = new iterators<T>*[settings_.THREAD_NUMBER];
+[0.356s]       |                            [01;31m[K^~~~~~~~~~[m[K
+[0.358s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:200:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ does not name a type
+[0.358s]   200 |             iterators<T>** iterators_ = new [01;31m[Kiterators[m[K<T>*[settings_.THREAD_NUMBER];
+[0.358s]       |                                             [01;31m[K^~~~~~~~~[m[K
+[0.358s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:200:56:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.358s]   200 |             iterators<T>** iterators_ = new iterators<T[01;31m[K>[m[K*[settings_.THREAD_NUMBER];
+[0.358s]       |                                                        [01;31m[K^[m[K
+[0.358s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:200:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ before ‘[01m[K.[m[K’ token
+[0.359s]   200 |             iterators<T>** iterators_ = new iterators<T>*[settings_[01;31m[K.[m[KTHREAD_NUMBER];
+[0.359s]       |                                                                    [01;31m[K^[m[K
+[0.359s]       |                                                                    [32m[K,[m[K
+[0.359s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:200:68:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[K.[m[K’ token
+[0.359s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In lambda function:
+[0.359s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:200:83:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K;[m[K’ token
+[0.360s]   200 |             iterators<T>** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER][01;31m[K;[m[K
+[0.360s]       |                                                                                   [01;31m[K^[m[K
+[0.360s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel<T>::execute_pthread_sched(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&)[m[K’:
+[0.360s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:210:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ does not name a type
+[0.360s]   210 |                     iterators_[i] = new [01;31m[Kiterators[m[K<T>(
+[0.360s]       |                                         [01;31m[K^~~~~~~~~[m[K
+[0.360s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:210:52:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.360s]   210 |                     iterators_[i] = new iterators<T[01;31m[K>[m[K(
+[0.361s]       |                                                    [01;31m[K^[m[K
+[0.361s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:221:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ does not name a type
+[0.361s]   221 |                     iterators_[i] = new [01;31m[Kiterators[m[K<T>(
+[0.362s]       |                                         [01;31m[K^~~~~~~~~[m[K
+[0.362s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:221:52:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.362s]   221 |                     iterators_[i] = new iterators<T[01;31m[K>[m[K(
+[0.362s]       |                                                    [01;31m[K^[m[K
+[0.363s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel<T>::execute_pthread_affine_sched(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&)[m[K’:
+[0.363s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:242:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ was not declared in this scope; did you mean ‘[01m[Koperator=[m[K’?
+[0.363s]   242 |             [01;31m[Kiterators[m[K<T>** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER];
+[0.363s]       |             [01;31m[K^~~~~~~~~[m[K
+[0.363s]       |             [32m[Koperator=[m[K
+[0.363s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:242:24:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.363s]   242 |             iterators<T[01;31m[K>[m[K** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER];
+[0.364s]       |                        [01;31m[K^[m[K
+[0.365s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:242:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators_[m[K’ was not declared in this scope
+[0.365s]   242 |             iterators<T>** [01;31m[Kiterators_[m[K = new iterators<T>*[settings_.THREAD_NUMBER];
+[0.365s]       |                            [01;31m[K^~~~~~~~~~[m[K
+[0.366s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:242:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ does not name a type
+[0.366s]   242 |             iterators<T>** iterators_ = new [01;31m[Kiterators[m[K<T>*[settings_.THREAD_NUMBER];
+[0.366s]       |                                             [01;31m[K^~~~~~~~~[m[K
+[0.366s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:242:56:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.366s]   242 |             iterators<T>** iterators_ = new iterators<T[01;31m[K>[m[K*[settings_.THREAD_NUMBER];
+[0.367s]       |                                                        [01;31m[K^[m[K
+[0.367s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:242:68:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ before ‘[01m[K.[m[K’ token
+[0.367s]   242 |             iterators<T>** iterators_ = new iterators<T>*[settings_[01;31m[K.[m[KTHREAD_NUMBER];
+[0.367s]       |                                                                    [01;31m[K^[m[K
+[0.367s]       |                                                                    [32m[K,[m[K
+[0.367s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:242:68:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[K.[m[K’ token
+[0.367s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In lambda function:
+[0.367s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:242:83:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K;[m[K’ token
+[0.367s]   242 |             iterators<T>** iterators_ = new iterators<T>*[settings_.THREAD_NUMBER][01;31m[K;[m[K
+[0.367s]       |                                                                                   [01;31m[K^[m[K
+[0.368s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:[m[K In member function ‘[01m[Kvoid multiply_parallel<T>::execute_pthread_affine_sched(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&)[m[K’:
+[0.368s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:256:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ does not name a type
+[0.368s]   256 |                     iterators_[i] = new [01;31m[Kiterators[m[K<T>(
+[0.368s]       |                                         [01;31m[K^~~~~~~~~[m[K
+[0.368s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:256:52:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.368s]   256 |                     iterators_[i] = new iterators<T[01;31m[K>[m[K(
+[0.368s]       |                                                    [01;31m[K^[m[K
+[0.369s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:267:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterators[m[K’ does not name a type
+[0.369s]   267 |                     iterators_[i] = new [01;31m[Kiterators[m[K<T>(
+[0.370s]       |                                         [01;31m[K^~~~~~~~~[m[K
+[0.370s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:267:52:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[0.370s]   267 |                     iterators_[i] = new iterators<T[01;31m[K>[m[K(
+[0.370s]       |                                                    [01;31m[K^[m[K
+[0.385s] In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[0.385s] /home/arian/Framework/src/framework/include/framework/generators/single_generator.hpp: In instantiation of ‘[01m[Kstatic std::vector<T> single_generator::generate_input(int) [with T = double][m[K’:
+[0.385s] [01m[K/home/arian/Framework/src/framework/src/main.cpp:7:63:[m[K   required from here
+[0.385s] [01m[K/home/arian/Framework/src/framework/include/framework/generators/single_generator.hpp:18:30:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<double, std::allocator<double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[0.386s]    18 |             for(int i = 0; i < temp.capacity(); i++)
+[0.397s] In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[0.397s] /home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid multiply_parallel<T>::execute_pthread_affine_sched(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double][m[K’:
+[0.397s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:82:25:[m[K   required from ‘[01m[Kvoid multiply_parallel<T>::execute(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double][m[K’
+[0.397s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:47:19:[m[K   required from ‘[01m[Kmultiply_parallel<T>::multiply_parallel(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double][m[K’
+[0.397s] [01m[K/home/arian/Framework/src/framework/src/main.cpp:12:76:[m[K   required from here
+[0.397s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:242:57:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand type is ‘[01m[Kmultiply_parallel<T>::execute_pthread_affine_sched(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double]::<lambda()>[m[K’)
+[0.397s]   242 |             iterators<T>** iterators_ = new iterators<T>[01;31m[K*[settings_.THREAD_NUMBER][m[K;
+[0.398s]       |                                                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.398s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:257:34:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.398s]   257 |                         [01;35m[Kmatrix_a_, matrix_b_[m[K, matrix_c_,
+[0.398s]       |                         [01;35m[K~~~~~~~~~^~~~~~~~~~~[m[K
+[0.398s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:257:45:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.398s]   257 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_[m[K,
+[0.399s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[0.399s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:257:56:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.399s]   257 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_,[m[K
+[0.399s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[0.399s]   258 | [01;35m[K                        i * delimeter[m[K,
+[0.399s]       |                         [01;35m[K~~~~~~~~~~~~~[m[K                   
+[0.399s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:258:27:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.400s]   258 |                         [01;35m[Ki * delimeter[m[K,
+[0.400s]       |                         [01;35m[K~~^~~~~~~~~~~[m[K
+[0.400s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:259:33:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.400s]   259 |                         [01;35m[K(i + 1) * delimeter[m[K,
+[0.400s]       |                         [01;35m[K~~~~~~~~^~~~~~~~~~~[m[K
+[0.400s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:268:34:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.401s]   268 |                         [01;35m[Kmatrix_a_, matrix_b_[m[K, matrix_c_,
+[0.401s]       |                         [01;35m[K~~~~~~~~~^~~~~~~~~~~[m[K
+[0.401s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:268:45:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.401s]   268 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_[m[K,
+[0.401s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[0.401s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:268:56:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.401s]   268 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_,[m[K
+[0.401s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[0.402s]   269 | [01;35m[K                        i * delimeter[m[K,
+[0.402s]       |                         [01;35m[K~~~~~~~~~~~~~[m[K                   
+[0.402s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:269:27:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.402s]   269 |                         [01;35m[Ki * delimeter[m[K,
+[0.402s]       |                         [01;35m[K~~^~~~~~~~~~~[m[K
+[0.402s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:270:42:[m[K [01;35m[Kwarning: [m[Kvalue computed is not used [[01;35m[K-Wunused-value[m[K]
+[0.402s]   270 |                         matrix_a_.size() / sqrt(matrix_a_.size()),
+[0.402s] /home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid multiply_parallel<T>::execute_pthread_affine(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double][m[K’:
+[0.402s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:84:25:[m[K   required from ‘[01m[Kvoid multiply_parallel<T>::execute(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double][m[K’
+[0.403s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:47:19:[m[K   required from ‘[01m[Kmultiply_parallel<T>::multiply_parallel(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double][m[K’
+[0.403s] [01m[K/home/arian/Framework/src/framework/src/main.cpp:12:76:[m[K   required from here
+[0.403s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:143:57:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand type is ‘[01m[Kmultiply_parallel<T>::execute_pthread_affine(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double]::<lambda()>[m[K’)
+[0.403s]   143 |             iterators<T>** iterators_ = new iterators<T>[01;31m[K*[settings_.THREAD_NUMBER][m[K;
+[0.403s]       |                                                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.403s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:156:34:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.403s]   156 |                         [01;35m[Kmatrix_a_, matrix_b_[m[K, matrix_c_,
+[0.403s]       |                         [01;35m[K~~~~~~~~~^~~~~~~~~~~[m[K
+[0.403s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:156:45:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.404s]   156 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_[m[K,
+[0.404s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[0.404s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:156:56:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.404s]   156 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_,[m[K
+[0.404s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[0.404s]   157 | [01;35m[K                        i * delimeter[m[K,
+[0.404s]       |                         [01;35m[K~~~~~~~~~~~~~[m[K                   
+[0.404s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:157:27:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.404s]   157 |                         [01;35m[Ki * delimeter[m[K,
+[0.405s]       |                         [01;35m[K~~^~~~~~~~~~~[m[K
+[0.405s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:158:33:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.405s]   158 |                         [01;35m[K(i + 1) * delimeter[m[K,
+[0.405s]       |                         [01;35m[K~~~~~~~~^~~~~~~~~~~[m[K
+[0.405s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:167:34:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.405s]   167 |                         [01;35m[Kmatrix_a_, matrix_b_[m[K, matrix_c_,
+[0.405s]       |                         [01;35m[K~~~~~~~~~^~~~~~~~~~~[m[K
+[0.405s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:167:45:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.405s]   167 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_[m[K,
+[0.406s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[0.406s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:167:56:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.406s]   167 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_,[m[K
+[0.406s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[0.406s]   168 | [01;35m[K                        i * delimeter[m[K,
+[0.406s]       |                         [01;35m[K~~~~~~~~~~~~~[m[K                   
+[0.406s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:168:27:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.406s]   168 |                         [01;35m[Ki * delimeter[m[K,
+[0.406s]       |                         [01;35m[K~~^~~~~~~~~~~[m[K
+[0.407s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:169:42:[m[K [01;35m[Kwarning: [m[Kvalue computed is not used [[01;35m[K-Wunused-value[m[K]
+[0.407s]   169 |                         matrix_a_.size() / sqrt(matrix_a_.size()),
+[0.407s] /home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid multiply_parallel<T>::execute_pthread_sched(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double][m[K’:
+[0.407s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:89:25:[m[K   required from ‘[01m[Kvoid multiply_parallel<T>::execute(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double][m[K’
+[0.407s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:47:19:[m[K   required from ‘[01m[Kmultiply_parallel<T>::multiply_parallel(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double][m[K’
+[0.407s] [01m[K/home/arian/Framework/src/framework/src/main.cpp:12:76:[m[K   required from here
+[0.407s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:200:57:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand type is ‘[01m[Kmultiply_parallel<T>::execute_pthread_sched(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double]::<lambda()>[m[K’)
+[0.407s]   200 |             iterators<T>** iterators_ = new iterators<T>[01;31m[K*[settings_.THREAD_NUMBER][m[K;
+[0.408s]       |                                                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.408s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:211:34:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.408s]   211 |                         [01;35m[Kmatrix_a_, matrix_b_[m[K, matrix_c_,
+[0.408s]       |                         [01;35m[K~~~~~~~~~^~~~~~~~~~~[m[K
+[0.408s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:211:45:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.408s]   211 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_[m[K,
+[0.408s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[0.408s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:211:56:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.408s]   211 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_,[m[K
+[0.409s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[0.409s]   212 | [01;35m[K                        i * delimeter[m[K,
+[0.409s]       |                         [01;35m[K~~~~~~~~~~~~~[m[K                   
+[0.409s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:212:27:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.409s]   212 |                         [01;35m[Ki * delimeter[m[K,
+[0.409s]       |                         [01;35m[K~~^~~~~~~~~~~[m[K
+[0.409s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:213:33:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.409s]   213 |                         [01;35m[K(i + 1) * delimeter[m[K,
+[0.410s]       |                         [01;35m[K~~~~~~~~^~~~~~~~~~~[m[K
+[0.410s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:222:34:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.410s]   222 |                         [01;35m[Kmatrix_a_, matrix_b_[m[K, matrix_c_,
+[0.410s]       |                         [01;35m[K~~~~~~~~~^~~~~~~~~~~[m[K
+[0.410s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:222:45:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.410s]   222 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_[m[K,
+[0.410s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[0.410s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:222:56:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.410s]   222 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_,[m[K
+[0.411s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[0.411s]   223 | [01;35m[K                        i * delimeter[m[K,
+[0.411s]       |                         [01;35m[K~~~~~~~~~~~~~[m[K                   
+[0.411s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:223:27:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.411s]   223 |                         [01;35m[Ki * delimeter[m[K,
+[0.411s]       |                         [01;35m[K~~^~~~~~~~~~~[m[K
+[0.411s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:224:42:[m[K [01;35m[Kwarning: [m[Kvalue computed is not used [[01;35m[K-Wunused-value[m[K]
+[0.411s]   224 |                         matrix_a_.size() / sqrt(matrix_a_.size()),
+[0.412s] /home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid multiply_parallel<T>::execute_pthread(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double][m[K’:
+[0.412s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:91:25:[m[K   required from ‘[01m[Kvoid multiply_parallel<T>::execute(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double][m[K’
+[0.412s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:47:19:[m[K   required from ‘[01m[Kmultiply_parallel<T>::multiply_parallel(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double][m[K’
+[0.412s] [01m[K/home/arian/Framework/src/framework/src/main.cpp:12:76:[m[K   required from here
+[0.412s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:105:57:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator*[m[K’ (operand type is ‘[01m[Kmultiply_parallel<T>::execute_pthread(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double]::<lambda()>[m[K’)
+[0.412s]   105 |             iterators<T>** iterators_ = new iterators<T>[01;31m[K*[settings_.THREAD_NUMBER][m[K;
+[0.412s]       |                                                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.412s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:113:34:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.412s]   113 |                         [01;35m[Kmatrix_a_, matrix_b_[m[K, matrix_c_,
+[0.413s]       |                         [01;35m[K~~~~~~~~~^~~~~~~~~~~[m[K
+[0.413s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:113:45:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.413s]   113 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_[m[K,
+[0.413s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[0.413s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:113:56:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.413s]   113 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_,[m[K
+[0.413s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[0.413s]   114 | [01;35m[K                        i * delimeter[m[K,
+[0.414s]       |                         [01;35m[K~~~~~~~~~~~~~[m[K                   
+[0.414s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:114:27:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.414s]   114 |                         [01;35m[Ki * delimeter[m[K,
+[0.414s]       |                         [01;35m[K~~^~~~~~~~~~~[m[K
+[0.414s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:115:33:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.414s]   115 |                         [01;35m[K(i + 1) * delimeter[m[K,
+[0.414s]       |                         [01;35m[K~~~~~~~~^~~~~~~~~~~[m[K
+[0.414s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:124:34:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.415s]   124 |                         [01;35m[Kmatrix_a_, matrix_b_[m[K, matrix_c_,
+[0.415s]       |                         [01;35m[K~~~~~~~~~^~~~~~~~~~~[m[K
+[0.415s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:124:45:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.415s]   124 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_[m[K,
+[0.415s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[0.415s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:124:56:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.415s]   124 |                         [01;35m[Kmatrix_a_, matrix_b_, matrix_c_,[m[K
+[0.415s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[0.415s]   125 | [01;35m[K                        i * delimeter[m[K,
+[0.416s]       |                         [01;35m[K~~~~~~~~~~~~~[m[K                   
+[0.416s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:125:27:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K-Wunused-value[m[K]
+[0.416s]   125 |                         [01;35m[Ki * delimeter[m[K,
+[0.416s]       |                         [01;35m[K~~^~~~~~~~~~~[m[K
+[0.416s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:126:42:[m[K [01;35m[Kwarning: [m[Kvalue computed is not used [[01;35m[K-Wunused-value[m[K]
+[0.416s]   126 |                         matrix_a_.size() / sqrt(matrix_a_.size()),
+[0.416s] /home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp: In instantiation of ‘[01m[Kvoid multiply_parallel<T>::execute_openmp(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double][m[K’:
+[0.416s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:97:17:[m[K   required from ‘[01m[Kvoid multiply_parallel<T>::execute(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double][m[K’
+[0.416s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:47:19:[m[K   required from ‘[01m[Kmultiply_parallel<T>::multiply_parallel(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const settings&) [with T = double][m[K’
+[0.417s] [01m[K/home/arian/Framework/src/framework/src/main.cpp:12:76:[m[K   required from here
+[0.417s] [01m[K/home/arian/Framework/src/framework/include/framework/multiply_parallel.hpp:292:139:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[0.417s]   292 |         void execute_openmp(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K )
+[0.417s]       |                                                                                                                          [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[0.427s] make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+[0.427s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+[0.428s] make: *** [Makefile:141: all] Error 2
+[0.430s] Invoked command in '/home/arian/Framework/build/framework' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/arian/ros2_foxy/install/ros2bag:/home/arian/ros2_foxy/install/tracetools_launch:/home/arian/ros2_foxy/install/topic_monitor:/home/arian/ros2_foxy/install/examples_tf2_py:/home/arian/ros2_foxy/install/sros2:/home/arian/ros2_foxy/install/rqt_topic:/home/arian/ros2_foxy/install/rqt_reconfigure:/home/arian/ros2_foxy/install/rqt_action:/home/arian/ros2_foxy/install/rqt:/home/arian/ros2_foxy/install/rqt_graph:/home/arian/ros2_foxy/install/rqt_gui_py:/home/arian/ros2_foxy/install/rqt_gui:/home/arian/ros2_foxy/install/ros2trace:/home/arian/ros2_foxy/install/ros2topic:/home/arian/ros2_foxy/install/ros2test:/home/arian/ros2_foxy/install/ros2component:/home/arian/ros2_foxy/install/ros2param:/home/arian/ros2_foxy/install/ros2lifecycle:/home/arian/ros2_foxy/install/ros2service:/home/arian/ros2_foxy/install/ros2run:/home/arian/ros2_foxy/install/ros2launch:/home/arian/ros2_foxy/install/ros2pkg:/home/arian/ros2_foxy/install/ros2node:/home/arian/ros2_foxy/install/ros2multicast:/home/arian/ros2_foxy/install/ros2interface:/home/arian/ros2_foxy/install/ros2doctor:/home/arian/ros2_foxy/install/ros2action:/home/arian/ros2_foxy/install/ros2cli:/home/arian/ros2_foxy/install/quality_of_service_demo_py:/home/arian/ros2_foxy/install/launch_testing_ros:/home/arian/ros2_foxy/install/launch_ros:/home/arian/ros2_foxy/install/examples_rclpy_minimal_subscriber:/home/arian/ros2_foxy/install/examples_rclpy_minimal_service:/home/arian/ros2_foxy/install/examples_rclpy_minimal_publisher:/home/arian/ros2_foxy/install/examples_rclpy_minimal_client:/home/arian/ros2_foxy/install/examples_rclpy_minimal_action_server:/home/arian/ros2_foxy/install/examples_rclpy_minimal_action_client:/home/arian/ros2_foxy/install/examples_rclpy_executors:/home/arian/ros2_foxy/install/demo_nodes_py:/home/arian/ros2_foxy/install/action_tutorials_py:/home/arian/ros2_foxy/install/ament_uncrustify:/home/arian/ros2_foxy/install/tracetools_trace:/home/arian/ros2_foxy/install/tracetools_read:/home/arian/ros2_foxy/install/test_launch_ros:/home/arian/ros2_foxy/install/rpyutils:/home/arian/ros2_foxy/install/rosidl_runtime_py:/home/arian/ros2_foxy/install/launch_yaml:/home/arian/ros2_foxy/install/launch_xml:/home/arian/ros2_foxy/install/launch_testing:/home/arian/ros2_foxy/install/launch:/home/arian/ros2_foxy/install/osrf_pycommon:/home/arian/ros2_foxy/install/domain_coordinator:/home/arian/ros2_foxy/install/ament_xmllint:/home/arian/ros2_foxy/install/ament_pyflakes:/home/arian/ros2_foxy/install/ament_pycodestyle:/home/arian/ros2_foxy/install/ament_pep257:/home/arian/ros2_foxy/install/ament_pclint:/home/arian/ros2_foxy/install/ament_package:/home/arian/ros2_foxy/install/ament_mypy:/home/arian/ros2_foxy/install/ament_lint_cmake:/home/arian/ros2_foxy/install/ament_flake8:/home/arian/ros2_foxy/install/ament_copyright:/home/arian/ros2_foxy/install/ament_lint:/home/arian/ros2_foxy/install/ament_index_python:/home/arian/ros2_foxy/install/ament_cpplint:/home/arian/ros2_foxy/install/ament_cppcheck:/home/arian/ros2_foxy/install/ament_clang_tidy:/home/arian/ros2_foxy/install/ament_clang_format /usr/bin/cmake --build /home/arian/Framework/build/framework -- -j12 -l12
