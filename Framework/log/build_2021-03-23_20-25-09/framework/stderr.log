@@ -1,0 +1,50 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/sum_parallel.hpp:[m[K In function ‘[01m[Kvoid* framework::base::sum_parallel_pthread(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/sum_parallel.hpp:30:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   30 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/sum_parallel.hpp:[m[K At global scope:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/sum_parallel.hpp:33:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Ktemplate<class T> void framework::base::multiply_parallel_openmp(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&)[m[K’
+   33 | void [01;31m[Kmultiply_parallel_openmp[m[K(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_ )
+      |      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:1[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/multiply_parallel.hpp:41:6:[m[K [01;36m[Knote: [m[K‘[01m[Ktemplate<class T> void framework::base::multiply_parallel_openmp(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&)[m[K’ previously declared here
+   41 | void [01;36m[Kmultiply_parallel_openmp[m[K(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_ )
+      |      [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:5[m[K:
+/home/arian/Framework/src/framework/include/framework/generators/generator.hpp: In instantiation of ‘[01m[Kstatic std::vector<std::vector<T> > framework::generator::generate_inputs(std::initializer_list<int>) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:11:74:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/generators/generator.hpp:27:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   27 |                 for(int i = 0; i < temp.capacity(); i++)
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:4[m[K:
+/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp: In instantiation of ‘[01m[Kvoid framework::benchmark<T>::execute_all() [with K = std::ratio<1, 1000>; T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:20:63:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:64:30:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<framework::settings>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   64 |             for(int i = 0; [01;35m[Ki < settingss_.size()[m[K; i++)
+      |                            [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:73:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<int>, std::allocator<std::vector<int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   73 |                 for(int j = 0; j < inputs_a_.size(); j++)
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:87:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<int>, std::allocator<std::vector<int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   87 |                     if([01;35m[Kj != inputs_a_.size() - 1[m[K)
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:95:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<framework::settings>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   95 |                 if([01;35m[Ki == settingss_.size() - 1[m[K)
+      |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:10[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:4[m[K:
+/home/arian/Framework/src/framework/include/framework/generators/json_generator.hpp: In instantiation of ‘[01m[Kframework::json_generator& framework::json_generator::add(const std::chrono::duration<long int, T>&) [with T = std::ratio<1, 1000>][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:61:29:[m[K   required from ‘[01m[Kvoid framework::benchmark<T>::execute_all() [with K = std::ratio<1, 1000>; T = int][m[K’
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:20:63:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/generators/json_generator.hpp:44:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kduration[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   44 |         json_generator& add([01;35m[Kconst std::chrono::duration<int64_t, T>& duration[m[K)
+      |                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+/home/arian/Framework/src/framework/include/framework/base/sum_parallel.hpp: In instantiation of ‘[01m[Kvoid framework::base::sum_parallel<T>::execute(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/sum_parallel.hpp:90:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/base/sum_parallel.hpp:112:36:[m[K [01;31m[Kerror: [m[K‘[01m[Ksum_parallel_openmp[m[K’ was not declared in this scope; did you mean ‘[01m[Ksum_parallel[m[K’?
+  112 |                 [01;31m[Ksum_parallel_openmp(matrix_a_,matrix_b_, matrix_c_, settings_)[m[K;
+      |                 [01;31m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                 [32m[Ksum_parallel[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -1,0 +1,8 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:4[m[K:
+/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp: In instantiation of ‘[01m[Kvoid framework::base::adjoint_serial(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp:211:34:[m[K   required from ‘[01m[Kvoid framework::base::adjoint_parallel<T>::execute(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp:157:19:[m[K   required from ‘[01m[Kframework::base::adjoint_parallel<T>::adjoint_parallel(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:35:84:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp:122:131:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  122 | void adjoint_serial(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K )
+      |                                                                                                                  [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K

@@ -36,6 +36,22 @@ class generator
             
         }
 
+        template<typename T = int>
+        static std::vector<std::vector<T> > generate_inputs_zero(std::initializer_list<int> sizes)
+        {
+            std::vector<std::vector<T> > content;
+
+            for(auto size : sizes)
+            {
+                std::vector<T> temp(size * size);
+
+                content.push_back(temp);
+            }
+
+            return content;
+            
+        }
+
         static std::vector<settings> generate_settings(std::initializer_list<settings> settings_)
         {
             std::vector<settings> content;

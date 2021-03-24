@@ -1,0 +1,36 @@
+{
+	"name" : "adjoint_parallel",
+	"time_unit" : "milli",
+	"tests" : {
+		"test_1" : {
+			"settings" : [12, "TS", 19, "false", "PTHREADS"],
+			"measurements" : {
+				"8x8" : 51
+			}
+		},
+		"test_2" : {
+			"settings" : [12, "TS", 21, "true", "PTHREADS"],
+			"measurements" : {
+				"8x8" : 49
+			}
+		},
+		"test_3" : {
+			"settings" : [12, "TS", 45, "true", "PTHREADS"],
+			"measurements" : {
+				"8x8" : 51
+			}
+		},
+		"test_4" : {
+			"settings" : [12, "TS", 19, "false", "OPENMP"],
+			"measurements" : {
+				"8x8" : 27
+			}
+		},
+		"test_5" : {
+			"settings" : [0, "TS", 19, "false", "SERIAL"],
+			"measurements" : {
+				"8x8" : 58
+			}
+		}
+	}
+}

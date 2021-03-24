@@ -1,0 +1,42 @@
+{
+	"name" : "complex_parallel",
+	"time_unit" : "milli",
+	"tests" : {
+		"test_1" : {
+			"settings" : [2, "TS", 19, "false", "PTHREADS"],
+			"measurements" : {
+				"2000x2000" : 64,
+				"3000x3000" : 176,
+				"4000x4000" : 310,
+				"10000x10000" : 1962
+			}
+		},
+		"test_2" : {
+			"settings" : [4, "TS", 21, "true", "PTHREADS"],
+			"measurements" : {
+				"2000x2000" : 34,
+				"3000x3000" : 86,
+				"4000x4000" : 158,
+				"10000x10000" : 1013
+			}
+		},
+		"test_3" : {
+			"settings" : [4, "TS", 45, "true", "PTHREADS"],
+			"measurements" : {
+				"2000x2000" : 41,
+				"3000x3000" : 89,
+				"4000x4000" : 161,
+				"10000x10000" : 1027
+			}
+		},
+		"test_4" : {
+			"settings" : [4, "TS", 19, "false", "OPENMP"],
+			"measurements" : {
+				"2000x2000" : 42,
+				"3000x3000" : 91,
+				"4000x4000" : 163,
+				"10000x10000" : 1018
+			}
+		}
+	}
+}

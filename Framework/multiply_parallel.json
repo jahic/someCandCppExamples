@@ -5,22 +5,31 @@
 		"test_1" : {
 			"settings" : [2, "TS", 19, "false", "PTHREADS"],
 			"measurements" : {
-				"200x200" : 29,
-				"500x500" : 489
+				"500x500" : 799
 			}
 		},
 		"test_2" : {
 			"settings" : [4, "TS", 21, "true", "PTHREADS"],
 			"measurements" : {
-				"200x200" : 14,
-				"500x500" : 267
+				"500x500" : 419
 			}
 		},
 		"test_3" : {
-			"settings" : [12, "TS", 19, "false", "PTHREADS"],
+			"settings" : [4, "TS", 45, "true", "PTHREADS"],
 			"measurements" : {
-				"200x200" : 14,
-				"500x500" : 206
+				"500x500" : 432
+			}
+		},
+		"test_4" : {
+			"settings" : [4, "TS", 19, "false", "OPENMP"],
+			"measurements" : {
+				"500x500" : 385
+			}
+		},
+		"test_5" : {
+			"settings" : [0, "TS", 19, "false", "SERIAL"],
+			"measurements" : {
+				"500x500" : 1122
 			}
 		}
 	}

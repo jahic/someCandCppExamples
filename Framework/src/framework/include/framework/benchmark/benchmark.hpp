@@ -1,8 +1,10 @@
 #ifndef __BENCHMARK_HPP__
 #define __BENCHMARK_HPP__
 
+#include <string>
 #include <vector>
 #include <chrono>
+#include <iostream>
 
 #include <framework/settings/settings.hpp>
 #include <framework/settings/time_format.hpp>
@@ -63,6 +65,8 @@ class benchmark
 
             for(int i = 0; i < settingss_.size(); i++)
             {
+                std::cout << "Running Test " << i + 1 << " from " << settingss_.size() << std::endl;
+
                 json_generator_.add("\n\t\t\"test_")
                                .add(i + 1)
                                .add("\" : {")
@@ -102,7 +106,71 @@ class benchmark
             json_generator_.add("\n\t}\n}");
 
             json_generator_.save_to_json_file(base_parallel_->get_name());
+
+            std::cout << "Done!" << std::endl;
         }
+
+        template<typename K = TIME_FORMAT::NANO>
+        void
+        execute_all(std::string file_path)
+        {
+
+            std::string name = base_parallel_->get_name();
+            
+            json_generator_.add("{\n\t\"name\" : \"")
+                           .add(name)
+                           .add("\",\n\t\"time_unit\" : \"")
+                           .add<K>(std::chrono::duration<int64_t, K>())
+                           .add("\",")
+                           .add("\n\t\"tests\" : {");
+
+            for(int i = 0; i < settingss_.size(); i++)
+            {
+                std::cout << "Running Test " << i + 1 << " from " << settingss_.size() << std::endl;
+
+                json_generator_.add("\n\t\t\"test_")
+                               .add(i + 1)
+                               .add("\" : {")
+                               .add("\n\t\t\t\"settings\" : ")
+                               .add(settingss_[i])
+                               .add(",\n\t\t\t\"measurements\" : {");
+
+                for(int j = 0; j < inputs_a_.size(); j++)
+                {
+                    result_.reserve(inputs_a_[j].capacity());
+                    before = std::chrono::high_resolution_clock::now();
+                    base_parallel_->ctor(inputs_a_[j], inputs_b_[j], result_, settingss_[i]);
+                    after  = std::chrono::high_resolution_clock::now();
+
+                    json_generator_.add("\n\t\t\t\t\"")
+                                   .add((int&&)sqrt(inputs_a_[j].size()))
+                                   .add("x")
+                                   .add((int&&)sqrt(inputs_a_[j].size()))
+                                   .add("\" : ")
+                                   .add((int&&)std::chrono::duration_cast<std::chrono::duration<int64_t, K> >(after - before).count());
+
+                    if(j != inputs_a_.size() - 1)
+                        json_generator_.add(",");
+                   
+                    result_.clear();
+                }
+
+                json_generator_.add("\n\t\t\t}");
+
+                if(i == settingss_.size() - 1)
+                    json_generator_.add("\n\t\t}");
+                else
+                    json_generator_.add("\n\t\t},");
+
+            }
+
+            json_generator_.add("\n\t}\n}");
+
+            json_generator_.save_to_json_file(file_path + base_parallel_->get_name());
+
+            std::cout << "Done!" << std::endl;
+        }
+
 
        
     private:

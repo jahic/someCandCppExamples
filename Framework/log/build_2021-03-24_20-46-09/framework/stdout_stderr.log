@@ -1,0 +1,61 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:8[m[K:
+/home/arian/Framework/src/framework/include/framework/generators/generator.hpp: In instantiation of ‘[01m[Kstatic std::vector<std::vector<T> > framework::generator::generate_inputs(std::initializer_list<int>) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:14:86:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/generators/generator.hpp:27:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   27 |                 for(int i = 0; i < temp.capacity(); i++)
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp: In instantiation of ‘[01m[Kvoid framework::benchmark<T>::execute_all() [with K = std::ratio<1, 1000>; T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:25:62:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:65:30:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<framework::settings>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   65 |             for(int i = 0; [01;35m[Ki < settingss_.size()[m[K; i++)
+      |                            [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:76:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<int>, std::allocator<std::vector<int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   76 |                 for(int j = 0; j < inputs_a_.size(); j++)
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:90:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<int>, std::allocator<std::vector<int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   90 |                     if([01;35m[Kj != inputs_a_.size() - 1[m[K)
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:98:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<framework::settings>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   98 |                 if([01;35m[Ki == settingss_.size() - 1[m[K)
+      |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:11[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+/home/arian/Framework/src/framework/include/framework/generators/json_generator.hpp: In instantiation of ‘[01m[Kframework::json_generator& framework::json_generator::add(const std::chrono::duration<long int, T>&) [with T = std::ratio<1, 1000>][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:62:29:[m[K   required from ‘[01m[Kvoid framework::benchmark<T>::execute_all() [with K = std::ratio<1, 1000>; T = int][m[K’
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:25:62:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/generators/json_generator.hpp:44:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kduration[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   44 |         json_generator& add([01;35m[Kconst std::chrono::duration<int64_t, T>& duration[m[K)
+      |                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:4[m[K:
+/home/arian/Framework/src/framework/include/framework/base/grayscale_parallel.hpp: In instantiation of ‘[01m[Kvoid framework::base::grayscale_parallel_openmp(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/grayscale_parallel.hpp:129:45:[m[K   required from ‘[01m[Kvoid framework::base::grayscale_parallel<T>::execute(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/base/grayscale_parallel.hpp:107:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/base/grayscale_parallel.hpp:34:87:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   34 | void grayscale_parallel_openmp(const std::vector<T>& matrix_a_, [01;35m[Kconst std::vector<T>& matrix_b_[m[K, std::vector<T>& matrix_c_, const settings & settings_ )
+      |                                                                 [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+/home/arian/Framework/src/framework/include/framework/base/grayscale_parallel.hpp: In instantiation of ‘[01m[Kvoid framework::base::grayscale_serial(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/grayscale_parallel.hpp:133:36:[m[K   required from ‘[01m[Kvoid framework::base::grayscale_parallel<T>::execute(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/base/grayscale_parallel.hpp:107:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/base/grayscale_parallel.hpp:51:78:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   51 | void grayscale_serial(const std::vector<T>& matrix_a_, [01;35m[Kconst std::vector<T>& matrix_b_[m[K, std::vector<T>& matrix_c_, const settings & settings_ )
+      |                                                        [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/grayscale_parallel.hpp:51:133:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   51 | void grayscale_serial(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K )
+      |                                                                                                                    [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable main[0m
+[100%] Built target main
+-- Install configuration: ""
+-- Up-to-date: /home/arian/Framework/install/framework/share/ament_index/resource_index/package_run_dependencies/framework
+-- Up-to-date: /home/arian/Framework/install/framework/share/ament_index/resource_index/parent_prefix_path/framework
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/environment/path.dsv
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/local_setup.bash
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/local_setup.sh
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/local_setup.zsh
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/local_setup.dsv
+-- Installing: /home/arian/Framework/install/framework/share/framework/package.dsv
+-- Up-to-date: /home/arian/Framework/install/framework/share/ament_index/resource_index/packages/framework
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/cmake/frameworkConfig.cmake
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/cmake/frameworkConfig-version.cmake
+-- Up-to-date: /home/arian/Framework/install/framework/share/framework/package.xml

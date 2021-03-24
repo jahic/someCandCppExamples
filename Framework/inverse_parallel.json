@@ -1,0 +1,36 @@
+{
+	"name" : "inverse_parallel",
+	"time_unit" : "milli",
+	"tests" : {
+		"test_1" : {
+			"settings" : [2, "TS", 19, "false", "PTHREADS"],
+			"measurements" : {
+				"7x7" : 2
+			}
+		},
+		"test_2" : {
+			"settings" : [4, "TS", 21, "true", "PTHREADS"],
+			"measurements" : {
+				"7x7" : 4
+			}
+		},
+		"test_3" : {
+			"settings" : [6, "TS", 45, "true", "PTHREADS"],
+			"measurements" : {
+				"7x7" : 3
+			}
+		},
+		"test_4" : {
+			"settings" : [4, "TS", 19, "false", "OPENMP"],
+			"measurements" : {
+				"7x7" : 2
+			}
+		},
+		"test_5" : {
+			"settings" : [0, "TS", 19, "false", "SERIAL"],
+			"measurements" : {
+				"7x7" : 6
+			}
+		}
+	}
+}

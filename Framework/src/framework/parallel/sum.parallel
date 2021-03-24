@@ -1,5 +1,4 @@
 - inputs: matrix_a, matrix_b
 - output: matrix_result
 - function
-    - for(int i = 0; i < matrix_a.size(); i++)
-        matrix_result[i] = matrix_a + matrix_b
+    -- matrix_result = matrix_a + matrix_b

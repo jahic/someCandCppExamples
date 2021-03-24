@@ -1,6 +1,7 @@
 from  matplotlib import pyplot as plt
 import numpy as np
 import json
+import sys
 
 
 
@@ -18,8 +19,7 @@ def autolabel(setting, rect):
         i = i + 1
 
 
-
-with open('/home/arian/Framework/multiply_parallel.json') as json_file:
+with open('/home/arian/Framework/' + sys.argv[1]) as json_file:
     data = json.load(json_file)
 
 

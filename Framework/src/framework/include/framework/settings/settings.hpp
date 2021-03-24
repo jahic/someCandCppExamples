@@ -25,6 +25,16 @@ struct settings
             this->PARALLELIZATION_STRATEGY =     PARALLELIZATION_STRATEGY::PTHREADS;
         }
 
+        settings(int parallelization_strategy_) :
+            THREAD_NUMBER(0),
+            SCHED_STRATEGY(SCHEDULING_STRATEGY::SCHEDULING_TS),
+            PRIORITY(19_PRIORITY),
+            AFFINITY(AFFINITY::FALSE),
+            PARALLELIZATION_STRATEGY(parallelization_strategy_)
+        {
+
+        }
+
         settings(int thread_number_, int parallelization_strategy_) :
             THREAD_NUMBER(thread_number_),
             SCHED_STRATEGY(SCHEDULING_STRATEGY::SCHEDULING_TS),
@@ -87,6 +97,8 @@ struct settings
         {
             if(parallelization_strategy == PARALLELIZATION_STRATEGY::OPENMP)
                 return "\"OPENMP\"";
+            else if(parallelization_strategy == PARALLELIZATION_STRATEGY::SERIAL)
+                return "\"SERIAL\"";
 
             return "\"PTHREADS\"";
         }

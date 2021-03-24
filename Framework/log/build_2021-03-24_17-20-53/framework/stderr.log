@@ -1,0 +1,5 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+/home/arian/Framework/src/framework/include/framework/generators/generator.hpp: In instantiation of ‘[01m[Kstatic std::vector<std::vector<T> > framework::generator::generate_inputs(std::initializer_list<int>) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:27:64:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/generators/generator.hpp:27:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   27 |                 for(int i = 0; i < temp.capacity(); i++)

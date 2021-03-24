@@ -1,0 +1,36 @@
+{
+	"name" : "determinant_parallel",
+	"time_unit" : "milli",
+	"tests" : {
+		"test_1" : {
+			"settings" : [2, "TS", 19, "false", "PTHREADS"],
+			"measurements" : {
+				"10x10" : 308
+			}
+		},
+		"test_2" : {
+			"settings" : [4, "TS", 21, "true", "PTHREADS"],
+			"measurements" : {
+				"10x10" : 252
+			}
+		},
+		"test_3" : {
+			"settings" : [6, "TS", 45, "true", "PTHREADS"],
+			"measurements" : {
+				"10x10" : 388
+			}
+		},
+		"test_4" : {
+			"settings" : [4, "TS", 19, "false", "OPENMP"],
+			"measurements" : {
+				"10x10" : 205
+			}
+		},
+		"test_5" : {
+			"settings" : [0, "TS", 19, "false", "SERIAL"],
+			"measurements" : {
+				"10x10" : 672
+			}
+		}
+	}
+}

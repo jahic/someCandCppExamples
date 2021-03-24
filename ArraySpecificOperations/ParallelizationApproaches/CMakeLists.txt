@@ -15,6 +15,7 @@ add_executable(ImageGrayscaling src/ImageGrayscaling.cpp)
 add_executable(GrayscaleParallel src/GrayscaleParallel.cpp)
 add_executable(Filtering src/Filtering.cpp)
 add_executable(Priority src/priority.cpp)
+add_executable(Adjoint src/Adjoint.cpp)
 
 target_link_libraries(Priority PRIVATE Threads::Threads)
 

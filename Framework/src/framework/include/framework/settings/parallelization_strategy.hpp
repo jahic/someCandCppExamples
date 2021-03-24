@@ -5,6 +5,7 @@ namespace PARALLELIZATION_STRATEGY
 {
     int PTHREADS = 0;
     int OPENMP   = 1;
+    int SERIAL   = 2;
 }
 
 #endif

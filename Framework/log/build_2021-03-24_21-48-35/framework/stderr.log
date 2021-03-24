@@ -1,0 +1,94 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:8[m[K:
+/home/arian/Framework/src/framework/include/framework/generators/generator.hpp: In instantiation of ‘[01m[Kstatic std::vector<std::vector<T> > framework::generator::generate_inputs(std::initializer_list<int>) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:16:72:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/generators/generator.hpp:27:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   27 |                 for(int i = 0; i < temp.capacity(); i++)
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp: In instantiation of ‘[01m[Kvoid framework::benchmark<T>::execute_all(std::string) [with K = std::ratio<1, 1000>; T = int; std::string = std::__cxx11::basic_string<char>][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:27:76:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:127:30:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<framework::settings>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  127 |             for(int i = 0; [01;35m[Ki < settingss_.size()[m[K; i++)
+      |                            [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:138:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<int>, std::allocator<std::vector<int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  138 |                 for(int j = 0; j < inputs_a_.size(); j++)
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:152:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<int>, std::allocator<std::vector<int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  152 |                     if([01;35m[Kj != inputs_a_.size() - 1[m[K)
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:160:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<framework::settings>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  160 |                 if([01;35m[Ki == settingss_.size() - 1[m[K)
+      |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:12[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+/home/arian/Framework/src/framework/include/framework/generators/json_generator.hpp: In instantiation of ‘[01m[Kframework::json_generator& framework::json_generator::add(const std::chrono::duration<long int, T>&) [with T = std::ratio<1, 1000>][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:124:29:[m[K   required from ‘[01m[Kvoid framework::benchmark<T>::execute_all(std::string) [with K = std::ratio<1, 1000>; T = int; std::string = std::__cxx11::basic_string<char>][m[K’
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:27:76:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/generators/json_generator.hpp:44:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kduration[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   44 |         json_generator& add([01;35m[Kconst std::chrono::duration<int64_t, T>& duration[m[K)
+      |                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:11[m[K:
+/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp: In instantiation of ‘[01m[Kvoid framework::base::inverse_parallel<T>::execute_pthread(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:85:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:85:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_a_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |         void execute_pthread([01;35m[Kconst std::vector<T>& matrix_a_[m[K, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) { }
+      |                              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:85:85:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |         void execute_pthread(const std::vector<T>& matrix_a_, [01;35m[Kconst std::vector<T>& matrix_b_[m[K, std::vector<T>& matrix_c_, const settings & settings_) { }
+      |                                                               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:85:112:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_c_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |         void execute_pthread(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, [01;35m[Kstd::vector<T>& matrix_c_[m[K, const settings & settings_) { }
+      |                                                                                                [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:85:140:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   85 |         void execute_pthread(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K) { }
+      |                                                                                                                           [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp: In instantiation of ‘[01m[Kvoid framework::base::inverse_parallel<T>::execute_pthread_affine(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:87:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:87:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_a_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   87 |         void execute_pthread_affine([01;35m[Kconst std::vector<T>& matrix_a_[m[K, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) { }
+      |                                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:87:92:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   87 |         void execute_pthread_affine(const std::vector<T>& matrix_a_, [01;35m[Kconst std::vector<T>& matrix_b_[m[K, std::vector<T>& matrix_c_, const settings & settings_) { }
+      |                                                                      [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:87:119:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_c_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   87 |         void execute_pthread_affine(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, [01;35m[Kstd::vector<T>& matrix_c_[m[K, const settings & settings_) { }
+      |                                                                                                       [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:87:147:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   87 |         void execute_pthread_affine(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K) { }
+      |                                                                                                                                  [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp: In instantiation of ‘[01m[Kvoid framework::base::inverse_parallel<T>::execute_pthread_sched(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:89:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:89:58:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_a_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   89 |         void execute_pthread_sched([01;35m[Kconst std::vector<T>& matrix_a_[m[K, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) { }
+      |                                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:89:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   89 |         void execute_pthread_sched(const std::vector<T>& matrix_a_, [01;35m[Kconst std::vector<T>& matrix_b_[m[K, std::vector<T>& matrix_c_, const settings & settings_) { }
+      |                                                                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:89:118:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_c_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   89 |         void execute_pthread_sched(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, [01;35m[Kstd::vector<T>& matrix_c_[m[K, const settings & settings_) { }
+      |                                                                                                      [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:89:146:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   89 |         void execute_pthread_sched(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K) { }
+      |                                                                                                                                 [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp: In instantiation of ‘[01m[Kvoid framework::base::inverse_parallel<T>::execute_pthread_affine_sched(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:91:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:91:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_a_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   91 |         void execute_pthread_affine_sched([01;35m[Kconst std::vector<T>& matrix_a_[m[K, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_) { }
+      |                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:91:98:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_b_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   91 |         void execute_pthread_affine_sched(const std::vector<T>& matrix_a_, [01;35m[Kconst std::vector<T>& matrix_b_[m[K, std::vector<T>& matrix_c_, const settings & settings_) { }
+      |                                                                            [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:91:125:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmatrix_c_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   91 |         void execute_pthread_affine_sched(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, [01;35m[Kstd::vector<T>& matrix_c_[m[K, const settings & settings_) { }
+      |                                                                                                             [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:91:153:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   91 |         void execute_pthread_affine_sched(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K) { }
+      |                                                                                                                                        [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:15[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:11[m[K:
+/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp: In instantiation of ‘[01m[Kvoid framework::base::adjoint_serial(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp:205:34:[m[K   required from ‘[01m[Kvoid framework::base::adjoint_parallel<T>::execute(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp:151:19:[m[K   required from ‘[01m[Kframework::base::adjoint_parallel<T>::adjoint_parallel(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:73:33:[m[K   required from ‘[01m[Kvoid framework::base::inverse_parallel<T>::execute(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/base/inverse_parallel.hpp:65:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp:116:131:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksettings_[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  116 | void adjoint_serial(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, [01;35m[Kconst settings & settings_[m[K )
+      |                                                                                                                  [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K

@@ -1,0 +1,57 @@
+[35m[1mScanning dependencies of target main[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:2[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/sum_parallel.hpp:[m[K In function ‘[01m[Kvoid* framework::base::sum_parallel_pthread(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/sum_parallel.hpp:30:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   30 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:3[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/complex_parallel.hpp:[m[K In function ‘[01m[Kvoid* framework::base::complex_parallel_pthread(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/complex_parallel.hpp:30:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   30 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:4[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/grayscale_parallel.hpp:[m[K In function ‘[01m[Kvoid* framework::base::grayscale_parallel_pthread(void*)[m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/grayscale_parallel.hpp:30:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K-Wreturn-type[m[K]
+   30 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:14:59:[m[K [01;31m[Kerror: [m[K‘[01m[Kint_32t[m[K’ was not declared in this scope; did you mean ‘[01m[Kint32_t[m[K’?
+   14 |   auto matrices_a = framework::generator::generate_inputs<[01;31m[Kint_32t[m[K>({10});
+      |                                                           [01;31m[K^~~~~~~[m[K
+      |                                                           [32m[Kint32_t[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:14:72:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kframework::generator::generate_inputs<<expression error> >(<brace-enclosed initializer list>)[m[K’
+   14 |   auto matrices_a = framework::generator::generate_inputs<int_32t>({10}[01;31m[K)[m[K;
+      |                                                                        [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:8[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/generators/generator.hpp:18:45:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T> static std::vector<std::vector<T> > framework::generator::generate_inputs(std::initializer_list<int>)[m[K’
+   18 |         static std::vector<std::vector<T> > [01;36m[Kgenerate_inputs[m[K(std::initializer_list<int> sizes)
+      |                                             [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/generators/generator.hpp:18:45:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:14:72:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   14 |   auto matrices_a = framework::generator::generate_inputs<int_32t>({10}[01;31m[K)[m[K;
+      |                                                                        [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:15:77:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kframework::generator::generate_inputs_zero<int_32t>(<brace-enclosed initializer list>)[m[K’
+   15 |   auto matrices_b = framework::generator::generate_inputs_zero<int_32t>({10}[01;31m[K)[m[K;
+      |                                                                             [01;31m[K^[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:8[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/generators/generator.hpp:40:45:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class T> static std::vector<std::vector<T> > framework::generator::generate_inputs_zero(std::initializer_list<int>)[m[K’
+   40 |         static std::vector<std::vector<T> > [01;36m[Kgenerate_inputs_zero[m[K(std::initializer_list<int> sizes)
+      |                                             [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/generators/generator.hpp:40:45:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:23:272:[m[K [01;31m[Kerror: [m[Kexpression list treated as compound expression in initializer [[01;31m[K-fpermissive[m[K]
+   23 | , matrices_b, std::vector<framework::settings>{input_settings_one, input_settings_two, input_settings_three, input_settings_four, input_settings_five}[01;31m[K)[m[K;
+      |                                                                                                                                                       [01;31m[K^[m[K
+
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:25:30:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kexecute_all[m[K’ in ‘[01m[Kbenchmark_adjoint_parallel[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+   25 |   benchmark_adjoint_parallel.[01;31m[Kexecute_all[m[K<TIME_FORMAT::MILLI>();
+      |                              [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:25:60:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   25 |   benchmark_adjoint_parallel.execute_all<TIME_FORMAT::MILLI[01;31m[K>[m[K();
+      |                                                            [01;31m[K^[m[K
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:25:62:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+   25 |   benchmark_adjoint_parallel.execute_all<TIME_FORMAT::MILLI>([01;31m[K)[m[K;
+      |                                                              [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

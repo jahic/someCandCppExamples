@@ -1,0 +1,51 @@
+{
+	"name" : "grayscale_parallel",
+	"time_unit" : "milli",
+	"tests" : {
+		"test_1" : {
+			"settings" : [2, "TS", 19, "false", "PTHREADS"],
+			"measurements" : {
+				"1000x1000" : 6,
+				"2000x2000" : 28,
+				"3000x3000" : 64,
+				"4000x4000" : 121
+			}
+		},
+		"test_2" : {
+			"settings" : [4, "TS", 21, "true", "PTHREADS"],
+			"measurements" : {
+				"1000x1000" : 4,
+				"2000x2000" : 14,
+				"3000x3000" : 30,
+				"4000x4000" : 60
+			}
+		},
+		"test_3" : {
+			"settings" : [6, "TS", 45, "true", "PTHREADS"],
+			"measurements" : {
+				"1000x1000" : 5,
+				"2000x2000" : 22,
+				"3000x3000" : 46,
+				"4000x4000" : 82
+			}
+		},
+		"test_4" : {
+			"settings" : [4, "TS", 19, "false", "OPENMP"],
+			"measurements" : {
+				"1000x1000" : 5,
+				"2000x2000" : 17,
+				"3000x3000" : 32,
+				"4000x4000" : 57
+			}
+		},
+		"test_5" : {
+			"settings" : [0, "TS", 19, "false", "SERIAL"],
+			"measurements" : {
+				"1000x1000" : 12,
+				"2000x2000" : 42,
+				"3000x3000" : 93,
+				"4000x4000" : 165
+			}
+		}
+	}
+}

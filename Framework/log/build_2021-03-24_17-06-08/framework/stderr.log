@@ -1,0 +1,56 @@
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:7[m[K:
+/home/arian/Framework/src/framework/include/framework/generators/generator.hpp: In instantiation of ‘[01m[Kstatic std::vector<std::vector<T> > framework::generator::generate_inputs(std::initializer_list<int>) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:13:68:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/generators/generator.hpp:27:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   27 |                 for(int i = 0; i < temp.capacity(); i++)
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:6[m[K:
+/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp: In instantiation of ‘[01m[Kvoid framework::benchmark<T>::execute_all() [with K = std::ratio<1, 1000>; T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:24:62:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:64:30:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<framework::settings>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   64 |             for(int i = 0; [01;35m[Ki < settingss_.size()[m[K; i++)
+      |                            [01;35m[K~~^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:73:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<int>, std::allocator<std::vector<int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   73 |                 for(int j = 0; j < inputs_a_.size(); j++)
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:87:26:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<int>, std::allocator<std::vector<int> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   87 |                     if([01;35m[Kj != inputs_a_.size() - 1[m[K)
+      |                        [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:95:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<framework::settings>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   95 |                 if([01;35m[Ki == settingss_.size() - 1[m[K)
+      |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:10[m[K,
+                 from [01m[K/home/arian/Framework/src/framework/src/main.cpp:6[m[K:
+/home/arian/Framework/src/framework/include/framework/generators/json_generator.hpp: In instantiation of ‘[01m[Kframework::json_generator& framework::json_generator::add(const std::chrono::duration<long int, T>&) [with T = std::ratio<1, 1000>][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/benchmark/benchmark.hpp:61:29:[m[K   required from ‘[01m[Kvoid framework::benchmark<T>::execute_all() [with K = std::ratio<1, 1000>; T = int][m[K’
+[01m[K/home/arian/Framework/src/framework/src/main.cpp:24:62:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/generators/json_generator.hpp:44:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kduration[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   44 |         json_generator& add([01;35m[Kconst std::chrono::duration<int64_t, T>& duration[m[K)
+      |                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:4[m[K:
+/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp: In instantiation of ‘[01m[Kvoid framework::base::adjoint_parallel<T>::execute(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp:175:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp:197:43:[m[K [01;31m[Kerror: [m[Kbinding reference of type ‘[01m[Kstd::vector<int>&[m[K’ to ‘[01m[Kconst std::vector<int>[m[K’ discards qualifiers
+  197 |                 [01;31m[Kadjoint_parallel_openmp<T>(matrix_a_,matrix_b_, matrix_c_, settings_)[m[K;
+      |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp:94:46:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid framework::base::adjoint_parallel_openmp(std::vector<T>&, std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’
+   94 | void adjoint_parallel_openmp([01;36m[Kstd::vector<T>& matrix_a_[m[K, std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_ )
+      |                              [01;36m[K~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp:201:34:[m[K [01;31m[Kerror: [m[Kbinding reference of type ‘[01m[Kstd::vector<int>&[m[K’ to ‘[01m[Kconst std::vector<int>[m[K’ discards qualifiers
+  201 |                 [01;31m[Kadjoint_serial<T>(matrix_a_,matrix_b_, matrix_c_, settings_)[m[K;
+      |                 [01;31m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp:115:37:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid framework::base::adjoint_serial(std::vector<T>&, std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’
+  115 | void adjoint_serial([01;36m[Kstd::vector<T>& matrix_a_[m[K, std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_ )
+      |                     [01;36m[K~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:4[m[K:
+/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp: In instantiation of ‘[01m[Kvoid* framework::base::adjoint_parallel_pthread(void*) [with T = int][m[K’:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp:235:31:[m[K   required from ‘[01m[Kvoid framework::base::adjoint_parallel<T>::execute_pthread(const std::vector<T>&, const std::vector<T>&, std::vector<T>&, const framework::settings&) [with T = int][m[K’
+[01m[K/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp:206:14:[m[K   required from here
+[01m[K/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp:83:79:[m[K [01;31m[Kerror: [m[Kinvalid static_cast from type ‘[01m[Kconst std::vector<int>[m[K’ to type ‘[01m[Kstd::vector<int>&[m[K’
+   83 |             getCofactor<T>(static_cast<std::vector<T>>(iterators_->matrix_a), [01;31m[Kstatic_cast<std::vector<T>&>(iterators_->matrix_b)[m[K, i, j, iterators_->width, iterators_->width);
+      |                                                                               [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/arian/Framework/src/framework/src/main.cpp:4[m[K:
+[01m[K/home/arian/Framework/src/framework/include/framework/base/adjoint_parallel.hpp:85:86:[m[K [01;31m[Kerror: [m[Kinvalid static_cast from type ‘[01m[Kconst std::vector<int>[m[K’ to type ‘[01m[Kstd::vector<int>&[m[K’
+   85 |             iterators_->matrix_c[j * iterators_->width + i] = (sign)*(determinant<T>([01;31m[Kstatic_cast<std::vector<T>&>(iterators_->matrix_b)[m[K, iterators_->width - 1, iterators_->size, iterators_->width));
+      |                                                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/main.dir/build.make:63: CMakeFiles/main.dir/src/main.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/main.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

@@ -37,6 +37,48 @@ void * multiply_parallel_pthread(void * iterators__)
     return NULL;   
 }
 
+template<typename T>
+void multiply_parallel_openmp(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_ )
+{
+
+    int matrix_delimeter = sqrt(matrix_a_.size());
+    int boundary = matrix_a_.size() / sqrt(matrix_a_.size());
+
+    #pragma omp parallel for num_threads(settings_.THREAD_NUMBER) collapse(3)
+    for(int i = 0; i < boundary; i++)
+    {
+        for(int j = 0; j < boundary; j++)
+        {
+            for(int k = 0; k < boundary; k++)
+            {
+                matrix_c_[i * matrix_delimeter + j] += 
+                    matrix_a_[i * matrix_delimeter + k] * 
+                    matrix_b_[k * matrix_delimeter + j]; 
+            }
+        }
+    }
+}
+
+template<typename T>
+void multiply_serial(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_ )
+{
+    int matrix_delimeter = sqrt(matrix_a_.size());
+    int boundary = matrix_a_.size() / sqrt(matrix_a_.size());
+
+    for(int i = 0; i < boundary; i++)
+    {
+        for(int j = 0; j < boundary; j++)
+        {
+            for(int k = 0; k < boundary; k++)
+            {
+                matrix_c_[i * matrix_delimeter + j] += 
+                    matrix_a_[i * matrix_delimeter + k] * 
+                    matrix_b_[k * matrix_delimeter + j]; 
+            }
+        }
+    }
+}
+
 
 template<typename T>
 class multiply_parallel : public base_parallel<T>
@@ -101,7 +143,11 @@ class multiply_parallel : public base_parallel<T>
             }
             else if(settings_.PARALLELIZATION_STRATEGY == PARALLELIZATION_STRATEGY::OPENMP)
             {
-                execute_openmp(matrix_a_,matrix_b_, matrix_c_, settings_);
+                multiply_parallel_openmp(matrix_a_,matrix_b_, matrix_c_, settings_);
+            }
+            else 
+            {
+                multiply_serial(matrix_a_,matrix_b_, matrix_c_, settings_);
             }
             
         }
@@ -296,22 +342,6 @@ class multiply_parallel : public base_parallel<T>
             }
         }
 
-        void execute_openmp(const std::vector<T>& matrix_a_, const std::vector<T>& matrix_b_, std::vector<T>& matrix_c_, const settings & settings_ )
-        {
-            #pragma omp parallel num_threads(settings_.THREAD_NUMBER) 
-            for(int i = 0; i < matrix_a_.size() / sqrt(matrix_a_.size()) ; i++)
-            {
-                for(int j = 0; j < matrix_a_.size() / sqrt(matrix_a_.size()); j++)
-                {
-                    for(int k = 0; k < matrix_a_.size() / sqrt(matrix_a_.size()); k++)
-                    {
-                        matrix_c_[i * sqrt(matrix_a_.size()) + j] += 
-                            matrix_a_[i * sqrt(matrix_a_.size()) + k] * 
-                            matrix_b_[k * sqrt(matrix_a_.size()) + j]; 
-                    }
-                }
-            }
-        }
 };
 
 }

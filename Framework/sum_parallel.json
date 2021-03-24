@@ -1,0 +1,42 @@
+{
+	"name" : "sum_parallel",
+	"time_unit" : "milli",
+	"tests" : {
+		"test_1" : {
+			"settings" : [2, "TS", 19, "false", "PTHREADS"],
+			"measurements" : {
+				"2000x2000" : 17,
+				"3000x3000" : 52,
+				"4000x4000" : 102,
+				"10000x10000" : 672
+			}
+		},
+		"test_2" : {
+			"settings" : [4, "TS", 21, "true", "PTHREADS"],
+			"measurements" : {
+				"2000x2000" : 10,
+				"3000x3000" : 23,
+				"4000x4000" : 44,
+				"10000x10000" : 288
+			}
+		},
+		"test_3" : {
+			"settings" : [4, "TS", 45, "true", "PTHREADS"],
+			"measurements" : {
+				"2000x2000" : 12,
+				"3000x3000" : 26,
+				"4000x4000" : 46,
+				"10000x10000" : 297
+			}
+		},
+		"test_4" : {
+			"settings" : [4, "TS", 19, "false", "OPENMP"],
+			"measurements" : {
+				"2000x2000" : 10,
+				"3000x3000" : 24,
+				"4000x4000" : 44,
+				"10000x10000" : 282
+			}
+		}
+	}
+}
